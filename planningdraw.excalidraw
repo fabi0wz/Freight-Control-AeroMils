@@ -1,0 +1,47 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "type": "text",
+      "version": 55,
+      "versionNonce": 70596526,
+      "isDeleted": false,
+      "id": "19spB5eD5urAxPqiK3Zqu",
+      "fillStyle": "hachure",
+      "strokeWidth": 1,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "angle": 0,
+      "x": -50.08110809326172,
+      "y": -23.12748149797025,
+      "strokeColor": "#000000",
+      "backgroundColor": "transparent",
+      "width": 225.39981079101562,
+      "height": 25,
+      "seed": 447180513,
+      "groupIds": [],
+      "roundness": null,
+      "boundElements": [],
+      "updated": 1688075944194,
+      "link": null,
+      "locked": false,
+      "fontSize": 20,
+      "fontFamily": 1,
+      "text": "aqui desenhamos logica",
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "aqui desenhamos logica",
+      "lineHeight": 1.25,
+      "baseline": 17
+    }
+  ],
+  "appState": {
+    "gridSize": null,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
