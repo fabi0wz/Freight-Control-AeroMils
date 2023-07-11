@@ -1,0 +1,7 @@
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.csproj.AssemblyReference.cache
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Form1.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.csproj.GenerateResource.cache
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.AssemblyInfoInputs.cache
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.AssemblyInfo.cs
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.csproj.CoreCompileInputs.cache
