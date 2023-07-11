@@ -7,3 +7,5 @@ isto vai fazer download do repositorio para o teu ambiente de trabalho e podes a
 quando terminares/quiseres guardar fazes ``git add .`` nao esqueçer o ponto final (para adicionar todos os ficheiros que alteraste) e depois ``git commit -m "mensagem"`` (para fazer commit das alterações) e por fim ``git push origin DEV``
 
 ## NUNCA FAZER PUSH PARA A BRANCH MASTER/MAIN É SEMPRE DEV
+
+tteeset
