@@ -8,14 +8,173 @@ namespace AeroMils___Controlo_de_Frota
 {
     internal class Aviao
     {
-        public int CapacidadePassageiros { get; set; }
-        public int? Autonomia { get; set; }
-        public DateTime DataUltimaManutencao { get; set; }
-        public bool AtivoInativo { get; set; }
-        public int QtdMotores { get; set; }
-        public string Marca { get; set; }
-        public string Modelo { get; set; }
-        public DateTime AnoFabrico { get; set; }
+        private int _capacidade_passageiros;
+
+        private int _autonomia;
+
+        private DateTime _dataUltimaManutencao;
+
+        private bool _ativoInativo;
+
+        private int _qtdMotores;
+
+        private string _marca;
+
+        private string _modelo;
+
+        private DateTime _anoFabrico;
+
+
+        public int capacidade_passageiros
+        {
+            get
+            {
+                return _capacidade_passageiros;
+            }
+
+            set
+            {
+                _capacidade_passageiros = value;
+            }
+        }
+
+        public int autonomia
+        {
+            get
+            {
+                return _autonomia;
+            }
+
+            set
+            {
+                _autonomia = value;
+            }
+        }
+
+        public DateTime dataUltimaManutencao
+        {
+            get
+            {
+                return _dataUltimaManutencao;
+            }
+
+            set
+            {
+                _dataUltimaManutencao = value;
+            }
+        }
+
+        public bool ativoInativo
+        {
+            get
+            {
+                return _ativoInativo;
+            }
+
+            set
+            {
+                _ativoInativo = value;
+            }
+        }
+
+        public int qtdMotores
+        {
+            get
+            {
+                return _qtdMotores;
+            }
+
+            set
+            {
+                _qtdMotores = value;
+            }
+        }
+
+        public string marca
+        {
+            get
+            {
+                return _marca;
+            }
+
+            set
+            {
+                _marca = value;
+            }
+        }
+
+        public string modelo
+        {
+            get
+            {
+                return _modelo;
+            }
+
+            set
+            {
+                _modelo = value;
+            }
+        }
+
+        public DateTime anoFabrico
+        {
+            get
+            {
+                return _anoFabrico;
+            }
+
+            set
+            {
+                _anoFabrico = value;
+            }
+        }
+
+    public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool ativoInativo, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+        {
+            this.capacidade_passageiros = capacidade_passageiros;
+            this.autonomia = autonomia;
+            this.dataUltimaManutencao = dataUltimaManutencao;
+            this.ativoInativo = ativoInativo;
+            this.qtdMotores = qtdMotores;
+            this.marca = marca;
+            this.modelo = modelo;
+            this.anoFabrico = anoFabrico;
+        }
+
+        public void AlterarEstado()
+        {
+            ativoInativo = !ativoInativo;
+        }
+
+        /*public List<Aviao> ConsultarDisponiveis(List<Aviao> avioes)
+        {
+            List<Aviao> disponiveis = new List<Aviao>();
+
+            foreach (var aviao in avioes)
+            {
+                if (aviao.ativoInativo)
+                {
+                    disponiveis.Add(aviao);
+                }
+            }
+
+            return disponiveis;
+        }*/
+
+        /*public List<Aviao> ConsultarManutencao(List<Aviao> avioes)
+        {
+            List<Aviao> emManutencao = new List<Aviao>();
+
+            foreach (var aviao in avioes)
+            {
+                if (aviao.dataUltimaManutencao < DateTime.Now)
+                {
+                    emManutencao.Add(aviao);
+                }
+            }
+
+            return emManutencao;
+        }*/
 
     }
 }
