@@ -59,5 +59,15 @@ namespace AeroMils___Controlo_de_Frota.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap amlogo {
+            get {
+                object obj = ResourceManager.GetObject("amlogo", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

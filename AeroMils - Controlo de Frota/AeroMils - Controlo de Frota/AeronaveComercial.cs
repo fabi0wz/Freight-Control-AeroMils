@@ -11,8 +11,17 @@ namespace AeroMils___Controlo_de_Frota
         private int _numeroVoosDia;
         private string _companhiaAerea;
 
-        public int numeroVoosDia { get; set; }
-        public string companhiaAerea { get; set; }
+        public int numeroVoosDia
+        {
+            get => _numeroVoosDia;
+            set => _numeroVoosDia = value;
+        }
+
+        public string companhiaAerea 
+        { 
+            get => _companhiaAerea;
+            set => _companhiaAerea = value;
+        }
 
         public AeronaveComercial(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool ativoInativo, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int numeroVoosDia, string companhiaAerea) : base(capacidade_passageiros, autonomia, data_ult_manutencao, ativoInativo, qtdMotores, marca, modelo, anoFabrico)
         {

@@ -11,8 +11,16 @@ namespace AeroMils___Controlo_de_Frota
         private int _capacidadeCarga;
         private double _valorFrete;
 
-        public int capacidadeCarga { get; set; }
-        public double valorFrete { get; set; }
+        public int capacidadeCarga 
+        { 
+            get => _capacidadeCarga;
+            set => _capacidadeCarga = value;
+        }
+        public double valorFrete 
+        {
+            get => _valorFrete;
+            set => _valorFrete = value;
+        }
 
         public AeronaveMercadorias(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool ativoInativo, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int capacidadeCarga, double valorFrete) : base(capacidade_passageiros, autonomia, data_ult_manutencao, ativoInativo, qtdMotores, marca, modelo, anoFabrico) 
         {

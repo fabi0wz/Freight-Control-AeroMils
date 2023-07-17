@@ -12,9 +12,23 @@ namespace AeroMils___Controlo_de_Frota
         private int _areaPouso;
         private double _valorFrete;
 
-        public int areaDescolagem { get; set; }
-        public int areaPouso { get; set; }
-        public double valorFrete { get; set; }
+        public int areaDescolagem 
+        {
+            get => _areaDescolagem;
+            set => _areaDescolagem = value;
+        }
+
+        public int areaPouso 
+        {
+            get => _areaPouso;
+            set => _areaPouso = value;
+        }
+
+        public double valorFrete 
+        {
+            get => _valorFrete;
+            set => _valorFrete = value;
+        }
 
 
         public Avioneta(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool ativoInativo, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int areaDescolagem, int areaPouso, double valorFrete) : base(capacidade_passageiros, autonomia, data_ult_manutencao, ativoInativo, qtdMotores, marca, modelo, anoFabrico)

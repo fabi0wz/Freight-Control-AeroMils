@@ -29,3 +29,20 @@ C:\Users\Daniel\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo 
 C:\Users\Daniel\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Manutencao.resources
 C:\Users\Daniel\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Reservas.resources
 C:\Users\Daniel\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Sobre.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\bin\Debug\net7.0-windows\AeroMils - Controlo de Frota.exe
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\bin\Debug\net7.0-windows\AeroMils - Controlo de Frota.deps.json
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\bin\Debug\net7.0-windows\AeroMils - Controlo de Frota.runtimeconfig.json
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\bin\Debug\net7.0-windows\AeroMils - Controlo de Frota.dll
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\bin\Debug\net7.0-windows\AeroMils - Controlo de Frota.pdb
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Alertas.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Avioes.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Dashboard.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Manutencao.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Reservas.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Forms.Sobre.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Properties.Resources.resources
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.dll
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\refint\AeroMils - Controlo de Frota.dll
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.pdb
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils - Controlo de Frota.genruntimeconfig.cache
+C:\Users\Fabi0\Desktop\TP4-C-\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\ref\AeroMils - Controlo de Frota.dll

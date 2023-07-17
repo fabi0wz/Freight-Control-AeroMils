@@ -3,8 +3,8 @@ namespace AeroMils___Controlo_de_Frota
     public partial class Form1 : Form
     {
         // fields
-        private Button currentButton;
-        private Form activeForm;
+        private Button currentButton = null!;
+        private Form activeForm = null!;
 
 
         public Form1()
@@ -13,6 +13,7 @@ namespace AeroMils___Controlo_de_Frota
 
             //open dashboard form by default
             OpenChildForm(new Forms.Dashboard(), button_dashboard);
+            this.Text = "AeroMils - Controlo de Frota";
         }
 
         // methods
