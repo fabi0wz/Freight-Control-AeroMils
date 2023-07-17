@@ -1,3 +1,5 @@
+using AeroMils___Controlo_de_Frota.Model;
+
 namespace AeroMils___Controlo_de_Frota
 {
     public partial class Form1 : Form
@@ -10,6 +12,7 @@ namespace AeroMils___Controlo_de_Frota
         public Form1()
         {
             InitializeComponent();
+            //tempDB.CreateDefaults();
 
             //open dashboard form by default
             OpenChildForm(new Forms.Dashboard(), button_dashboard);
