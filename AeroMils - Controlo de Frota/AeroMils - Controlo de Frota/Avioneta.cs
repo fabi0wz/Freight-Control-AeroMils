@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AeroMils___Controlo_de_Frota
 {
-    internal class Avioneta
+    internal class Avioneta : Aviao
     {
         private int _areaDescolagem;
         private int _areaPouso;

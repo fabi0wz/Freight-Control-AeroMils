@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AeroMils___Controlo_de_Frota
 {
-    internal class AeronaveComercial
+    internal class AeronaveComercial : Aviao
     {
         private int _numeroVoosDia;
         private string _companhiaAerea;
