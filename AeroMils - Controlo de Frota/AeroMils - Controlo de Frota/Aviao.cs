@@ -64,7 +64,7 @@ namespace AeroMils___Controlo_de_Frota
             }
         }
 
-        public bool ativoInativo
+        public bool estado
         {
             get
             {
@@ -129,12 +129,12 @@ namespace AeroMils___Controlo_de_Frota
             }
         }
 
-    public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool ativoInativo, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+    public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
         {
             this.capacidade_passageiros = capacidade_passageiros;
             this.autonomia = autonomia;
             this.dataUltimaManutencao = dataUltimaManutencao;
-            this.ativoInativo = ativoInativo;
+            this.estado = estado;
             this.qtdMotores = qtdMotores;
             this.marca = marca;
             this.modelo = modelo;
@@ -143,7 +143,7 @@ namespace AeroMils___Controlo_de_Frota
 
         public void AlterarEstado()
         {
-            ativoInativo = !ativoInativo;
+            estado = !estado;
         }
 
         /*public List<Aviao> ConsultarDisponiveis(List<Aviao> avioes)
@@ -152,7 +152,7 @@ namespace AeroMils___Controlo_de_Frota
 
             foreach (var aviao in avioes)
             {
-                if (aviao.ativoInativo)
+                if (aviao.estado)
                 {
                     disponiveis.Add(aviao);
                 }

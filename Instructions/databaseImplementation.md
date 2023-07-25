@@ -84,3 +84,27 @@ foreach(object[] row in dataList)
 }
 para mostrar campos especificos de cada linha
 ```
+
+
+### Tables
+
+O model de cada uma das classes é que lida com os inserts que sao para ser inseridos
+EX a SQLiteDBContext.cs é onde tem as funcoes de insert, mas recebe parametros tipo as tabelas e isso que sao enviados a partir do model
+
+- Table: Avioes
+	- aviao_id (Primary Key)	modelo	capacidade_passageiros	autonomia_voo	data_ultima_manutencao	ativo	quantidade_motores	marca	ano_fabrico
+
+- Table: Avionetas
+	- aviao_id (Foreign Key, references Avioes)	area_minima_descolagem_pouso	valor_frete
+
+- Table: AeronavesComerciais
+	- aviao_id (Foreign Key, references Avioes)	numero_voos_diarios	companhia_aerea
+
+- Table: AeronavesParticulares
+	- aviao_id (Foreign Key, references Avioes)	numero_proprietarios	valor_frete
+
+- Table: AeronavesMercadorias
+	- aviao_id (Foreign Key, references Avioes)	capacidade_carga	valor_frete
+
+- Table: Aeroportos
+	- aeroporto_id (Primary Key)	localizacao	numero_pistas	capacidade_atendimento
