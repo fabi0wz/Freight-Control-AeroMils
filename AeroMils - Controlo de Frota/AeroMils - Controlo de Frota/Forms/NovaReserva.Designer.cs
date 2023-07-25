@@ -1,6 +1,6 @@
 ﻿namespace AeroMils___Controlo_de_Frota.Forms
 {
-    partial class Reservas
+    partial class NovaReserva
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
-            SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(169, 127);
-            label1.Name = "label1";
-            label1.Size = new Size(346, 86);
-            label1.TabIndex = 0;
-            label1.Text = "RESERVAS";
-            // 
-            // Reservas
-            // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
-            Controls.Add(label1);
-            Margin = new Padding(3, 2, 3, 2);
-            Name = "Reservas";
-            Text = "Reservas";
-            ResumeLayout(false);
-            PerformLayout();
+            this.components = new System.ComponentModel.Container();
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "NovaReserva";
         }
 
         #endregion
-
-        private Label label1;
     }
 }

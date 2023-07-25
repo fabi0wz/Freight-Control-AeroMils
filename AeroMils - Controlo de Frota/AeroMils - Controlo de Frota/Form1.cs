@@ -17,6 +17,8 @@ namespace AeroMils___Controlo_de_Frota
             //open dashboard form by default
             OpenChildForm(new Forms.Dashboard(), button_dashboard);
             this.Text = "AeroMils - Controlo de Frota";
+
+            pictureBox1.Parent = button_dashboard;
         }
 
         // methods
@@ -55,8 +57,8 @@ namespace AeroMils___Controlo_de_Frota
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.panel_main.Controls.Add(childForm);
-            this.panel_main.Tag = childForm;
+            panel_main.Controls.Add(childForm);
+            panel_main.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }
@@ -77,6 +79,11 @@ namespace AeroMils___Controlo_de_Frota
             OpenChildForm(new Forms.Reservas(), sender);
         }
 
+        private void button_reservas_MouseHover(object sender, EventArgs e)
+        {
+
+        }
+
         private void button_manutencao_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Manutencao(), sender);
@@ -86,6 +93,7 @@ namespace AeroMils___Controlo_de_Frota
         {
             OpenChildForm(new Forms.Alertas(), sender);
         }
+
         private void button_sobre_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Sobre(), sender);
