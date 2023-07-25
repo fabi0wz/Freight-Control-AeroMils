@@ -15,7 +15,7 @@ namespace AeroMils___Controlo_de_Frota
 
             foreach (var aviao in avioes)
             {
-                if (aviao.ativoInativo)
+                if (aviao.estado)
                 {
                     disponiveis.Add(aviao);
                 }

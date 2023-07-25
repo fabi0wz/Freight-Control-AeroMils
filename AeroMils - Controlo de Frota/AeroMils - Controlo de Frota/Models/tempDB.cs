@@ -27,8 +27,8 @@ namespace AeroMils___Controlo_de_Frota.Model
                 string anoFabrico = GenerateRandomDate(AeronaveComercialRand);
                 int numeroVoosDia = AeronaveComercialRand.Next(5000, 10000);
                 string companhiaAerea = $"voo# {i}";
-
-                AeronaveMercadorias aeronavemercadorias = new AeronaveMercadorias(capacidade_passageiros, autonomia, Convert.ToDateTime(data_ult_manutencao), estado, qtdMotores, marca, modelo, Convert.ToDateTime(anoFabrico), numeroVoosDia, companhiaAerea);
+                //public AeronaveMercadorias(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int capacidadeCarga, double valorFrete) : base(capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+                //AeronaveMercadorias aeronavemercadorias = new AeronaveMercadorias(capacidade_passageiros, autonomia, Convert.ToDateTime(data_ult_manutencao), estado, qtdMotores, marca, modelo, Convert.ToDateTime(anoFabrico), numeroVoosDia, companhiaAerea);
             }
         }
         public static void criarAeronavesMercadorias(int instancesAeronaveMercadorias, Random AeronaveMercadoriasRand)
