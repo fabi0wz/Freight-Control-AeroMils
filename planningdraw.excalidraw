@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 55,
-      "versionNonce": 70596526,
+      "version": 56,
+      "versionNonce": 1906848812,
       "isDeleted": false,
       "id": "19spB5eD5urAxPqiK3Zqu",
       "fillStyle": "hachure",
@@ -25,7 +25,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1688075944194,
+      "updated": 1689102677930,
       "link": null,
       "locked": false,
       "fontSize": 20,
@@ -36,7 +36,7 @@
       "containerId": null,
       "originalText": "aqui desenhamos logica",
       "lineHeight": 1.25,
-      "baseline": 17
+      "baseline": 18
     }
   ],
   "appState": {
