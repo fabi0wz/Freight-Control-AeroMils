@@ -13,7 +13,19 @@
     <Compile Update="Views\Dashboard.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Views\HistoricoManutencoes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\HistoricoReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\InserirAviao.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Views\Manutencao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Views\NovaManutencao.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Views\NovaReserva.cs">

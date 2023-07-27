@@ -1,6 +1,6 @@
-﻿namespace AeroMils___Controlo_de_Frota.Forms
+﻿namespace AeroMils___Controlo_de_Frota.Views
 {
-    partial class NovaReserva
+    partial class NovaManutencao
     {
         /// <summary>
         /// Required designer variable.
@@ -29,35 +29,26 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            label2 = new Label();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.Location = new Point(0, 0);
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(98, 162);
             label1.Name = "label1";
-            label1.Size = new Size(100, 23);
-            label1.TabIndex = 0;
+            label1.Size = new Size(597, 106);
+            label1.TabIndex = 1;
+            label1.Text = "NOVA MANUT";
             // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(85, 162);
-            label2.Name = "label2";
-            label2.Size = new Size(636, 106);
-            label2.TabIndex = 1;
-            label2.Text = "NOVA RESERVA";
-            // 
-            // NovaReserva
+            // NovaManutencao
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-            Controls.Add(label2);
             Controls.Add(label1);
-            Name = "NovaReserva";
-            Text = "NovaReserva";
+            Name = "NovaManutencao";
+            Text = "NovaManutencao";
             ResumeLayout(false);
             PerformLayout();
         }
@@ -65,6 +56,5 @@
         #endregion
 
         private Label label1;
-        private Label label2;
     }
 }
