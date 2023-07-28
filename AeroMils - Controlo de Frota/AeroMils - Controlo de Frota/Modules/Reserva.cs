@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
+namespace AeroMils___Controlo_de_Frota.Modules
 {
     internal class Reserva
     {

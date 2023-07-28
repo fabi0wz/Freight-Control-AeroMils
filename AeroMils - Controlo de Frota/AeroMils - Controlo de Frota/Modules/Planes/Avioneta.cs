@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AeroMils___Controlo_de_Frota.Modules;
 
-namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
+namespace AeroMils___Controlo_de_Frota.Modules.Planes
 {
     internal class Avioneta : Aviao
     {
         private int _areaDescolagem;
         private int _areaPouso;
-        private double _valorFrete;
+        private Frete _valorFrete;
 
         public int areaDescolagem
         {
@@ -26,8 +27,8 @@ namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 
         public double valorFrete
         {
-            get => _valorFrete;
-            set => _valorFrete = value;
+            get => _valorFrete.ValorFrete;
+            set => _valorFrete = new Frete(value);
         }
 
 
@@ -35,7 +36,7 @@ namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
         {
             _areaDescolagem = areaDescolagem;
             _areaPouso = areaPouso;
-            _valorFrete = valorFrete;
+            _valorFrete = new Frete(valorFrete);
         }
     }
 }

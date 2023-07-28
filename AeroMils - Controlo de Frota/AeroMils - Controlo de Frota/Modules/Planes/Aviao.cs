@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
+namespace AeroMils___Controlo_de_Frota.Modules.Planes
 {
     internal class Aviao
     {
@@ -14,7 +14,7 @@ namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 
         private DateTime _dataUltimaManutencao;
 
-        private bool _ativoInativo;
+        private bool _estado;
 
         private int _qtdMotores;
 
@@ -68,12 +68,12 @@ namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
         {
             get
             {
-                return _ativoInativo;
+                return _estado;
             }
 
             set
             {
-                _ativoInativo = value;
+                _estado = value;
             }
         }
 
