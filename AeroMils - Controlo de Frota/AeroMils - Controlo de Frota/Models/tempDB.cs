@@ -4,9 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AeroMils___Controlo_de_Frota.src.Modules.Planes;
+using AeroMils___Controlo_de_Frota.Modules.Planes;
 
-namespace AeroMils___Controlo_de_Frota.src.Models
+namespace AeroMils___Controlo_de_Frota.Models
 {
     internal static class tempDB
     {

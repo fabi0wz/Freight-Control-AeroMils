@@ -25,7 +25,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="src\Controllers\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Data\DbContext\" />
+    <Folder Include="Data\Repositories\" />
   </ItemGroup>
 
 </Project>

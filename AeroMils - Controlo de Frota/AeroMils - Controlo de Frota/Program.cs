@@ -1,5 +1,4 @@
-using AeroMils___Controlo_de_Frota.Views;
-namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
+namespace AeroMils___Controlo_de_Frota
 {
     internal static class Program
     {
@@ -12,7 +11,7 @@ namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new Form1());
+            Application.Run(new Views.Form1());
         }
     }
 }
