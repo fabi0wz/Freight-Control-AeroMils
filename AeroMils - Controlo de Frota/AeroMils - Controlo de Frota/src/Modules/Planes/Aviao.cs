@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AeroMils___Controlo_de_Frota
+namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 {
     internal class Aviao
     {
@@ -129,7 +129,7 @@ namespace AeroMils___Controlo_de_Frota
             }
         }
 
-    public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+        public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
         {
             this.capacidade_passageiros = capacidade_passageiros;
             this.autonomia = autonomia;

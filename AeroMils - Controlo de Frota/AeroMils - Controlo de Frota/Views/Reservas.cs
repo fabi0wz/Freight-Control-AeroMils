@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace AeroMils___Controlo_de_Frota.Forms
+namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Reservas : Form
     {

@@ -4,8 +4,9 @@ using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AeroMils___Controlo_de_Frota.src.Modules.Planes;
 
-namespace AeroMils___Controlo_de_Frota.Model
+namespace AeroMils___Controlo_de_Frota.src.Models
 {
     internal static class tempDB
     {
@@ -101,7 +102,7 @@ namespace AeroMils___Controlo_de_Frota.Model
         }
         public static void CreateDefaults()
         {
-            
+
 
             Random rand = new Random();
             criarAeronavesParticulares(100, rand);

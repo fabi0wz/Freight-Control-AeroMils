@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AeroMils___Controlo_de_Frota
+namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 {
     internal class AeronaveComercial : Aviao
     {
@@ -17,16 +17,16 @@ namespace AeroMils___Controlo_de_Frota
             set => _numeroVoosDia = value;
         }
 
-        public string companhiaAerea 
-        { 
+        public string companhiaAerea
+        {
             get => _companhiaAerea;
             set => _companhiaAerea = value;
         }
 
         public AeronaveComercial(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int numeroVoosDia, string companhiaAerea) : base(capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
         {
-            this._numeroVoosDia = numeroVoosDia;
-            this._companhiaAerea = companhiaAerea;
+            _numeroVoosDia = numeroVoosDia;
+            _companhiaAerea = companhiaAerea;
         }
     }
 }

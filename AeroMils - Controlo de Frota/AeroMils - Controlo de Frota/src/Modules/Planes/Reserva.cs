@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace AeroMils___Controlo_de_Frota
+namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 {
     internal class Reserva
     {
@@ -16,11 +16,11 @@ namespace AeroMils___Controlo_de_Frota
         public DateTime dataFim { get; set; }
         public double valorFreteTotal { get; set; }
 
-        public Reserva(DateTime dataInicio, DateTime dataFim, double valorFreteTotal) 
+        public Reserva(DateTime dataInicio, DateTime dataFim, double valorFreteTotal)
         {
-            this._dataInicio = dataInicio;
-            this._dataFim = dataFim;
-            this._valorFreteTotal = valorFreteTotal;
+            _dataInicio = dataInicio;
+            _dataFim = dataFim;
+            _valorFreteTotal = valorFreteTotal;
         }
     }
 }

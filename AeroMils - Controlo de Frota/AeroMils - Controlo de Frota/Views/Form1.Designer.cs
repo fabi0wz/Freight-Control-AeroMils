@@ -1,4 +1,4 @@
-﻿namespace AeroMils___Controlo_de_Frota
+﻿namespace AeroMils___Controlo_de_Frota.Views
 {
     partial class Form1
     {

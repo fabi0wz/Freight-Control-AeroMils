@@ -1,6 +1,5 @@
-using AeroMils___Controlo_de_Frota.Model;
 
-namespace AeroMils___Controlo_de_Frota
+namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Form1 : Form
     {
@@ -15,7 +14,7 @@ namespace AeroMils___Controlo_de_Frota
             //tempDB.CreateDefaults();
 
             //open dashboard form by default
-            OpenChildForm(new Forms.Dashboard(), button_dashboard);
+            OpenChildForm(new Views.Dashboard(), button_dashboard);
             this.Text = "AeroMils - Controlo de Frota";
         }
 
@@ -64,57 +63,57 @@ namespace AeroMils___Controlo_de_Frota
         // event handlers
         private void button_dashboard_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Dashboard(), sender);
+            OpenChildForm(new Views.Dashboard(), sender);
         }
 
         private void button_avioes_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Avioes(), sender);
+            OpenChildForm(new Views.Avioes(), sender);
         }
 
         private void button_reservas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Reservas(), sender);
+            OpenChildForm(new Views.Reservas(), sender);
         }
 
         private void button_manutencao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Manutencao(), sender);
+            OpenChildForm(new Views.Manutencao(), sender);
         }
 
         private void button_alertas_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Alertas(), sender);
+            OpenChildForm(new Views.Alertas(), sender);
         }
 
         private void button_sobre_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.Sobre(), sender);
         }
 
         private void button_InserirAviao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.InserirAviao(), sender);
         }
 
         private void button_NovaReserva_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.NovaReserva(), sender);
         }
 
         private void button_HistoricoReserva_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.HistoricoReservas(), sender);
         }
 
         private void button_NovaManutencao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.NovaManutencao(), sender);
         }
 
         private void button_HistoricoManutencao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Sobre(), sender);
+            OpenChildForm(new Views.HistoricoManutencoes(), sender);
         }
     }
 }

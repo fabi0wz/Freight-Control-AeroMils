@@ -1,4 +1,4 @@
-﻿namespace AeroMils___Controlo_de_Frota.Forms
+﻿namespace AeroMils___Controlo_de_Frota.Views
 {
     partial class Alertas
     {

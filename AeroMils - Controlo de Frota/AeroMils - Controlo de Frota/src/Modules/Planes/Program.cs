@@ -1,4 +1,5 @@
-namespace AeroMils___Controlo_de_Frota
+using AeroMils___Controlo_de_Frota.Views;
+namespace AeroMils___Controlo_de_Frota.src.Modules.Planes
 {
     internal static class Program
     {
