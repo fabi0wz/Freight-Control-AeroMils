@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Fabi0\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj": {}
+    "C:\\Users\\Fabi0\\Desktop\\Freight-Control-AeroMils\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Fabi0\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj": {
+    "C:\\Users\\Fabi0\\Desktop\\Freight-Control-AeroMils\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Fabi0\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
+        "projectUniqueName": "C:\\Users\\Fabi0\\Desktop\\Freight-Control-AeroMils\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
         "projectName": "AeroMils - Controlo de Frota",
-        "projectPath": "C:\\Users\\Fabi0\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
+        "projectPath": "C:\\Users\\Fabi0\\Desktop\\Freight-Control-AeroMils\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
         "packagesPath": "C:\\Users\\Fabi0\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Fabi0\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\obj\\",
+        "outputPath": "C:\\Users\\Fabi0\\Desktop\\Freight-Control-AeroMils\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
           "C:\\Users\\Fabi0\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -44,6 +39,12 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
+          "dependencies": {
+            "System.Data.SQLite": {
+              "target": "Package",
+              "version": "[1.0.118, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",

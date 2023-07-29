@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AeroMils___Controlo_de_Frota.Modules.Planes;
+using AeroMils___Controlo_de_Frota.Models;
 
 namespace AeroMils___Controlo_de_Frota.Modules
 {
