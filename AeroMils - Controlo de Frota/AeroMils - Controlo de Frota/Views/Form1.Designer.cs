@@ -28,22 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             panel_sidebar = new Panel();
+            SobreContainer = new Panel();
             button_sobre = new Button();
+            AlertasContainer = new Panel();
             button_alertas = new Button();
+            ManutencaoContainer = new Panel();
+            button_NovaManutencao = new Button();
+            button_HistoricoManutencao = new Button();
             button_manutencao = new Button();
+            ReservasContainer = new Panel();
+            button_HistoricoReserva = new Button();
+            button_NovaReserva = new Button();
             button_reservas = new Button();
+            AvioesContainer = new Panel();
             button_avioes = new Button();
+            button_InserirAviao = new Button();
+            DashboardContainer = new Panel();
             button_dashboard = new Button();
             panel_icone = new Panel();
             pictureBoxLogo = new PictureBox();
             panel_main = new Panel();
-            button_HistoricoManutencao = new Button();
-            button_NovaManutencao = new Button();
-            button_HistoricoReserva = new Button();
-            button_NovaReserva = new Button();
-            button_InserirAviao = new Button();
+            AvioesTimer = new System.Windows.Forms.Timer(components);
+            ReservasTimer = new System.Windows.Forms.Timer(components);
+            ManutencaoTimer = new System.Windows.Forms.Timer(components);
             panel_sidebar.SuspendLayout();
+            SobreContainer.SuspendLayout();
+            AlertasContainer.SuspendLayout();
+            ManutencaoContainer.SuspendLayout();
+            ReservasContainer.SuspendLayout();
+            AvioesContainer.SuspendLayout();
+            DashboardContainer.SuspendLayout();
             panel_icone.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).BeginInit();
             SuspendLayout();
@@ -51,40 +67,61 @@
             // panel_sidebar
             // 
             panel_sidebar.BackColor = Color.FromArgb(54, 53, 67);
-            panel_sidebar.Controls.Add(button_HistoricoManutencao);
-            panel_sidebar.Controls.Add(button_sobre);
-            panel_sidebar.Controls.Add(button_NovaManutencao);
-            panel_sidebar.Controls.Add(button_alertas);
-            panel_sidebar.Controls.Add(button_HistoricoReserva);
-            panel_sidebar.Controls.Add(button_manutencao);
-            panel_sidebar.Controls.Add(button_NovaReserva);
-            panel_sidebar.Controls.Add(button_reservas);
-            panel_sidebar.Controls.Add(button_InserirAviao);
-            panel_sidebar.Controls.Add(button_avioes);
-            panel_sidebar.Controls.Add(button_dashboard);
+            panel_sidebar.Controls.Add(SobreContainer);
+            panel_sidebar.Controls.Add(AlertasContainer);
+            panel_sidebar.Controls.Add(ManutencaoContainer);
+            panel_sidebar.Controls.Add(ReservasContainer);
+            panel_sidebar.Controls.Add(AvioesContainer);
+            panel_sidebar.Controls.Add(DashboardContainer);
             panel_sidebar.Controls.Add(panel_icone);
             panel_sidebar.Dock = DockStyle.Left;
             panel_sidebar.Location = new Point(0, 0);
+            panel_sidebar.Margin = new Padding(3, 2, 3, 2);
             panel_sidebar.Name = "panel_sidebar";
-            panel_sidebar.Size = new Size(218, 868);
+            panel_sidebar.Size = new Size(191, 651);
             panel_sidebar.TabIndex = 0;
+            // 
+            // SobreContainer
+            // 
+            SobreContainer.BackColor = Color.FromArgb(54, 53, 67);
+            SobreContainer.Controls.Add(button_sobre);
+            SobreContainer.Dock = DockStyle.Bottom;
+            SobreContainer.Location = new Point(0, 610);
+            SobreContainer.MaximumSize = new Size(200, 41);
+            SobreContainer.MinimumSize = new Size(200, 41);
+            SobreContainer.Name = "SobreContainer";
+            SobreContainer.Size = new Size(200, 41);
+            SobreContainer.TabIndex = 3;
             // 
             // button_sobre
             // 
-            button_sobre.Dock = DockStyle.Bottom;
+            button_sobre.Dock = DockStyle.Top;
             button_sobre.FlatAppearance.BorderSize = 0;
             button_sobre.FlatStyle = FlatStyle.Flat;
             button_sobre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button_sobre.ForeColor = Color.White;
             button_sobre.Image = Properties.Resources.Sobre;
-            button_sobre.Location = new Point(0, 813);
+            button_sobre.Location = new Point(0, 0);
+            button_sobre.Margin = new Padding(3, 2, 3, 2);
             button_sobre.Name = "button_sobre";
-            button_sobre.Size = new Size(218, 55);
+            button_sobre.Size = new Size(200, 41);
             button_sobre.TabIndex = 1;
             button_sobre.Text = "Sobre";
             button_sobre.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_sobre.UseVisualStyleBackColor = true;
             button_sobre.Click += button_sobre_Click;
+            // 
+            // AlertasContainer
+            // 
+            AlertasContainer.BackColor = Color.FromArgb(54, 53, 67);
+            AlertasContainer.Controls.Add(button_alertas);
+            AlertasContainer.Dock = DockStyle.Top;
+            AlertasContainer.Location = new Point(0, 355);
+            AlertasContainer.MaximumSize = new Size(200, 41);
+            AlertasContainer.MinimumSize = new Size(200, 41);
+            AlertasContainer.Name = "AlertasContainer";
+            AlertasContainer.Size = new Size(200, 41);
+            AlertasContainer.TabIndex = 2;
             // 
             // button_alertas
             // 
@@ -95,14 +132,67 @@
             button_alertas.ForeColor = Color.White;
             button_alertas.Image = Properties.Resources.Alertas;
             button_alertas.ImageAlign = ContentAlignment.MiddleLeft;
-            button_alertas.Location = new Point(0, 475);
+            button_alertas.Location = new Point(0, 0);
+            button_alertas.Margin = new Padding(3, 2, 3, 2);
             button_alertas.Name = "button_alertas";
-            button_alertas.Size = new Size(218, 55);
+            button_alertas.Size = new Size(200, 41);
             button_alertas.TabIndex = 1;
             button_alertas.Text = "Alertas";
             button_alertas.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_alertas.UseVisualStyleBackColor = true;
             button_alertas.Click += button_alertas_Click;
+            // 
+            // ManutencaoContainer
+            // 
+            ManutencaoContainer.BackColor = Color.FromArgb(54, 53, 67);
+            ManutencaoContainer.Controls.Add(button_NovaManutencao);
+            ManutencaoContainer.Controls.Add(button_HistoricoManutencao);
+            ManutencaoContainer.Controls.Add(button_manutencao);
+            ManutencaoContainer.Dock = DockStyle.Top;
+            ManutencaoContainer.Location = new Point(0, 314);
+            ManutencaoContainer.MaximumSize = new Size(200, 125);
+            ManutencaoContainer.MinimumSize = new Size(200, 41);
+            ManutencaoContainer.Name = "ManutencaoContainer";
+            ManutencaoContainer.Size = new Size(200, 41);
+            ManutencaoContainer.TabIndex = 1;
+            // 
+            // button_NovaManutencao
+            // 
+            button_NovaManutencao.Dock = DockStyle.Top;
+            button_NovaManutencao.FlatAppearance.BorderSize = 0;
+            button_NovaManutencao.FlatStyle = FlatStyle.Flat;
+            button_NovaManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_NovaManutencao.ForeColor = Color.White;
+            button_NovaManutencao.Image = Properties.Resources.Manutencao;
+            button_NovaManutencao.ImageAlign = ContentAlignment.MiddleLeft;
+            button_NovaManutencao.Location = new Point(0, 82);
+            button_NovaManutencao.Margin = new Padding(3, 2, 3, 2);
+            button_NovaManutencao.Name = "button_NovaManutencao";
+            button_NovaManutencao.Size = new Size(200, 41);
+            button_NovaManutencao.TabIndex = 2;
+            button_NovaManutencao.Text = "Nova Manutencao";
+            button_NovaManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button_NovaManutencao.UseVisualStyleBackColor = true;
+            button_NovaManutencao.Click += button_NovaManutencao_Click;
+            // 
+            // button_HistoricoManutencao
+            // 
+            button_HistoricoManutencao.Dock = DockStyle.Top;
+            button_HistoricoManutencao.FlatAppearance.BorderSize = 0;
+            button_HistoricoManutencao.FlatStyle = FlatStyle.Flat;
+            button_HistoricoManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_HistoricoManutencao.ForeColor = Color.White;
+            button_HistoricoManutencao.Image = Properties.Resources.Manutencao;
+            button_HistoricoManutencao.ImageAlign = ContentAlignment.MiddleLeft;
+            button_HistoricoManutencao.Location = new Point(0, 41);
+            button_HistoricoManutencao.Margin = new Padding(3, 2, 3, 2);
+            button_HistoricoManutencao.Name = "button_HistoricoManutencao";
+            button_HistoricoManutencao.Size = new Size(200, 41);
+            button_HistoricoManutencao.TabIndex = 3;
+            button_HistoricoManutencao.Text = "Historico Manutenções";
+            button_HistoricoManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button_HistoricoManutencao.UseVisualStyleBackColor = true;
+            button_HistoricoManutencao.Click += button_HistoricoManutencao_Click;
             // 
             // button_manutencao
             // 
@@ -113,14 +203,67 @@
             button_manutencao.ForeColor = Color.White;
             button_manutencao.Image = Properties.Resources.Manutencao;
             button_manutencao.ImageAlign = ContentAlignment.MiddleLeft;
-            button_manutencao.Location = new Point(0, 420);
+            button_manutencao.Location = new Point(0, 0);
+            button_manutencao.Margin = new Padding(3, 2, 3, 2);
             button_manutencao.Name = "button_manutencao";
-            button_manutencao.Size = new Size(218, 55);
+            button_manutencao.Size = new Size(200, 41);
             button_manutencao.TabIndex = 1;
             button_manutencao.Text = "Manutenção   ❯";
             button_manutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_manutencao.UseVisualStyleBackColor = true;
             button_manutencao.Click += button_manutencao_Click;
+            // 
+            // ReservasContainer
+            // 
+            ReservasContainer.BackColor = Color.FromArgb(54, 53, 67);
+            ReservasContainer.Controls.Add(button_HistoricoReserva);
+            ReservasContainer.Controls.Add(button_NovaReserva);
+            ReservasContainer.Controls.Add(button_reservas);
+            ReservasContainer.Dock = DockStyle.Top;
+            ReservasContainer.Location = new Point(0, 273);
+            ReservasContainer.MaximumSize = new Size(200, 125);
+            ReservasContainer.MinimumSize = new Size(200, 41);
+            ReservasContainer.Name = "ReservasContainer";
+            ReservasContainer.Size = new Size(200, 41);
+            ReservasContainer.TabIndex = 1;
+            // 
+            // button_HistoricoReserva
+            // 
+            button_HistoricoReserva.Dock = DockStyle.Top;
+            button_HistoricoReserva.FlatAppearance.BorderSize = 0;
+            button_HistoricoReserva.FlatStyle = FlatStyle.Flat;
+            button_HistoricoReserva.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_HistoricoReserva.ForeColor = Color.White;
+            button_HistoricoReserva.Image = Properties.Resources.Reservas;
+            button_HistoricoReserva.ImageAlign = ContentAlignment.MiddleLeft;
+            button_HistoricoReserva.Location = new Point(0, 82);
+            button_HistoricoReserva.Margin = new Padding(3, 2, 3, 2);
+            button_HistoricoReserva.Name = "button_HistoricoReserva";
+            button_HistoricoReserva.Size = new Size(200, 41);
+            button_HistoricoReserva.TabIndex = 3;
+            button_HistoricoReserva.Text = "Historico Reservas";
+            button_HistoricoReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button_HistoricoReserva.UseVisualStyleBackColor = true;
+            button_HistoricoReserva.Click += button_HistoricoReserva_Click;
+            // 
+            // button_NovaReserva
+            // 
+            button_NovaReserva.Dock = DockStyle.Top;
+            button_NovaReserva.FlatAppearance.BorderSize = 0;
+            button_NovaReserva.FlatStyle = FlatStyle.Flat;
+            button_NovaReserva.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_NovaReserva.ForeColor = Color.White;
+            button_NovaReserva.Image = Properties.Resources.Reservas;
+            button_NovaReserva.ImageAlign = ContentAlignment.MiddleLeft;
+            button_NovaReserva.Location = new Point(0, 41);
+            button_NovaReserva.Margin = new Padding(3, 2, 3, 2);
+            button_NovaReserva.Name = "button_NovaReserva";
+            button_NovaReserva.Size = new Size(200, 41);
+            button_NovaReserva.TabIndex = 2;
+            button_NovaReserva.Text = "Nova Reserva";
+            button_NovaReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button_NovaReserva.UseVisualStyleBackColor = true;
+            button_NovaReserva.Click += button_NovaReserva_Click;
             // 
             // button_reservas
             // 
@@ -131,14 +274,28 @@
             button_reservas.ForeColor = Color.White;
             button_reservas.Image = Properties.Resources.Reservas;
             button_reservas.ImageAlign = ContentAlignment.MiddleLeft;
-            button_reservas.Location = new Point(0, 365);
+            button_reservas.Location = new Point(0, 0);
+            button_reservas.Margin = new Padding(3, 2, 3, 2);
             button_reservas.Name = "button_reservas";
-            button_reservas.Size = new Size(218, 55);
+            button_reservas.Size = new Size(200, 41);
             button_reservas.TabIndex = 1;
             button_reservas.Text = "Reservas   ❯";
             button_reservas.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_reservas.UseVisualStyleBackColor = true;
             button_reservas.Click += button_reservas_Click;
+            // 
+            // AvioesContainer
+            // 
+            AvioesContainer.BackColor = Color.FromArgb(54, 53, 67);
+            AvioesContainer.Controls.Add(button_avioes);
+            AvioesContainer.Controls.Add(button_InserirAviao);
+            AvioesContainer.Dock = DockStyle.Top;
+            AvioesContainer.Location = new Point(0, 232);
+            AvioesContainer.MaximumSize = new Size(200, 82);
+            AvioesContainer.MinimumSize = new Size(200, 41);
+            AvioesContainer.Name = "AvioesContainer";
+            AvioesContainer.Size = new Size(200, 41);
+            AvioesContainer.TabIndex = 0;
             // 
             // button_avioes
             // 
@@ -149,14 +306,46 @@
             button_avioes.ForeColor = Color.White;
             button_avioes.Image = Properties.Resources.Avioes;
             button_avioes.ImageAlign = ContentAlignment.MiddleLeft;
-            button_avioes.Location = new Point(0, 310);
+            button_avioes.Location = new Point(0, 0);
+            button_avioes.Margin = new Padding(3, 2, 3, 2);
             button_avioes.Name = "button_avioes";
-            button_avioes.Size = new Size(218, 55);
+            button_avioes.Size = new Size(200, 41);
             button_avioes.TabIndex = 1;
             button_avioes.Text = "Aviões   ❯";
             button_avioes.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_avioes.UseVisualStyleBackColor = true;
             button_avioes.Click += button_avioes_Click;
+            // 
+            // button_InserirAviao
+            // 
+            button_InserirAviao.Dock = DockStyle.Bottom;
+            button_InserirAviao.FlatAppearance.BorderSize = 0;
+            button_InserirAviao.FlatStyle = FlatStyle.Flat;
+            button_InserirAviao.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            button_InserirAviao.ForeColor = Color.White;
+            button_InserirAviao.Image = Properties.Resources.Avioes;
+            button_InserirAviao.ImageAlign = ContentAlignment.MiddleLeft;
+            button_InserirAviao.Location = new Point(0, 0);
+            button_InserirAviao.Margin = new Padding(3, 2, 3, 2);
+            button_InserirAviao.Name = "button_InserirAviao";
+            button_InserirAviao.Size = new Size(200, 41);
+            button_InserirAviao.TabIndex = 2;
+            button_InserirAviao.Text = "Inserir Aviao";
+            button_InserirAviao.TextImageRelation = TextImageRelation.ImageBeforeText;
+            button_InserirAviao.UseVisualStyleBackColor = true;
+            button_InserirAviao.Click += button_InserirAviao_Click;
+            // 
+            // DashboardContainer
+            // 
+            DashboardContainer.BackColor = Color.FromArgb(54, 53, 67);
+            DashboardContainer.Controls.Add(button_dashboard);
+            DashboardContainer.Dock = DockStyle.Top;
+            DashboardContainer.Location = new Point(0, 191);
+            DashboardContainer.MaximumSize = new Size(200, 41);
+            DashboardContainer.MinimumSize = new Size(200, 41);
+            DashboardContainer.Name = "DashboardContainer";
+            DashboardContainer.Size = new Size(200, 41);
+            DashboardContainer.TabIndex = 2;
             // 
             // button_dashboard
             // 
@@ -167,9 +356,10 @@
             button_dashboard.ForeColor = Color.White;
             button_dashboard.Image = Properties.Resources.Dashboard;
             button_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
-            button_dashboard.Location = new Point(0, 255);
+            button_dashboard.Location = new Point(0, 0);
+            button_dashboard.Margin = new Padding(3, 2, 3, 2);
             button_dashboard.Name = "button_dashboard";
-            button_dashboard.Size = new Size(218, 55);
+            button_dashboard.Size = new Size(200, 41);
             button_dashboard.TabIndex = 1;
             button_dashboard.Text = "Dashboard";
             button_dashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -181,18 +371,17 @@
             panel_icone.Controls.Add(pictureBoxLogo);
             panel_icone.Dock = DockStyle.Top;
             panel_icone.Location = new Point(0, 0);
-            panel_icone.Margin = new Padding(11, 7, 6, 13);
+            panel_icone.Margin = new Padding(10, 5, 5, 10);
             panel_icone.Name = "panel_icone";
-            panel_icone.Size = new Size(218, 255);
+            panel_icone.Size = new Size(191, 191);
             panel_icone.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Image = Properties.Resources.amlogo;
-            pictureBoxLogo.Location = new Point(23, 13);
-            pictureBoxLogo.Margin = new Padding(3, 4, 3, 4);
+            pictureBoxLogo.Location = new Point(20, 10);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(170, 208);
+            pictureBoxLogo.Size = new Size(149, 156);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
@@ -203,79 +392,45 @@
             panel_main.BorderStyle = BorderStyle.Fixed3D;
             panel_main.Dock = DockStyle.Fill;
             panel_main.ImeMode = ImeMode.Off;
-            panel_main.Location = new Point(218, 0);
+            panel_main.Location = new Point(191, 0);
+            panel_main.Margin = new Padding(3, 2, 3, 2);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(1086, 868);
+            panel_main.Size = new Size(950, 651);
             panel_main.TabIndex = 1;
             // 
-            // button_HistoricoManutencao
+            // AvioesTimer
             // 
-            button_HistoricoManutencao.Location = new Point(9, 744);
-            button_HistoricoManutencao.Margin = new Padding(3, 4, 3, 4);
-            button_HistoricoManutencao.Name = "button_HistoricoManutencao";
-            button_HistoricoManutencao.Size = new Size(203, 31);
-            button_HistoricoManutencao.TabIndex = 4;
-            button_HistoricoManutencao.Text = "Historico de Manutenções";
-            button_HistoricoManutencao.UseVisualStyleBackColor = true;
-            button_HistoricoManutencao.Click += button_HistoricoManutencao_Click;
+            AvioesTimer.Interval = 10;
+            AvioesTimer.Tick += AvioesTimer_Tick;
             // 
-            // button_NovaManutencao
+            // ReservasTimer
             // 
-            button_NovaManutencao.Location = new Point(33, 708);
-            button_NovaManutencao.Margin = new Padding(3, 4, 3, 4);
-            button_NovaManutencao.Name = "button_NovaManutencao";
-            button_NovaManutencao.Size = new Size(179, 31);
-            button_NovaManutencao.TabIndex = 3;
-            button_NovaManutencao.Text = "Nova Manutencao";
-            button_NovaManutencao.UseVisualStyleBackColor = true;
-            button_NovaManutencao.Click += button_NovaManutencao_Click;
+            ReservasTimer.Interval = 10;
+            ReservasTimer.Tick += ReservasTimer_Tick;
             // 
-            // button_HistoricoReserva
+            // ManutencaoTimer
             // 
-            button_HistoricoReserva.Location = new Point(53, 674);
-            button_HistoricoReserva.Margin = new Padding(3, 4, 3, 4);
-            button_HistoricoReserva.Name = "button_HistoricoReserva";
-            button_HistoricoReserva.Size = new Size(159, 31);
-            button_HistoricoReserva.TabIndex = 2;
-            button_HistoricoReserva.Text = "Historico de Reservas";
-            button_HistoricoReserva.UseVisualStyleBackColor = true;
-            button_HistoricoReserva.Click += button_HistoricoReserva_Click;
-            // 
-            // button_NovaReserva
-            // 
-            button_NovaReserva.Location = new Point(87, 643);
-            button_NovaReserva.Margin = new Padding(3, 4, 3, 4);
-            button_NovaReserva.Name = "button_NovaReserva";
-            button_NovaReserva.Size = new Size(125, 31);
-            button_NovaReserva.TabIndex = 1;
-            button_NovaReserva.Text = "Nova Reserva";
-            button_NovaReserva.UseVisualStyleBackColor = true;
-            button_NovaReserva.Click += button_NovaReserva_Click;
-            // 
-            // button_InserirAviao
-            // 
-            button_InserirAviao.Location = new Point(76, 604);
-            button_InserirAviao.Margin = new Padding(3, 4, 3, 4);
-            button_InserirAviao.Name = "button_InserirAviao";
-            button_InserirAviao.Size = new Size(136, 31);
-            button_InserirAviao.TabIndex = 0;
-            button_InserirAviao.Text = "Inserir Avião";
-            button_InserirAviao.UseVisualStyleBackColor = true;
-            button_InserirAviao.Click += button_InserirAviao_Click;
+            ManutencaoTimer.Interval = 10;
+            ManutencaoTimer.Tick += ManutencaoTimer_Tick;
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1304, 868);
+            ClientSize = new Size(1141, 651);
             Controls.Add(panel_main);
             Controls.Add(panel_sidebar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aeromils";
             panel_sidebar.ResumeLayout(false);
+            SobreContainer.ResumeLayout(false);
+            AlertasContainer.ResumeLayout(false);
+            ManutencaoContainer.ResumeLayout(false);
+            ReservasContainer.ResumeLayout(false);
+            AvioesContainer.ResumeLayout(false);
+            DashboardContainer.ResumeLayout(false);
             panel_icone.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBoxLogo).EndInit();
             ResumeLayout(false);
@@ -293,10 +448,20 @@
         private Button button_sobre;
         private Panel panel_main;
         private PictureBox pictureBoxLogo;
+        private Button button_HistoricoReserva;
+        private Panel AvioesContainer;
+        private Button button_InserirAviao;
+        private System.Windows.Forms.Timer AvioesTimer;
+        private Panel ManutencaoContainer;
+        private Panel ReservasContainer;
+        private Button button_NovaReserva;
+        private Button button2;
+        private System.Windows.Forms.Timer ReservasTimer;
+        private System.Windows.Forms.Timer ManutencaoTimer;
         private Button button_HistoricoManutencao;
         private Button button_NovaManutencao;
-        private Button button_HistoricoReserva;
-        private Button button_NovaReserva;
-        private Button button_InserirAviao;
+        private Panel AlertasContainer;
+        private Panel DashboardContainer;
+        private Panel SobreContainer;
     }
 }
