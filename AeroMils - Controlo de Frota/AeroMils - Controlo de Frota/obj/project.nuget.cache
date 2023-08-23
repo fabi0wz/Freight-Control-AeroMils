@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "zKlRTU9QFWjxjcESsPGfUKR0bvAPQrS2xiylPR/iAzLPYA5VR2bkQbnhltCktAh5W9xC2Ou+78+EGGuZMqkMtQ==",
+  "dgSpecHash": "boCLWfH9C4vQPVaM5pcXL3vIxQZ0zEnj6z4oB7BhMJdchDxdAs3TJmTjU8oG35dW58zX9Y3ftaJUFpR9bDTIgw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\TP4-C-\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\Desktop\\backup\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota\\AeroMils - Controlo de Frota.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",

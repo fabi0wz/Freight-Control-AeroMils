@@ -19,33 +19,59 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             InitializeComponent();
 
-            panel_vooComercial.Visible = true;
-            panel_vooParticular.Visible = false;
-            panel_vooMercadoria.Visible = false;
-            panel_avionetas.Visible = false;
+            ComercialDetails_panel.Visible = true;
+            IdaVolta_panel.Visible = true;
+            Comercial_SoIda_panel.Visible = false;
+            ParticularDetails_panel.Visible = false;
+            MercadoriaDetails_panel.Visible = false;
+
+
         }
 
 
         // methods
-        private void ActivateButton(object senderBtn)
+        private void ActivateBigButtons(object senderBtn)
         {
             if (senderBtn != null)
             {
-                DisableButton();
+                DisableBigButtons();
                 currentButton = (Button)senderBtn;
                 currentButton.BackColor = Color.FromArgb(255, 98, 45);
-                currentButton.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+            }
+        }
+        private void ActivateSmallButtons(object senderBtn)
+        {
+            if (senderBtn != null)
+            {
+                DisableSmallButtons();
+                currentButton = (Button)senderBtn;
+                currentButton.BackColor = Color.FromArgb(255, 98, 45);
             }
         }
 
-        private void DisableButton()
+        private void DisableBigButtons()
         {
             foreach (Control btn in VoosPanel.Controls)
             {
                 if (btn.GetType() == typeof(Button))
                 {
                     btn.BackColor = Color.FromArgb(54, 53, 67);
-                    btn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+        }
+        private void DisableSmallButtons()
+        {
+            foreach (Control panel in VoosPanel.Controls)
+            {
+                if (panel.GetType() == typeof(Panel))
+                {
+                    foreach (Control btn in panel.Controls)
+                    {
+                        if (btn.GetType() == typeof(Button))
+                        {
+                            btn.BackColor = Color.FromArgb(54, 53, 67);
+                        }
+                    }
                 }
             }
         }
@@ -54,44 +80,88 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooComercial_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateBigButtons(sender);
 
-            panel_vooComercial.Visible = true;
-            panel_vooParticular.Visible = false;
-            panel_vooMercadoria.Visible = false;
-            panel_avionetas.Visible = false;
+            ComercialDetails_panel.Visible = true;
+            ParticularDetails_panel.Visible = false;
+            MercadoriaDetails_panel.Visible = false;
+
         }
 
         private void VooParticular_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateBigButtons(sender);
 
-            panel_vooComercial.Visible = false;
-            panel_vooParticular.Visible = true;
-            panel_vooMercadoria.Visible = false;
-            panel_avionetas.Visible = false;
+            ComercialDetails_panel.Visible = false;
+            ParticularDetails_panel.Visible = true;
+            MercadoriaDetails_panel.Visible = false;
+
         }
 
         private void VooMercadoria_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateBigButtons(sender);
 
-            panel_vooComercial.Visible = false;
-            panel_vooParticular.Visible = false;
-            panel_vooMercadoria.Visible = true;
-            panel_avionetas.Visible = false;
+            ComercialDetails_panel.Visible = false;
+            ParticularDetails_panel.Visible = false;
+            MercadoriaDetails_panel.Visible = true;
+
         }
 
         private void Avionetas_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            ActivateBigButtons(sender);
 
-            panel_vooComercial.Visible = false;
-            panel_vooParticular.Visible = false;
-            panel_vooMercadoria.Visible = false;
-            panel_avionetas.Visible = true;
+            ComercialDetails_panel.Visible = false;
+            ParticularDetails_panel.Visible = false;
+            MercadoriaDetails_panel.Visible = false;
+
         }
 
 
+        private void Comercial_IdaVolta_button_Click(object sender, EventArgs e)
+        {
+            ActivateSmallButtons(sender);
+
+            IdaVolta_panel.Visible = true;
+            Comercial_SoIda_panel.Visible = false;
+        }
+
+        private void Comercial_SoIda_button_Click(object sender, EventArgs e)
+        {
+            ActivateSmallButtons(sender);
+
+            IdaVolta_panel.Visible = false;
+            Comercial_SoIda_panel.Visible = true;
+        }
+
+        private void Reservar_button_Click(object sender, EventArgs e)
+        {
+            if (ComercialDetails_panel.Visible == true)
+            {
+                if (IdaVolta_panel.Visible == true)
+                {
+                    //reserva ida e volta
+
+
+                }
+                else
+                {
+                    //reserva so ida
+                }
+            }
+            else if (ParticularDetails_panel.Visible == true)
+            {
+                //reserva particular
+            }
+            else if (MercadoriaDetails_panel.Visible == true)
+            {
+                //reserva mercadoria
+            }
+            else
+            {
+                //reserva avioneta
+            }
+        }
     }
 }

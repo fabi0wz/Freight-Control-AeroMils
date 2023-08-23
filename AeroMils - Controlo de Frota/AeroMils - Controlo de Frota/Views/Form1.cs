@@ -29,7 +29,6 @@ namespace AeroMils___Controlo_de_Frota.Views
                 DisableButton();
                 currentButton = (Button)senderBtn;
                 currentButton.BackColor = Color.FromArgb(255, 98, 45);
-                currentButton.Font = new Font("Microsoft Sans Serif", 13F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
             }
         }
 
@@ -44,7 +43,6 @@ namespace AeroMils___Controlo_de_Frota.Views
                         if (btn.GetType() == typeof(Button))
                         {
                             btn.BackColor = Color.FromArgb(54, 53, 67);
-                            btn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, ((byte)(0)));
                         }
                     }
                 }
@@ -151,9 +149,12 @@ namespace AeroMils___Controlo_de_Frota.Views
             OpenChildForm(new Views.InserirAviao(), sender);
         }
 
+
+        //open a new form in a separate window
         private void button_NovaReserva_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Views.NovaReserva(), sender);
+            Views.NovaReserva novaReserva = new Views.NovaReserva();
+            novaReserva.Show();
         }
 
         private void button_HistoricoReserva_Click(object sender, EventArgs e)
@@ -251,7 +252,5 @@ namespace AeroMils___Controlo_de_Frota.Views
                 }
             }
         }
-
-
     }
 }
