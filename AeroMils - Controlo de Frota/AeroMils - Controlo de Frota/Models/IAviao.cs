@@ -11,6 +11,8 @@
         string modelo { get; set; }
         int qtdMotores { get; set; }
 
+        //string tipoAviao { get; set; } //dar return de um string com o tipo de aviao
+
         void AlterarEstado();
     }
 }

@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewAvioes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewAvioes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(219, 162);
-            label1.Name = "label1";
-            label1.Size = new Size(324, 106);
-            label1.TabIndex = 0;
-            label1.Text = "AVIOES";
+            dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAvioes.Location = new Point(85, 53);
+            dataGridViewAvioes.Name = "dataGridViewAvioes";
+            dataGridViewAvioes.RowTemplate.Height = 25;
+            dataGridViewAvioes.Size = new Size(240, 150);
+            dataGridViewAvioes.TabIndex = 0;
             // 
             // Avioes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(700, 338);
+            Controls.Add(dataGridViewAvioes);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Avioes";
             Text = "Avioes";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridViewAvioes;
     }
 }
