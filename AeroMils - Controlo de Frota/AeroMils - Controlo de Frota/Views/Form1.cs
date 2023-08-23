@@ -1,4 +1,7 @@
 
+using AeroMils___Controlo_de_Frota.Data.DbContext;
+using System.Data;
+
 namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Form1 : Form
@@ -9,6 +12,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         bool avioesCollapsed = true;
         bool reservasCollapsed = true;
         bool manutencaoCollapsed = true;
+        private SQLiteDBContext dbContext = new SQLiteDBContext();
 
 
         public Form1()

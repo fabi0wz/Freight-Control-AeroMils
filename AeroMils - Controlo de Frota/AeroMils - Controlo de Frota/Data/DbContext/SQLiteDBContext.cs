@@ -10,31 +10,184 @@ using AeroMils___Controlo_de_Frota.Models;
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
-    internal class SQLiteDBContext
+    public class SQLiteDBContext
     {
-        SQLiteConnection DBConnection = new SQLiteConnection(@"Data/AeroMilsDatabase.db"); 
+        private SQLiteConnection connection;
 
-
-        public void openConnection()
+        public SQLiteDBContext()
         {
-            DBConnection.Open();
+            // Initialize your connection in the constructor
+            string connectionString = @"Data Source=C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\Data\AeroMilsDatabase.db";
+            connection = new SQLiteConnection(connectionString);
         }
 
-        public void closeConnection()
+        public void OpenConnection()
         {
-            DBConnection.Close();
+            if (connection.State == ConnectionState.Closed)
+            {
+                connection.Open();
+            }
         }
 
-        public void inserirNovoAviao(IAviao aviao)
+        public void CloseConnection()
         {
-            string query = $"INSERT INTO Aviao (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_de_aviao) VALUES ({aviao.modelo}, {aviao.capacidade_passageiros}, {aviao.autonomia}, )";
-            //ok uma explicacao rapida (depois explico melhor) esta funcao recebe por parametro nao um objeto mas uma interface (como o sergio disse interface é um contrato que as classes sao obrigadas a implementar)
-            //ou seja nao importa qual é o tipo de aviao que estamos a passar para aqui, o que importa é que implemente a interface IAviao
-            //isto é util porque assim podemos passar qualquer tipo de aviao para aqui e o codigo vai funcionar na mesma
-            //A seguir vou fazer um metodo para determinar o tipo de aviao (em cada um dos Models, vai ter uma especie to_string que só retorna o string a dizer o tipo de aviao) e depois com um if
-            //escolhemos para que table vamos adicionar o resto das informacoes do aviao
+            if (connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
+        }
 
-            //getPlaneType(aviao.GetPlaneType);
-        }   
+        static int InserirNovoAviao(IAviao aviao)
+        {
+            string connectionString = @"Data Source=Data/AeroMilsDatabase.db";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string query = "INSERT INTO Aviao (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_de_aviao) VALUES (@modelo, @capacidade, @autonomia, @dataManutencao, @tipo); SELECT last_insert_rowid();";
+
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@modelo", aviao.modelo);
+                    command.Parameters.AddWithValue("@capacidade", aviao.capacidade_passageiros);
+                    command.Parameters.AddWithValue("@autonomia", aviao.autonomia);
+                    command.Parameters.AddWithValue("@dataManutencao", aviao.dataUltimaManutencao);
+                    //command.Parameters.AddWithValue("@tipo", aviao.tipoAviao);
+
+                    int newAviaoId = Convert.ToInt32(command.ExecuteScalar());
+                    return newAviaoId;
+                }
+            }
+        }
+
+        static void InserirNovaAvioneta(int aviaoId, int areaMinimaDescolagem, decimal valorFrete)
+        {
+            string connectionString = @"Data Source=Data/AeroMilsDatabase.db";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string query = "INSERT INTO Avioneta (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
+
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
+                    command.Parameters.AddWithValue("@areaMinimaDescolagem", areaMinimaDescolagem);
+                    command.Parameters.AddWithValue("@valorFrete", valorFrete);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        static void InserirNovaAeronaveMercadorias(int aviaoId, int capacidadeCarga, decimal valorFrete)
+        {
+            string connectionString = @"Data Source=Data/AeroMilsDatabase.db";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string query = "INSERT INTO AeronaveMercadorias (id_aviao, capacidade_carga, valor_frete) VALUES (@aviaoId, @capacidadeCarga, @valorFrete);";
+
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
+                    command.Parameters.AddWithValue("@capacidadeCarga", capacidadeCarga);
+                    command.Parameters.AddWithValue("@valorFrete", valorFrete);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        static void InserirNovaAeronaveComercial(int aviaoId, int numVoosDiarios, decimal companhiaArea)
+        {
+            string connectionString = @"Data Source=Data/AeroMilsDatabase.db";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string query = "INSERT INTO AeronavesComerciais (id_aviao, num_voos_diarios, companhia_area) VALUES (@aviaoId, @numVoosDiarios, @companhiaArea);";
+
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
+                    command.Parameters.AddWithValue("@numVoosDiarios", numVoosDiarios);
+                    command.Parameters.AddWithValue("@companhiaArea", companhiaArea);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        static void InserirNovaAeronaveParticular(int aviaoId, int numProprietarios, decimal valorFrete)
+        {
+            string connectionString = @"Data Source=Data/AeroMilsDatabase.db";
+
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                using (SQLiteCommand command = new SQLiteCommand(connection))
+                {
+                    string query = "INSERT INTO AeronavesParticulares (id_aviao, num_proprietarios, valor_frete) VALUES (@aviaoId, @numProprietarios, @valorFrete);";
+
+                    command.CommandText = query;
+                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
+                    command.Parameters.AddWithValue("@numProprietarios", numProprietarios);
+                    command.Parameters.AddWithValue("@valorFrete", valorFrete);
+
+                    command.ExecuteNonQuery();
+                }
+            }
+        }
+
+
+        public DataTable GetAvioesData()
+        {
+            DataTable dataTable = new DataTable();
+
+            OpenConnection(); // Open the connection before using it
+
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes", connection))
+            {
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            CloseConnection(); // Close the connection after using it
+
+            return dataTable;
+        }
+
+        public DataTable GetReservasData()
+        {
+            DataTable dataTable = new DataTable();
+
+            OpenConnection(); // Open the connection before using it
+
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Reservas", connection))
+            {
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            CloseConnection(); // Close the connection after using it
+
+            return dataTable;
+        }
+
     }
 }
