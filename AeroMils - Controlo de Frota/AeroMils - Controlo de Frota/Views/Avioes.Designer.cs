@@ -28,18 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             dataGridViewAvioes = new DataGridView();
+            sQLiteDBContextBindingSource = new BindingSource(components);
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             SuspendLayout();
             // 
             // dataGridViewAvioes
             // 
             dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAvioes.Location = new Point(85, 53);
+            dataGridViewAvioes.Location = new Point(3, 2);
             dataGridViewAvioes.Name = "dataGridViewAvioes";
             dataGridViewAvioes.RowTemplate.Height = 25;
-            dataGridViewAvioes.Size = new Size(240, 150);
+            dataGridViewAvioes.Size = new Size(695, 333);
             dataGridViewAvioes.TabIndex = 0;
+            // 
+            // sQLiteDBContextBindingSource
+            // 
+            sQLiteDBContextBindingSource.DataSource = typeof(Data.DbContext.SQLiteDBContext);
             // 
             // Avioes
             // 
@@ -51,11 +58,13 @@
             Name = "Avioes";
             Text = "Avioes";
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private DataGridView dataGridViewAvioes;
+        private BindingSource sQLiteDBContextBindingSource;
     }
 }

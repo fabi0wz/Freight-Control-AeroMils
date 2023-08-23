@@ -17,7 +17,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public SQLiteDBContext()
         {
             // Initialize your connection in the constructor
-            string connectionString = @"Data Source=../AeroMilsDatabase.db";
+            string connectionString = @"Data Source=C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\Data\AeroMilsDatabase.db";
             connection = new SQLiteConnection(connectionString);
         }
 
@@ -158,6 +158,25 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             OpenConnection(); // Open the connection before using it
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes", connection))
+            {
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            CloseConnection(); // Close the connection after using it
+
+            return dataTable;
+        }
+
+        public DataTable GetReservasData()
+        {
+            DataTable dataTable = new DataTable();
+
+            OpenConnection(); // Open the connection before using it
+
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Reservas", connection))
             {
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
