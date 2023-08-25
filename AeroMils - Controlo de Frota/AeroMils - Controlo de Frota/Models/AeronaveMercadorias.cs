@@ -22,7 +22,7 @@ namespace AeroMils___Controlo_de_Frota.Models
             set => _valorFrete = new Frete(value);
         }
 
-        public AeronaveMercadorias(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int capacidadeCarga, double valorFrete) : base(capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+        public AeronaveMercadorias(int id, int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int capacidadeCarga, double valorFrete) : base(id, capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
         {
             _capacidadeCarga = capacidade_passageiros;
             _valorFrete = new Frete(valorFrete);

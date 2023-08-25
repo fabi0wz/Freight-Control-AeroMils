@@ -23,8 +23,8 @@ namespace AeroMils___Controlo_de_Frota.Models
             set => _companhiaAerea = value;
         }
 
-        public AeronaveComercial(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int numeroVoosDia, string companhiaAerea)
-            : base(capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+        public AeronaveComercial(int id, int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int numeroVoosDia, string companhiaAerea)
+            : base(id, capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
         {
             _numeroVoosDia = numeroVoosDia;
             _companhiaAerea = companhiaAerea;

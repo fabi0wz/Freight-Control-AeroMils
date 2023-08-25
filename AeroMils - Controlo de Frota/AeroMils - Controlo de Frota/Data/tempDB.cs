@@ -9,7 +9,7 @@ using AeroMils___Controlo_de_Frota.Models;
 namespace AeroMils___Controlo_de_Frota.Data
 {
     internal static class tempDB
-    {
+    { }/*
         public static void criarAeronaveComercial(int instancesAeronaveComercial, Random AeronaveComercialRand)
         {
             for (int i = 0; i < instancesAeronaveComercial; i++)
@@ -118,5 +118,5 @@ namespace AeroMils___Controlo_de_Frota.Data
             DateTime randomDate = startDate.AddDays(random.Next(range));
             return randomDate.ToString("dd/MM/yyyy");
         }
-    }
+    }*/
 }

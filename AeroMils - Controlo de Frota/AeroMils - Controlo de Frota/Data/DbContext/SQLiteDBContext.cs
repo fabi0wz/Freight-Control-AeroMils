@@ -8,18 +8,19 @@ using System.Data.Common;
 using System.Data;
 using AeroMils___Controlo_de_Frota.Models;
 using System.Numerics;
+using System.Reflection;
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
     public class SQLiteDBContext
     {
         private SQLiteConnection connection;
-        private static string connectionString = @"Data Source=C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\Data\AeroMilsDatabase.db";
+        private static readonly string connectionString = "Data Source=../../../Data/AeroMilsDatabase.db";
 
         public SQLiteDBContext()
         {
-            // Initialize your connection in the constructor
             connection = new SQLiteConnection(connectionString);
+
         }
 
         public void OpenConnection()
@@ -204,41 +205,23 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         }
 
 
-        public List<Plane> GetAvioesData()
+        public DataTable GetAvioesData()
         {
-            List<Plane> planes = new List<Plane>();
+            DataTable dataTable = new DataTable();
 
             OpenConnection(); // Open the connection before using it
 
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes", connection))
+            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes ORDER BY id_aviao DESC", connection))
             {
-                using (SQLiteDataReader reader = command.ExecuteReader())
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
-                    while (reader.Read())
-                    {
-                        Plane plane = new Plane
-
-                        //private int _capacidade_passageiros;
-                        //private int _autonomia;
-                        //private DateTime _dataUltimaManutencao;
-                        //private bool _estado;
-                        //private int _qtdMotores;
-                        //private string _marca;
-                        //private string _modelo;
-                        //private DateTime _anoFabrico;
-                        {
-                            ID = Convert.ToInt32(reader["id_aviao"]),
-                            Model = reader["Model"].ToString(),
-                            // Set other properties here
-                        };
-                        planes.Add(plane);
-                    }
+                    adapter.Fill(dataTable);
                 }
             }
 
             CloseConnection(); // Close the connection after using it
 
-            return planes;
+            return dataTable;
         }
 
         public DataTable getAvailablePlanes()
@@ -383,7 +366,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             using (SQLiteCommand command = new SQLiteCommand(
                 "SELECT * " +
                 "FROM Avioes " +
-                "WHERE Status = 1 " +
+                "WHERE estado = 1 " +
                 "LIMIT 5", connection))
             {
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))

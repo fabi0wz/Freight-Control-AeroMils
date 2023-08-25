@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace AeroMils___Controlo_de_Frota.Models
 {
-    internal class Aviao : IAviao
+    public class Aviao : IAviao
     {
 
-        private int id;
+        private int _id;
 
         private int _capacidade_passageiros;
 
@@ -27,8 +27,19 @@ namespace AeroMils___Controlo_de_Frota.Models
         private string _modelo;
 
         private DateTime _anoFabrico;
+        
+        public int id
+        {
+            get
+            {
+                return _id;
+            }
 
-
+            set
+            {
+                _id = value;
+            }
+        }   
         public int capacidade_passageiros
         {
             get
@@ -157,38 +168,5 @@ namespace AeroMils___Controlo_de_Frota.Models
         {
             SQLiteDBContext.ChangePlaneStatus(id);
         }
-
-  
-
-        /*public List<Aviao> ConsultarDisponiveis(List<Aviao> avioes)
-        {
-            List<Aviao> disponiveis = new List<Aviao>();
-
-            foreach (var aviao in avioes)
-            {
-                if (aviao.estado)
-                {
-                    disponiveis.Add(aviao);
-                }
-            }
-
-            return disponiveis;
-        }*/
-
-        /*public List<Aviao> ConsultarManutencao(List<Aviao> avioes)
-        {
-            List<Aviao> emManutencao = new List<Aviao>();
-
-            foreach (var aviao in avioes)
-            {
-                if (aviao.dataUltimaManutencao < DateTime.Now)
-                {
-                    emManutencao.Add(aviao);
-                }
-            }
-
-            return emManutencao;
-        }*/
-
     }
 }

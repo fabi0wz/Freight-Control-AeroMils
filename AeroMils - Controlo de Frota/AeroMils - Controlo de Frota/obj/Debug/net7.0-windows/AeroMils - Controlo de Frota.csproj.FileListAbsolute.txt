@@ -161,3 +161,5 @@ C:\Users\Daniel\Desktop\backup\AeroMils - Controlo de Frota\AeroMils - Controlo 
 C:\Users\Daniel\Desktop\backup\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\ref\AeroMils - Controlo de Frota.dll
 C:\Users\Daniel\Desktop\backup\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Login.resources
 C:\Users\Daniel\Desktop\backup\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Register.resources
+C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Login.resources
+C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Register.resources

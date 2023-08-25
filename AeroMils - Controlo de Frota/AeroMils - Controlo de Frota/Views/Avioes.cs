@@ -1,4 +1,5 @@
 ﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
+using AeroMils___Controlo_de_Frota.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,5 +23,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             DataTable avioesDataTable = dbContext.GetAvioesData();
             dataGridViewAvioes.DataSource = avioesDataTable;
         }
+
+
     }
 }

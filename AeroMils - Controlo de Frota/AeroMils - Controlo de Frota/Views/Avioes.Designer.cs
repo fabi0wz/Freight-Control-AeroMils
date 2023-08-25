@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            dataGridViewAvioes = new DataGridView();
             sQLiteDBContextBindingSource = new BindingSource(components);
-            dataGridViewAvioesButtons = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
+            dataGridViewAvioes = new DataGridView();
+            changeStatus = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
             SuspendLayout();
-            // 
-            // dataGridViewAvioes
-            // 
-            dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewAvioes.Columns.AddRange(new DataGridViewColumn[] { dataGridViewAvioesButtons });
-            dataGridViewAvioes.Location = new Point(3, 2);
-            dataGridViewAvioes.Name = "dataGridViewAvioes";
-            dataGridViewAvioes.RowTemplate.Height = 25;
-            dataGridViewAvioes.Size = new Size(1056, 508);
-            dataGridViewAvioes.TabIndex = 0;
             // 
             // sQLiteDBContextBindingSource
             // 
             sQLiteDBContextBindingSource.DataSource = typeof(Data.DbContext.SQLiteDBContext);
             // 
-            // dataGridViewAvioesButtons
+            // dataGridViewAvioes
             // 
-            dataGridViewAvioesButtons.HeaderText = "Editar Estado";
-            dataGridViewAvioesButtons.Name = "dataGridViewAvioesButtons";
+            dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAvioes.Columns.AddRange(new DataGridViewColumn[] { changeStatus });
+            dataGridViewAvioes.Location = new Point(12, 12);
+            dataGridViewAvioes.Name = "dataGridViewAvioes";
+            dataGridViewAvioes.RowTemplate.Height = 25;
+            dataGridViewAvioes.Size = new Size(1000, 500);
+            dataGridViewAvioes.TabIndex = 0;
+            // 
+            // changeStatus
+            // 
+            changeStatus.HeaderText = "Mudar Estado";
+            changeStatus.Name = "changeStatus";
             // 
             // Avioes
             // 
@@ -64,15 +64,15 @@
             Margin = new Padding(3, 2, 3, 2);
             Name = "Avioes";
             Text = "Avioes";
-            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).EndInit();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-
-        private DataGridView dataGridViewAvioes;
         private BindingSource sQLiteDBContextBindingSource;
-        private DataGridViewButtonColumn dataGridViewAvioesButtons;
+        private FlowLayoutPanel airplaneSlideMenuFlowLayoutPanel;
+        private DataGridView dataGridViewAvioes;
+        private DataGridViewButtonColumn changeStatus;
     }
 }

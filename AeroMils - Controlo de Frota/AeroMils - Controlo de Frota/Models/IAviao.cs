@@ -13,6 +13,6 @@
 
         //string tipoAviao { get; set; } //dar return de um string com o tipo de aviao
 
-        void AlterarEstado();
+        void AlterarEstado(int id);
     }
 }
