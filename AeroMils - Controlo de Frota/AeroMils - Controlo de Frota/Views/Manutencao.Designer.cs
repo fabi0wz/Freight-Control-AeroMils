@@ -28,33 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewManutencao = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewManutencao).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewManutencao
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(100, 169);
-            label1.Name = "label1";
-            label1.Size = new Size(618, 106);
-            label1.TabIndex = 0;
-            label1.Text = "MANUTENCAO";
+            dataGridViewManutencao.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewManutencao.Location = new Point(2, 2);
+            dataGridViewManutencao.Name = "dataGridViewManutencao";
+            dataGridViewManutencao.RowTemplate.Height = 25;
+            dataGridViewManutencao.Size = new Size(695, 333);
+            dataGridViewManutencao.TabIndex = 0;
             // 
             // Manutencao
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(700, 338);
+            Controls.Add(dataGridViewManutencao);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Manutencao";
             Text = "Manutencao";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewManutencao).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridViewManutencao;
     }
 }

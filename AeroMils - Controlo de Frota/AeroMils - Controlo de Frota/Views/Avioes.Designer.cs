@@ -28,33 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            components = new System.ComponentModel.Container();
+            dataGridViewAvioes = new DataGridView();
+            sQLiteDBContextBindingSource = new BindingSource(components);
+            dataGridViewAvioesButtons = new DataGridViewButtonColumn();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewAvioes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(219, 162);
-            label1.Name = "label1";
-            label1.Size = new Size(324, 106);
-            label1.TabIndex = 0;
-            label1.Text = "AVIOES";
+            dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAvioes.Columns.AddRange(new DataGridViewColumn[] { dataGridViewAvioesButtons });
+            dataGridViewAvioes.Location = new Point(3, 2);
+            dataGridViewAvioes.Name = "dataGridViewAvioes";
+            dataGridViewAvioes.RowTemplate.Height = 25;
+            dataGridViewAvioes.Size = new Size(1056, 508);
+            dataGridViewAvioes.TabIndex = 0;
+            // 
+            // sQLiteDBContextBindingSource
+            // 
+            sQLiteDBContextBindingSource.DataSource = typeof(Data.DbContext.SQLiteDBContext);
+            // 
+            // dataGridViewAvioesButtons
+            // 
+            dataGridViewAvioesButtons.HeaderText = "Editar Estado";
+            dataGridViewAvioesButtons.Name = "dataGridViewAvioesButtons";
             // 
             // Avioes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(1064, 515);
+            Controls.Add(dataGridViewAvioes);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Avioes";
             Text = "Avioes";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).EndInit();
+            ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridViewAvioes;
+        private BindingSource sQLiteDBContextBindingSource;
+        private DataGridViewButtonColumn dataGridViewAvioesButtons;
     }
 }

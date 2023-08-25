@@ -5,8 +5,8 @@
   "elements": [
     {
       "type": "text",
-      "version": 56,
-      "versionNonce": 1906848812,
+      "version": 57,
+      "versionNonce": 1145577528,
       "isDeleted": false,
       "id": "19spB5eD5urAxPqiK3Zqu",
       "fillStyle": "hachure",
@@ -25,7 +25,7 @@
       "groupIds": [],
       "roundness": null,
       "boundElements": [],
-      "updated": 1689102677930,
+      "updated": 1692745034022,
       "link": null,
       "locked": false,
       "fontSize": 20,
