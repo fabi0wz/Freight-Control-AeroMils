@@ -339,6 +339,29 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
+        public DataTable GetPreviousReservasData()
+        {
+           
+            DataTable dataTable = new DataTable();
+
+            OpenConnection(); // Open the connection before using it
+
+            using (SQLiteCommand command = new SQLiteCommand(
+                               "SELECT * " +
+                               "FROM Reservas " +
+                               "WHERE data_fim < DATE('now') " +
+                               "ORDER BY data_fim DESC", connection))
+            {
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            CloseConnection(); // Close the connection after using it
+            return dataTable;
+        }
+
         public DataTable GetManutencoesData()
         {
             DataTable dataTable = new DataTable();
@@ -346,6 +369,29 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             OpenConnection(); // Open the connection before using it
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Manutencoes", connection))
+            {
+                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                {
+                    adapter.Fill(dataTable);
+                }
+            }
+
+            CloseConnection(); // Close the connection after using it
+
+            return dataTable;
+        }
+
+        public DataTable GetPreviousManutencoesData()
+        {
+            DataTable dataTable = new DataTable();
+
+            OpenConnection(); // Open the connection before using it
+
+            using (SQLiteCommand command = new SQLiteCommand(
+                "SELECT * " +
+                "FROM Manutencoes " +
+                "WHERE data_fim < DATE('now') " +
+                "ORDER BY data_fim DESC", connection))
             {
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {

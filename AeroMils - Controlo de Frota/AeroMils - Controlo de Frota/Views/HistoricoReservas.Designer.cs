@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewHistoricoReservas = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistoricoReservas).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewHistoricoReservas
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 45F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(-3, 175);
-            label1.Name = "label1";
-            label1.Size = new Size(821, 100);
-            label1.TabIndex = 1;
-            label1.Text = "HISTORICO RESERVAS";
+            dataGridViewHistoricoReservas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewHistoricoReservas.Location = new Point(12, 12);
+            dataGridViewHistoricoReservas.Name = "dataGridViewHistoricoReservas";
+            dataGridViewHistoricoReservas.RowTemplate.Height = 25;
+            dataGridViewHistoricoReservas.Size = new Size(1027, 518);
+            dataGridViewHistoricoReservas.TabIndex = 0;
             // 
             // HistoricoReservas
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(1124, 575);
+            Controls.Add(dataGridViewHistoricoReservas);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "HistoricoReservas";
             Text = "HistoricoReservas";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistoricoReservas).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private DataGridView dataGridViewHistoricoReservas;
     }
 }
