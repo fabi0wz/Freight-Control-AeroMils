@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             dataGridViewAvioes = new DataGridView();
             sQLiteDBContextBindingSource = new BindingSource(components);
+            dataGridViewAvioesButtons = new DataGridViewButtonColumn();
             ((System.ComponentModel.ISupportInitialize)dataGridViewAvioes).BeginInit();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             SuspendLayout();
@@ -38,21 +39,27 @@
             // dataGridViewAvioes
             // 
             dataGridViewAvioes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewAvioes.Columns.AddRange(new DataGridViewColumn[] { dataGridViewAvioesButtons });
             dataGridViewAvioes.Location = new Point(3, 2);
             dataGridViewAvioes.Name = "dataGridViewAvioes";
             dataGridViewAvioes.RowTemplate.Height = 25;
-            dataGridViewAvioes.Size = new Size(695, 333);
+            dataGridViewAvioes.Size = new Size(1056, 508);
             dataGridViewAvioes.TabIndex = 0;
             // 
             // sQLiteDBContextBindingSource
             // 
             sQLiteDBContextBindingSource.DataSource = typeof(Data.DbContext.SQLiteDBContext);
             // 
+            // dataGridViewAvioesButtons
+            // 
+            dataGridViewAvioesButtons.HeaderText = "Editar Estado";
+            dataGridViewAvioesButtons.Name = "dataGridViewAvioesButtons";
+            // 
             // Avioes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1064, 515);
             Controls.Add(dataGridViewAvioes);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Avioes";
@@ -66,5 +73,6 @@
 
         private DataGridView dataGridViewAvioes;
         private BindingSource sQLiteDBContextBindingSource;
+        private DataGridViewButtonColumn dataGridViewAvioesButtons;
     }
 }

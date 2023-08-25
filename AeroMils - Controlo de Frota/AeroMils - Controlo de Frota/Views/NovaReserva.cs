@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,6 +15,8 @@ namespace AeroMils___Controlo_de_Frota.Views
     {
         // fields
         private Button currentButton = null!;
+        private SQLiteDBContext dbContext = new SQLiteDBContext();
+
 
         public NovaReserva()
         {
@@ -25,9 +28,25 @@ namespace AeroMils___Controlo_de_Frota.Views
             ParticularDetails_panel.Visible = false;
             MercadoriaDetails_panel.Visible = false;
 
+            PopulateDropDown();
 
+            //dataGridViewAvioesDisponiveis
         }
 
+        private void PopulateDropDown()
+        {
+            DataTable avioesDisponiveisDataTable = dbContext.getAvailablePlanes();
+            if(avioesDisponiveisDataTable.Rows.Count > 0)
+            {
+                avioesDisponiveisComboBox.DisplayMember = "modelo";
+                avioesDisponiveisComboBox.ValueMember = "id_aviao";
+                avioesDisponiveisComboBox.DataSource = avioesDisponiveisDataTable;
+            }
+            else
+            {
+                MessageBox.Show("Não existem aviões disponíveis");
+            }
+        }
 
         // methods
         private void ActivateBigButtons(object senderBtn)
@@ -142,6 +161,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 if (IdaVolta_panel.Visible == true)
                 {
                     //reserva ida e volta
+
 
 
                 }

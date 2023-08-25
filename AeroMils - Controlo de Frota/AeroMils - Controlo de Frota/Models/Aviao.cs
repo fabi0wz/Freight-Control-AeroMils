@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,9 @@ namespace AeroMils___Controlo_de_Frota.Models
 {
     internal class Aviao : IAviao
     {
+
+        private int id;
+
         private int _capacidade_passageiros;
 
         private int _autonomia;
@@ -129,8 +133,16 @@ namespace AeroMils___Controlo_de_Frota.Models
             }
         }
 
-        public Aviao(int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+        public Aviao(int id, int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
         {
+            if (id >= 0) 
+            {
+                this.id = id;
+            }
+            else
+            {
+                this.id = SQLiteDBContext.GetLastPlaneID() + 1;
+            }
             this.capacidade_passageiros = capacidade_passageiros;
             this.autonomia = autonomia;
             this.dataUltimaManutencao = dataUltimaManutencao;
@@ -141,9 +153,9 @@ namespace AeroMils___Controlo_de_Frota.Models
             this.anoFabrico = anoFabrico;
         }
 
-        public void AlterarEstado()
+        public void AlterarEstado(int id)
         {
-            estado = !estado;
+            SQLiteDBContext.ChangePlaneStatus(id);
         }
 
   

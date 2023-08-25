@@ -30,6 +30,7 @@
         {
             VoosPanel = new Panel();
             MercadoriaDetails_panel = new Panel();
+            escolha_aviao_label = new Label();
             Mercadoria_Peso_textBox = new TextBox();
             Mercadoria_Peso_label = new Label();
             Mercadoria_DeOnde_label = new Label();
@@ -70,6 +71,7 @@
             Valor_label = new Label();
             VooParticular_button = new Button();
             VooComercial_button = new Button();
+            avioesDisponiveisComboBox = new ComboBox();
             VoosPanel.SuspendLayout();
             MercadoriaDetails_panel.SuspendLayout();
             ParticularDetails_panel.SuspendLayout();
@@ -97,6 +99,8 @@
             // 
             // MercadoriaDetails_panel
             // 
+            MercadoriaDetails_panel.Controls.Add(avioesDisponiveisComboBox);
+            MercadoriaDetails_panel.Controls.Add(escolha_aviao_label);
             MercadoriaDetails_panel.Controls.Add(Mercadoria_Peso_textBox);
             MercadoriaDetails_panel.Controls.Add(Mercadoria_Peso_label);
             MercadoriaDetails_panel.Controls.Add(Mercadoria_DeOnde_label);
@@ -109,6 +113,16 @@
             MercadoriaDetails_panel.Name = "MercadoriaDetails_panel";
             MercadoriaDetails_panel.Size = new Size(700, 194);
             MercadoriaDetails_panel.TabIndex = 22;
+            // 
+            // escolha_aviao_label
+            // 
+            escolha_aviao_label.AutoSize = true;
+            escolha_aviao_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            escolha_aviao_label.Location = new Point(378, 16);
+            escolha_aviao_label.Name = "escolha_aviao_label";
+            escolha_aviao_label.Size = new Size(143, 21);
+            escolha_aviao_label.TabIndex = 24;
+            escolha_aviao_label.Text = "Avioes Disponiveis:";
             // 
             // Mercadoria_Peso_textBox
             // 
@@ -571,6 +585,14 @@
             VooComercial_button.UseVisualStyleBackColor = false;
             VooComercial_button.Click += VooComercial_Click;
             // 
+            // avioesDisponiveisComboBox
+            // 
+            avioesDisponiveisComboBox.FormattingEnabled = true;
+            avioesDisponiveisComboBox.Location = new Point(378, 45);
+            avioesDisponiveisComboBox.Name = "avioesDisponiveisComboBox";
+            avioesDisponiveisComboBox.Size = new Size(230, 23);
+            avioesDisponiveisComboBox.TabIndex = 25;
+            // 
             // NovaReserva
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -641,5 +663,7 @@
         private TextBox Mercadoria_DeOnde_textBox;
         private TextBox Mercadoria_ParaOnde_textBox;
         private DateTimePicker Mercadoria_Quando_dateTimePicker;
+        private Label escolha_aviao_label;
+        private ComboBox avioesDisponiveisComboBox;
     }
 }
