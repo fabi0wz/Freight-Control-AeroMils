@@ -29,264 +29,617 @@
         private void InitializeComponent()
         {
             VoosPanel = new Panel();
-            panel_vooComercial = new Panel();
-            panel_vooParticular = new Panel();
-            panel_vooMercadoria = new Panel();
-            panel_avionetas = new Panel();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            Avionetas = new Button();
-            VooMercadoria = new Button();
-            VooParticular = new Button();
-            VooComercial = new Button();
-            VooDetails = new Panel();
-            button1 = new Button();
-            button2 = new Button();
-            textBox1 = new TextBox();
-            textBox2 = new TextBox();
-            textBox3 = new TextBox();
-            label1 = new Label();
-            button3 = new Button();
+            MercadoriaDetails_panel = new Panel();
+            Mercadoria_Peso_textBox = new TextBox();
+            Mercadoria_Peso_label = new Label();
+            Mercadoria_DeOnde_label = new Label();
+            Mercadoria_Quando_label = new Label();
+            Mercadoria_ParaOnde_label = new Label();
+            Mercadoria_DeOnde_textBox = new TextBox();
+            Mercadoria_ParaOnde_textBox = new TextBox();
+            Mercadoria_Quando_dateTimePicker = new DateTimePicker();
+            ParticularDetails_panel = new Panel();
+            Particular_DeOnde_label = new Label();
+            Particular_Quando_label = new Label();
+            Particular_ParaOnde_label = new Label();
+            Particular_DeOnde_textBox = new TextBox();
+            Particular_ParaOnde_textBox = new TextBox();
+            Particular_De_dateTimePicker = new DateTimePicker();
+            ComercialDetails_panel = new Panel();
+            Comercial_SoIda_panel = new Panel();
+            Comercial_Ate_SoIda_label = new Label();
+            Comercial_De_SoIda_label = new Label();
+            Comercial_Deonde_SoIda_label = new Label();
+            Comercial_Ate_SoIda_dateTimePicker = new DateTimePicker();
+            Comercial_De_SoIda_dateTimePicker = new DateTimePicker();
+            Comercial_Deonde_SoIda_textBox = new TextBox();
+            IdaVolta_panel = new Panel();
+            Comercial_Ate_IdaVolta_label = new Label();
+            Comercial_De_IdaVolta_label = new Label();
+            Comercial_ParaOnde_IdaVolta_label = new Label();
+            Comercial_Ate_IdaVolta_dateTimePicker = new DateTimePicker();
+            Comercial_DeOnde_IdaVolta_label = new Label();
+            Comercial_De_IdaVolta_dateTimePicker = new DateTimePicker();
+            Comercial_ParaOnde_IdaVolta_textBox = new TextBox();
+            Comercial_DeOnde_IdaVolta_textBox = new TextBox();
+            Comercial_IdaVolta_button = new Button();
+            Comercial_SoIda_button = new Button();
+            Reservar_button = new Button();
+            VooMercadoria_button = new Button();
+            Avionetas_button = new Button();
+            Valor_label = new Label();
+            VooParticular_button = new Button();
+            VooComercial_button = new Button();
             VoosPanel.SuspendLayout();
-            panel_vooComercial.SuspendLayout();
-            panel_vooParticular.SuspendLayout();
-            panel_vooMercadoria.SuspendLayout();
-            panel_avionetas.SuspendLayout();
-            VooDetails.SuspendLayout();
+            MercadoriaDetails_panel.SuspendLayout();
+            ParticularDetails_panel.SuspendLayout();
+            ComercialDetails_panel.SuspendLayout();
+            Comercial_SoIda_panel.SuspendLayout();
+            IdaVolta_panel.SuspendLayout();
             SuspendLayout();
             // 
             // VoosPanel
             // 
-            VoosPanel.Controls.Add(panel_vooParticular);
-            VoosPanel.Controls.Add(panel_vooMercadoria);
-            VoosPanel.Controls.Add(panel_avionetas);
-            VoosPanel.Controls.Add(Avionetas);
-            VoosPanel.Controls.Add(VooMercadoria);
-            VoosPanel.Controls.Add(VooParticular);
-            VoosPanel.Controls.Add(VooComercial);
-            VoosPanel.Dock = DockStyle.Top;
+            VoosPanel.Controls.Add(MercadoriaDetails_panel);
+            VoosPanel.Controls.Add(ParticularDetails_panel);
+            VoosPanel.Controls.Add(ComercialDetails_panel);
+            VoosPanel.Controls.Add(Reservar_button);
+            VoosPanel.Controls.Add(VooMercadoria_button);
+            VoosPanel.Controls.Add(Avionetas_button);
+            VoosPanel.Controls.Add(Valor_label);
+            VoosPanel.Controls.Add(VooParticular_button);
+            VoosPanel.Controls.Add(VooComercial_button);
+            VoosPanel.Dock = DockStyle.Fill;
             VoosPanel.Location = new Point(0, 0);
             VoosPanel.Name = "VoosPanel";
-            VoosPanel.Size = new Size(934, 110);
+            VoosPanel.Size = new Size(700, 338);
             VoosPanel.TabIndex = 0;
             // 
-            // panel_vooComercial
+            // MercadoriaDetails_panel
             // 
-            panel_vooComercial.Controls.Add(button3);
-            panel_vooComercial.Controls.Add(label1);
-            panel_vooComercial.Controls.Add(textBox3);
-            panel_vooComercial.Controls.Add(textBox2);
-            panel_vooComercial.Controls.Add(textBox1);
-            panel_vooComercial.Controls.Add(button2);
-            panel_vooComercial.Controls.Add(button1);
-            panel_vooComercial.Dock = DockStyle.Fill;
-            panel_vooComercial.Location = new Point(0, 0);
-            panel_vooComercial.Name = "panel_vooComercial";
-            panel_vooComercial.Size = new Size(934, 502);
-            panel_vooComercial.TabIndex = 1;
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_Peso_textBox);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_Peso_label);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_DeOnde_label);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_Quando_label);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_ParaOnde_label);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_DeOnde_textBox);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_ParaOnde_textBox);
+            MercadoriaDetails_panel.Controls.Add(Mercadoria_Quando_dateTimePicker);
+            MercadoriaDetails_panel.Location = new Point(3, 77);
+            MercadoriaDetails_panel.Name = "MercadoriaDetails_panel";
+            MercadoriaDetails_panel.Size = new Size(700, 194);
+            MercadoriaDetails_panel.TabIndex = 22;
             // 
-            // panel_vooParticular
+            // Mercadoria_Peso_textBox
             // 
-            panel_vooParticular.Controls.Add(label2);
-            panel_vooParticular.Location = new Point(826, 71);
-            panel_vooParticular.Name = "panel_vooParticular";
-            panel_vooParticular.Size = new Size(934, 503);
-            panel_vooParticular.TabIndex = 2;
+            Mercadoria_Peso_textBox.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_Peso_textBox.Location = new Point(568, 120);
+            Mercadoria_Peso_textBox.Name = "Mercadoria_Peso_textBox";
+            Mercadoria_Peso_textBox.Size = new Size(103, 23);
+            Mercadoria_Peso_textBox.TabIndex = 22;
             // 
-            // panel_vooMercadoria
+            // Mercadoria_Peso_label
             // 
-            panel_vooMercadoria.Controls.Add(label3);
-            panel_vooMercadoria.Location = new Point(846, 34);
-            panel_vooMercadoria.Name = "panel_vooMercadoria";
-            panel_vooMercadoria.Size = new Size(934, 503);
-            panel_vooMercadoria.TabIndex = 3;
+            Mercadoria_Peso_label.AutoSize = true;
+            Mercadoria_Peso_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_Peso_label.Location = new Point(568, 98);
+            Mercadoria_Peso_label.Name = "Mercadoria_Peso_label";
+            Mercadoria_Peso_label.Size = new Size(46, 17);
+            Mercadoria_Peso_label.TabIndex = 21;
+            Mercadoria_Peso_label.Text = "Peso ?";
             // 
-            // panel_avionetas
+            // Mercadoria_DeOnde_label
             // 
-            panel_avionetas.Controls.Add(label4);
-            panel_avionetas.Location = new Point(879, 12);
-            panel_avionetas.Name = "panel_avionetas";
-            panel_avionetas.Size = new Size(934, 503);
-            panel_avionetas.TabIndex = 4;
+            Mercadoria_DeOnde_label.AutoSize = true;
+            Mercadoria_DeOnde_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_DeOnde_label.Location = new Point(21, 90);
+            Mercadoria_DeOnde_label.Name = "Mercadoria_DeOnde_label";
+            Mercadoria_DeOnde_label.Size = new Size(79, 21);
+            Mercadoria_DeOnde_label.TabIndex = 20;
+            Mercadoria_DeOnde_label.Text = "De onde ?";
             // 
-            // label4
+            // Mercadoria_Quando_label
             // 
-            label4.AutoSize = true;
-            label4.Location = new Point(334, 201);
-            label4.Name = "label4";
-            label4.Size = new Size(67, 15);
-            label4.TabIndex = 0;
-            label4.Text = "AVIONETAS";
+            Mercadoria_Quando_label.AutoSize = true;
+            Mercadoria_Quando_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_Quando_label.Location = new Point(455, 98);
+            Mercadoria_Quando_label.Name = "Mercadoria_Quando_label";
+            Mercadoria_Quando_label.Size = new Size(65, 17);
+            Mercadoria_Quando_label.TabIndex = 18;
+            Mercadoria_Quando_label.Text = "Quando ?";
             // 
-            // label3
+            // Mercadoria_ParaOnde_label
             // 
-            label3.AutoSize = true;
-            label3.Location = new Point(334, 201);
-            label3.Name = "label3";
-            label3.Size = new Size(82, 15);
-            label3.TabIndex = 0;
-            label3.Text = "MERCADORIA";
+            Mercadoria_ParaOnde_label.AutoSize = true;
+            Mercadoria_ParaOnde_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_ParaOnde_label.Location = new Point(258, 90);
+            Mercadoria_ParaOnde_label.Name = "Mercadoria_ParaOnde_label";
+            Mercadoria_ParaOnde_label.Size = new Size(90, 21);
+            Mercadoria_ParaOnde_label.TabIndex = 17;
+            Mercadoria_ParaOnde_label.Text = "Para onde ?";
             // 
-            // label2
+            // Mercadoria_DeOnde_textBox
             // 
-            label2.AutoSize = true;
-            label2.Location = new Point(334, 201);
-            label2.Name = "label2";
-            label2.Size = new Size(73, 15);
-            label2.TabIndex = 0;
-            label2.Text = "PARTICULAR";
+            Mercadoria_DeOnde_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_DeOnde_textBox.Location = new Point(21, 114);
+            Mercadoria_DeOnde_textBox.Name = "Mercadoria_DeOnde_textBox";
+            Mercadoria_DeOnde_textBox.Size = new Size(170, 29);
+            Mercadoria_DeOnde_textBox.TabIndex = 2;
             // 
-            // Avionetas
+            // Mercadoria_ParaOnde_textBox
             // 
-            Avionetas.Location = new Point(689, 50);
-            Avionetas.Name = "Avionetas";
-            Avionetas.Size = new Size(75, 23);
-            Avionetas.TabIndex = 3;
-            Avionetas.Text = "Avionetas";
-            Avionetas.UseVisualStyleBackColor = true;
-            Avionetas.Click += Avionetas_Click;
+            Mercadoria_ParaOnde_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_ParaOnde_textBox.Location = new Point(258, 114);
+            Mercadoria_ParaOnde_textBox.Name = "Mercadoria_ParaOnde_textBox";
+            Mercadoria_ParaOnde_textBox.Size = new Size(170, 29);
+            Mercadoria_ParaOnde_textBox.TabIndex = 4;
             // 
-            // VooMercadoria
+            // Mercadoria_Quando_dateTimePicker
             // 
-            VooMercadoria.Location = new Point(478, 55);
-            VooMercadoria.Name = "VooMercadoria";
-            VooMercadoria.Size = new Size(127, 23);
-            VooMercadoria.TabIndex = 2;
-            VooMercadoria.Text = "Voo Mercadoria";
-            VooMercadoria.UseVisualStyleBackColor = true;
-            VooMercadoria.Click += VooMercadoria_Click;
+            Mercadoria_Quando_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Mercadoria_Quando_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Mercadoria_Quando_dateTimePicker.Location = new Point(455, 118);
+            Mercadoria_Quando_dateTimePicker.MaxDate = new DateTime(2023, 12, 31, 0, 0, 0, 0);
+            Mercadoria_Quando_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Mercadoria_Quando_dateTimePicker.Name = "Mercadoria_Quando_dateTimePicker";
+            Mercadoria_Quando_dateTimePicker.Size = new Size(103, 25);
+            Mercadoria_Quando_dateTimePicker.TabIndex = 13;
+            Mercadoria_Quando_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             // 
-            // VooParticular
+            // ParticularDetails_panel
             // 
-            VooParticular.Location = new Point(268, 59);
-            VooParticular.Name = "VooParticular";
-            VooParticular.Size = new Size(122, 23);
-            VooParticular.TabIndex = 1;
-            VooParticular.Text = "Voo Particular";
-            VooParticular.UseVisualStyleBackColor = true;
-            VooParticular.Click += VooParticular_Click;
+            ParticularDetails_panel.Controls.Add(Particular_DeOnde_label);
+            ParticularDetails_panel.Controls.Add(Particular_Quando_label);
+            ParticularDetails_panel.Controls.Add(Particular_ParaOnde_label);
+            ParticularDetails_panel.Controls.Add(Particular_DeOnde_textBox);
+            ParticularDetails_panel.Controls.Add(Particular_ParaOnde_textBox);
+            ParticularDetails_panel.Controls.Add(Particular_De_dateTimePicker);
+            ParticularDetails_panel.Location = new Point(3, 77);
+            ParticularDetails_panel.Name = "ParticularDetails_panel";
+            ParticularDetails_panel.Size = new Size(700, 194);
+            ParticularDetails_panel.TabIndex = 21;
             // 
-            // VooComercial
+            // Particular_DeOnde_label
             // 
-            VooComercial.Location = new Point(95, 52);
-            VooComercial.Name = "VooComercial";
-            VooComercial.Size = new Size(126, 23);
-            VooComercial.TabIndex = 0;
-            VooComercial.Text = "Voo Comercial";
-            VooComercial.UseVisualStyleBackColor = true;
-            VooComercial.Click += VooComercial_Click;
+            Particular_DeOnde_label.AutoSize = true;
+            Particular_DeOnde_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_DeOnde_label.Location = new Point(21, 90);
+            Particular_DeOnde_label.Name = "Particular_DeOnde_label";
+            Particular_DeOnde_label.Size = new Size(79, 21);
+            Particular_DeOnde_label.TabIndex = 20;
+            Particular_DeOnde_label.Text = "De onde ?";
             // 
-            // VooDetails
+            // Particular_Quando_label
             // 
-            VooDetails.Controls.Add(panel_vooComercial);
-            VooDetails.Dock = DockStyle.Fill;
-            VooDetails.Location = new Point(0, 110);
-            VooDetails.Name = "VooDetails";
-            VooDetails.Size = new Size(934, 502);
-            VooDetails.TabIndex = 1;
+            Particular_Quando_label.AutoSize = true;
+            Particular_Quando_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_Quando_label.Location = new Point(492, 98);
+            Particular_Quando_label.Name = "Particular_Quando_label";
+            Particular_Quando_label.Size = new Size(65, 17);
+            Particular_Quando_label.TabIndex = 18;
+            Particular_Quando_label.Text = "Quando ?";
             // 
-            // button1
+            // Particular_ParaOnde_label
             // 
-            button1.Location = new Point(95, 121);
-            button1.Name = "button1";
-            button1.Size = new Size(75, 23);
-            button1.TabIndex = 0;
-            button1.Text = "button1";
-            button1.UseVisualStyleBackColor = true;
+            Particular_ParaOnde_label.AutoSize = true;
+            Particular_ParaOnde_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_ParaOnde_label.Location = new Point(258, 90);
+            Particular_ParaOnde_label.Name = "Particular_ParaOnde_label";
+            Particular_ParaOnde_label.Size = new Size(90, 21);
+            Particular_ParaOnde_label.TabIndex = 17;
+            Particular_ParaOnde_label.Text = "Para onde ?";
             // 
-            // button2
+            // Particular_DeOnde_textBox
             // 
-            button2.Location = new Point(215, 121);
-            button2.Name = "button2";
-            button2.Size = new Size(75, 23);
-            button2.TabIndex = 1;
-            button2.Text = "button2";
-            button2.UseVisualStyleBackColor = true;
+            Particular_DeOnde_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_DeOnde_textBox.Location = new Point(21, 114);
+            Particular_DeOnde_textBox.Name = "Particular_DeOnde_textBox";
+            Particular_DeOnde_textBox.Size = new Size(170, 29);
+            Particular_DeOnde_textBox.TabIndex = 2;
             // 
-            // textBox1
+            // Particular_ParaOnde_textBox
             // 
-            textBox1.Location = new Point(70, 272);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(100, 23);
-            textBox1.TabIndex = 2;
+            Particular_ParaOnde_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_ParaOnde_textBox.Location = new Point(258, 114);
+            Particular_ParaOnde_textBox.Name = "Particular_ParaOnde_textBox";
+            Particular_ParaOnde_textBox.Size = new Size(170, 29);
+            Particular_ParaOnde_textBox.TabIndex = 4;
             // 
-            // textBox2
+            // Particular_De_dateTimePicker
             // 
-            textBox2.Location = new Point(374, 272);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(100, 23);
-            textBox2.TabIndex = 3;
+            Particular_De_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Particular_De_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Particular_De_dateTimePicker.Location = new Point(492, 118);
+            Particular_De_dateTimePicker.MaxDate = new DateTime(2023, 12, 31, 0, 0, 0, 0);
+            Particular_De_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Particular_De_dateTimePicker.Name = "Particular_De_dateTimePicker";
+            Particular_De_dateTimePicker.Size = new Size(103, 25);
+            Particular_De_dateTimePicker.TabIndex = 13;
+            Particular_De_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             // 
-            // textBox3
+            // ComercialDetails_panel
             // 
-            textBox3.Location = new Point(745, 266);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(100, 23);
-            textBox3.TabIndex = 4;
+            ComercialDetails_panel.Controls.Add(Comercial_SoIda_panel);
+            ComercialDetails_panel.Controls.Add(IdaVolta_panel);
+            ComercialDetails_panel.Controls.Add(Comercial_IdaVolta_button);
+            ComercialDetails_panel.Controls.Add(Comercial_SoIda_button);
+            ComercialDetails_panel.Location = new Point(3, 77);
+            ComercialDetails_panel.Name = "ComercialDetails_panel";
+            ComercialDetails_panel.Size = new Size(700, 194);
+            ComercialDetails_panel.TabIndex = 2;
             // 
-            // label1
+            // Comercial_SoIda_panel
             // 
-            label1.AutoSize = true;
-            label1.Location = new Point(666, 436);
-            label1.Name = "label1";
-            label1.Size = new Size(38, 15);
-            label1.TabIndex = 5;
-            label1.Text = "label1";
+            Comercial_SoIda_panel.Controls.Add(Comercial_Ate_SoIda_label);
+            Comercial_SoIda_panel.Controls.Add(Comercial_De_SoIda_label);
+            Comercial_SoIda_panel.Controls.Add(Comercial_Deonde_SoIda_label);
+            Comercial_SoIda_panel.Controls.Add(Comercial_Ate_SoIda_dateTimePicker);
+            Comercial_SoIda_panel.Controls.Add(Comercial_De_SoIda_dateTimePicker);
+            Comercial_SoIda_panel.Controls.Add(Comercial_Deonde_SoIda_textBox);
+            Comercial_SoIda_panel.Location = new Point(3, 93);
+            Comercial_SoIda_panel.Name = "Comercial_SoIda_panel";
+            Comercial_SoIda_panel.Size = new Size(700, 101);
+            Comercial_SoIda_panel.TabIndex = 20;
             // 
-            // button3
+            // Comercial_Ate_SoIda_label
             // 
-            button3.Location = new Point(806, 434);
-            button3.Name = "button3";
-            button3.Size = new Size(75, 23);
-            button3.TabIndex = 6;
-            button3.Text = "button3";
-            button3.UseVisualStyleBackColor = true;
+            Comercial_Ate_SoIda_label.AutoSize = true;
+            Comercial_Ate_SoIda_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Ate_SoIda_label.Location = new Point(568, 27);
+            Comercial_Ate_SoIda_label.Name = "Comercial_Ate_SoIda_label";
+            Comercial_Ate_SoIda_label.Size = new Size(37, 17);
+            Comercial_Ate_SoIda_label.TabIndex = 19;
+            Comercial_Ate_SoIda_label.Text = "Até ?";
+            // 
+            // Comercial_De_SoIda_label
+            // 
+            Comercial_De_SoIda_label.AutoSize = true;
+            Comercial_De_SoIda_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_De_SoIda_label.Location = new Point(445, 27);
+            Comercial_De_SoIda_label.Name = "Comercial_De_SoIda_label";
+            Comercial_De_SoIda_label.Size = new Size(34, 17);
+            Comercial_De_SoIda_label.TabIndex = 18;
+            Comercial_De_SoIda_label.Text = "De ?";
+            // 
+            // Comercial_Deonde_SoIda_label
+            // 
+            Comercial_Deonde_SoIda_label.AutoSize = true;
+            Comercial_Deonde_SoIda_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Deonde_SoIda_label.Location = new Point(258, 19);
+            Comercial_Deonde_SoIda_label.Name = "Comercial_Deonde_SoIda_label";
+            Comercial_Deonde_SoIda_label.Size = new Size(79, 21);
+            Comercial_Deonde_SoIda_label.TabIndex = 17;
+            Comercial_Deonde_SoIda_label.Text = "De onde ?";
+            // 
+            // Comercial_Ate_SoIda_dateTimePicker
+            // 
+            Comercial_Ate_SoIda_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Ate_SoIda_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Comercial_Ate_SoIda_dateTimePicker.Location = new Point(568, 47);
+            Comercial_Ate_SoIda_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Comercial_Ate_SoIda_dateTimePicker.Name = "Comercial_Ate_SoIda_dateTimePicker";
+            Comercial_Ate_SoIda_dateTimePicker.Size = new Size(103, 25);
+            Comercial_Ate_SoIda_dateTimePicker.TabIndex = 15;
+            Comercial_Ate_SoIda_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            // 
+            // Comercial_De_SoIda_dateTimePicker
+            // 
+            Comercial_De_SoIda_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_De_SoIda_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Comercial_De_SoIda_dateTimePicker.Location = new Point(445, 47);
+            Comercial_De_SoIda_dateTimePicker.MaxDate = new DateTime(2023, 12, 31, 0, 0, 0, 0);
+            Comercial_De_SoIda_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Comercial_De_SoIda_dateTimePicker.Name = "Comercial_De_SoIda_dateTimePicker";
+            Comercial_De_SoIda_dateTimePicker.Size = new Size(103, 25);
+            Comercial_De_SoIda_dateTimePicker.TabIndex = 13;
+            Comercial_De_SoIda_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            // 
+            // Comercial_Deonde_SoIda_textBox
+            // 
+            Comercial_Deonde_SoIda_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Deonde_SoIda_textBox.Location = new Point(258, 43);
+            Comercial_Deonde_SoIda_textBox.Name = "Comercial_Deonde_SoIda_textBox";
+            Comercial_Deonde_SoIda_textBox.Size = new Size(170, 29);
+            Comercial_Deonde_SoIda_textBox.TabIndex = 4;
+            // 
+            // IdaVolta_panel
+            // 
+            IdaVolta_panel.Controls.Add(Comercial_Ate_IdaVolta_label);
+            IdaVolta_panel.Controls.Add(Comercial_De_IdaVolta_label);
+            IdaVolta_panel.Controls.Add(Comercial_ParaOnde_IdaVolta_label);
+            IdaVolta_panel.Controls.Add(Comercial_Ate_IdaVolta_dateTimePicker);
+            IdaVolta_panel.Controls.Add(Comercial_DeOnde_IdaVolta_label);
+            IdaVolta_panel.Controls.Add(Comercial_De_IdaVolta_dateTimePicker);
+            IdaVolta_panel.Controls.Add(Comercial_ParaOnde_IdaVolta_textBox);
+            IdaVolta_panel.Controls.Add(Comercial_DeOnde_IdaVolta_textBox);
+            IdaVolta_panel.Location = new Point(3, 93);
+            IdaVolta_panel.Name = "IdaVolta_panel";
+            IdaVolta_panel.Size = new Size(700, 101);
+            IdaVolta_panel.TabIndex = 1;
+            // 
+            // Comercial_Ate_IdaVolta_label
+            // 
+            Comercial_Ate_IdaVolta_label.AutoSize = true;
+            Comercial_Ate_IdaVolta_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Ate_IdaVolta_label.Location = new Point(568, 27);
+            Comercial_Ate_IdaVolta_label.Name = "Comercial_Ate_IdaVolta_label";
+            Comercial_Ate_IdaVolta_label.Size = new Size(37, 17);
+            Comercial_Ate_IdaVolta_label.TabIndex = 19;
+            Comercial_Ate_IdaVolta_label.Text = "Até ?";
+            // 
+            // Comercial_De_IdaVolta_label
+            // 
+            Comercial_De_IdaVolta_label.AutoSize = true;
+            Comercial_De_IdaVolta_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_De_IdaVolta_label.Location = new Point(445, 27);
+            Comercial_De_IdaVolta_label.Name = "Comercial_De_IdaVolta_label";
+            Comercial_De_IdaVolta_label.Size = new Size(34, 17);
+            Comercial_De_IdaVolta_label.TabIndex = 18;
+            Comercial_De_IdaVolta_label.Text = "De ?";
+            // 
+            // Comercial_ParaOnde_IdaVolta_label
+            // 
+            Comercial_ParaOnde_IdaVolta_label.AutoSize = true;
+            Comercial_ParaOnde_IdaVolta_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_ParaOnde_IdaVolta_label.Location = new Point(258, 19);
+            Comercial_ParaOnde_IdaVolta_label.Name = "Comercial_ParaOnde_IdaVolta_label";
+            Comercial_ParaOnde_IdaVolta_label.Size = new Size(79, 21);
+            Comercial_ParaOnde_IdaVolta_label.TabIndex = 17;
+            Comercial_ParaOnde_IdaVolta_label.Text = "De onde ?";
+            // 
+            // Comercial_Ate_IdaVolta_dateTimePicker
+            // 
+            Comercial_Ate_IdaVolta_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_Ate_IdaVolta_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Comercial_Ate_IdaVolta_dateTimePicker.Location = new Point(568, 47);
+            Comercial_Ate_IdaVolta_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Comercial_Ate_IdaVolta_dateTimePicker.Name = "Comercial_Ate_IdaVolta_dateTimePicker";
+            Comercial_Ate_IdaVolta_dateTimePicker.Size = new Size(103, 25);
+            Comercial_Ate_IdaVolta_dateTimePicker.TabIndex = 15;
+            Comercial_Ate_IdaVolta_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            // 
+            // Comercial_DeOnde_IdaVolta_label
+            // 
+            Comercial_DeOnde_IdaVolta_label.AutoSize = true;
+            Comercial_DeOnde_IdaVolta_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_DeOnde_IdaVolta_label.Location = new Point(21, 19);
+            Comercial_DeOnde_IdaVolta_label.Name = "Comercial_DeOnde_IdaVolta_label";
+            Comercial_DeOnde_IdaVolta_label.Size = new Size(79, 21);
+            Comercial_DeOnde_IdaVolta_label.TabIndex = 14;
+            Comercial_DeOnde_IdaVolta_label.Text = "De onde ?";
+            // 
+            // Comercial_De_IdaVolta_dateTimePicker
+            // 
+            Comercial_De_IdaVolta_dateTimePicker.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_De_IdaVolta_dateTimePicker.Format = DateTimePickerFormat.Short;
+            Comercial_De_IdaVolta_dateTimePicker.Location = new Point(445, 47);
+            Comercial_De_IdaVolta_dateTimePicker.MaxDate = new DateTime(2023, 12, 31, 0, 0, 0, 0);
+            Comercial_De_IdaVolta_dateTimePicker.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            Comercial_De_IdaVolta_dateTimePicker.Name = "Comercial_De_IdaVolta_dateTimePicker";
+            Comercial_De_IdaVolta_dateTimePicker.Size = new Size(103, 25);
+            Comercial_De_IdaVolta_dateTimePicker.TabIndex = 13;
+            Comercial_De_IdaVolta_dateTimePicker.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
+            // 
+            // Comercial_ParaOnde_IdaVolta_textBox
+            // 
+            Comercial_ParaOnde_IdaVolta_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_ParaOnde_IdaVolta_textBox.Location = new Point(258, 43);
+            Comercial_ParaOnde_IdaVolta_textBox.Name = "Comercial_ParaOnde_IdaVolta_textBox";
+            Comercial_ParaOnde_IdaVolta_textBox.Size = new Size(170, 29);
+            Comercial_ParaOnde_IdaVolta_textBox.TabIndex = 4;
+            // 
+            // Comercial_DeOnde_IdaVolta_textBox
+            // 
+            Comercial_DeOnde_IdaVolta_textBox.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            Comercial_DeOnde_IdaVolta_textBox.Location = new Point(21, 43);
+            Comercial_DeOnde_IdaVolta_textBox.Name = "Comercial_DeOnde_IdaVolta_textBox";
+            Comercial_DeOnde_IdaVolta_textBox.Size = new Size(170, 29);
+            Comercial_DeOnde_IdaVolta_textBox.TabIndex = 2;
+            // 
+            // Comercial_IdaVolta_button
+            // 
+            Comercial_IdaVolta_button.BackColor = Color.FromArgb(255, 98, 45);
+            Comercial_IdaVolta_button.FlatAppearance.BorderSize = 0;
+            Comercial_IdaVolta_button.FlatStyle = FlatStyle.Flat;
+            Comercial_IdaVolta_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Comercial_IdaVolta_button.ForeColor = Color.White;
+            Comercial_IdaVolta_button.ImageAlign = ContentAlignment.MiddleLeft;
+            Comercial_IdaVolta_button.Location = new Point(24, 39);
+            Comercial_IdaVolta_button.Margin = new Padding(3, 2, 3, 2);
+            Comercial_IdaVolta_button.Name = "Comercial_IdaVolta_button";
+            Comercial_IdaVolta_button.Size = new Size(106, 29);
+            Comercial_IdaVolta_button.TabIndex = 9;
+            Comercial_IdaVolta_button.Text = "Ida e volta";
+            Comercial_IdaVolta_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Comercial_IdaVolta_button.UseVisualStyleBackColor = false;
+            Comercial_IdaVolta_button.Click += Comercial_IdaVolta_button_Click;
+            // 
+            // Comercial_SoIda_button
+            // 
+            Comercial_SoIda_button.BackColor = Color.FromArgb(54, 53, 67);
+            Comercial_SoIda_button.FlatAppearance.BorderSize = 0;
+            Comercial_SoIda_button.FlatStyle = FlatStyle.Flat;
+            Comercial_SoIda_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Comercial_SoIda_button.ForeColor = Color.White;
+            Comercial_SoIda_button.ImageAlign = ContentAlignment.MiddleLeft;
+            Comercial_SoIda_button.Location = new Point(136, 39);
+            Comercial_SoIda_button.Margin = new Padding(3, 2, 3, 2);
+            Comercial_SoIda_button.Name = "Comercial_SoIda_button";
+            Comercial_SoIda_button.Size = new Size(106, 29);
+            Comercial_SoIda_button.TabIndex = 10;
+            Comercial_SoIda_button.Text = "Só ida";
+            Comercial_SoIda_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Comercial_SoIda_button.UseVisualStyleBackColor = false;
+            Comercial_SoIda_button.Click += Comercial_SoIda_button_Click;
+            // 
+            // Reservar_button
+            // 
+            Reservar_button.BackColor = Color.FromArgb(54, 53, 67);
+            Reservar_button.FlatAppearance.BorderSize = 0;
+            Reservar_button.FlatStyle = FlatStyle.Flat;
+            Reservar_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Reservar_button.ForeColor = Color.White;
+            Reservar_button.ImageAlign = ContentAlignment.MiddleLeft;
+            Reservar_button.Location = new Point(568, 276);
+            Reservar_button.Margin = new Padding(3, 2, 3, 2);
+            Reservar_button.Name = "Reservar_button";
+            Reservar_button.Size = new Size(120, 51);
+            Reservar_button.TabIndex = 16;
+            Reservar_button.Text = "Reservar";
+            Reservar_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Reservar_button.UseVisualStyleBackColor = false;
+            Reservar_button.Click += Reservar_button_Click;
+            // 
+            // VooMercadoria_button
+            // 
+            VooMercadoria_button.BackColor = Color.FromArgb(54, 53, 67);
+            VooMercadoria_button.FlatAppearance.BorderSize = 0;
+            VooMercadoria_button.FlatStyle = FlatStyle.Flat;
+            VooMercadoria_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            VooMercadoria_button.ForeColor = Color.White;
+            VooMercadoria_button.ImageAlign = ContentAlignment.MiddleLeft;
+            VooMercadoria_button.Location = new Point(363, 12);
+            VooMercadoria_button.Margin = new Padding(3, 2, 3, 2);
+            VooMercadoria_button.Name = "VooMercadoria_button";
+            VooMercadoria_button.Size = new Size(144, 44);
+            VooMercadoria_button.TabIndex = 8;
+            VooMercadoria_button.Text = "Voo Mercadoria";
+            VooMercadoria_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            VooMercadoria_button.UseVisualStyleBackColor = false;
+            VooMercadoria_button.Click += VooMercadoria_Click;
+            // 
+            // Avionetas_button
+            // 
+            Avionetas_button.BackColor = Color.FromArgb(54, 53, 67);
+            Avionetas_button.FlatAppearance.BorderSize = 0;
+            Avionetas_button.FlatStyle = FlatStyle.Flat;
+            Avionetas_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            Avionetas_button.ForeColor = Color.White;
+            Avionetas_button.ImageAlign = ContentAlignment.MiddleLeft;
+            Avionetas_button.Location = new Point(530, 12);
+            Avionetas_button.Margin = new Padding(3, 2, 3, 2);
+            Avionetas_button.Name = "Avionetas_button";
+            Avionetas_button.Size = new Size(144, 44);
+            Avionetas_button.TabIndex = 7;
+            Avionetas_button.Text = "Avionetas";
+            Avionetas_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            Avionetas_button.UseVisualStyleBackColor = false;
+            Avionetas_button.Click += Avionetas_Click;
+            // 
+            // Valor_label
+            // 
+            Valor_label.AutoSize = true;
+            Valor_label.Location = new Point(513, 296);
+            Valor_label.Name = "Valor_label";
+            Valor_label.Size = new Size(25, 15);
+            Valor_label.TabIndex = 5;
+            Valor_label.Text = "100";
+            // 
+            // VooParticular_button
+            // 
+            VooParticular_button.BackColor = Color.FromArgb(54, 53, 67);
+            VooParticular_button.FlatAppearance.BorderSize = 0;
+            VooParticular_button.FlatStyle = FlatStyle.Flat;
+            VooParticular_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            VooParticular_button.ForeColor = Color.White;
+            VooParticular_button.ImageAlign = ContentAlignment.MiddleLeft;
+            VooParticular_button.Location = new Point(195, 12);
+            VooParticular_button.Margin = new Padding(3, 2, 3, 2);
+            VooParticular_button.Name = "VooParticular_button";
+            VooParticular_button.Size = new Size(144, 44);
+            VooParticular_button.TabIndex = 6;
+            VooParticular_button.Text = "Voo Particular";
+            VooParticular_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            VooParticular_button.UseVisualStyleBackColor = false;
+            VooParticular_button.Click += VooParticular_Click;
+            // 
+            // VooComercial_button
+            // 
+            VooComercial_button.BackColor = Color.FromArgb(255, 98, 45);
+            VooComercial_button.FlatAppearance.BorderSize = 0;
+            VooComercial_button.FlatStyle = FlatStyle.Flat;
+            VooComercial_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            VooComercial_button.ForeColor = Color.White;
+            VooComercial_button.ImageAlign = ContentAlignment.MiddleLeft;
+            VooComercial_button.Location = new Point(24, 12);
+            VooComercial_button.Margin = new Padding(3, 2, 3, 2);
+            VooComercial_button.Name = "VooComercial_button";
+            VooComercial_button.Size = new Size(144, 44);
+            VooComercial_button.TabIndex = 5;
+            VooComercial_button.Text = "Voo Comercial";
+            VooComercial_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            VooComercial_button.UseVisualStyleBackColor = false;
+            VooComercial_button.Click += VooComercial_Click;
             // 
             // NovaReserva
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(934, 612);
-            Controls.Add(VooDetails);
+            ClientSize = new Size(700, 338);
             Controls.Add(VoosPanel);
             Margin = new Padding(3, 2, 3, 2);
             Name = "NovaReserva";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "NovaReserva";
             VoosPanel.ResumeLayout(false);
-            panel_vooComercial.ResumeLayout(false);
-            panel_vooComercial.PerformLayout();
-            panel_vooParticular.ResumeLayout(false);
-            panel_vooParticular.PerformLayout();
-            panel_vooMercadoria.ResumeLayout(false);
-            panel_vooMercadoria.PerformLayout();
-            panel_avionetas.ResumeLayout(false);
-            panel_avionetas.PerformLayout();
-            VooDetails.ResumeLayout(false);
+            VoosPanel.PerformLayout();
+            MercadoriaDetails_panel.ResumeLayout(false);
+            MercadoriaDetails_panel.PerformLayout();
+            ParticularDetails_panel.ResumeLayout(false);
+            ParticularDetails_panel.PerformLayout();
+            ComercialDetails_panel.ResumeLayout(false);
+            Comercial_SoIda_panel.ResumeLayout(false);
+            Comercial_SoIda_panel.PerformLayout();
+            IdaVolta_panel.ResumeLayout(false);
+            IdaVolta_panel.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Panel VoosPanel;
-        private Button Avionetas;
-        private Button VooMercadoria;
-        private Button VooParticular;
-        private Button VooComercial;
-        private Panel panel_vooComercial;
-        private Panel panel_vooParticular;
-        private Label label2;
-        private Panel panel_vooMercadoria;
-        private Label label3;
-        private Panel panel_avionetas;
-        private Label label4;
-        private Panel VooDetails;
-        private Button button3;
-        private Label label1;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Button button2;
-        private Button button1;
+        private Button VooComercial_button;
+        private Button VooParticular_button;
+        private Button VooMercadoria_button;
+        private Button Avionetas_button;
+        private Button Reservar_button;
+        private Label Valor_label;
+        private Panel ParticularDetails_panel;
+        private Label Particular_Ate_label;
+        private Label Particular_Quando_label;
+        private Label Particular_ParaOnde_label;
+        private DateTimePicker Particular_Ate_dateTimePicker;
+        private DateTimePicker Particular_De_dateTimePicker;
+        private TextBox Particular_ParaOnde_textBox;
+        private TextBox Particular_DeOnde_textBox;
+        private Panel ComercialDetails_panel;
+        private Panel Comercial_SoIda_panel;
+        private Label Comercial_Ate_SoIda_label;
+        private Label Comercial_De_SoIda_label;
+        private Label Comercial_Deonde_SoIda_label;
+        private DateTimePicker Comercial_Ate_SoIda_dateTimePicker;
+        private DateTimePicker Comercial_De_SoIda_dateTimePicker;
+        private TextBox Comercial_Deonde_SoIda_textBox;
+        private Panel IdaVolta_panel;
+        private Label Comercial_Ate_IdaVolta_label;
+        private Label Comercial_De_IdaVolta_label;
+        private Label Comercial_ParaOnde_IdaVolta_label;
+        private DateTimePicker Comercial_Ate_IdaVolta_dateTimePicker;
+        private Label Comercial_DeOnde_IdaVolta_label;
+        private DateTimePicker Comercial_De_IdaVolta_dateTimePicker;
+        private TextBox Comercial_ParaOnde_IdaVolta_textBox;
+        private TextBox Comercial_DeOnde_IdaVolta_textBox;
+        private Button Comercial_IdaVolta_button;
+        private Button Comercial_SoIda_button;
+        private Label Particular_DeOnde_label;
+        private Panel MercadoriaDetails_panel;
+        private TextBox Mercadoria_Peso_textBox;
+        private Label Mercadoria_Peso_label;
+        private Label Mercadoria_DeOnde_label;
+        private Label Mercadoria_Quando_label;
+        private Label Mercadoria_ParaOnde_label;
+        private TextBox Mercadoria_DeOnde_textBox;
+        private TextBox Mercadoria_ParaOnde_textBox;
+        private DateTimePicker Mercadoria_Quando_dateTimePicker;
     }
 }

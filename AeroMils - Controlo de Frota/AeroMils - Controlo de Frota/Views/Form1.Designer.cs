@@ -78,7 +78,7 @@
             panel_sidebar.Location = new Point(0, 0);
             panel_sidebar.Margin = new Padding(3, 2, 3, 2);
             panel_sidebar.Name = "panel_sidebar";
-            panel_sidebar.Size = new Size(191, 651);
+            panel_sidebar.Size = new Size(240, 651);
             panel_sidebar.TabIndex = 0;
             // 
             // SobreContainer
@@ -87,10 +87,10 @@
             SobreContainer.Controls.Add(button_sobre);
             SobreContainer.Dock = DockStyle.Bottom;
             SobreContainer.Location = new Point(0, 610);
-            SobreContainer.MaximumSize = new Size(200, 41);
-            SobreContainer.MinimumSize = new Size(200, 41);
+            SobreContainer.MaximumSize = new Size(277, 41);
+            SobreContainer.MinimumSize = new Size(277, 41);
             SobreContainer.Name = "SobreContainer";
-            SobreContainer.Size = new Size(200, 41);
+            SobreContainer.Size = new Size(277, 41);
             SobreContainer.TabIndex = 3;
             // 
             // button_sobre
@@ -104,7 +104,7 @@
             button_sobre.Location = new Point(0, 0);
             button_sobre.Margin = new Padding(3, 2, 3, 2);
             button_sobre.Name = "button_sobre";
-            button_sobre.Size = new Size(200, 41);
+            button_sobre.Size = new Size(277, 41);
             button_sobre.TabIndex = 1;
             button_sobre.Text = "Sobre";
             button_sobre.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -117,10 +117,10 @@
             AlertasContainer.Controls.Add(button_alertas);
             AlertasContainer.Dock = DockStyle.Top;
             AlertasContainer.Location = new Point(0, 355);
-            AlertasContainer.MaximumSize = new Size(200, 41);
-            AlertasContainer.MinimumSize = new Size(200, 41);
+            AlertasContainer.MaximumSize = new Size(277, 41);
+            AlertasContainer.MinimumSize = new Size(277, 41);
             AlertasContainer.Name = "AlertasContainer";
-            AlertasContainer.Size = new Size(200, 41);
+            AlertasContainer.Size = new Size(277, 41);
             AlertasContainer.TabIndex = 2;
             // 
             // button_alertas
@@ -135,7 +135,7 @@
             button_alertas.Location = new Point(0, 0);
             button_alertas.Margin = new Padding(3, 2, 3, 2);
             button_alertas.Name = "button_alertas";
-            button_alertas.Size = new Size(200, 41);
+            button_alertas.Size = new Size(277, 41);
             button_alertas.TabIndex = 1;
             button_alertas.Text = "Alertas";
             button_alertas.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -150,10 +150,10 @@
             ManutencaoContainer.Controls.Add(button_manutencao);
             ManutencaoContainer.Dock = DockStyle.Top;
             ManutencaoContainer.Location = new Point(0, 314);
-            ManutencaoContainer.MaximumSize = new Size(200, 125);
-            ManutencaoContainer.MinimumSize = new Size(200, 41);
+            ManutencaoContainer.MaximumSize = new Size(277, 125);
+            ManutencaoContainer.MinimumSize = new Size(277, 41);
             ManutencaoContainer.Name = "ManutencaoContainer";
-            ManutencaoContainer.Size = new Size(200, 41);
+            ManutencaoContainer.Size = new Size(277, 41);
             ManutencaoContainer.TabIndex = 1;
             // 
             // button_NovaManutencao
@@ -168,7 +168,7 @@
             button_NovaManutencao.Location = new Point(0, 82);
             button_NovaManutencao.Margin = new Padding(3, 2, 3, 2);
             button_NovaManutencao.Name = "button_NovaManutencao";
-            button_NovaManutencao.Size = new Size(200, 41);
+            button_NovaManutencao.Size = new Size(277, 41);
             button_NovaManutencao.TabIndex = 2;
             button_NovaManutencao.Text = "Nova Manutencao";
             button_NovaManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -187,7 +187,7 @@
             button_HistoricoManutencao.Location = new Point(0, 41);
             button_HistoricoManutencao.Margin = new Padding(3, 2, 3, 2);
             button_HistoricoManutencao.Name = "button_HistoricoManutencao";
-            button_HistoricoManutencao.Size = new Size(200, 41);
+            button_HistoricoManutencao.Size = new Size(277, 41);
             button_HistoricoManutencao.TabIndex = 3;
             button_HistoricoManutencao.Text = "Historico Manutenções";
             button_HistoricoManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -206,7 +206,7 @@
             button_manutencao.Location = new Point(0, 0);
             button_manutencao.Margin = new Padding(3, 2, 3, 2);
             button_manutencao.Name = "button_manutencao";
-            button_manutencao.Size = new Size(200, 41);
+            button_manutencao.Size = new Size(277, 41);
             button_manutencao.TabIndex = 1;
             button_manutencao.Text = "Manutenção   ❯";
             button_manutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -221,10 +221,10 @@
             ReservasContainer.Controls.Add(button_reservas);
             ReservasContainer.Dock = DockStyle.Top;
             ReservasContainer.Location = new Point(0, 273);
-            ReservasContainer.MaximumSize = new Size(200, 125);
-            ReservasContainer.MinimumSize = new Size(200, 41);
+            ReservasContainer.MaximumSize = new Size(277, 125);
+            ReservasContainer.MinimumSize = new Size(277, 41);
             ReservasContainer.Name = "ReservasContainer";
-            ReservasContainer.Size = new Size(200, 41);
+            ReservasContainer.Size = new Size(277, 41);
             ReservasContainer.TabIndex = 1;
             // 
             // button_HistoricoReserva
@@ -239,7 +239,7 @@
             button_HistoricoReserva.Location = new Point(0, 82);
             button_HistoricoReserva.Margin = new Padding(3, 2, 3, 2);
             button_HistoricoReserva.Name = "button_HistoricoReserva";
-            button_HistoricoReserva.Size = new Size(200, 41);
+            button_HistoricoReserva.Size = new Size(277, 41);
             button_HistoricoReserva.TabIndex = 3;
             button_HistoricoReserva.Text = "Historico Reservas";
             button_HistoricoReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -258,7 +258,7 @@
             button_NovaReserva.Location = new Point(0, 41);
             button_NovaReserva.Margin = new Padding(3, 2, 3, 2);
             button_NovaReserva.Name = "button_NovaReserva";
-            button_NovaReserva.Size = new Size(200, 41);
+            button_NovaReserva.Size = new Size(277, 41);
             button_NovaReserva.TabIndex = 2;
             button_NovaReserva.Text = "Nova Reserva";
             button_NovaReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -277,7 +277,7 @@
             button_reservas.Location = new Point(0, 0);
             button_reservas.Margin = new Padding(3, 2, 3, 2);
             button_reservas.Name = "button_reservas";
-            button_reservas.Size = new Size(200, 41);
+            button_reservas.Size = new Size(277, 41);
             button_reservas.TabIndex = 1;
             button_reservas.Text = "Reservas   ❯";
             button_reservas.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -291,10 +291,10 @@
             AvioesContainer.Controls.Add(button_InserirAviao);
             AvioesContainer.Dock = DockStyle.Top;
             AvioesContainer.Location = new Point(0, 232);
-            AvioesContainer.MaximumSize = new Size(200, 82);
-            AvioesContainer.MinimumSize = new Size(200, 41);
+            AvioesContainer.MaximumSize = new Size(277, 82);
+            AvioesContainer.MinimumSize = new Size(277, 41);
             AvioesContainer.Name = "AvioesContainer";
-            AvioesContainer.Size = new Size(200, 41);
+            AvioesContainer.Size = new Size(277, 41);
             AvioesContainer.TabIndex = 0;
             // 
             // button_avioes
@@ -309,7 +309,7 @@
             button_avioes.Location = new Point(0, 0);
             button_avioes.Margin = new Padding(3, 2, 3, 2);
             button_avioes.Name = "button_avioes";
-            button_avioes.Size = new Size(200, 41);
+            button_avioes.Size = new Size(277, 41);
             button_avioes.TabIndex = 1;
             button_avioes.Text = "Aviões   ❯";
             button_avioes.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -328,7 +328,7 @@
             button_InserirAviao.Location = new Point(0, 0);
             button_InserirAviao.Margin = new Padding(3, 2, 3, 2);
             button_InserirAviao.Name = "button_InserirAviao";
-            button_InserirAviao.Size = new Size(200, 41);
+            button_InserirAviao.Size = new Size(277, 41);
             button_InserirAviao.TabIndex = 2;
             button_InserirAviao.Text = "Inserir Aviao";
             button_InserirAviao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -341,10 +341,10 @@
             DashboardContainer.Controls.Add(button_dashboard);
             DashboardContainer.Dock = DockStyle.Top;
             DashboardContainer.Location = new Point(0, 191);
-            DashboardContainer.MaximumSize = new Size(200, 41);
-            DashboardContainer.MinimumSize = new Size(200, 41);
+            DashboardContainer.MaximumSize = new Size(277, 41);
+            DashboardContainer.MinimumSize = new Size(277, 41);
             DashboardContainer.Name = "DashboardContainer";
-            DashboardContainer.Size = new Size(200, 41);
+            DashboardContainer.Size = new Size(277, 41);
             DashboardContainer.TabIndex = 2;
             // 
             // button_dashboard
@@ -359,7 +359,7 @@
             button_dashboard.Location = new Point(0, 0);
             button_dashboard.Margin = new Padding(3, 2, 3, 2);
             button_dashboard.Name = "button_dashboard";
-            button_dashboard.Size = new Size(200, 41);
+            button_dashboard.Size = new Size(277, 41);
             button_dashboard.TabIndex = 1;
             button_dashboard.Text = "Dashboard";
             button_dashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -373,13 +373,13 @@
             panel_icone.Location = new Point(0, 0);
             panel_icone.Margin = new Padding(10, 5, 5, 10);
             panel_icone.Name = "panel_icone";
-            panel_icone.Size = new Size(191, 191);
+            panel_icone.Size = new Size(240, 191);
             panel_icone.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Image = Properties.Resources.amlogo;
-            pictureBoxLogo.Location = new Point(20, 10);
+            pictureBoxLogo.Location = new Point(42, 12);
             pictureBoxLogo.Name = "pictureBoxLogo";
             pictureBoxLogo.Size = new Size(149, 156);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
@@ -392,10 +392,10 @@
             panel_main.BorderStyle = BorderStyle.Fixed3D;
             panel_main.Dock = DockStyle.Fill;
             panel_main.ImeMode = ImeMode.Off;
-            panel_main.Location = new Point(191, 0);
+            panel_main.Location = new Point(240, 0);
             panel_main.Margin = new Padding(3, 2, 3, 2);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(950, 651);
+            panel_main.Size = new Size(901, 651);
             panel_main.TabIndex = 1;
             // 
             // AvioesTimer
