@@ -3,25 +3,24 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AeroMils___Controlo_de_Frota.Models;
 
-namespace AeroMils___Controlo_de_Frota.Modules
+namespace AeroMils___Controlo_de_Frota.Models
 {
     public class Empresa
     {
-        private List<Aviao> avioes;
+        private List<IAviao> avioes;
 
         public Empresa()
         {
-            avioes = new List<Aviao>();
+            avioes = new List<IAviao>();
         }
 
-        public void AddAviao(Aviao aviao)
+        public void AddAviao(IAviao aviao)
         {
             avioes.Add(aviao);
         }
 
-        public List<Aviao> GetAvioes()
+        public List<IAviao> GetAvioes()
         {
             return avioes;
         }

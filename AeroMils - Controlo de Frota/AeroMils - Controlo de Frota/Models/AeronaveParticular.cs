@@ -7,10 +7,10 @@ using AeroMils___Controlo_de_Frota.Modules;
 
 namespace AeroMils___Controlo_de_Frota.Models
 {
-    internal class AeronaveParticular : Aviao
+    public class AeronaveParticular : Aviao
     {
         private int _numProprietarios;
-        private Frete _valorFrete;
+        private double _valorFrete;
         public int numProprietarios
         {
             get => _numProprietarios;
@@ -18,17 +18,18 @@ namespace AeroMils___Controlo_de_Frota.Models
         }
         public double valorFrete
         {
-            get => _valorFrete.ValorFrete;
-            set => _valorFrete = new Frete(value);
+            get => _valorFrete;
+            set => _valorFrete = value;
         }
 
 
-        public AeronaveParticular(int id, int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int numProprietarios, double valorFrete)
-        : base(id, capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+        public AeronaveParticular(int id, int numProprietarios, double valorFrete)
+        : base(id)
         {
             _numProprietarios = numProprietarios;
-            _valorFrete = new Frete(valorFrete);
+            _valorFrete = valorFrete;
         }
 
+        
     }
 }

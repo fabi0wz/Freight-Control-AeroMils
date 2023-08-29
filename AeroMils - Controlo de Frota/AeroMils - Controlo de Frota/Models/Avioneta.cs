@@ -7,11 +7,10 @@ using AeroMils___Controlo_de_Frota.Modules;
 
 namespace AeroMils___Controlo_de_Frota.Models
 {
-    internal class Avioneta : Aviao
+    public class Avioneta : Aviao
     {
         private int _areaDescolagem;
-        private int _areaPouso;
-        private Frete _valorFrete;
+        private double _valorFrete;
 
         public int areaDescolagem
         {
@@ -19,24 +18,20 @@ namespace AeroMils___Controlo_de_Frota.Models
             set => _areaDescolagem = value;
         }
 
-        public int areaPouso
-        {
-            get => _areaPouso;
-            set => _areaPouso = value;
-        }
-
         public double valorFrete
         {
-            get => _valorFrete.ValorFrete;
-            set => _valorFrete = new Frete(value);
+            get => _valorFrete;
+            set => _valorFrete = value;
         }
 
 
-        public Avioneta(int id, int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int areaDescolagem, int areaPouso, double valorFrete) : base(id, capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+        public Avioneta(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico) : base(capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico) { }
+
+        public Avioneta(int id, int areaMinimaDescolagem, double valorFrete)
+            : base(id)
         {
-            _areaDescolagem = areaDescolagem;
-            _areaPouso = areaPouso;
-            _valorFrete = new Frete(valorFrete);
+            _areaDescolagem = areaMinimaDescolagem;
+            _valorFrete = valorFrete;
         }
     }
 }

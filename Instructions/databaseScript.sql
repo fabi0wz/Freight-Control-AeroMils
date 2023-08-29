@@ -4,8 +4,13 @@ CREATE TABLE Avioes (
     capacidade_passageiros INTEGER NOT NULL,
     autonomia INTEGER NOT NULL,
     data_ult_manutencao DATE NOT NULL,
-    tipo_aviao VARCHAR(45) NOT NULL
+    tipo_aviao VARCHAR(45) NOT NULL,
+    estado BOOLEAN NOT NULL,
+    marca VARCHAR(45) NOT NULL,
+    ano_fabrico DATE NOT NULL,
+    qtd_motores INTEGER NOT NULL
 );
+
 
 CREATE TABLE Avionetas(
     id_aviao INTEGER,
@@ -24,7 +29,7 @@ CREATE TABLE AeronavesMercadorias(
 CREATE TABLE AeronavesComerciais(
     id_aviao INTEGER,
     num_voos_diarios INTEGER NOT NULL,
-    companhia_area DECIMAL NOT NULL,
+    companhia_aerea TEXT NOT NULL,
     CONSTRAINT fk_aeronaves_comerciais_avioes FOREIGN KEY (id_aviao) REFERENCES Avioes(id_aviao)
 );
 
@@ -53,178 +58,89 @@ CREATE TABLE Reservas(
 );
 
 -- Insert data into Avioes table
-INSERT INTO Avioes (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_aviao)
-VALUES
-    ('Boeing 777', 300, 12000, '2023-08-01', 'Comercial'),
-    ('Airbus A320', 150, 8000, '2023-07-15', 'Comercial'),
-    ('Embraer E190', 100, 4000, '2023-08-10', 'Comercial'),
-    ('Cessna 172', 4, 800, '2023-08-05', 'Particular'),
-    ('Beechcraft King Air', 8, 1200, '2023-07-20', 'Particular'),
-    ('Antonov An-225', 800, 16000, '2023-07-30', 'Cargo'),
-    ('Piper PA-28 Cherokee', 4, 600, '2023-07-25', 'Particular'),
-    ('Gulfstream G650', 18, 7000, '2023-08-15', 'Particular'),
-    ('Embraer Legacy 650', 13, 5000, '2023-08-20', 'Particular'),
-    ('Airbus A380', 853, 14000, '2023-08-10', 'Comercial'),
-    ('Boeing 737', 180, 6000, '2023-09-01', 'Comercial'),
-    ('Cessna Citation X', 12, 3500, '2023-09-05', 'Particular'),
-    ('Dassault Falcon 7X', 16, 6000, '2023-09-10', 'Particular'),
-    ('Embraer Phenom 300', 8, 2200, '2023-09-15', 'Particular'),
-    ('Bombardier Global 7500', 19, 8000, '2023-09-20', 'Particular'),
-    ('Boeing 787 Dreamliner', 296, 15000, '2023-09-25', 'Comercial'),
-    ('Cirrus SR22', 4, 1000, '2023-10-01', 'Particular'),
-    ('Pilatus PC-12', 9, 1600, '2023-10-05', 'Particular'),
-    ('Airbus A350', 440, 16000, '2023-10-10', 'Comercial'),
-    ('Embraer Legacy 500', 12, 3500, '2023-10-15', 'Particular'),
-    ('Cessna Caravan 208', 14, 1100, '2023-10-20', 'Particular'),
-    ('Antonov An-124', 500, 4200, '2023-10-25', 'Cargo'),
-    ('Beechcraft Bonanza', 6, 800, '2023-10-30', 'Particular'),
-    ('Boeing 747', 524, 7500, '2023-11-01', 'Comercial'),
-    ('Embraer E175', 88, 3200, '2023-11-05', 'Comercial'),
-    ('Daher TBM 930', 6, 1600, '2023-11-10', 'Particular'),
-    ('Cessna 208 Caravan', 10, 1000, '2023-11-15', 'Particular'),
-    ('Airbus A330', 440, 12500, '2023-11-20', 'Comercial'),
-    ('Cirrus Vision Jet', 5, 1300, '2023-11-25', 'Particular'),
-    ('Embraer E195-E2', 146, 2800, '2023-11-30', 'Comercial');
 
+INSERT INTO Avioes (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_aviao, estado, marca, ano_fabrico, qtd_motores)
+VALUES
+    ('Boeing 747', 416, 7240, '2023-08-01', 'AeronaveComercial', 1, 'Boeing', '2018-01-01', 4),
+    ('Airbus A320', 180, 3450, '2023-07-15', 'AeronaveComercial', 0, 'Airbus', '2020-03-01', 2),
+    ('Cessna Citation X', 8, 3400, '2023-06-10', 'AeronaveParticular', 1, 'Cessna', '2019-05-01', 2),
+    ('Piper PA-28 Cherokee', 4, 450, '2023-05-01', 'Avioneta', 0, 'Piper', '2022-10-01', 1),
+    ('Embraer E190', 106, 2500, '2023-04-20', 'AeronaveComercial', 1, 'Embraer', '2021-11-01', 2),
+    ('Beechcraft King Air 350', 9, 1730, '2023-03-15', 'AeronaveParticular', 1, 'Beechcraft', '2018-07-01', 2),
+    ('Cessna 208 Caravan', 13, 850, '2023-02-10', 'AeronaveMercadorias', 0, 'Cessna', '2020-09-01', 1),
+    ('Cirrus SR22', 4, 1000, '2023-01-05', 'AeronaveParticular', 1, 'Cirrus', '2019-04-01', 1),
+    ('Gulfstream G650', 19, 7000, '2022-12-01', 'AeronaveParticular', 1, 'Gulfstream', '2017-02-01', 2),
+    ('Diamond DA40', 4, 600, '2022-11-01', 'Avioneta', 0, 'Diamond Aircraft', '2021-03-01', 1),
+    ('Airbus A380', 853, 8100, '2022-08-05', 'AeronaveComercial', 1, 'Airbus', '2015-06-01', 4),
+    ('Embraer Phenom 300', 11, 1970, '2022-07-20', 'AeronaveParticular', 0, 'Embraer', '2020-12-01', 2),
+    ('Pilatus PC-12', 9, 1600, '2022-06-15', 'AeronaveMercadorias', 1, 'Pilatus', '2019-09-01', 1),
+    ('Bombardier Learjet 75', 9, 2300, '2022-05-10', 'AeronaveParticular', 1, 'Bombardier', '2018-04-01', 2),
+    ('Cessna 152', 2, 380, '2022-04-05', 'Avioneta', 0, 'Cessna', '2021-08-01', 1),
+    ('Boeing 737', 189, 3500, '2023-08-15', 'AeronaveComercial', 1, 'Boeing', '2020-01-01', 2),
+    ('Airbus A330', 440, 5900, '2023-07-20', 'AeronaveComercial', 0, 'Airbus', '2019-03-01', 2),
+    ('Pilatus PC-24', 11, 2120, '2023-06-25', 'AeronaveParticular', 1, 'Pilatus', '2021-05-01', 2),
+    ('Cirrus Vision Jet SF50', 5, 1200, '2023-05-30', 'AeronaveParticular', 1, 'Cirrus', '2022-02-01', 1),
+    ('Beechcraft Baron G58', 6, 2000, '2023-05-01', 'AeronaveParticular', 1, 'Beechcraft', '2021-10-01', 2),
+    ('Cessna Citation M2', 6, 1550, '2023-04-15', 'AeronaveParticular', 1, 'Cessna', '2020-08-01', 2),
+    ('Piper M350', 6, 1325, '2023-04-01', 'AeronaveParticular', 0, 'Piper', '2019-12-01', 1),
+    ('Embraer Legacy 500', 12, 3330, '2023-03-15', 'AeronaveParticular', 1, 'Embraer', '2018-06-01', 2),
+    ('Cessna 421 Golden Eagle', 8, 1700, '2023-03-01', 'AeronaveParticular', 0, 'Cessna', '2017-01-01', 2),
+    ('Beechcraft King Air 260', 9, 1700, '2023-02-15', 'AeronaveParticular', 1, 'Beechcraft', '2020-03-01', 2),
+    ('Dassault Falcon 2000', 19, 3500, '2022-08-20', 'AeronaveParticular', 1, 'Dassault', '2019-07-01', 2),
+    ('Cessna 208B Grand Caravan EX', 14, 1180, '2022-08-05', 'AeronaveMercadorias', 0, 'Cessna', '2018-02-01', 1),
+    ('Embraer E195-E2', 146, 2600, '2022-07-20', 'AeronaveComercial', 1, 'Embraer', '2021-04-01', 2),
+    ('Cessna T206H Stationair', 6, 800, '2022-07-05', 'AeronaveParticular', 1, 'Cessna', '2020-10-01', 1),
+    ('Gulfstream G550', 18, 6750, '2022-06-20', 'AeronaveParticular', 1, 'Gulfstream', '2019-09-01', 2);
 
 -- Insert data into Avionetas table
 INSERT INTO Avionetas (id_aviao, area_minima_descolagem, valor_frete)
 VALUES
-    (1, 30, 200.50),
-    (2, 20, 100.75),
-    (3, 25, 120.25),
-    (4, 15, 80.90),
-    (5, 35, 180.00),
-    (6, 18, 90.50),
-    (7, 25, 110.25),
-    (8, 12, 70.75),
-    (9, 22, 130.00),
-    (10, 10, 60.25),
-    (11, 30, 180.50),
-    (12, 15, 75.75),
-    (13, 25, 140.25),
-    (14, 10, 55.00),
-    (15, 35, 200.50),
-    (16, 18, 100.75),
-    (17, 23, 125.25),
-    (18, 13, 75.90),
-    (19, 30, 170.00),
-    (20, 16, 80.25),
-    (21, 28, 150.50),
-    (22, 14, 70.75),
-    (23, 32, 180.25),
-    (24, 18, 90.00),
-    (25, 24, 120.50),
-    (26, 12, 60.75),
-    (27, 30, 190.25),
-    (28, 20, 100.50),
-    (29, 26, 140.75),
-    (30, 14, 70.25);
+    (4, 150, 2000.00),
+    (10, 100, 800.00),
+    (15, 80, 600.00);
 
 
 -- Insert data into AeronavesMercadorias table
 INSERT INTO AeronavesMercadorias (id_aviao, capacidade_carga, valor_frete)
 VALUES
-    (1, 15000, 5000.75),
-    (2, 8000, 3500.50),
-    (3, 12000, 7000.25),
-    (4, 2000, 1500.00),
-    (5, 30000, 12000.75),
-    (6, 10000, 4000.50),
-    (7, 18000, 8000.25),
-    (8, 7000, 3000.00),
-    (9, 13000, 6000.75),
-    (10, 5000, 2500.50),
-    (11, 17000, 7500.25),
-    (12, 9000, 4000.00),
-    (13, 11000, 5000.75),
-    (14, 6000, 2500.50),
-    (15, 14000, 6000.25),
-    (16, 8000, 3500.00),
-    (17, 12000, 5000.75),
-    (18, 4000, 1500.50),
-    (19, 25000, 10000.25),
-    (20, 10000, 4000.00),
-    (21, 16000, 7000.75),
-    (22, 9000, 3500.50),
-    (23, 18000, 8000.25),
-    (24, 7000, 3000.00),
-    (25, 11000, 5000.75),
-    (26, 5000, 2500.50),
-    (27, 14000, 6000.25),
-    (28, 8000, 3500.00),
-    (29, 12000, 5000.75),
-    (30, 4000, 1500.50);
+    (7, 5000, 1200.00),
+    (13, 2500, 800.00),
+    (27, 3500, 1500.00);
 
 
 -- Insert data into AeronavesComerciais table
-INSERT INTO AeronavesComerciais (id_aviao, num_voos_diarios, companhia_area)
+INSERT INTO AeronavesComerciais (id_aviao, num_voos_diarios, companhia_aerea)
 VALUES
-    (1, 10, 'Airline A'),
-    (2, 8, 'Airline B'),
-    (3, 6, 'Airline C'),
-    (4, 4, 'Airline D'),
-    (5, 12, 'Airline E'),
-    (6, 5, 'Airline F'),
-    (7, 7, 'Airline G'),
-    (8, 9, 'Airline H'),
-    (9, 11, 'Airline I'),
-    (10, 7, 'Airline J'),
-    (11, 13, 'Airline K'),
-    (12, 6, 'Airline L'),
-    (13, 8, 'Airline M'),
-    (14, 10, 'Airline N'),
-    (15, 12, 'Airline O'),
-    (16, 4, 'Airline P'),
-    (17, 6, 'Airline Q'),
-    (18, 9, 'Airline R'),
-    (19, 11, 'Airline S'),
-    (20, 14, 'Airline T'),
-    (21, 7, 'Airline U'),
-    (22, 10, 'Airline V'),
-    (23, 12, 'Airline W'),
-    (24, 6, 'Airline X'),
-    (25, 8, 'Airline Y'),
-    (26, 5, 'Airline Z'),
-    (27, 9, 'Airline A1'),
-    (28, 11, 'Airline B1'),
-    (29, 7, 'Airline C1'),
-    (30, 13, 'Airline D1');
+    (1, 10, 'Delta Airlines'),
+    (2, 8, 'American Airlines'),
+    (5, 12, 'Lufthansa'),
+    (11, 9, 'British Airways'),
+    (16, 7, 'Air France'),
+    (17, 11, 'Qatar Airways'),
+    (28, 5, 'Singapore Airlines');
 
 
 -- Insert data into AeronavesParticulares table
 INSERT INTO AeronavesParticulares (id_aviao, num_proprietarios, valor_frete)
 VALUES
-    (1, 1, 2500.50),
-    (2, 2, 1800.75),
-    (3, 1, 2200.25),
-    (4, 1, 1500.00),
-    (5, 2, 2000.75),
-    (6, 1, 1700.50),
-    (7, 1, 2100.25),
-    (8, 3, 2300.00),
-    (9, 1, 2500.50),
-    (10, 2, 1800.75),
-    (11, 1, 2200.25),
-    (12, 3, 2500.00),
-    (13, 1, 2300.75),
-    (14, 2, 1700.50),
-    (15, 1, 2100.25),
-    (16, 1, 2500.00),
-    (17, 1, 1800.75),
-    (18, 2, 2200.25),
-    (19, 1, 1500.00),
-    (20, 2, 2000.75),
-    (21, 1, 1700.50),
-    (22, 1, 2100.25),
-    (23, 3, 2300.00),
-    (24, 1, 2500.50),
-    (25, 2, 1800.75),
-    (26, 1, 2200.25),
-    (27, 1, 1500.00),
-    (28, 2, 2000.75),
-    (29, 1, 1700.50),
-    (30, 1, 2100.25);
+    (3, 2, 2500.00),
+    (6, 1, 1800.00),
+    (8, 3, 3000.00),
+    (9, 2, 2200.00),
+    (12, 1, 2800.00),
+    (14, 2, 3200.00),
+    (18, 1, 2000.00),
+    (19, 3, 2700.00),
+    (20, 2, 2300.00),
+    (21, 1, 2900.00),
+    (22, 2, 2600.00),
+    (23, 1, 2100.00),
+    (24, 3, 3100.00),
+    (25, 2, 2400.00),
+    (26, 1, 2700.00),
+    (29, 2, 2200.00),
+    (30, 1, 2500.00);
+
 
 -- Insert data into Manutencoes table
 INSERT INTO Manutencoes (id_aviao, data_inicio, data_fim)

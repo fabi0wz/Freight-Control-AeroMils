@@ -1,6 +1,6 @@
 ﻿namespace AeroMils___Controlo_de_Frota.Models
 {
-    internal interface IAviao
+    public interface IAviao
     {
         DateTime anoFabrico { get; set; }
         int autonomia { get; set; }

@@ -1,5 +1,6 @@
 ﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
 using AeroMils___Controlo_de_Frota.Models;
+using AeroMils___Controlo_de_Frota.Modules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,8 +21,16 @@ namespace AeroMils___Controlo_de_Frota.Views
         public Avioes()
         {
             InitializeComponent();
-            DataTable avioesDataTable = dbContext.GetAvioesData();
-            dataGridViewAvioes.DataSource = avioesDataTable;
+            Empresa empresa = dbContext.GetAvioesData();
+            List<Aviao> listaAvioes = empresa.GetAvioes();
+
+            MessageBox.Show(listaAvioes.Count.ToString());
+
+            for (int i = 0; i < listaAvioes.Count; i++)
+            {
+                Aviao aviao = listaAvioes[i];
+                MessageBox.Show($"Element {i + 1}: Marca = {aviao.marca}");
+            }
         }
 
 

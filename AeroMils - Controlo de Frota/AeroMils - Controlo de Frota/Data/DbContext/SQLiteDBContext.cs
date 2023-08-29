@@ -165,7 +165,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
         public static void ChangePlaneStatus(int planeID)
         {
-            using (SQLiteConnection connection = new SQLiteConnection("your_connection_string_here"))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
 
@@ -191,7 +191,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         {
             int highestID = -1;
 
-            using (SQLiteConnection connection = new SQLiteConnection("your_connection_string_here"))
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 connection.Open();
 
@@ -204,25 +204,100 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return highestID;
         }
 
-
-        public DataTable GetAvioesData()
+        public Modules.Empresa GetAvioesData()
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes ORDER BY id_aviao DESC", connection))
-            {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+            Modules.Empresa AeroMills = new Modules.Empresa();
+                OpenConnection();
+                try
                 {
-                    adapter.Fill(dataTable);
+                    using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes", connection))
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                            {
+                                string tipo_aviao = reader["tipo_aviao"].ToString();
+
+                                int id = Convert.ToInt32(reader["id_aviao"]);
+                                int capacidade_passageiros = Convert.ToInt32(reader["capacidade_passageiros"]);
+                                int autonomia = Convert.ToInt32(reader["autonomia"]);
+                                DateTime dataUltimaManutencao = Convert.ToDateTime(reader["data_ult_manutencao"]);
+                                bool estado = Convert.ToBoolean(reader["estado"]);
+                                int qtdMotores = Convert.ToInt32(reader["qtd_motores"]);
+                                string marca = reader["marca"].ToString();
+                                string modelo = reader["modelo"].ToString();
+                                DateTime anoFabrico = Convert.ToDateTime(reader["ano_fabrico"]);
+
+
+                                switch (tipo_aviao)
+                                {
+                                    case "AeronaveComercial":
+                                        AeronaveComercial aeronavecomercial = GetAeronavesComerciaisData(id);
+                                        aeronavecomercial.capacidade_passageiros = capacidade_passageiros;
+                                        aeronavecomercial.autonomia = autonomia;
+                                        aeronavecomercial.dataUltimaManutencao = dataUltimaManutencao;
+                                        aeronavecomercial.estado = estado;
+                                        aeronavecomercial.qtdMotores = qtdMotores;
+                                        aeronavecomercial.marca = marca;
+                                        aeronavecomercial.modelo = modelo;
+                                        aeronavecomercial.anoFabrico = anoFabrico;
+                                        AeroMills.AddAviao(aeronavecomercial);
+                                        break;
+                                    case "AeronaveMercadorias":
+                                        AeronaveMercadorias aeronaveMercadorias = GetAeronavesMercadoriasData(id);
+                                        aeronaveMercadorias.capacidade_passageiros = capacidade_passageiros;
+                                        aeronaveMercadorias.autonomia = autonomia;
+                                        aeronaveMercadorias.dataUltimaManutencao = dataUltimaManutencao;
+                                        aeronaveMercadorias.estado = estado;
+                                        aeronaveMercadorias.qtdMotores = qtdMotores;
+                                        aeronaveMercadorias.marca = marca;
+                                        aeronaveMercadorias.modelo = modelo;
+                                        aeronaveMercadorias.anoFabrico = anoFabrico;
+                                        AeroMills.AddAviao(aeronaveMercadorias);
+                                        break;
+                                    case "AeronaveParticular":
+                                        AeronaveParticular aeronaveparticular = GetAeroNaveParticularData(id);
+                                        aeronaveparticular.capacidade_passageiros = capacidade_passageiros;
+                                        aeronaveparticular.autonomia = autonomia;
+                                        aeronaveparticular.dataUltimaManutencao = dataUltimaManutencao;
+                                        aeronaveparticular.estado = estado;
+                                        aeronaveparticular.qtdMotores = qtdMotores;
+                                        aeronaveparticular.marca = marca;
+                                        aeronaveparticular.modelo = modelo;
+                                        aeronaveparticular.anoFabrico = anoFabrico;
+                                        AeroMills.AddAviao(aeronaveparticular);
+                                        break;
+                                    case "Avioneta":
+                                        Avioneta avioneta = GetAvionetaData(id);
+                                        avioneta.capacidade_passageiros = capacidade_passageiros;
+                                        avioneta.autonomia = autonomia;
+                                        avioneta.dataUltimaManutencao = dataUltimaManutencao;
+                                        avioneta.estado = estado;
+                                        avioneta.qtdMotores = qtdMotores;
+                                        avioneta.marca = marca;
+                                        avioneta.modelo = modelo;
+                                        avioneta.anoFabrico = anoFabrico;
+                                        AeroMills.AddAviao(avioneta);
+                                        break;
+                                    default:
+                                        // Handle invalid type
+                                        break;
+                                }
+                            }
+                        }
+                    
                 }
-            }
 
-            CloseConnection(); // Close the connection after using it
+                catch (Exception ex)
+                {
+                    // Display the exception details in a message box
+                    MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
 
-            return dataTable;
+            
+            CloseConnection(); // Ensure the connection is closed in case of an exception
+            return AeroMills;
         }
+
 
         public DataTable getAvailablePlanes()
         {
@@ -241,83 +316,104 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             CloseConnection(); // Close the connection after using it
                    
             return dataTable;
-        }   
+        }
 
-        public DataTable GetAvionetasData()
+        public Avioneta GetAvionetaData(int id)
         {
-            DataTable dataTable = new DataTable();
+            Avioneta avioneta = null;
 
-            OpenConnection(); // Open the connection before using it
 
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avionetas", connection))
+            using (SQLiteCommand command = new SQLiteCommand("SELECT area_minima_descolagem, valor_frete FROM Avionetas WHERE id_aviao = @id_aviao", connection))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                command.Parameters.AddWithValue("@id_aviao", id);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    if (reader.Read())
+                    {
+                        int areaMinimaDescolagem = Convert.ToInt32(reader["area_minima_descolagem"]);
+                        double valorFrete = Convert.ToDouble(reader["valor_frete"]);
+
+                        avioneta = new Avioneta(id, areaMinimaDescolagem, valorFrete); // Only set areaDescolagem and valorFrete
+                    }
                 }
             }
 
-            CloseConnection(); // Close the connection after using it
-
-            return dataTable;
+            return avioneta;
         }
 
 
-        public DataTable GetAeronavesParticularesData()
+        public AeronaveParticular GetAeroNaveParticularData(int id)
         {
-            DataTable dataTable = new DataTable();
+            AeronaveParticular aeronaveparticular = null;
 
-            OpenConnection(); // Open the connection before using it
 
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM AeronavesParticulares", connection))
+            using (SQLiteCommand command = new SQLiteCommand("SELECT num_proprietarios, valor_frete FROM AeronavesParticulares WHERE id_aviao = @id_aviao", connection))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                command.Parameters.AddWithValue("@id_aviao", id);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    if (reader.Read())
+                    {
+                        int num_proprietarios = Convert.ToInt32(reader["num_proprietarios"]);
+                        double valorFrete = Convert.ToDouble(reader["valor_frete"]);
+
+                        aeronaveparticular = new AeronaveParticular(id, num_proprietarios, valorFrete);
+                    }
                 }
             }
 
-            CloseConnection(); // Close the connection after using it
-
-            return dataTable;
+            return aeronaveparticular;
         }
 
-        public DataTable GetAeronavesComerciaisData()
+        public AeronaveComercial GetAeronavesComerciaisData(int id)
         {
-            DataTable dataTable = new DataTable();
+            AeronaveComercial aeronaveComercial = null;
 
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM AeronavesComerciais", connection))
+            using (SQLiteCommand command = new SQLiteCommand("SELECT num_voos_diarios, companhia_aerea FROM AeronavesComerciais WHERE id_aviao = @id_aviao", connection))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                command.Parameters.AddWithValue("@id_aviao", id);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    if (reader.Read())
+                    {
+                        int num_voos_diarios = Convert.ToInt32(reader["num_voos_diarios"]);
+                        string companhia_aerea = reader["companhia_aerea"].ToString();
+
+                        aeronaveComercial = new AeronaveComercial(id, num_voos_diarios, companhia_aerea);
+                    }
                 }
             }
 
-            CloseConnection(); // Close the connection after using it
 
-            return dataTable;
+            return aeronaveComercial;
         }
 
-        public DataTable GetAeronavesMercadoriasData()
+        public AeronaveMercadorias GetAeronavesMercadoriasData(int id)
         {
-            DataTable dataTable = new DataTable();
+            AeronaveMercadorias aeronaveMercadorias = null;
 
-            OpenConnection(); // Open the connection before using it
 
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM AeronavesMercadorias", connection))
+            using (SQLiteCommand command = new SQLiteCommand("SELECT capacidade_carga, valor_frete FROM AeronavesMercadorias WHERE id_aviao = @id_aviao", connection))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                command.Parameters.AddWithValue("@id_aviao", id);
+
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    if (reader.Read())
+                    {
+                        int capacidade_carga = Convert.ToInt32(reader["capacidade_carga"]);
+                        double valor_frete = Convert.ToDouble(reader["valor_frete"]);
+
+                        aeronaveMercadorias = new AeronaveMercadorias(id, capacidade_carga, valor_frete);
+                    }
                 }
             }
 
-            CloseConnection(); // Close the connection after using it
 
-            return dataTable;
+            return aeronaveMercadorias;
         }
 
         public DataTable GetReservasData()

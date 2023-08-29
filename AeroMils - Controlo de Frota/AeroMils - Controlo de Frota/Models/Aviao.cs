@@ -2,7 +2,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace AeroMils___Controlo_de_Frota.Models
@@ -144,19 +146,16 @@ namespace AeroMils___Controlo_de_Frota.Models
             }
         }
 
-        public Aviao(int id, int capacidade_passageiros, int autonomia, DateTime dataUltimaManutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+        public Aviao(int id)
         {
-            if (id >= 0) 
-            {
-                this.id = id;
-            }
-            else
-            {
-                this.id = SQLiteDBContext.GetLastPlaneID() + 1;
-            }
+            this.id = id;
+        }
+
+        public Aviao(int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico)
+        {
             this.capacidade_passageiros = capacidade_passageiros;
             this.autonomia = autonomia;
-            this.dataUltimaManutencao = dataUltimaManutencao;
+            this.dataUltimaManutencao = data_ult_manutencao;
             this.estado = estado;
             this.qtdMotores = qtdMotores;
             this.marca = marca;

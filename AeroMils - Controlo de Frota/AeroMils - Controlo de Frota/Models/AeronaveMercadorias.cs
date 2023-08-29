@@ -7,10 +7,10 @@ using AeroMils___Controlo_de_Frota.Modules;
 
 namespace AeroMils___Controlo_de_Frota.Models
 {
-    internal class AeronaveMercadorias : Aviao
+    public class AeronaveMercadorias : Aviao
     {
         private int _capacidadeCarga;
-        private Frete _valorFrete;
+        private double _valorFrete;
         public int capacidadeCarga
         {
             get => _capacidadeCarga;
@@ -18,14 +18,15 @@ namespace AeroMils___Controlo_de_Frota.Models
         }
         public double valorFrete
         {
-            get => _valorFrete.ValorFrete;
-            set => _valorFrete = new Frete(value);
+            get => _valorFrete;
+            set => _valorFrete = value;
         }
 
-        public AeronaveMercadorias(int id, int capacidade_passageiros, int autonomia, DateTime data_ult_manutencao, bool estado, int qtdMotores, string marca, string modelo, DateTime anoFabrico, int capacidadeCarga, double valorFrete) : base(id, capacidade_passageiros, autonomia, data_ult_manutencao, estado, qtdMotores, marca, modelo, anoFabrico)
+        public AeronaveMercadorias(int id, int capacidadeCarga, double valorFrete) 
+            : base(id)
         {
-            _capacidadeCarga = capacidade_passageiros;
-            _valorFrete = new Frete(valorFrete);
+            _capacidadeCarga = capacidadeCarga;
+            _valorFrete = valorFrete;
         }
     }
 }
