@@ -210,7 +210,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                 OpenConnection();
                 try
                 {
-                    using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes", connection))
+                    using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes ORDER BY id_aviao DESC", connection))
                     using (SQLiteDataReader reader = command.ExecuteReader())
                     {
                         while (reader.Read())
@@ -240,19 +240,21 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                                         aeronavecomercial.marca = marca;
                                         aeronavecomercial.modelo = modelo;
                                         aeronavecomercial.anoFabrico = anoFabrico;
+                                        aeronavecomercial.Tipo = "Aeronave Comercial";
                                         AeroMills.AddAviao(aeronavecomercial);
                                         break;
                                     case "AeronaveMercadorias":
-                                        AeronaveMercadorias aeronaveMercadorias = GetAeronavesMercadoriasData(id);
-                                        aeronaveMercadorias.capacidade_passageiros = capacidade_passageiros;
-                                        aeronaveMercadorias.autonomia = autonomia;
-                                        aeronaveMercadorias.dataUltimaManutencao = dataUltimaManutencao;
-                                        aeronaveMercadorias.estado = estado;
-                                        aeronaveMercadorias.qtdMotores = qtdMotores;
-                                        aeronaveMercadorias.marca = marca;
-                                        aeronaveMercadorias.modelo = modelo;
-                                        aeronaveMercadorias.anoFabrico = anoFabrico;
-                                        AeroMills.AddAviao(aeronaveMercadorias);
+                                        AeronaveMercadorias aeronavemercadorias = GetAeronavesMercadoriasData(id);
+                                        aeronavemercadorias.capacidade_passageiros = capacidade_passageiros;
+                                        aeronavemercadorias.autonomia = autonomia;
+                                        aeronavemercadorias.dataUltimaManutencao = dataUltimaManutencao;
+                                        aeronavemercadorias.estado = estado;
+                                        aeronavemercadorias.qtdMotores = qtdMotores;
+                                        aeronavemercadorias.marca = marca;
+                                        aeronavemercadorias.modelo = modelo;
+                                        aeronavemercadorias.anoFabrico = anoFabrico;
+                                        aeronavemercadorias.Tipo = "Aeronave de Mercadorias";  
+                                        AeroMills.AddAviao(aeronavemercadorias);
                                         break;
                                     case "AeronaveParticular":
                                         AeronaveParticular aeronaveparticular = GetAeroNaveParticularData(id);
@@ -264,6 +266,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                                         aeronaveparticular.marca = marca;
                                         aeronaveparticular.modelo = modelo;
                                         aeronaveparticular.anoFabrico = anoFabrico;
+                                        aeronaveparticular.Tipo = "Aeronave Particular";
                                         AeroMills.AddAviao(aeronaveparticular);
                                         break;
                                     case "Avioneta":
@@ -276,6 +279,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                                         avioneta.marca = marca;
                                         avioneta.modelo = modelo;
                                         avioneta.anoFabrico = anoFabrico;
+                                        avioneta.Tipo = "Avioneta";
                                         AeroMills.AddAviao(avioneta);
                                         break;
                                     default:

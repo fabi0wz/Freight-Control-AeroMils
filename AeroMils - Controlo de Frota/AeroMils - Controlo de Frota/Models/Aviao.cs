@@ -29,6 +29,8 @@ namespace AeroMils___Controlo_de_Frota.Models
         private string _modelo;
 
         private DateTime _anoFabrico;
+
+        private string _tipo;
         
         public int id
         {
@@ -143,6 +145,18 @@ namespace AeroMils___Controlo_de_Frota.Models
             set
             {
                 _anoFabrico = value;
+            }
+        }
+
+        public string Tipo
+        {
+            get
+            {
+                return _tipo;
+            }
+            set
+            {
+                _tipo = value;
             }
         }
 
