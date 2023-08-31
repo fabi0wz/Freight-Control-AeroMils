@@ -18,6 +18,7 @@ namespace AeroMils___Controlo_de_Frota.Views
     {
         private SQLiteDBContext dbContext = new SQLiteDBContext();
         private int counter = -1;
+        private bool endFlag = false;
 
         public Avioes()
         {
@@ -34,17 +35,35 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void avioesNextButton_Click(object sender, EventArgs e)
         {
-            counter += 9;
-            clearTable();
-            retrieveData();
+            if (endFlag)
+            {
+                MessageBox.Show("Não existem mais dados para mostrar");
+            }
+            else
+            {
+                counter += 9;
+                clearTable();
+                retrieveData();
+            }
+            
         }
 
         private void avioesPreviousButton_Click(object sender, EventArgs e)
         {
             try
             {
-                counter -= 9;
-                retrieveData();
+                if(counter < -1)
+                {
+                    MessageBox.Show("Não existem mais dados para mostrar");
+                }
+                else
+                {
+                    counter -= 9;
+                    retrieveData();
+                    endFlag = false;
+
+                }
+
             }
             catch (Exception ex)
             {
@@ -64,6 +83,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha1Estado.Text = listaAvioes[counter + 1].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha1Tipo.Text = listaAvioes[counter + 1].Tipo;
                 aviaoLinha1DataManutencao.Text = listaAvioes[counter + 1].dataUltimaManutencao.ToString();
+
+                if (counter + 1 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha2
@@ -74,6 +98,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha2Estado.Text = listaAvioes[counter + 2].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha2Tipo.Text = listaAvioes[counter + 2].Tipo;
                 aviaoLinha2DataManutencao.Text = listaAvioes[counter + 2].dataUltimaManutencao.ToString();
+
+                if(counter+2 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha3
@@ -84,6 +113,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha3Estado.Text = listaAvioes[counter + 3].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha3Tipo.Text = listaAvioes[counter + 3].Tipo;
                 aviaoLinha3DataManutencao.Text = listaAvioes[counter + 3].dataUltimaManutencao.ToString();
+
+                if (counter + 3 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha4
@@ -94,6 +128,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha4Estado.Text = listaAvioes[counter + 4].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha4Tipo.Text = listaAvioes[counter + 4].Tipo;
                 aviaoLinha4DataManutencao.Text = listaAvioes[counter + 4].dataUltimaManutencao.ToString();
+
+                if (counter + 4 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha5
@@ -104,6 +143,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha5Estado.Text = listaAvioes[counter + 5].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha5Tipo.Text = listaAvioes[counter + 5].Tipo;
                 aviaoLinha5DataManutencao.Text = listaAvioes[counter + 5].dataUltimaManutencao.ToString();
+
+                if (counter + 5 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha6
@@ -114,6 +158,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha6Estado.Text = listaAvioes[counter + 6].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha6Tipo.Text = listaAvioes[counter + 6].Tipo;
                 aviaoLinha6DataManutencao.Text = listaAvioes[counter + 6].dataUltimaManutencao.ToString();
+
+                if (counter + 6 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha7
@@ -124,6 +173,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha7Estado.Text = listaAvioes[counter + 7].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha7Tipo.Text = listaAvioes[counter + 7].Tipo;
                 aviaoLinha7DataManutencao.Text = listaAvioes[counter + 7].dataUltimaManutencao.ToString();
+
+                if (counter + 7 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha8
@@ -134,6 +188,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha8Estado.Text = listaAvioes[counter + 8].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha8Tipo.Text = listaAvioes[counter + 8].Tipo;
                 aviaoLinha8DataManutencao.Text = listaAvioes[counter + 8].dataUltimaManutencao.ToString();
+
+                if (counter + 8 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
             //Linha 9
@@ -144,6 +203,11 @@ namespace AeroMils___Controlo_de_Frota.Views
                 aviaoLinha9Estado.Text = listaAvioes[counter + 9].estado == false ? "No Hangar" : "Em Viagem";
                 aviaoLinha9Tipo.Text = listaAvioes[counter + 9].Tipo;
                 aviaoLinha9DataManutencao.Text = listaAvioes[counter + 9].dataUltimaManutencao.ToString();
+
+                if (counter + 9 == listaAvioes.Count - 1)
+                {
+                    endFlag = true;
+                }
             }
 
         }
