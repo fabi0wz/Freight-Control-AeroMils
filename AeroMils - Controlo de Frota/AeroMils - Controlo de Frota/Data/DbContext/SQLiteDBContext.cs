@@ -9,6 +9,7 @@ using System.Data;
 using AeroMils___Controlo_de_Frota.Models;
 using System.Numerics;
 using System.Reflection;
+using static System.ComponentModel.Design.ObjectSelectorEditor;
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -39,30 +40,55 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static int InserirNovoAviao(IAviao aviao)
+        public int InserirNovoAviao(string modelo, string marca, int capacidade, int autonomia, DateTime manutencao, string tipo, DateTime ano, int quantidade)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                connection.Open();
-
-                using (SQLiteCommand command = new SQLiteCommand(connection))
+                try
                 {
-                    string query = "INSERT INTO Aviao (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_de_aviao) VALUES (@modelo, @capacidade, @autonomia, @dataManutencao, @tipo); SELECT last_insert_rowid();";
+                    connection.Open();
 
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@modelo", aviao.modelo);
-                    command.Parameters.AddWithValue("@capacidade", aviao.capacidade_passageiros);
-                    command.Parameters.AddWithValue("@autonomia", aviao.autonomia);
-                    command.Parameters.AddWithValue("@dataManutencao", aviao.dataUltimaManutencao);
-                    //command.Parameters.AddWithValue("@tipo", aviao.tipoAviao);
+                    // Create a SQLite command to insert data into the database
+                    string query = "INSERT INTO Avioes (modelo, capacidade_passageiros, autonomia, data_ult_manutencao, tipo_aviao, estado, marca, ano_fabrico, qtd_motores) " +
+                                   "VALUES (@Modelo, @Capacidade, @Autonomia, @Manutencao, @Tipo, @Estado, @Marca, @Ano, @Quantidade);" +
+                                   "SELECT last_insert_rowid();"; // Retrieve the last inserted row ID
 
-                    int newAviaoId = Convert.ToInt32(command.ExecuteScalar());
-                    return newAviaoId;
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@Modelo", modelo);
+                        command.Parameters.AddWithValue("@Capacidade", capacidade);
+                        command.Parameters.AddWithValue("@Autonomia", autonomia);
+                        command.Parameters.AddWithValue("@Manutencao", manutencao);
+                        command.Parameters.AddWithValue("@Tipo", tipo);
+                        command.Parameters.AddWithValue("@Estado", 0);
+                        command.Parameters.AddWithValue("@Marca", marca);
+                        command.Parameters.AddWithValue("@Ano", ano);
+                        command.Parameters.AddWithValue("@Quantidade", quantidade);
+
+                        // Execute the SQL command to insert the data and retrieve the last inserted ID
+                        int insertedId = Convert.ToInt32(command.ExecuteScalar());
+
+                        // Check if the insertion was successful and the ID was retrieved
+                        if (insertedId > 0)
+                        {
+                            // Now, you can run any additional logic here if needed
+                        }
+
+                        return insertedId;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during database interaction
+                    Console.WriteLine("Error: " + ex.Message);
+                    return -1; // Return a value to indicate failure
                 }
             }
         }
 
-        static void InserirNovaAvioneta(int aviaoId, int areaMinimaDescolagem, decimal valorFrete)
+        
+
+        public void InserirNovaAvioneta(int aviaoId, int areaMinimaDescolagem, double valorFrete)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -82,7 +108,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static void InserirNovaAeronaveMercadorias(int aviaoId, int capacidadeCarga, decimal valorFrete)
+        public void InserirNovaAeronaveMercadorias(int aviaoId, int capacidadeCarga, double valorFrete)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -102,7 +128,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static void InserirNovaAeronaveComercial(int aviaoId, int numVoosDiarios, decimal companhiaArea)
+        public void InserirNovaAeronaveComercial(int aviaoId, int numVoosDiarios, string companhiaArea)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -110,7 +136,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    string query = "INSERT INTO AeronavesComerciais (id_aviao, num_voos_diarios, companhia_area) VALUES (@aviaoId, @numVoosDiarios, @companhiaArea);";
+                    string query = "INSERT INTO AeronavesComerciais (id_aviao, num_voos_diarios, companhia_aerea) VALUES (@aviaoId, @numVoosDiarios, @companhiaArea);";
 
                     command.CommandText = query;
                     command.Parameters.AddWithValue("@aviaoId", aviaoId);
@@ -122,7 +148,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static void InserirNovaAeronaveParticular(int aviaoId, int numProprietarios, decimal valorFrete)
+        public void InserirNovaAeronaveParticular(int aviaoId, int numProprietarios, double valorFrete)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -187,23 +213,6 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         }
 
 
-        public static int GetLastPlaneID()
-        {
-            int highestID = -1;
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-
-                using (SQLiteCommand command = new SQLiteCommand("SELECT MAX(id_aviao) FROM Avioes", connection))
-                {
-                    highestID = Convert.ToInt32(command.ExecuteScalar());
-                }
-            }
-
-            return highestID;
-        }
-
         public Modules.Empresa GetAvioesData()
         {
             Modules.Empresa AeroMills = new Modules.Empresa();
@@ -216,7 +225,6 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                         while (reader.Read())
                             {
                                 string tipo_aviao = reader["tipo_aviao"].ToString();
-
                                 int id = Convert.ToInt32(reader["id_aviao"]);
                                 int capacidade_passageiros = Convert.ToInt32(reader["capacidade_passageiros"]);
                                 int autonomia = Convert.ToInt32(reader["autonomia"]);
