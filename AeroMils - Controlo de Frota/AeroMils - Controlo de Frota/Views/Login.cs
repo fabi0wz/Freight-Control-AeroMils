@@ -12,16 +12,23 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Login : Form
     {
+
+        Register register;
+
         public Login()
         {
             InitializeComponent();
+
+            this.register = new Register(this);
+
+            this.register.Hide();
+
         }
 
         // opens the register form
         private void CreateAccount_label_Click(object sender, EventArgs e)
         {
-            Register register = new Register();
-            register.Show();
+            this.register.Show();
             this.Hide();
         }
 
@@ -48,7 +55,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 if (Username_textBox.Text == "admin" && Password_textBox.Text == "admin")
                 {
                     //opens the main form
-                    Form main = new Form1();
+                    Form main = new Form1(this);
                     main.Show();
                     this.Hide();
                 }
@@ -62,6 +69,8 @@ namespace AeroMils___Controlo_de_Frota.Views
                     Username_textBox.Focus();
                 }
             }
+
+            register.Close();
         }
 
         private void ShowPassword_checkBox_CheckedChanged(object sender, EventArgs e)

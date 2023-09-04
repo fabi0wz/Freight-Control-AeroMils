@@ -26,7 +26,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             empresa = dbContext.GetAvioesData();
             listaAvioes = empresa.GetAvioes();
-            
+
             DisplayRecords();
         }
 

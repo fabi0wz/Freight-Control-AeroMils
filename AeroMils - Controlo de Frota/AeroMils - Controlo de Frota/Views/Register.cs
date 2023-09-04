@@ -12,15 +12,19 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Register : Form
     {
-        public Register()
+
+        Login login;
+
+        public Register(Login login)
         {
             InitializeComponent();
+
+            this.login = login;
         }
 
         // opens the login form
         private void BackToLogin_label_Click(object sender, EventArgs e)
         {
-            Login login = new Login();
             login.Show();
             this.Hide();
         }
@@ -54,7 +58,6 @@ namespace AeroMils___Controlo_de_Frota.Views
                 {
                     MessageBox.Show("Account Created");
                     //opens the login form
-                    Login login = new Login();
                     login.Show();
                     this.Hide();
                 }

@@ -14,8 +14,10 @@ namespace AeroMils___Controlo_de_Frota.Views
         bool manutencaoCollapsed = true;
         private SQLiteDBContext dbContext = new SQLiteDBContext();
 
+        Login login;
 
-        public Form1()
+
+        public Form1(Login login)
         {
             InitializeComponent();
             //tempDB.CreateDefaults();
@@ -23,6 +25,8 @@ namespace AeroMils___Controlo_de_Frota.Views
             //open dashboard form by default
             OpenChildForm(new Views.Dashboard(), button_dashboard);
             this.Text = "AeroMils - Controlo de Frota";
+
+            this.login = login;
         }
 
         // methods
@@ -146,6 +150,8 @@ namespace AeroMils___Controlo_de_Frota.Views
             OpenChildForm(new Views.Sobre(), sender);
 
             CloseExpanded();
+
+            login.Close();
         }
 
         private void button_InserirAviao_Click(object sender, EventArgs e)
@@ -255,6 +261,13 @@ namespace AeroMils___Controlo_de_Frota.Views
                     ManutencaoTimer.Stop();
                 }
             }
+        }
+
+
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            login.Close();
         }
     }
 }

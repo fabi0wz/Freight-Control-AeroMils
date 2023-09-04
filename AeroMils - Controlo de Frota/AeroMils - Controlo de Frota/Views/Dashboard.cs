@@ -26,5 +26,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             dataGridViewFretesaTerminar.DataSource = fretesATerminarDataTable;
             dataGridViewManutencoesemBreve.DataSource = manutencoesEmBreveDataTAble;
         }
+
+
     }
 }
