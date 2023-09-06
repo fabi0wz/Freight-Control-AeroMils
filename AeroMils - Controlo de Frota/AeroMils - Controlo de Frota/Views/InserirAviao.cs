@@ -26,10 +26,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             inserirTipoInput.SelectedIndex = 0;
         }
 
-        private void InserirAviao_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void inserirTipoInput_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -62,6 +59,11 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void submitButton_Click(object sender, EventArgs e)
         {
+            while (!validations())
+            {
+                return;
+            }
+
             string modelo = inserirModeloInput.Text;
             string marca = inserirMarcaInput.Text;
             int capacidade = Convert.ToInt32(inserirCapacidadeInput.Text);
@@ -71,26 +73,23 @@ namespace AeroMils___Controlo_de_Frota.Views
             DateTime ano = parseAnoFabrico();
             int quantidade = Convert.ToInt32(inserirQuantidadeInput.Text);
 
-            if (validations())// Makes validations on the users inputs
+            DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                if (result == DialogResult.Yes)
+                int idInserted = dbContext.InserirNovoAviao(modelo, marca, capacidade, autonomia, manutencao, tipo, ano, quantidade);
+
+                if (idInserted > 0)
                 {
-
-                    int idInserted = dbContext.InserirNovoAviao(modelo, marca, capacidade, autonomia, manutencao, tipo, ano, quantidade);
-
-                    if (idInserted > 0)
-                    {
-                        // The plane insertion was successful
-                        inserirSpecial(idInserted);
-                        MessageBox.Show("Avião inserido com sucesso!");
-                    }
-                    else
-                    {
-                        // Handle the case where the insertion failed
-                        MessageBox.Show("Falha ao inserir o Avião.");
-                    }
+                    // The plane insertion was successful
+                    inserirSpecial(idInserted);
+                    MessageBox.Show("Avião inserido com sucesso!");
+                }
+                else
+                {
+                    // Handle the case where the insertion failed
+                    MessageBox.Show("Falha ao inserir o Avião.");
                 }
             }
 
@@ -105,7 +104,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 "Aeronave Particular" => "AeronaveParticular",
                 "Avioneta" => "Avioneta",
                 _ => "Aeronave Comercial",
-            };  
+            };
         }
 
         private DateTime parseAnoFabrico()
@@ -217,5 +216,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             }
             return false;
         }
+
+       
     }
 }

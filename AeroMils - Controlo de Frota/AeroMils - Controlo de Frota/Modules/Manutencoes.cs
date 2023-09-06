@@ -6,13 +6,12 @@ using System.Threading.Tasks;
 
 namespace AeroMils___Controlo_de_Frota.Modules
 {
-    public class Reserva
+    public class Manutencoes
     {
         private DateTime _data_inicio;
         private DateTime _data_fim;
-        private double _nome_cliente;
         private int _id_aviao;
-        private int _id_reserva;
+        private int _id_manutencao;
 
         public string data_inicio
         {
@@ -37,20 +36,16 @@ namespace AeroMils___Controlo_de_Frota.Modules
             }
         }
         public double valorFreteTotal { get; set; }
-
         public int id_aviao { get; set; }
-        public int id_reserva { get; set; }
-        public string nome_cliente { get; set; }
+        public int id_manutencao { get; set; }
 
 
-        public Reserva(int id_aviao, int id_reserva, string nome_cliente, string data_inicio, string data_fim)
+        public Manutencoes(int id_aviao, int id_manutencao, string data_inicio, string data_fim)
         {
             this.id_aviao = id_aviao;
-            this.id_reserva = id_reserva;
-            this.nome_cliente = nome_cliente;
+            this.id_manutencao = id_manutencao;
             this.data_inicio = data_inicio;
             this.data_fim = data_fim;
         }
-
     }
 }

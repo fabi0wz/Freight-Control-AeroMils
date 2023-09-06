@@ -10,6 +10,13 @@ using AeroMils___Controlo_de_Frota.Models;
 using System.Numerics;
 using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
+using AeroMils___Controlo_de_Frota.Modules;
+using AeroMils___Controlo_de_Frota.Views;
+<<<<<<< Updated upstream
+=======
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
+>>>>>>> Stashed changes
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -21,7 +28,6 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public SQLiteDBContext()
         {
             connection = new SQLiteConnection(connectionString);
-
         }
 
         public void OpenConnection()
@@ -168,25 +174,36 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static void InserirNovaReserva(int aviaoId, string nome_cliente, DateTime data_inicio, DateTime data_fim)
+        public void InserirNovaReserva(int id_Aviao, string nomeCliente, string origem, string destino, DateTime dataPartida, DateTime dataRetorno)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                connection.Open();
-
-                using (SQLiteCommand command = new SQLiteCommand(connection))
+                try
                 {
-                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim) VALUES (@aviaoId, @nome_cliente, @data_inicio, @data_fim);";
+                    connection.Open();
 
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
-                    command.Parameters.AddWithValue("@nome_cliente", nome_cliente);
-                    command.Parameters.AddWithValue("@data_inicio", data_inicio);
-                    command.Parameters.AddWithValue("@data_fim", data_fim);
+                    // Create a SQLite command to insert data into the database
+                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim, localPartida, localDestino)" +
+                                   "VALUES (@idAviao, @nomeCliente, @dataInicio, @dataFim, @localPartida, @localDestino);";
 
-                    command.ExecuteNonQuery();
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@idAviao", id_Aviao);
+                        command.Parameters.AddWithValue("@nomeCliente", nomeCliente);
+                        command.Parameters.AddWithValue("@dataInicio", dataPartida);
+                        command.Parameters.AddWithValue("@dataFim", dataRetorno);
+                        command.Parameters.AddWithValue("@localPartida", origem);
+                        command.Parameters.AddWithValue("@localDestino", destino);
+                        command.ExecuteNonQuery();
+                       
+                    }
                 }
-            }   
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during database interaction
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
 
         public static void ChangePlaneStatus(int planeID)
@@ -311,23 +328,41 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         }
 
 
-        public DataTable getAvailablePlanes()
+    
+
+        public void getAvailablePlanes(ComboBox combobox, string currentPlane)
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes WHERE Status = 0", connection)) // status 0 é disponivel 1 em viagem
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                try
                 {
-                    adapter.Fill(dataTable);
+                    connection.Open();
+
+                    // Create a SQLite command to insert data into the database
+                    string query = "SELECT id_aviao, modelo, marca FROM Avioes WHERE tipo_aviao LIKE @tipo_aviao"; 
+
+
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        // Set the parameters using the SQLiteParameter objects and add them to the command
+                        command.Parameters.AddWithValue("@tipo_aviao", currentPlane);
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string planeInfo = $"{reader["id_aviao"]} - {reader["modelo"]} - {reader["marca"]}";
+                                combobox.Items.Add(planeInfo);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during database interaction
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
-
-            CloseConnection(); // Close the connection after using it
-                   
-            return dataTable;
+            connection.Close();
         }
 
         public Avioneta GetAvionetaData(int id)
@@ -428,23 +463,37 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return aeronaveMercadorias;
         }
 
-        public DataTable GetReservasData()
+        public Modules.Empresa GetReservasData()
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Reservas", connection))
+            Modules.Empresa AeroMills = new Modules.Empresa();
+            OpenConnection();
+            try
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Reservas ORDER BY id_reserva DESC", connection))
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    while (reader.Read())
+                    {
+                        int id_reserva = Convert.ToInt32(reader["id_reserva"]);
+                        int id_aviao = Convert.ToInt32(reader["id_aviao"]);
+                        string nome_cliente = reader["nome_cliente"].ToString();
+                        string data_inicio = reader["data_inicio"].ToString();
+                        string data_fim = reader["data_fim"].ToString();
+
+                        Reserva reserva = new Reserva(id_aviao, id_reserva, nome_cliente, data_inicio, data_fim);
+                        
+                        
+                        AeroMills.AddReserva(reserva);
+                    }
                 }
             }
-
-            CloseConnection(); // Close the connection after using it
-
-            return dataTable;
+            catch (Exception ex)
+            {
+                // Display the exception details in a message box
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            CloseConnection(); // Ensure the connection is closed in case of an exception
+            return AeroMills;
         }
 
         public DataTable GetPreviousReservasData()
@@ -470,23 +519,36 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
-        public DataTable GetManutencoesData()
+        public Modules.Empresa GetManutencoesData()
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Manutencoes", connection))
+            Modules.Empresa AeroMills = new Modules.Empresa();
+            OpenConnection();
+            try
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Manutencoes ORDER BY id_manutencao DESC", connection))
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    while (reader.Read())
+                    {
+                        int id_aviao = Convert.ToInt32(reader["id_aviao"]);
+                        int id_manutencao = Convert.ToInt32(reader["id_manutencao"]);
+                        string data_inicio = reader["data_inicio"].ToString();
+                        string data_fim = reader["data_fim"].ToString();
+
+                        Manutencoes manutencoes = new Manutencoes(id_aviao, id_manutencao, data_inicio, data_fim);
+
+
+                        AeroMills.AddManutencao(manutencoes);
+                    }
                 }
             }
-
-            CloseConnection(); // Close the connection after using it
-
-            return dataTable;
+            catch (Exception ex)
+            {
+                // Display the exception details in a message box
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            CloseConnection(); // Ensure the connection is closed in case of an exception
+            return AeroMills;
         }
 
         public DataTable GetPreviousManutencoesData()

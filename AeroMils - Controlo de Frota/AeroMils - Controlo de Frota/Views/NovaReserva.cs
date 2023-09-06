@@ -1,4 +1,5 @@
-﻿using AeroMils___Controlo_de_Frota.Modules;
+﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
+using AeroMils___Controlo_de_Frota.Modules;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,155 +14,157 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class NovaReserva : Form
     {
+        SQLiteDBContext dbContext = new SQLiteDBContext();
         // fields
-        private Button currentButton = null!;
+        private string currentButton = "AeronaveComercial";
+        private string idaVolta = "IdaVolta";
 
         public NovaReserva()
         {
             InitializeComponent();
+            dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+        }
 
-            ComercialDetails_panel.Visible = true;
-            IdaVolta_panel.Visible = true;
-            Comercial_SoIda_panel.Visible = false;
-            ParticularDetails_panel.Visible = false;
-            MercadoriaDetails_panel.Visible = false;
+        private void VooComercial_button_Click(object sender, EventArgs e)
+        {
+            currentButton = "AeronaveComercial";
+            resetColors();
+            VooComercial_button.BackColor = Color.FromArgb(255, 98, 45);
+            listaAvioesInput.Items.Clear();
+            listaAvioesInput.SelectedItem = null;
 
+            dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+
+            verificarDisponiveis(listaAvioesInput);
 
         }
 
+        private void VooParticular_button_Click(object sender, EventArgs e)
+        {
+            currentButton = "AeronaveParticular";
+            resetColors();
+            VooParticular_button.BackColor = Color.FromArgb(255, 98, 45);
+            listaAvioesInput.Items.Clear();
+            listaAvioesInput.SelectedItem = null;
 
-        // methods
-        private void ActivateBigButtons(object senderBtn)
-        {
-            if (senderBtn != null)
-            {
-                DisableBigButtons();
-                currentButton = (Button)senderBtn;
-                currentButton.BackColor = Color.FromArgb(255, 98, 45);
-            }
-        }
-        private void ActivateSmallButtons(object senderBtn)
-        {
-            if (senderBtn != null)
-            {
-                DisableSmallButtons();
-                currentButton = (Button)senderBtn;
-                currentButton.BackColor = Color.FromArgb(255, 98, 45);
-            }
+            dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+            verificarDisponiveis(listaAvioesInput);
         }
 
-        private void DisableBigButtons()
+        private void VooMercadoria_button_Click(object sender, EventArgs e)
         {
-            foreach (Control btn in VoosPanel.Controls)
-            {
-                if (btn.GetType() == typeof(Button))
-                {
-                    btn.BackColor = Color.FromArgb(54, 53, 67);
-                }
-            }
-        }
-        private void DisableSmallButtons()
-        {
-            foreach (Control panel in VoosPanel.Controls)
-            {
-                if (panel.GetType() == typeof(Panel))
-                {
-                    foreach (Control btn in panel.Controls)
-                    {
-                        if (btn.GetType() == typeof(Button))
-                        {
-                            btn.BackColor = Color.FromArgb(54, 53, 67);
-                        }
-                    }
-                }
-            }
+            currentButton = "AeronaveMercadoria";
+            resetColors();
+            VooMercadoria_button.BackColor = Color.FromArgb(255, 98, 45);
+            listaAvioesInput.Items.Clear();
+            listaAvioesInput.SelectedItem = null;
+
+            dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+            verificarDisponiveis(listaAvioesInput);
         }
 
-        //opens a panel and closes child panels if they are open 
-
-        private void VooComercial_Click(object sender, EventArgs e)
+        private void Avionetas_button_Click(object sender, EventArgs e)
         {
-            ActivateBigButtons(sender);
+            currentButton = "Avioneta";
+            resetColors();
+            Avionetas_button.BackColor = Color.FromArgb(255, 98, 45);
+            listaAvioesInput.Items.Clear();
+            listaAvioesInput.SelectedItem = null;
 
-            ComercialDetails_panel.Visible = true;
-            ParticularDetails_panel.Visible = false;
-            MercadoriaDetails_panel.Visible = false;
-
+            dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+            verificarDisponiveis(listaAvioesInput);
         }
 
-        private void VooParticular_Click(object sender, EventArgs e)
+        private void IdaVolta_button_Click(object sender, EventArgs e)
         {
-            ActivateBigButtons(sender);
-
-            ComercialDetails_panel.Visible = false;
-            ParticularDetails_panel.Visible = true;
-            MercadoriaDetails_panel.Visible = false;
-
+            idaVolta = "IdaVolta";
+            IdaVolta_button.BackColor = Color.FromArgb(255, 98, 45);
+            SoIda_button.BackColor = Color.FromArgb(54, 53, 67);
         }
 
-        private void VooMercadoria_Click(object sender, EventArgs e)
+        private void SoIda_button_Click(object sender, EventArgs e)
         {
-            ActivateBigButtons(sender);
-
-            ComercialDetails_panel.Visible = false;
-            ParticularDetails_panel.Visible = false;
-            MercadoriaDetails_panel.Visible = true;
-
-        }
-
-        private void Avionetas_Click(object sender, EventArgs e)
-        {
-            ActivateBigButtons(sender);
-
-            ComercialDetails_panel.Visible = false;
-            ParticularDetails_panel.Visible = false;
-            MercadoriaDetails_panel.Visible = false;
-
-        }
-
-
-        private void Comercial_IdaVolta_button_Click(object sender, EventArgs e)
-        {
-            ActivateSmallButtons(sender);
-
-            IdaVolta_panel.Visible = true;
-            Comercial_SoIda_panel.Visible = false;
-        }
-
-        private void Comercial_SoIda_button_Click(object sender, EventArgs e)
-        {
-            ActivateSmallButtons(sender);
-
-            IdaVolta_panel.Visible = false;
-            Comercial_SoIda_panel.Visible = true;
+            idaVolta = "SoIda";
+            SoIda_button.BackColor = Color.FromArgb(255, 98, 45);
+            IdaVolta_button.BackColor = Color.FromArgb(54, 53, 67);
         }
 
         private void Reservar_button_Click(object sender, EventArgs e)
         {
-            if (ComercialDetails_panel.Visible == true)
+            while (!validations())
             {
-                if (IdaVolta_panel.Visible == true)
-                {
-                    //reserva ida e volta
+                return;
+            }
 
-                }
-                else
-                {
-                    //reserva so ida
-                }
-            }
-            else if (ParticularDetails_panel.Visible == true)
+            string nomeCliente = nomeClienteInput.Text;
+            string origem = localPartidaInput.Text;
+            string destino = localDestinoInput.Text;
+            DateTime dataPartida = startDateInput.Value;
+            DateTime dataRetorno = endDateInput.Value;
+
+            string stringIdAviao = listaAvioesInput.SelectedItem.ToString();
+            int index = stringIdAviao.IndexOf("-");
+            int id_aviao = Convert.ToInt32(stringIdAviao.Substring(0, index - 1));
+
+
+            DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if (result == DialogResult.Yes)
             {
-                //reserva particular
-            }
-            else if (MercadoriaDetails_panel.Visible == true)
-            {
-                //reserva mercadoria
-            }
-            else
-            {
-                //reserva avioneta
+                dbContext.InserirNovaReserva(id_aviao, nomeCliente, origem, destino, dataPartida, dataRetorno);
+                this.Close();
             }
         }
+
+        private void resetColors()
+        {
+            VooComercial_button.BackColor = Color.FromArgb(54, 53, 67);
+            VooParticular_button.BackColor = Color.FromArgb(54, 53, 67);
+            VooMercadoria_button.BackColor = Color.FromArgb(54, 53, 67);
+            Avionetas_button.BackColor = Color.FromArgb(54, 53, 67);
+        }
+
+        private bool validations()
+        {
+            string nomeCliente = nomeClienteInput.Text;
+            string origem = localPartidaInput.Text;
+            string destino = localDestinoInput.Text;
+
+            if (string.IsNullOrWhiteSpace(nomeCliente) || string.IsNullOrWhiteSpace(origem) || string.IsNullOrEmpty(destino))
+            {
+                // Handle empty or whitespace input for modelo and marca
+                MessageBox.Show("Nome Cliente, Local de Origem e Local de Destino são campos obrigatórios.");
+                return false; // Exit the method
+            }
+
+            DateTime dataPartida = startDateInput.Value;
+
+            DateTime dataRetorno = endDateInput.Value;
+
+            if (dataPartida < DateTime.Now)
+            {
+                // Handle invalid year input
+                MessageBox.Show("Data de Partida Inválida.");
+                return false; // Exit the method
+            }
+            if (dataRetorno < dataPartida)
+            {
+                // Handle invalid year input
+                MessageBox.Show("Data de Volta Inválida.");
+                return false; // Exit the method
+            }
+
+
+            return true;
+        }
+
+        public void verificarDisponiveis(ComboBox listaAvioesInput)
+        {
+            if(listaAvioesInput.Items.Count == 0)
+            {
+                MessageBox.Show("Não existem aeronaves disponíveis para o tipo de voo selecionado.");
+            }
+        }
+
     }
 }
