@@ -12,6 +12,11 @@ using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using AeroMils___Controlo_de_Frota.Modules;
 using AeroMils___Controlo_de_Frota.Views;
+<<<<<<< Updated upstream
+=======
+using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.Text.RegularExpressions;
+>>>>>>> Stashed changes
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -169,25 +174,36 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        static void InserirNovaReserva(int aviaoId, string nome_cliente, DateTime data_inicio, DateTime data_fim)
+        public void InserirNovaReserva(int id_Aviao, string nomeCliente, string origem, string destino, DateTime dataPartida, DateTime dataRetorno)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                connection.Open();
-
-                using (SQLiteCommand command = new SQLiteCommand(connection))
+                try
                 {
-                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim) VALUES (@aviaoId, @nome_cliente, @data_inicio, @data_fim);";
+                    connection.Open();
 
-                    command.CommandText = query;
-                    command.Parameters.AddWithValue("@aviaoId", aviaoId);
-                    command.Parameters.AddWithValue("@nome_cliente", nome_cliente);
-                    command.Parameters.AddWithValue("@data_inicio", data_inicio);
-                    command.Parameters.AddWithValue("@data_fim", data_fim);
+                    // Create a SQLite command to insert data into the database
+                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim, localPartida, localDestino)" +
+                                   "VALUES (@idAviao, @nomeCliente, @dataInicio, @dataFim, @localPartida, @localDestino);";
 
-                    command.ExecuteNonQuery();
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@idAviao", id_Aviao);
+                        command.Parameters.AddWithValue("@nomeCliente", nomeCliente);
+                        command.Parameters.AddWithValue("@dataInicio", dataPartida);
+                        command.Parameters.AddWithValue("@dataFim", dataRetorno);
+                        command.Parameters.AddWithValue("@localPartida", origem);
+                        command.Parameters.AddWithValue("@localDestino", destino);
+                        command.ExecuteNonQuery();
+                       
+                    }
                 }
-            }   
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during database interaction
+                    MessageBox.Show("Error: " + ex.Message);
+                }
+            }
         }
 
         public static void ChangePlaneStatus(int planeID)
@@ -312,23 +328,41 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         }
 
 
-        public DataTable getAvailablePlanes()
+    
+
+        public void getAvailablePlanes(ComboBox combobox, string currentPlane)
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes WHERE Status = 0", connection)) // status 0 é disponivel 1 em viagem
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                try
                 {
-                    adapter.Fill(dataTable);
+                    connection.Open();
+
+                    // Create a SQLite command to insert data into the database
+                    string query = "SELECT id_aviao, modelo, marca FROM Avioes WHERE tipo_aviao LIKE @tipo_aviao"; 
+
+
+                    using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                    {
+                        // Set the parameters using the SQLiteParameter objects and add them to the command
+                        command.Parameters.AddWithValue("@tipo_aviao", currentPlane);
+                        using (SQLiteDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                string planeInfo = $"{reader["id_aviao"]} - {reader["modelo"]} - {reader["marca"]}";
+                                combobox.Items.Add(planeInfo);
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    // Handle any exceptions that may occur during database interaction
+                    Console.WriteLine("Error: " + ex.Message);
                 }
             }
-
-            CloseConnection(); // Close the connection after using it
-                   
-            return dataTable;
+            connection.Close();
         }
 
         public Avioneta GetAvionetaData(int id)

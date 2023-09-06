@@ -29,7 +29,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             InitializeComponent();
             retrieveData();
             InitializeButtons();
-
         }
 
         private void retrieveData()
