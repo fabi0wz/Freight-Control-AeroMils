@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AeroMils___Controlo_de_Frota.Models;
+using AeroMils___Controlo_de_Frota.Views;
 
 namespace AeroMils___Controlo_de_Frota.Modules
 {
@@ -11,11 +12,13 @@ namespace AeroMils___Controlo_de_Frota.Modules
     {
         private List<Aviao> avioes;
         private List<Reserva> reservas;
+        private List<Manutencoes> manutencao;
 
         public Empresa()
         {
             avioes = new List<Aviao>();
             reservas = new List<Reserva>();
+            manutencao = new List<Manutencoes>();
         }
 
         public void AddAviao(Aviao aviao)
@@ -27,6 +30,11 @@ namespace AeroMils___Controlo_de_Frota.Modules
         {
             reservas.Add(reserva);
         }
+        
+        public void AddManutencao(Manutencoes manutencoes)
+        {
+            manutencao.Add(manutencoes);
+        }
 
         public List<Aviao> GetAvioes()
         {
@@ -36,6 +44,11 @@ namespace AeroMils___Controlo_de_Frota.Modules
         public List<Reserva> GetReservas()
         {
             return reservas;
+        }
+        
+        public List<Manutencoes> GetManutencoes()
+        {
+            return manutencao;
         }
     }
 }

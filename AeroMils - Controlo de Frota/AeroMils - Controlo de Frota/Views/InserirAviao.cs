@@ -26,10 +26,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             inserirTipoInput.SelectedIndex = 0;
         }
 
-        private void InserirAviao_Load(object sender, EventArgs e)
-        {
 
-        }
 
         private void inserirTipoInput_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -105,7 +102,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 "Aeronave Particular" => "AeronaveParticular",
                 "Avioneta" => "Avioneta",
                 _ => "Aeronave Comercial",
-            };  
+            };
         }
 
         private DateTime parseAnoFabrico()
@@ -217,5 +214,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             }
             return false;
         }
+
+       
     }
 }

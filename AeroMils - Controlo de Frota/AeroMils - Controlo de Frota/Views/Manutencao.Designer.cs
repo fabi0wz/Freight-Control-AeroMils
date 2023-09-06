@@ -716,6 +716,7 @@
             manutencaoNextButton.TabIndex = 12;
             manutencaoNextButton.Text = "Next";
             manutencaoNextButton.UseVisualStyleBackColor = false;
+            manutencaoNextButton.Click += manutencaoNextButton_Click;
             // 
             // manutencaoPreviousButton
             // 
@@ -729,6 +730,7 @@
             manutencaoPreviousButton.TabIndex = 13;
             manutencaoPreviousButton.Text = "Previous";
             manutencaoPreviousButton.UseVisualStyleBackColor = false;
+            manutencaoPreviousButton.Click += manutencaoPreviousButton_Click;
             // 
             // Manutencao
             // 

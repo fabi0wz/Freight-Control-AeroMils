@@ -156,7 +156,8 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void button_InserirAviao_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Views.InserirAviao(), sender);
+            Views.InserirAviao inserirAviao = new Views.InserirAviao();
+            inserirAviao.Show();
         }
 
 

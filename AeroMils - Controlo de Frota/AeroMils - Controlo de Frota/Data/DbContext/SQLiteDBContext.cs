@@ -11,6 +11,7 @@ using System.Numerics;
 using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using AeroMils___Controlo_de_Frota.Modules;
+using AeroMils___Controlo_de_Frota.Views;
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -484,23 +485,36 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
-        public DataTable GetManutencoesData()
+        public Modules.Empresa GetManutencoesData()
         {
-            DataTable dataTable = new DataTable();
-
-            OpenConnection(); // Open the connection before using it
-
-            using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Manutencoes", connection))
+            Modules.Empresa AeroMills = new Modules.Empresa();
+            OpenConnection();
+            try
             {
-                using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Manutencoes ORDER BY id_manutencao DESC", connection))
+                using (SQLiteDataReader reader = command.ExecuteReader())
                 {
-                    adapter.Fill(dataTable);
+                    while (reader.Read())
+                    {
+                        int id_aviao = Convert.ToInt32(reader["id_aviao"]);
+                        int id_manutencao = Convert.ToInt32(reader["id_manutencao"]);
+                        string data_inicio = reader["data_inicio"].ToString();
+                        string data_fim = reader["data_fim"].ToString();
+
+                        Manutencoes manutencoes = new Manutencoes(id_aviao, id_manutencao, data_inicio, data_fim);
+
+
+                        AeroMills.AddManutencao(manutencoes);
+                    }
                 }
             }
-
-            CloseConnection(); // Close the connection after using it
-
-            return dataTable;
+            catch (Exception ex)
+            {
+                // Display the exception details in a message box
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            CloseConnection(); // Ensure the connection is closed in case of an exception
+            return AeroMills;
         }
 
         public DataTable GetPreviousManutencoesData()
