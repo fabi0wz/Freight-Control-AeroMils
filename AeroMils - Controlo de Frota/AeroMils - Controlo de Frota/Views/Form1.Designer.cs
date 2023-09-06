@@ -402,7 +402,7 @@
             panel_main.Location = new Point(274, 0);
             panel_main.Margin = new Padding(3, 2, 3, 2);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(1258, 794);
+            panel_main.Size = new Size(1295, 794);
             panel_main.TabIndex = 1;
             // 
             // AvioesTimer
@@ -424,7 +424,7 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1532, 794);
+            ClientSize = new Size(1569, 794);
             Controls.Add(panel_main);
             Controls.Add(panel_sidebar);
             FormBorderStyle = FormBorderStyle.FixedSingle;

@@ -18,8 +18,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         public Reservas()
         {
             InitializeComponent();
-            DataTable reservasDataTable = dbContext.GetReservasData();
-            dataGridViewReservas.DataSource = reservasDataTable;
+
         }
     }
 }

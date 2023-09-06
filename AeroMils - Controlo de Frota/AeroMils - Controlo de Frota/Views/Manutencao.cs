@@ -18,9 +18,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         public Manutencao()
         {
             InitializeComponent();
-            DataTable manutencaoDataTable = dbContext.GetManutencoesData();
-            dataGridViewManutencao.DataSource = manutencaoDataTable;
-            //dataGridViewManutencao
+
         }
     }
 }

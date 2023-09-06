@@ -129,7 +129,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoBGPanel.Location = new Point(45, 33);
             aviaoBGPanel.Margin = new Padding(2, 3, 2, 3);
             aviaoBGPanel.Name = "aviaoBGPanel";
-            aviaoBGPanel.Size = new Size(1175, 656);
+            aviaoBGPanel.Size = new Size(1214, 656);
             aviaoBGPanel.TabIndex = 0;
             // 
             // aviaoLine2
@@ -144,63 +144,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine2.Location = new Point(0, 135);
             aviaoLine2.Margin = new Padding(2, 3, 2, 3);
             aviaoLine2.Name = "aviaoLine2";
-            aviaoLine2.Size = new Size(1284, 65);
+            aviaoLine2.Size = new Size(1214, 65);
             aviaoLine2.TabIndex = 7;
             // 
             // aviaoLinha2DataManutencao
             // 
             aviaoLinha2DataManutencao.AutoSize = true;
             aviaoLinha2DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha2DataManutencao.Location = new Point(812, 20);
+            aviaoLinha2DataManutencao.Location = new Point(803, 16);
             aviaoLinha2DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2DataManutencao.Name = "aviaoLinha2DataManutencao";
-            aviaoLinha2DataManutencao.Size = new Size(54, 28);
+            aviaoLinha2DataManutencao.Size = new Size(73, 28);
             aviaoLinha2DataManutencao.TabIndex = 9;
-            aviaoLinha2DataManutencao.Text = "cona";
+            aviaoLinha2DataManutencao.Text = "default";
             // 
             // aviaoLinha2Tipo
             // 
             aviaoLinha2Tipo.AutoSize = true;
             aviaoLinha2Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha2Tipo.Location = new Point(565, 20);
+            aviaoLinha2Tipo.Location = new Point(563, 16);
             aviaoLinha2Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Tipo.Name = "aviaoLinha2Tipo";
-            aviaoLinha2Tipo.Size = new Size(54, 28);
+            aviaoLinha2Tipo.Size = new Size(73, 28);
             aviaoLinha2Tipo.TabIndex = 8;
-            aviaoLinha2Tipo.Text = "cona";
+            aviaoLinha2Tipo.Text = "default";
             // 
             // aviaoLinha2Estado
             // 
             aviaoLinha2Estado.AutoSize = true;
             aviaoLinha2Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha2Estado.Location = new Point(411, 20);
+            aviaoLinha2Estado.Location = new Point(406, 16);
             aviaoLinha2Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Estado.Name = "aviaoLinha2Estado";
-            aviaoLinha2Estado.Size = new Size(54, 28);
+            aviaoLinha2Estado.Size = new Size(73, 28);
             aviaoLinha2Estado.TabIndex = 7;
-            aviaoLinha2Estado.Text = "cona";
+            aviaoLinha2Estado.Text = "default";
             // 
             // aviaoLinha2Modelo
             // 
             aviaoLinha2Modelo.AutoSize = true;
             aviaoLinha2Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha2Modelo.Location = new Point(242, 20);
+            aviaoLinha2Modelo.Location = new Point(236, 16);
             aviaoLinha2Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Modelo.Name = "aviaoLinha2Modelo";
-            aviaoLinha2Modelo.Size = new Size(54, 28);
+            aviaoLinha2Modelo.Size = new Size(73, 28);
             aviaoLinha2Modelo.TabIndex = 6;
-            aviaoLinha2Modelo.Text = "cona";
+            aviaoLinha2Modelo.Text = "default";
             // 
             // aviaoLinha2ID
             // 
             aviaoLinha2ID.AutoSize = true;
             aviaoLinha2ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha2ID.Location = new Point(66, 20);
+            aviaoLinha2ID.Location = new Point(60, 16);
             aviaoLinha2ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2ID.Name = "aviaoLinha2ID";
-            aviaoLinha2ID.Size = new Size(54, 28);
+            aviaoLinha2ID.Size = new Size(73, 28);
             aviaoLinha2ID.TabIndex = 5;
-            aviaoLinha2ID.Text = "cona";
+            aviaoLinha2ID.Text = "default";
             // 
             // aviaoLine4
             // 
@@ -214,63 +214,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine4.Location = new Point(0, 265);
             aviaoLine4.Margin = new Padding(2, 3, 2, 3);
             aviaoLine4.Name = "aviaoLine4";
-            aviaoLine4.Size = new Size(1284, 65);
+            aviaoLine4.Size = new Size(1214, 65);
             aviaoLine4.TabIndex = 8;
             // 
             // aviaoLinha4DataManutencao
             // 
             aviaoLinha4DataManutencao.AutoSize = true;
             aviaoLinha4DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha4DataManutencao.Location = new Point(812, 21);
+            aviaoLinha4DataManutencao.Location = new Point(803, 16);
             aviaoLinha4DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4DataManutencao.Name = "aviaoLinha4DataManutencao";
-            aviaoLinha4DataManutencao.Size = new Size(54, 28);
+            aviaoLinha4DataManutencao.Size = new Size(73, 28);
             aviaoLinha4DataManutencao.TabIndex = 9;
-            aviaoLinha4DataManutencao.Text = "cona";
+            aviaoLinha4DataManutencao.Text = "default";
             // 
             // aviaoLinha4Tipo
             // 
             aviaoLinha4Tipo.AutoSize = true;
             aviaoLinha4Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha4Tipo.Location = new Point(565, 21);
+            aviaoLinha4Tipo.Location = new Point(563, 16);
             aviaoLinha4Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Tipo.Name = "aviaoLinha4Tipo";
-            aviaoLinha4Tipo.Size = new Size(54, 28);
+            aviaoLinha4Tipo.Size = new Size(73, 28);
             aviaoLinha4Tipo.TabIndex = 8;
-            aviaoLinha4Tipo.Text = "cona";
+            aviaoLinha4Tipo.Text = "default";
             // 
             // aviaoLinha4Estado
             // 
             aviaoLinha4Estado.AutoSize = true;
             aviaoLinha4Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha4Estado.Location = new Point(411, 21);
+            aviaoLinha4Estado.Location = new Point(406, 16);
             aviaoLinha4Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Estado.Name = "aviaoLinha4Estado";
-            aviaoLinha4Estado.Size = new Size(54, 28);
+            aviaoLinha4Estado.Size = new Size(73, 28);
             aviaoLinha4Estado.TabIndex = 7;
-            aviaoLinha4Estado.Text = "cona";
+            aviaoLinha4Estado.Text = "default";
             // 
             // aviaoLinha4Modelo
             // 
             aviaoLinha4Modelo.AutoSize = true;
             aviaoLinha4Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha4Modelo.Location = new Point(242, 21);
+            aviaoLinha4Modelo.Location = new Point(236, 16);
             aviaoLinha4Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Modelo.Name = "aviaoLinha4Modelo";
-            aviaoLinha4Modelo.Size = new Size(54, 28);
+            aviaoLinha4Modelo.Size = new Size(73, 28);
             aviaoLinha4Modelo.TabIndex = 6;
-            aviaoLinha4Modelo.Text = "cona";
+            aviaoLinha4Modelo.Text = "default";
             // 
             // aviaoLinha4ID
             // 
             aviaoLinha4ID.AutoSize = true;
             aviaoLinha4ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha4ID.Location = new Point(66, 21);
+            aviaoLinha4ID.Location = new Point(60, 16);
             aviaoLinha4ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4ID.Name = "aviaoLinha4ID";
-            aviaoLinha4ID.Size = new Size(54, 28);
+            aviaoLinha4ID.Size = new Size(73, 28);
             aviaoLinha4ID.TabIndex = 5;
-            aviaoLinha4ID.Text = "cona";
+            aviaoLinha4ID.Text = "default";
             // 
             // aviaoLine9
             // 
@@ -284,63 +284,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine9.Location = new Point(0, 590);
             aviaoLine9.Margin = new Padding(2, 3, 2, 3);
             aviaoLine9.Name = "aviaoLine9";
-            aviaoLine9.Size = new Size(1284, 65);
+            aviaoLine9.Size = new Size(1214, 65);
             aviaoLine9.TabIndex = 11;
             // 
             // aviaoLinha9DataManutencao
             // 
             aviaoLinha9DataManutencao.AutoSize = true;
             aviaoLinha9DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha9DataManutencao.Location = new Point(812, 21);
+            aviaoLinha9DataManutencao.Location = new Point(803, 16);
             aviaoLinha9DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9DataManutencao.Name = "aviaoLinha9DataManutencao";
-            aviaoLinha9DataManutencao.Size = new Size(54, 28);
+            aviaoLinha9DataManutencao.Size = new Size(73, 28);
             aviaoLinha9DataManutencao.TabIndex = 9;
-            aviaoLinha9DataManutencao.Text = "cona";
+            aviaoLinha9DataManutencao.Text = "default";
             // 
             // aviaoLinha9Tipo
             // 
             aviaoLinha9Tipo.AutoSize = true;
             aviaoLinha9Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha9Tipo.Location = new Point(565, 21);
+            aviaoLinha9Tipo.Location = new Point(563, 16);
             aviaoLinha9Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Tipo.Name = "aviaoLinha9Tipo";
-            aviaoLinha9Tipo.Size = new Size(54, 28);
+            aviaoLinha9Tipo.Size = new Size(73, 28);
             aviaoLinha9Tipo.TabIndex = 8;
-            aviaoLinha9Tipo.Text = "cona";
+            aviaoLinha9Tipo.Text = "default";
             // 
             // aviaoLinha9Estado
             // 
             aviaoLinha9Estado.AutoSize = true;
             aviaoLinha9Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha9Estado.Location = new Point(411, 21);
+            aviaoLinha9Estado.Location = new Point(406, 16);
             aviaoLinha9Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Estado.Name = "aviaoLinha9Estado";
-            aviaoLinha9Estado.Size = new Size(54, 28);
+            aviaoLinha9Estado.Size = new Size(73, 28);
             aviaoLinha9Estado.TabIndex = 7;
-            aviaoLinha9Estado.Text = "cona";
+            aviaoLinha9Estado.Text = "default";
             // 
             // aviaoLinha9Modelo
             // 
             aviaoLinha9Modelo.AutoSize = true;
             aviaoLinha9Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha9Modelo.Location = new Point(242, 21);
+            aviaoLinha9Modelo.Location = new Point(236, 16);
             aviaoLinha9Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Modelo.Name = "aviaoLinha9Modelo";
-            aviaoLinha9Modelo.Size = new Size(54, 28);
+            aviaoLinha9Modelo.Size = new Size(73, 28);
             aviaoLinha9Modelo.TabIndex = 6;
-            aviaoLinha9Modelo.Text = "cona";
+            aviaoLinha9Modelo.Text = "default";
             // 
             // aviaoLinha9ID
             // 
             aviaoLinha9ID.AutoSize = true;
             aviaoLinha9ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha9ID.Location = new Point(66, 21);
+            aviaoLinha9ID.Location = new Point(60, 16);
             aviaoLinha9ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9ID.Name = "aviaoLinha9ID";
-            aviaoLinha9ID.Size = new Size(54, 28);
+            aviaoLinha9ID.Size = new Size(73, 28);
             aviaoLinha9ID.TabIndex = 5;
-            aviaoLinha9ID.Text = "cona";
+            aviaoLinha9ID.Text = "default";
             // 
             // aviaoLine7
             // 
@@ -354,63 +354,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine7.Location = new Point(0, 460);
             aviaoLine7.Margin = new Padding(2, 3, 2, 3);
             aviaoLine7.Name = "aviaoLine7";
-            aviaoLine7.Size = new Size(1284, 65);
+            aviaoLine7.Size = new Size(1214, 65);
             aviaoLine7.TabIndex = 10;
             // 
             // aviaoLinha7DataManutencao
             // 
             aviaoLinha7DataManutencao.AutoSize = true;
             aviaoLinha7DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha7DataManutencao.Location = new Point(812, 21);
+            aviaoLinha7DataManutencao.Location = new Point(803, 16);
             aviaoLinha7DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7DataManutencao.Name = "aviaoLinha7DataManutencao";
-            aviaoLinha7DataManutencao.Size = new Size(54, 28);
+            aviaoLinha7DataManutencao.Size = new Size(73, 28);
             aviaoLinha7DataManutencao.TabIndex = 9;
-            aviaoLinha7DataManutencao.Text = "cona";
+            aviaoLinha7DataManutencao.Text = "default";
             // 
             // aviaoLinha7Tipo
             // 
             aviaoLinha7Tipo.AutoSize = true;
             aviaoLinha7Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha7Tipo.Location = new Point(565, 21);
+            aviaoLinha7Tipo.Location = new Point(563, 16);
             aviaoLinha7Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Tipo.Name = "aviaoLinha7Tipo";
-            aviaoLinha7Tipo.Size = new Size(54, 28);
+            aviaoLinha7Tipo.Size = new Size(73, 28);
             aviaoLinha7Tipo.TabIndex = 8;
-            aviaoLinha7Tipo.Text = "cona";
+            aviaoLinha7Tipo.Text = "default";
             // 
             // aviaoLinha7Estado
             // 
             aviaoLinha7Estado.AutoSize = true;
             aviaoLinha7Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha7Estado.Location = new Point(411, 21);
+            aviaoLinha7Estado.Location = new Point(406, 16);
             aviaoLinha7Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Estado.Name = "aviaoLinha7Estado";
-            aviaoLinha7Estado.Size = new Size(54, 28);
+            aviaoLinha7Estado.Size = new Size(73, 28);
             aviaoLinha7Estado.TabIndex = 7;
-            aviaoLinha7Estado.Text = "cona";
+            aviaoLinha7Estado.Text = "default";
             // 
             // aviaoLinha7Modelo
             // 
             aviaoLinha7Modelo.AutoSize = true;
             aviaoLinha7Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha7Modelo.Location = new Point(242, 21);
+            aviaoLinha7Modelo.Location = new Point(236, 16);
             aviaoLinha7Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Modelo.Name = "aviaoLinha7Modelo";
-            aviaoLinha7Modelo.Size = new Size(54, 28);
+            aviaoLinha7Modelo.Size = new Size(73, 28);
             aviaoLinha7Modelo.TabIndex = 6;
-            aviaoLinha7Modelo.Text = "cona";
+            aviaoLinha7Modelo.Text = "default";
             // 
             // aviaoLinha7ID
             // 
             aviaoLinha7ID.AutoSize = true;
             aviaoLinha7ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha7ID.Location = new Point(66, 21);
+            aviaoLinha7ID.Location = new Point(60, 16);
             aviaoLinha7ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7ID.Name = "aviaoLinha7ID";
-            aviaoLinha7ID.Size = new Size(54, 28);
+            aviaoLinha7ID.Size = new Size(73, 28);
             aviaoLinha7ID.TabIndex = 5;
-            aviaoLinha7ID.Text = "cona";
+            aviaoLinha7ID.Text = "default";
             // 
             // aviaoLine8
             // 
@@ -424,63 +424,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine8.Location = new Point(0, 525);
             aviaoLine8.Margin = new Padding(2, 3, 2, 3);
             aviaoLine8.Name = "aviaoLine8";
-            aviaoLine8.Size = new Size(1284, 65);
+            aviaoLine8.Size = new Size(1214, 65);
             aviaoLine8.TabIndex = 11;
             // 
             // aviaoLinha8DataManutencao
             // 
             aviaoLinha8DataManutencao.AutoSize = true;
             aviaoLinha8DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha8DataManutencao.Location = new Point(812, 20);
+            aviaoLinha8DataManutencao.Location = new Point(803, 16);
             aviaoLinha8DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8DataManutencao.Name = "aviaoLinha8DataManutencao";
-            aviaoLinha8DataManutencao.Size = new Size(54, 28);
+            aviaoLinha8DataManutencao.Size = new Size(73, 28);
             aviaoLinha8DataManutencao.TabIndex = 9;
-            aviaoLinha8DataManutencao.Text = "cona";
+            aviaoLinha8DataManutencao.Text = "default";
             // 
             // aviaoLinha8Tipo
             // 
             aviaoLinha8Tipo.AutoSize = true;
             aviaoLinha8Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha8Tipo.Location = new Point(565, 20);
+            aviaoLinha8Tipo.Location = new Point(563, 16);
             aviaoLinha8Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Tipo.Name = "aviaoLinha8Tipo";
-            aviaoLinha8Tipo.Size = new Size(54, 28);
+            aviaoLinha8Tipo.Size = new Size(73, 28);
             aviaoLinha8Tipo.TabIndex = 8;
-            aviaoLinha8Tipo.Text = "cona";
+            aviaoLinha8Tipo.Text = "default";
             // 
             // aviaoLinha8Estado
             // 
             aviaoLinha8Estado.AutoSize = true;
             aviaoLinha8Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha8Estado.Location = new Point(411, 20);
+            aviaoLinha8Estado.Location = new Point(406, 16);
             aviaoLinha8Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Estado.Name = "aviaoLinha8Estado";
-            aviaoLinha8Estado.Size = new Size(54, 28);
+            aviaoLinha8Estado.Size = new Size(73, 28);
             aviaoLinha8Estado.TabIndex = 7;
-            aviaoLinha8Estado.Text = "cona";
+            aviaoLinha8Estado.Text = "default";
             // 
             // aviaoLinha8Modelo
             // 
             aviaoLinha8Modelo.AutoSize = true;
             aviaoLinha8Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha8Modelo.Location = new Point(242, 20);
+            aviaoLinha8Modelo.Location = new Point(236, 16);
             aviaoLinha8Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Modelo.Name = "aviaoLinha8Modelo";
-            aviaoLinha8Modelo.Size = new Size(54, 28);
+            aviaoLinha8Modelo.Size = new Size(73, 28);
             aviaoLinha8Modelo.TabIndex = 6;
-            aviaoLinha8Modelo.Text = "cona";
+            aviaoLinha8Modelo.Text = "default";
             // 
             // aviaoLinha8ID
             // 
             aviaoLinha8ID.AutoSize = true;
             aviaoLinha8ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha8ID.Location = new Point(66, 20);
+            aviaoLinha8ID.Location = new Point(60, 16);
             aviaoLinha8ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8ID.Name = "aviaoLinha8ID";
-            aviaoLinha8ID.Size = new Size(54, 28);
+            aviaoLinha8ID.Size = new Size(73, 28);
             aviaoLinha8ID.TabIndex = 5;
-            aviaoLinha8ID.Text = "cona";
+            aviaoLinha8ID.Text = "default";
             // 
             // aviaoLine1
             // 
@@ -494,63 +494,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine1.Location = new Point(0, 70);
             aviaoLine1.Margin = new Padding(2, 3, 2, 3);
             aviaoLine1.Name = "aviaoLine1";
-            aviaoLine1.Size = new Size(1284, 65);
+            aviaoLine1.Size = new Size(1214, 65);
             aviaoLine1.TabIndex = 5;
             // 
             // aviaoLinha1DataManutencao
             // 
             aviaoLinha1DataManutencao.AutoSize = true;
             aviaoLinha1DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha1DataManutencao.Location = new Point(812, 25);
+            aviaoLinha1DataManutencao.Location = new Point(803, 16);
             aviaoLinha1DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1DataManutencao.Name = "aviaoLinha1DataManutencao";
-            aviaoLinha1DataManutencao.Size = new Size(54, 28);
+            aviaoLinha1DataManutencao.Size = new Size(73, 28);
             aviaoLinha1DataManutencao.TabIndex = 4;
-            aviaoLinha1DataManutencao.Text = "cona";
+            aviaoLinha1DataManutencao.Text = "default";
             // 
             // aviaoLinha1Tipo
             // 
             aviaoLinha1Tipo.AutoSize = true;
             aviaoLinha1Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha1Tipo.Location = new Point(565, 25);
+            aviaoLinha1Tipo.Location = new Point(563, 16);
             aviaoLinha1Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Tipo.Name = "aviaoLinha1Tipo";
-            aviaoLinha1Tipo.Size = new Size(54, 28);
+            aviaoLinha1Tipo.Size = new Size(73, 28);
             aviaoLinha1Tipo.TabIndex = 3;
-            aviaoLinha1Tipo.Text = "cona";
+            aviaoLinha1Tipo.Text = "default";
             // 
             // aviaoLinha1Estado
             // 
             aviaoLinha1Estado.AutoSize = true;
             aviaoLinha1Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha1Estado.Location = new Point(411, 25);
+            aviaoLinha1Estado.Location = new Point(406, 16);
             aviaoLinha1Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Estado.Name = "aviaoLinha1Estado";
-            aviaoLinha1Estado.Size = new Size(54, 28);
+            aviaoLinha1Estado.Size = new Size(73, 28);
             aviaoLinha1Estado.TabIndex = 2;
-            aviaoLinha1Estado.Text = "cona";
+            aviaoLinha1Estado.Text = "default";
             // 
             // aviaoLinha1Modelo
             // 
             aviaoLinha1Modelo.AutoSize = true;
             aviaoLinha1Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha1Modelo.Location = new Point(242, 25);
+            aviaoLinha1Modelo.Location = new Point(236, 16);
             aviaoLinha1Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Modelo.Name = "aviaoLinha1Modelo";
-            aviaoLinha1Modelo.Size = new Size(54, 28);
+            aviaoLinha1Modelo.Size = new Size(73, 28);
             aviaoLinha1Modelo.TabIndex = 1;
-            aviaoLinha1Modelo.Text = "cona";
+            aviaoLinha1Modelo.Text = "default";
             // 
             // aviaoLinha1ID
             // 
             aviaoLinha1ID.AutoSize = true;
             aviaoLinha1ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha1ID.Location = new Point(66, 25);
+            aviaoLinha1ID.Location = new Point(60, 16);
             aviaoLinha1ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1ID.Name = "aviaoLinha1ID";
-            aviaoLinha1ID.Size = new Size(54, 28);
+            aviaoLinha1ID.Size = new Size(73, 28);
             aviaoLinha1ID.TabIndex = 0;
-            aviaoLinha1ID.Text = "cona";
+            aviaoLinha1ID.Text = "default";
             // 
             // aviaoLine6
             // 
@@ -564,63 +564,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine6.Location = new Point(0, 395);
             aviaoLine6.Margin = new Padding(2, 3, 2, 3);
             aviaoLine6.Name = "aviaoLine6";
-            aviaoLine6.Size = new Size(1284, 65);
+            aviaoLine6.Size = new Size(1214, 65);
             aviaoLine6.TabIndex = 9;
             // 
             // aviaoLinha6DataManutencao
             // 
             aviaoLinha6DataManutencao.AutoSize = true;
             aviaoLinha6DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha6DataManutencao.Location = new Point(812, 24);
+            aviaoLinha6DataManutencao.Location = new Point(803, 16);
             aviaoLinha6DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6DataManutencao.Name = "aviaoLinha6DataManutencao";
-            aviaoLinha6DataManutencao.Size = new Size(54, 28);
+            aviaoLinha6DataManutencao.Size = new Size(73, 28);
             aviaoLinha6DataManutencao.TabIndex = 9;
-            aviaoLinha6DataManutencao.Text = "cona";
+            aviaoLinha6DataManutencao.Text = "default";
             // 
             // aviaoLinha6Tipo
             // 
             aviaoLinha6Tipo.AutoSize = true;
             aviaoLinha6Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha6Tipo.Location = new Point(565, 24);
+            aviaoLinha6Tipo.Location = new Point(563, 16);
             aviaoLinha6Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Tipo.Name = "aviaoLinha6Tipo";
-            aviaoLinha6Tipo.Size = new Size(54, 28);
+            aviaoLinha6Tipo.Size = new Size(73, 28);
             aviaoLinha6Tipo.TabIndex = 8;
-            aviaoLinha6Tipo.Text = "cona";
+            aviaoLinha6Tipo.Text = "default";
             // 
             // aviaoLinha6Estado
             // 
             aviaoLinha6Estado.AutoSize = true;
             aviaoLinha6Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha6Estado.Location = new Point(411, 24);
+            aviaoLinha6Estado.Location = new Point(406, 16);
             aviaoLinha6Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Estado.Name = "aviaoLinha6Estado";
-            aviaoLinha6Estado.Size = new Size(54, 28);
+            aviaoLinha6Estado.Size = new Size(73, 28);
             aviaoLinha6Estado.TabIndex = 7;
-            aviaoLinha6Estado.Text = "cona";
+            aviaoLinha6Estado.Text = "default";
             // 
             // aviaoLinha6Modelo
             // 
             aviaoLinha6Modelo.AutoSize = true;
             aviaoLinha6Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha6Modelo.Location = new Point(242, 24);
+            aviaoLinha6Modelo.Location = new Point(236, 16);
             aviaoLinha6Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Modelo.Name = "aviaoLinha6Modelo";
-            aviaoLinha6Modelo.Size = new Size(54, 28);
+            aviaoLinha6Modelo.Size = new Size(73, 28);
             aviaoLinha6Modelo.TabIndex = 6;
-            aviaoLinha6Modelo.Text = "cona";
+            aviaoLinha6Modelo.Text = "default";
             // 
             // aviaoLinha6ID
             // 
             aviaoLinha6ID.AutoSize = true;
             aviaoLinha6ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha6ID.Location = new Point(66, 24);
+            aviaoLinha6ID.Location = new Point(60, 16);
             aviaoLinha6ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6ID.Name = "aviaoLinha6ID";
-            aviaoLinha6ID.Size = new Size(54, 28);
+            aviaoLinha6ID.Size = new Size(73, 28);
             aviaoLinha6ID.TabIndex = 5;
-            aviaoLinha6ID.Text = "cona";
+            aviaoLinha6ID.Text = "default";
             // 
             // panel2
             // 
@@ -634,7 +634,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1175, 70);
+            panel2.Size = new Size(1214, 70);
             panel2.TabIndex = 1;
             // 
             // headerDataManutencao
@@ -642,7 +642,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerDataManutencao.AutoSize = true;
             headerDataManutencao.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerDataManutencao.ForeColor = SystemColors.Control;
-            headerDataManutencao.Location = new Point(813, 16);
+            headerDataManutencao.Location = new Point(803, 16);
             headerDataManutencao.Margin = new Padding(2, 0, 2, 0);
             headerDataManutencao.Name = "headerDataManutencao";
             headerDataManutencao.Size = new Size(351, 37);
@@ -654,7 +654,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerTipoAviao.AutoSize = true;
             headerTipoAviao.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerTipoAviao.ForeColor = SystemColors.Control;
-            headerTipoAviao.Location = new Point(566, 16);
+            headerTipoAviao.Location = new Point(563, 16);
             headerTipoAviao.Margin = new Padding(2, 0, 2, 0);
             headerTipoAviao.Name = "headerTipoAviao";
             headerTipoAviao.Size = new Size(180, 37);
@@ -666,7 +666,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerEstado.AutoSize = true;
             headerEstado.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerEstado.ForeColor = SystemColors.Control;
-            headerEstado.Location = new Point(412, 16);
+            headerEstado.Location = new Point(406, 16);
             headerEstado.Margin = new Padding(2, 0, 2, 0);
             headerEstado.Name = "headerEstado";
             headerEstado.Size = new Size(97, 37);
@@ -678,7 +678,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerModelo.AutoSize = true;
             headerModelo.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerModelo.ForeColor = SystemColors.Control;
-            headerModelo.Location = new Point(243, 16);
+            headerModelo.Location = new Point(236, 16);
             headerModelo.Margin = new Padding(2, 0, 2, 0);
             headerModelo.Name = "headerModelo";
             headerModelo.Size = new Size(110, 37);
@@ -690,7 +690,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerID.AutoSize = true;
             headerID.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerID.ForeColor = SystemColors.Control;
-            headerID.Location = new Point(68, 16);
+            headerID.Location = new Point(60, 16);
             headerID.Margin = new Padding(2, 0, 2, 0);
             headerID.Name = "headerID";
             headerID.Size = new Size(116, 37);
@@ -709,63 +709,63 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine3.Location = new Point(0, 200);
             aviaoLine3.Margin = new Padding(2, 3, 2, 3);
             aviaoLine3.Name = "aviaoLine3";
-            aviaoLine3.Size = new Size(1284, 65);
+            aviaoLine3.Size = new Size(1214, 65);
             aviaoLine3.TabIndex = 7;
             // 
             // aviaoLinha3DataManutencao
             // 
             aviaoLinha3DataManutencao.AutoSize = true;
             aviaoLinha3DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha3DataManutencao.Location = new Point(812, 21);
+            aviaoLinha3DataManutencao.Location = new Point(803, 16);
             aviaoLinha3DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3DataManutencao.Name = "aviaoLinha3DataManutencao";
-            aviaoLinha3DataManutencao.Size = new Size(54, 28);
+            aviaoLinha3DataManutencao.Size = new Size(73, 28);
             aviaoLinha3DataManutencao.TabIndex = 9;
-            aviaoLinha3DataManutencao.Text = "cona";
+            aviaoLinha3DataManutencao.Text = "default";
             // 
             // aviaoLinha3Tipo
             // 
             aviaoLinha3Tipo.AutoSize = true;
             aviaoLinha3Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha3Tipo.Location = new Point(565, 21);
+            aviaoLinha3Tipo.Location = new Point(563, 16);
             aviaoLinha3Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Tipo.Name = "aviaoLinha3Tipo";
-            aviaoLinha3Tipo.Size = new Size(54, 28);
+            aviaoLinha3Tipo.Size = new Size(73, 28);
             aviaoLinha3Tipo.TabIndex = 8;
-            aviaoLinha3Tipo.Text = "cona";
+            aviaoLinha3Tipo.Text = "default";
             // 
             // aviaoLinha3Estado
             // 
             aviaoLinha3Estado.AutoSize = true;
             aviaoLinha3Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha3Estado.Location = new Point(411, 21);
+            aviaoLinha3Estado.Location = new Point(406, 16);
             aviaoLinha3Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Estado.Name = "aviaoLinha3Estado";
-            aviaoLinha3Estado.Size = new Size(54, 28);
+            aviaoLinha3Estado.Size = new Size(73, 28);
             aviaoLinha3Estado.TabIndex = 7;
-            aviaoLinha3Estado.Text = "cona";
+            aviaoLinha3Estado.Text = "default";
             // 
             // aviaoLinha3Modelo
             // 
             aviaoLinha3Modelo.AutoSize = true;
             aviaoLinha3Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha3Modelo.Location = new Point(242, 21);
+            aviaoLinha3Modelo.Location = new Point(236, 16);
             aviaoLinha3Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Modelo.Name = "aviaoLinha3Modelo";
-            aviaoLinha3Modelo.Size = new Size(54, 28);
+            aviaoLinha3Modelo.Size = new Size(73, 28);
             aviaoLinha3Modelo.TabIndex = 6;
-            aviaoLinha3Modelo.Text = "cona";
+            aviaoLinha3Modelo.Text = "default";
             // 
             // aviaoLinha3ID
             // 
             aviaoLinha3ID.AutoSize = true;
             aviaoLinha3ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha3ID.Location = new Point(66, 21);
+            aviaoLinha3ID.Location = new Point(60, 16);
             aviaoLinha3ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3ID.Name = "aviaoLinha3ID";
-            aviaoLinha3ID.Size = new Size(54, 28);
+            aviaoLinha3ID.Size = new Size(73, 28);
             aviaoLinha3ID.TabIndex = 5;
-            aviaoLinha3ID.Text = "cona";
+            aviaoLinha3ID.Text = "default";
             // 
             // aviaoLine5
             // 
@@ -779,70 +779,70 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine5.Location = new Point(0, 330);
             aviaoLine5.Margin = new Padding(2, 3, 2, 3);
             aviaoLine5.Name = "aviaoLine5";
-            aviaoLine5.Size = new Size(1284, 65);
+            aviaoLine5.Size = new Size(1214, 65);
             aviaoLine5.TabIndex = 9;
             // 
             // aviaoLinha5DataManutencao
             // 
             aviaoLinha5DataManutencao.AutoSize = true;
             aviaoLinha5DataManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha5DataManutencao.Location = new Point(812, 21);
+            aviaoLinha5DataManutencao.Location = new Point(803, 16);
             aviaoLinha5DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5DataManutencao.Name = "aviaoLinha5DataManutencao";
-            aviaoLinha5DataManutencao.Size = new Size(54, 28);
+            aviaoLinha5DataManutencao.Size = new Size(73, 28);
             aviaoLinha5DataManutencao.TabIndex = 9;
-            aviaoLinha5DataManutencao.Text = "cona";
+            aviaoLinha5DataManutencao.Text = "default";
             // 
             // aviaoLinha5Tipo
             // 
             aviaoLinha5Tipo.AutoSize = true;
             aviaoLinha5Tipo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha5Tipo.Location = new Point(565, 21);
+            aviaoLinha5Tipo.Location = new Point(563, 16);
             aviaoLinha5Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Tipo.Name = "aviaoLinha5Tipo";
-            aviaoLinha5Tipo.Size = new Size(54, 28);
+            aviaoLinha5Tipo.Size = new Size(73, 28);
             aviaoLinha5Tipo.TabIndex = 8;
-            aviaoLinha5Tipo.Text = "cona";
+            aviaoLinha5Tipo.Text = "default";
             // 
             // aviaoLinha5Estado
             // 
             aviaoLinha5Estado.AutoSize = true;
             aviaoLinha5Estado.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha5Estado.Location = new Point(411, 21);
+            aviaoLinha5Estado.Location = new Point(406, 16);
             aviaoLinha5Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Estado.Name = "aviaoLinha5Estado";
-            aviaoLinha5Estado.Size = new Size(54, 28);
+            aviaoLinha5Estado.Size = new Size(73, 28);
             aviaoLinha5Estado.TabIndex = 7;
-            aviaoLinha5Estado.Text = "cona";
+            aviaoLinha5Estado.Text = "default";
             // 
             // aviaoLinha5Modelo
             // 
             aviaoLinha5Modelo.AutoSize = true;
             aviaoLinha5Modelo.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha5Modelo.Location = new Point(242, 21);
+            aviaoLinha5Modelo.Location = new Point(236, 16);
             aviaoLinha5Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Modelo.Name = "aviaoLinha5Modelo";
-            aviaoLinha5Modelo.Size = new Size(54, 28);
+            aviaoLinha5Modelo.Size = new Size(73, 28);
             aviaoLinha5Modelo.TabIndex = 6;
-            aviaoLinha5Modelo.Text = "cona";
+            aviaoLinha5Modelo.Text = "default";
             // 
             // aviaoLinha5ID
             // 
             aviaoLinha5ID.AutoSize = true;
             aviaoLinha5ID.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            aviaoLinha5ID.Location = new Point(66, 21);
+            aviaoLinha5ID.Location = new Point(60, 16);
             aviaoLinha5ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5ID.Name = "aviaoLinha5ID";
-            aviaoLinha5ID.Size = new Size(54, 28);
+            aviaoLinha5ID.Size = new Size(73, 28);
             aviaoLinha5ID.TabIndex = 5;
-            aviaoLinha5ID.Text = "cona";
+            aviaoLinha5ID.Text = "default";
             // 
             // avioesNextButton
             // 
             avioesNextButton.BackColor = Color.FromArgb(54, 53, 67);
             avioesNextButton.FlatStyle = FlatStyle.Flat;
             avioesNextButton.ForeColor = Color.White;
-            avioesNextButton.Location = new Point(770, 712);
+            avioesNextButton.Location = new Point(853, 712);
             avioesNextButton.Margin = new Padding(2, 3, 2, 3);
             avioesNextButton.Name = "avioesNextButton";
             avioesNextButton.Size = new Size(116, 38);
@@ -856,7 +856,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             avioesPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             avioesPreviousButton.FlatStyle = FlatStyle.Flat;
             avioesPreviousButton.ForeColor = Color.White;
-            avioesPreviousButton.Location = new Point(500, 712);
+            avioesPreviousButton.Location = new Point(333, 712);
             avioesPreviousButton.Margin = new Padding(2, 3, 2, 3);
             avioesPreviousButton.Name = "avioesPreviousButton";
             avioesPreviousButton.Size = new Size(116, 38);
@@ -869,7 +869,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1368, 767);
+            ClientSize = new Size(1426, 767);
             Controls.Add(avioesPreviousButton);
             Controls.Add(avioesNextButton);
             Controls.Add(aviaoBGPanel);
