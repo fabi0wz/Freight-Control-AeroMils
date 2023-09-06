@@ -28,33 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewHistoricoManutencoes = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistoricoManutencoes).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewHistoricoManutencoes
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(-3, 172);
-            label1.Name = "label1";
-            label1.Size = new Size(791, 106);
-            label1.TabIndex = 1;
-            label1.Text = "HISTORICO MANUT";
+            dataGridViewHistoricoManutencoes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewHistoricoManutencoes.Location = new Point(2, 2);
+            dataGridViewHistoricoManutencoes.Name = "dataGridViewHistoricoManutencoes";
+            dataGridViewHistoricoManutencoes.RowTemplate.Height = 25;
+            dataGridViewHistoricoManutencoes.Size = new Size(897, 544);
+            dataGridViewHistoricoManutencoes.TabIndex = 0;
             // 
             // HistoricoManutencoes
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(label1);
+            ClientSize = new Size(901, 548);
+            Controls.Add(dataGridViewHistoricoManutencoes);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "HistoricoManutencoes";
             Text = "HistoricoManutencoes";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewHistoricoManutencoes).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private DataGridView dataGridViewHistoricoManutencoes;
     }
 }

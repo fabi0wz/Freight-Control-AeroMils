@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AeroMils___Controlo_de_Frota.Data.DbContext;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,9 +13,12 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class HistoricoManutencoes : Form
     {
+        private SQLiteDBContext dbContext = new SQLiteDBContext();
         public HistoricoManutencoes()
         {
             InitializeComponent();
+            DataTable historicoManutencoesDataTable = dbContext.GetPreviousManutencoesData();
+            dataGridViewHistoricoManutencoes.DataSource = historicoManutencoesDataTable;
         }
 
     }

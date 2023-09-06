@@ -28,34 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            dataGridViewReservas = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewReservas).BeginInit();
             SuspendLayout();
             // 
-            // label1
+            // dataGridViewReservas
             // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 48F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(169, 127);
-            label1.Name = "label1";
-            label1.Size = new Size(346, 86);
-            label1.TabIndex = 0;
-            label1.Text = "RESERVAS";
+            dataGridViewReservas.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewReservas.Location = new Point(1, 3);
+            dataGridViewReservas.Name = "dataGridViewReservas";
+            dataGridViewReservas.RowTemplate.Height = 25;
+            dataGridViewReservas.Size = new Size(696, 332);
+            dataGridViewReservas.TabIndex = 0;
             // 
             // Reservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
-            Controls.Add(label1);
+            Controls.Add(dataGridViewReservas);
             Margin = new Padding(3, 2, 3, 2);
             Name = "Reservas";
             Text = "Reservas";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewReservas).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
 
-        private Label label1;
+        private DataGridView dataGridViewReservas;
     }
 }

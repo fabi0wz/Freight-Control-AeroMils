@@ -3,41 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using AeroMils___Controlo_de_Frota.Modules.Planes;
+using AeroMils___Controlo_de_Frota.Models;
 
 namespace AeroMils___Controlo_de_Frota.Modules
 {
-    internal class Empresa
+    public class Empresa
     {
+        private List<Aviao> avioes;
 
-        public List<Aviao> ConsultarDisponiveis(List<Aviao> avioes)
+        public Empresa()
         {
-            List<Aviao> disponiveis = new List<Aviao>();
-
-            foreach (var aviao in avioes)
-            {
-                if (aviao.estado)
-                {
-                    disponiveis.Add(aviao);
-                }
-            }
-
-            return disponiveis;
+            avioes = new List<Aviao>();
         }
 
-        public List<Aviao> ConsultarManutencao(List<Aviao> avioes)
+        public void AddAviao(Aviao aviao)
         {
-            List<Aviao> emManutencao = new List<Aviao>();
+            avioes.Add(aviao);
+        }
 
-            foreach (var aviao in avioes)
-            {
-                if (aviao.dataUltimaManutencao < DateTime.Now)
-                {
-                    emManutencao.Add(aviao);
-                }
-            }
-
-            return emManutencao;
+        public List<Aviao> GetAvioes()
+        {
+            return avioes;
         }
     }
 }
