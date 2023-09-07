@@ -12,11 +12,8 @@ using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using AeroMils___Controlo_de_Frota.Modules;
 using AeroMils___Controlo_de_Frota.Views;
-<<<<<<< Updated upstream
-=======
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text.RegularExpressions;
->>>>>>> Stashed changes
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -206,7 +203,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        public static void ChangePlaneStatus(int planeID)
+        public void ChangePlaneStatus(int planeID)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
