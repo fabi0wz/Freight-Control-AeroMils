@@ -99,7 +99,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    string query = "INSERT INTO Avioneta (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
+                    string query = "INSERT INTO Avionetas (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
 
                     command.CommandText = query;
                     command.Parameters.AddWithValue("@aviaoId", aviaoId);
