@@ -121,5 +121,13 @@ namespace AeroMils___Controlo_de_Frota.Views
             currentPage--;
             DisplayRecords();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
+            Aviao aviao = dbContext.GetAviaoById(id);
+            string marca = aviao == null ? "id invalido" : aviao.modelo;
+            button1.Text = marca;
+        }
     }
 }

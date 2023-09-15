@@ -76,7 +76,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6Modelo = new Label();
             aviaoLinha6ID = new Label();
             panel2 = new Panel();
-            headerDataManutencao = new Label();
+            headerDetalhes = new Label();
             headerTipoAviao = new Label();
             headerEstado = new Label();
             headerModelo = new Label();
@@ -95,6 +95,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5ID = new Label();
             avioesNextButton = new Button();
             avioesPreviousButton = new Button();
+            button1 = new Button();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             aviaoBGPanel.SuspendLayout();
             aviaoLine2.SuspendLayout();
@@ -154,7 +155,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha2DataManutencao.Location = new Point(803, 16);
             aviaoLinha2DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2DataManutencao.Name = "aviaoLinha2DataManutencao";
-            aviaoLinha2DataManutencao.Size = new Size(73, 28);
+            aviaoLinha2DataManutencao.Size = new Size(89, 32);
             aviaoLinha2DataManutencao.TabIndex = 9;
             aviaoLinha2DataManutencao.Text = "default";
             // 
@@ -165,7 +166,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha2Tipo.Location = new Point(563, 16);
             aviaoLinha2Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Tipo.Name = "aviaoLinha2Tipo";
-            aviaoLinha2Tipo.Size = new Size(73, 28);
+            aviaoLinha2Tipo.Size = new Size(89, 32);
             aviaoLinha2Tipo.TabIndex = 8;
             aviaoLinha2Tipo.Text = "default";
             // 
@@ -176,7 +177,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha2Estado.Location = new Point(406, 16);
             aviaoLinha2Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Estado.Name = "aviaoLinha2Estado";
-            aviaoLinha2Estado.Size = new Size(73, 28);
+            aviaoLinha2Estado.Size = new Size(89, 32);
             aviaoLinha2Estado.TabIndex = 7;
             aviaoLinha2Estado.Text = "default";
             // 
@@ -187,7 +188,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha2Modelo.Location = new Point(236, 16);
             aviaoLinha2Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2Modelo.Name = "aviaoLinha2Modelo";
-            aviaoLinha2Modelo.Size = new Size(73, 28);
+            aviaoLinha2Modelo.Size = new Size(89, 32);
             aviaoLinha2Modelo.TabIndex = 6;
             aviaoLinha2Modelo.Text = "default";
             // 
@@ -198,7 +199,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha2ID.Location = new Point(60, 16);
             aviaoLinha2ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha2ID.Name = "aviaoLinha2ID";
-            aviaoLinha2ID.Size = new Size(73, 28);
+            aviaoLinha2ID.Size = new Size(89, 32);
             aviaoLinha2ID.TabIndex = 5;
             aviaoLinha2ID.Text = "default";
             // 
@@ -224,7 +225,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha4DataManutencao.Location = new Point(803, 16);
             aviaoLinha4DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4DataManutencao.Name = "aviaoLinha4DataManutencao";
-            aviaoLinha4DataManutencao.Size = new Size(73, 28);
+            aviaoLinha4DataManutencao.Size = new Size(89, 32);
             aviaoLinha4DataManutencao.TabIndex = 9;
             aviaoLinha4DataManutencao.Text = "default";
             // 
@@ -235,7 +236,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha4Tipo.Location = new Point(563, 16);
             aviaoLinha4Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Tipo.Name = "aviaoLinha4Tipo";
-            aviaoLinha4Tipo.Size = new Size(73, 28);
+            aviaoLinha4Tipo.Size = new Size(89, 32);
             aviaoLinha4Tipo.TabIndex = 8;
             aviaoLinha4Tipo.Text = "default";
             // 
@@ -246,7 +247,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha4Estado.Location = new Point(406, 16);
             aviaoLinha4Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Estado.Name = "aviaoLinha4Estado";
-            aviaoLinha4Estado.Size = new Size(73, 28);
+            aviaoLinha4Estado.Size = new Size(89, 32);
             aviaoLinha4Estado.TabIndex = 7;
             aviaoLinha4Estado.Text = "default";
             // 
@@ -257,7 +258,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha4Modelo.Location = new Point(236, 16);
             aviaoLinha4Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4Modelo.Name = "aviaoLinha4Modelo";
-            aviaoLinha4Modelo.Size = new Size(73, 28);
+            aviaoLinha4Modelo.Size = new Size(89, 32);
             aviaoLinha4Modelo.TabIndex = 6;
             aviaoLinha4Modelo.Text = "default";
             // 
@@ -268,7 +269,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha4ID.Location = new Point(60, 16);
             aviaoLinha4ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha4ID.Name = "aviaoLinha4ID";
-            aviaoLinha4ID.Size = new Size(73, 28);
+            aviaoLinha4ID.Size = new Size(89, 32);
             aviaoLinha4ID.TabIndex = 5;
             aviaoLinha4ID.Text = "default";
             // 
@@ -294,7 +295,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha9DataManutencao.Location = new Point(803, 16);
             aviaoLinha9DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9DataManutencao.Name = "aviaoLinha9DataManutencao";
-            aviaoLinha9DataManutencao.Size = new Size(73, 28);
+            aviaoLinha9DataManutencao.Size = new Size(89, 32);
             aviaoLinha9DataManutencao.TabIndex = 9;
             aviaoLinha9DataManutencao.Text = "default";
             // 
@@ -305,7 +306,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha9Tipo.Location = new Point(563, 16);
             aviaoLinha9Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Tipo.Name = "aviaoLinha9Tipo";
-            aviaoLinha9Tipo.Size = new Size(73, 28);
+            aviaoLinha9Tipo.Size = new Size(89, 32);
             aviaoLinha9Tipo.TabIndex = 8;
             aviaoLinha9Tipo.Text = "default";
             // 
@@ -316,7 +317,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha9Estado.Location = new Point(406, 16);
             aviaoLinha9Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Estado.Name = "aviaoLinha9Estado";
-            aviaoLinha9Estado.Size = new Size(73, 28);
+            aviaoLinha9Estado.Size = new Size(89, 32);
             aviaoLinha9Estado.TabIndex = 7;
             aviaoLinha9Estado.Text = "default";
             // 
@@ -327,7 +328,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha9Modelo.Location = new Point(236, 16);
             aviaoLinha9Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9Modelo.Name = "aviaoLinha9Modelo";
-            aviaoLinha9Modelo.Size = new Size(73, 28);
+            aviaoLinha9Modelo.Size = new Size(89, 32);
             aviaoLinha9Modelo.TabIndex = 6;
             aviaoLinha9Modelo.Text = "default";
             // 
@@ -338,7 +339,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha9ID.Location = new Point(60, 16);
             aviaoLinha9ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha9ID.Name = "aviaoLinha9ID";
-            aviaoLinha9ID.Size = new Size(73, 28);
+            aviaoLinha9ID.Size = new Size(89, 32);
             aviaoLinha9ID.TabIndex = 5;
             aviaoLinha9ID.Text = "default";
             // 
@@ -364,7 +365,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha7DataManutencao.Location = new Point(803, 16);
             aviaoLinha7DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7DataManutencao.Name = "aviaoLinha7DataManutencao";
-            aviaoLinha7DataManutencao.Size = new Size(73, 28);
+            aviaoLinha7DataManutencao.Size = new Size(89, 32);
             aviaoLinha7DataManutencao.TabIndex = 9;
             aviaoLinha7DataManutencao.Text = "default";
             // 
@@ -375,7 +376,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha7Tipo.Location = new Point(563, 16);
             aviaoLinha7Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Tipo.Name = "aviaoLinha7Tipo";
-            aviaoLinha7Tipo.Size = new Size(73, 28);
+            aviaoLinha7Tipo.Size = new Size(89, 32);
             aviaoLinha7Tipo.TabIndex = 8;
             aviaoLinha7Tipo.Text = "default";
             // 
@@ -386,7 +387,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha7Estado.Location = new Point(406, 16);
             aviaoLinha7Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Estado.Name = "aviaoLinha7Estado";
-            aviaoLinha7Estado.Size = new Size(73, 28);
+            aviaoLinha7Estado.Size = new Size(89, 32);
             aviaoLinha7Estado.TabIndex = 7;
             aviaoLinha7Estado.Text = "default";
             // 
@@ -397,7 +398,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha7Modelo.Location = new Point(236, 16);
             aviaoLinha7Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7Modelo.Name = "aviaoLinha7Modelo";
-            aviaoLinha7Modelo.Size = new Size(73, 28);
+            aviaoLinha7Modelo.Size = new Size(89, 32);
             aviaoLinha7Modelo.TabIndex = 6;
             aviaoLinha7Modelo.Text = "default";
             // 
@@ -408,7 +409,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha7ID.Location = new Point(60, 16);
             aviaoLinha7ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha7ID.Name = "aviaoLinha7ID";
-            aviaoLinha7ID.Size = new Size(73, 28);
+            aviaoLinha7ID.Size = new Size(89, 32);
             aviaoLinha7ID.TabIndex = 5;
             aviaoLinha7ID.Text = "default";
             // 
@@ -434,7 +435,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha8DataManutencao.Location = new Point(803, 16);
             aviaoLinha8DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8DataManutencao.Name = "aviaoLinha8DataManutencao";
-            aviaoLinha8DataManutencao.Size = new Size(73, 28);
+            aviaoLinha8DataManutencao.Size = new Size(89, 32);
             aviaoLinha8DataManutencao.TabIndex = 9;
             aviaoLinha8DataManutencao.Text = "default";
             // 
@@ -445,7 +446,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha8Tipo.Location = new Point(563, 16);
             aviaoLinha8Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Tipo.Name = "aviaoLinha8Tipo";
-            aviaoLinha8Tipo.Size = new Size(73, 28);
+            aviaoLinha8Tipo.Size = new Size(89, 32);
             aviaoLinha8Tipo.TabIndex = 8;
             aviaoLinha8Tipo.Text = "default";
             // 
@@ -456,7 +457,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha8Estado.Location = new Point(406, 16);
             aviaoLinha8Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Estado.Name = "aviaoLinha8Estado";
-            aviaoLinha8Estado.Size = new Size(73, 28);
+            aviaoLinha8Estado.Size = new Size(89, 32);
             aviaoLinha8Estado.TabIndex = 7;
             aviaoLinha8Estado.Text = "default";
             // 
@@ -467,7 +468,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha8Modelo.Location = new Point(236, 16);
             aviaoLinha8Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8Modelo.Name = "aviaoLinha8Modelo";
-            aviaoLinha8Modelo.Size = new Size(73, 28);
+            aviaoLinha8Modelo.Size = new Size(89, 32);
             aviaoLinha8Modelo.TabIndex = 6;
             aviaoLinha8Modelo.Text = "default";
             // 
@@ -478,7 +479,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha8ID.Location = new Point(60, 16);
             aviaoLinha8ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha8ID.Name = "aviaoLinha8ID";
-            aviaoLinha8ID.Size = new Size(73, 28);
+            aviaoLinha8ID.Size = new Size(89, 32);
             aviaoLinha8ID.TabIndex = 5;
             aviaoLinha8ID.Text = "default";
             // 
@@ -504,7 +505,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha1DataManutencao.Location = new Point(803, 16);
             aviaoLinha1DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1DataManutencao.Name = "aviaoLinha1DataManutencao";
-            aviaoLinha1DataManutencao.Size = new Size(73, 28);
+            aviaoLinha1DataManutencao.Size = new Size(89, 32);
             aviaoLinha1DataManutencao.TabIndex = 4;
             aviaoLinha1DataManutencao.Text = "default";
             // 
@@ -515,7 +516,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha1Tipo.Location = new Point(563, 16);
             aviaoLinha1Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Tipo.Name = "aviaoLinha1Tipo";
-            aviaoLinha1Tipo.Size = new Size(73, 28);
+            aviaoLinha1Tipo.Size = new Size(89, 32);
             aviaoLinha1Tipo.TabIndex = 3;
             aviaoLinha1Tipo.Text = "default";
             // 
@@ -526,7 +527,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha1Estado.Location = new Point(406, 16);
             aviaoLinha1Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Estado.Name = "aviaoLinha1Estado";
-            aviaoLinha1Estado.Size = new Size(73, 28);
+            aviaoLinha1Estado.Size = new Size(89, 32);
             aviaoLinha1Estado.TabIndex = 2;
             aviaoLinha1Estado.Text = "default";
             // 
@@ -537,7 +538,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha1Modelo.Location = new Point(236, 16);
             aviaoLinha1Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1Modelo.Name = "aviaoLinha1Modelo";
-            aviaoLinha1Modelo.Size = new Size(73, 28);
+            aviaoLinha1Modelo.Size = new Size(89, 32);
             aviaoLinha1Modelo.TabIndex = 1;
             aviaoLinha1Modelo.Text = "default";
             // 
@@ -548,7 +549,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha1ID.Location = new Point(60, 16);
             aviaoLinha1ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha1ID.Name = "aviaoLinha1ID";
-            aviaoLinha1ID.Size = new Size(73, 28);
+            aviaoLinha1ID.Size = new Size(89, 32);
             aviaoLinha1ID.TabIndex = 0;
             aviaoLinha1ID.Text = "default";
             // 
@@ -574,7 +575,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6DataManutencao.Location = new Point(803, 16);
             aviaoLinha6DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6DataManutencao.Name = "aviaoLinha6DataManutencao";
-            aviaoLinha6DataManutencao.Size = new Size(73, 28);
+            aviaoLinha6DataManutencao.Size = new Size(89, 32);
             aviaoLinha6DataManutencao.TabIndex = 9;
             aviaoLinha6DataManutencao.Text = "default";
             // 
@@ -585,7 +586,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6Tipo.Location = new Point(563, 16);
             aviaoLinha6Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Tipo.Name = "aviaoLinha6Tipo";
-            aviaoLinha6Tipo.Size = new Size(73, 28);
+            aviaoLinha6Tipo.Size = new Size(89, 32);
             aviaoLinha6Tipo.TabIndex = 8;
             aviaoLinha6Tipo.Text = "default";
             // 
@@ -596,7 +597,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6Estado.Location = new Point(406, 16);
             aviaoLinha6Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Estado.Name = "aviaoLinha6Estado";
-            aviaoLinha6Estado.Size = new Size(73, 28);
+            aviaoLinha6Estado.Size = new Size(89, 32);
             aviaoLinha6Estado.TabIndex = 7;
             aviaoLinha6Estado.Text = "default";
             // 
@@ -607,7 +608,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6Modelo.Location = new Point(236, 16);
             aviaoLinha6Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6Modelo.Name = "aviaoLinha6Modelo";
-            aviaoLinha6Modelo.Size = new Size(73, 28);
+            aviaoLinha6Modelo.Size = new Size(89, 32);
             aviaoLinha6Modelo.TabIndex = 6;
             aviaoLinha6Modelo.Text = "default";
             // 
@@ -618,14 +619,14 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha6ID.Location = new Point(60, 16);
             aviaoLinha6ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha6ID.Name = "aviaoLinha6ID";
-            aviaoLinha6ID.Size = new Size(73, 28);
+            aviaoLinha6ID.Size = new Size(89, 32);
             aviaoLinha6ID.TabIndex = 5;
             aviaoLinha6ID.Text = "default";
             // 
             // panel2
             // 
             panel2.BackColor = Color.FromArgb(54, 53, 67);
-            panel2.Controls.Add(headerDataManutencao);
+            panel2.Controls.Add(headerDetalhes);
             panel2.Controls.Add(headerTipoAviao);
             panel2.Controls.Add(headerEstado);
             panel2.Controls.Add(headerModelo);
@@ -637,17 +638,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             panel2.Size = new Size(1214, 70);
             panel2.TabIndex = 1;
             // 
-            // headerDataManutencao
+            // headerDetalhes
             // 
-            headerDataManutencao.AutoSize = true;
-            headerDataManutencao.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
-            headerDataManutencao.ForeColor = SystemColors.Control;
-            headerDataManutencao.Location = new Point(803, 16);
-            headerDataManutencao.Margin = new Padding(2, 0, 2, 0);
-            headerDataManutencao.Name = "headerDataManutencao";
-            headerDataManutencao.Size = new Size(351, 37);
-            headerDataManutencao.TabIndex = 4;
-            headerDataManutencao.Text = "Data da Ultima Manutenção";
+            headerDetalhes.AutoSize = true;
+            headerDetalhes.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            headerDetalhes.ForeColor = SystemColors.Control;
+            headerDetalhes.Location = new Point(803, 16);
+            headerDetalhes.Margin = new Padding(2, 0, 2, 0);
+            headerDetalhes.Name = "headerDetalhes";
+            headerDetalhes.Size = new Size(143, 45);
+            headerDetalhes.TabIndex = 4;
+            headerDetalhes.Text = "Detalhes";
             // 
             // headerTipoAviao
             // 
@@ -657,7 +658,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerTipoAviao.Location = new Point(563, 16);
             headerTipoAviao.Margin = new Padding(2, 0, 2, 0);
             headerTipoAviao.Name = "headerTipoAviao";
-            headerTipoAviao.Size = new Size(180, 37);
+            headerTipoAviao.Size = new Size(215, 45);
             headerTipoAviao.TabIndex = 3;
             headerTipoAviao.Text = "Tipo de Avião";
             // 
@@ -669,7 +670,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerEstado.Location = new Point(406, 16);
             headerEstado.Margin = new Padding(2, 0, 2, 0);
             headerEstado.Name = "headerEstado";
-            headerEstado.Size = new Size(97, 37);
+            headerEstado.Size = new Size(115, 45);
             headerEstado.TabIndex = 2;
             headerEstado.Text = "Estado";
             // 
@@ -681,7 +682,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerModelo.Location = new Point(236, 16);
             headerModelo.Margin = new Padding(2, 0, 2, 0);
             headerModelo.Name = "headerModelo";
-            headerModelo.Size = new Size(110, 37);
+            headerModelo.Size = new Size(131, 45);
             headerModelo.TabIndex = 1;
             headerModelo.Text = "Modelo";
             // 
@@ -693,7 +694,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerID.Location = new Point(60, 16);
             headerID.Margin = new Padding(2, 0, 2, 0);
             headerID.Name = "headerID";
-            headerID.Size = new Size(116, 37);
+            headerID.Size = new Size(138, 45);
             headerID.TabIndex = 0;
             headerID.Text = "ID Avião";
             // 
@@ -719,7 +720,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha3DataManutencao.Location = new Point(803, 16);
             aviaoLinha3DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3DataManutencao.Name = "aviaoLinha3DataManutencao";
-            aviaoLinha3DataManutencao.Size = new Size(73, 28);
+            aviaoLinha3DataManutencao.Size = new Size(89, 32);
             aviaoLinha3DataManutencao.TabIndex = 9;
             aviaoLinha3DataManutencao.Text = "default";
             // 
@@ -730,7 +731,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha3Tipo.Location = new Point(563, 16);
             aviaoLinha3Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Tipo.Name = "aviaoLinha3Tipo";
-            aviaoLinha3Tipo.Size = new Size(73, 28);
+            aviaoLinha3Tipo.Size = new Size(89, 32);
             aviaoLinha3Tipo.TabIndex = 8;
             aviaoLinha3Tipo.Text = "default";
             // 
@@ -741,7 +742,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha3Estado.Location = new Point(406, 16);
             aviaoLinha3Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Estado.Name = "aviaoLinha3Estado";
-            aviaoLinha3Estado.Size = new Size(73, 28);
+            aviaoLinha3Estado.Size = new Size(89, 32);
             aviaoLinha3Estado.TabIndex = 7;
             aviaoLinha3Estado.Text = "default";
             // 
@@ -752,7 +753,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha3Modelo.Location = new Point(236, 16);
             aviaoLinha3Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3Modelo.Name = "aviaoLinha3Modelo";
-            aviaoLinha3Modelo.Size = new Size(73, 28);
+            aviaoLinha3Modelo.Size = new Size(89, 32);
             aviaoLinha3Modelo.TabIndex = 6;
             aviaoLinha3Modelo.Text = "default";
             // 
@@ -763,7 +764,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha3ID.Location = new Point(60, 16);
             aviaoLinha3ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha3ID.Name = "aviaoLinha3ID";
-            aviaoLinha3ID.Size = new Size(73, 28);
+            aviaoLinha3ID.Size = new Size(89, 32);
             aviaoLinha3ID.TabIndex = 5;
             aviaoLinha3ID.Text = "default";
             // 
@@ -789,7 +790,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5DataManutencao.Location = new Point(803, 16);
             aviaoLinha5DataManutencao.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5DataManutencao.Name = "aviaoLinha5DataManutencao";
-            aviaoLinha5DataManutencao.Size = new Size(73, 28);
+            aviaoLinha5DataManutencao.Size = new Size(89, 32);
             aviaoLinha5DataManutencao.TabIndex = 9;
             aviaoLinha5DataManutencao.Text = "default";
             // 
@@ -800,7 +801,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5Tipo.Location = new Point(563, 16);
             aviaoLinha5Tipo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Tipo.Name = "aviaoLinha5Tipo";
-            aviaoLinha5Tipo.Size = new Size(73, 28);
+            aviaoLinha5Tipo.Size = new Size(89, 32);
             aviaoLinha5Tipo.TabIndex = 8;
             aviaoLinha5Tipo.Text = "default";
             // 
@@ -811,7 +812,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5Estado.Location = new Point(406, 16);
             aviaoLinha5Estado.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Estado.Name = "aviaoLinha5Estado";
-            aviaoLinha5Estado.Size = new Size(73, 28);
+            aviaoLinha5Estado.Size = new Size(89, 32);
             aviaoLinha5Estado.TabIndex = 7;
             aviaoLinha5Estado.Text = "default";
             // 
@@ -822,7 +823,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5Modelo.Location = new Point(236, 16);
             aviaoLinha5Modelo.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5Modelo.Name = "aviaoLinha5Modelo";
-            aviaoLinha5Modelo.Size = new Size(73, 28);
+            aviaoLinha5Modelo.Size = new Size(89, 32);
             aviaoLinha5Modelo.TabIndex = 6;
             aviaoLinha5Modelo.Text = "default";
             // 
@@ -833,7 +834,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5ID.Location = new Point(60, 16);
             aviaoLinha5ID.Margin = new Padding(2, 0, 2, 0);
             aviaoLinha5ID.Name = "aviaoLinha5ID";
-            aviaoLinha5ID.Size = new Size(73, 28);
+            aviaoLinha5ID.Size = new Size(89, 32);
             aviaoLinha5ID.TabIndex = 5;
             aviaoLinha5ID.Text = "default";
             // 
@@ -865,11 +866,22 @@ namespace AeroMils___Controlo_de_Frota.Views
             avioesPreviousButton.UseVisualStyleBackColor = false;
             avioesPreviousButton.Click += avioesPreviousButton_Click;
             // 
+            // button1
+            // 
+            button1.Location = new Point(1292, 558);
+            button1.Name = "button1";
+            button1.Size = new Size(112, 34);
+            button1.TabIndex = 14;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
+            // 
             // Avioes
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(11F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1426, 767);
+            Controls.Add(button1);
             Controls.Add(avioesPreviousButton);
             Controls.Add(avioesNextButton);
             Controls.Add(aviaoBGPanel);
@@ -906,7 +918,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         private FlowLayoutPanel airplaneSlideMenuFlowLayoutPanel;
         private Panel panel1;
         private Label headerID;
-        private Label headerDataManutencao;
+        private Label headerDetalhes;
         private Label headerTipoAviao;
         private Label headerEstado;
         private Label headerModelo;
@@ -974,5 +986,6 @@ namespace AeroMils___Controlo_de_Frota.Views
         private Label aviaoLinha9ID;
         private Button avioesNextButton;
         private Button avioesPreviousButton;
+        private Button button1;
     }
 }
