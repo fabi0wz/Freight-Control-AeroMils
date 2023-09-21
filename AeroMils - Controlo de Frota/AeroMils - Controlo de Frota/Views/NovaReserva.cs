@@ -112,6 +112,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             if (result == DialogResult.Yes)
             {
                 dbContext.InserirNovaReserva(id_aviao, nomeCliente, origem, destino, dataPartida, dataRetorno);
+                dbContext.ChangePlaneStatus(id_aviao);
                 this.Close();
             }
         }

@@ -179,7 +179,6 @@ namespace AeroMils___Controlo_de_Frota.Models
 
         public void AlterarEstado(int id)
         {
-            SQLiteDBContext.ChangePlaneStatus(id);
         }
     }
 }

@@ -12,11 +12,8 @@ using System.Reflection;
 using static System.ComponentModel.Design.ObjectSelectorEditor;
 using AeroMils___Controlo_de_Frota.Modules;
 using AeroMils___Controlo_de_Frota.Views;
-<<<<<<< Updated upstream
-=======
 using static System.Runtime.InteropServices.JavaScript.JSType;
 using System.Text.RegularExpressions;
->>>>>>> Stashed changes
 
 namespace AeroMils___Controlo_de_Frota.Data.DbContext
 {
@@ -102,7 +99,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
-                    string query = "INSERT INTO Avioneta (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
+                    string query = "INSERT INTO Avionetas (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
 
                     command.CommandText = query;
                     command.Parameters.AddWithValue("@aviaoId", aviaoId);
@@ -206,7 +203,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        public static void ChangePlaneStatus(int planeID)
+        public void ChangePlaneStatus(int planeID)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -461,6 +458,103 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
 
             return aeronaveMercadorias;
+        }
+
+        public Aviao GetAviaoById(int idaviao)
+        {
+            OpenConnection();
+            try
+            {
+                using (SQLiteCommand command = new SQLiteCommand("SELECT * FROM Avioes WHERE id_aviao = @id_aviao", connection))
+                {
+                    command.Parameters.AddWithValue("@id_aviao", idaviao);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            string tipo_aviao = reader["tipo_aviao"].ToString();
+                            int id = Convert.ToInt32(reader["id_aviao"]);
+                            int capacidade_passageiros = Convert.ToInt32(reader["capacidade_passageiros"]);
+                            int autonomia = Convert.ToInt32(reader["autonomia"]);
+                            DateTime dataUltimaManutencao = Convert.ToDateTime(reader["data_ult_manutencao"]);
+                            bool estado = Convert.ToBoolean(reader["estado"]);
+                            int qtdMotores = Convert.ToInt32(reader["qtd_motores"]);
+                            string marca = reader["marca"].ToString();
+                            string modelo = reader["modelo"].ToString();
+                            DateTime anoFabrico = Convert.ToDateTime(reader["ano_fabrico"]);
+
+
+                            switch (tipo_aviao)
+                            {
+                                case "AeronaveComercial":
+                                    AeronaveComercial aeronavecomercial = GetAeronavesComerciaisData(id);
+                                    aeronavecomercial.capacidade_passageiros = capacidade_passageiros;
+                                    aeronavecomercial.autonomia = autonomia;
+                                    aeronavecomercial.dataUltimaManutencao = dataUltimaManutencao;
+                                    aeronavecomercial.estado = estado;
+                                    aeronavecomercial.qtdMotores = qtdMotores;
+                                    aeronavecomercial.marca = marca;
+                                    aeronavecomercial.modelo = modelo;
+                                    aeronavecomercial.anoFabrico = anoFabrico;
+                                    aeronavecomercial.Tipo = "Aeronave Comercial";
+                                    return aeronavecomercial;
+                                    break;
+                                case "AeronaveMercadorias":
+                                    AeronaveMercadorias aeronavemercadorias = GetAeronavesMercadoriasData(id);
+                                    aeronavemercadorias.capacidade_passageiros = capacidade_passageiros;
+                                    aeronavemercadorias.autonomia = autonomia;
+                                    aeronavemercadorias.dataUltimaManutencao = dataUltimaManutencao;
+                                    aeronavemercadorias.estado = estado;
+                                    aeronavemercadorias.qtdMotores = qtdMotores;
+                                    aeronavemercadorias.marca = marca;
+                                    aeronavemercadorias.modelo = modelo;
+                                    aeronavemercadorias.anoFabrico = anoFabrico;
+                                    aeronavemercadorias.Tipo = "Aeronave de Mercadorias";
+                                    return aeronavemercadorias;
+                                    break;
+                                case "AeronaveParticular":
+                                    AeronaveParticular aeronaveparticular = GetAeroNaveParticularData(id);
+                                    aeronaveparticular.capacidade_passageiros = capacidade_passageiros;
+                                    aeronaveparticular.autonomia = autonomia;
+                                    aeronaveparticular.dataUltimaManutencao = dataUltimaManutencao;
+                                    aeronaveparticular.estado = estado;
+                                    aeronaveparticular.qtdMotores = qtdMotores;
+                                    aeronaveparticular.marca = marca;
+                                    aeronaveparticular.modelo = modelo;
+                                    aeronaveparticular.anoFabrico = anoFabrico;
+                                    aeronaveparticular.Tipo = "Aeronave Particular";
+                                    return aeronaveparticular;
+                                    break;
+                                case "Avioneta":
+                                    Avioneta avioneta = GetAvionetaData(id);
+                                    avioneta.capacidade_passageiros = capacidade_passageiros;
+                                    avioneta.autonomia = autonomia;
+                                    avioneta.dataUltimaManutencao = dataUltimaManutencao;
+                                    avioneta.estado = estado;
+                                    avioneta.qtdMotores = qtdMotores;
+                                    avioneta.marca = marca;
+                                    avioneta.modelo = modelo;
+                                    avioneta.anoFabrico = anoFabrico;
+                                    avioneta.Tipo = "Avioneta";
+                                    return avioneta;
+                                    break;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            catch (Exception ex)
+            {
+                // Display the exception details in a message box
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+
+            CloseConnection(); // Ensure the connection is closed in case of an exception
+            return null;
         }
 
         public Modules.Empresa GetReservasData()

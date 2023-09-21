@@ -1,6 +1,9 @@
 
 using AeroMils___Controlo_de_Frota.Data.DbContext;
+using AeroMils___Controlo_de_Frota.Models;
+using AeroMils___Controlo_de_Frota.Modules;
 using System.Data;
+using System.Text;
 
 namespace AeroMils___Controlo_de_Frota.Views
 {
@@ -269,6 +272,149 @@ namespace AeroMils___Controlo_de_Frota.Views
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             login.Close();
+        }
+
+
+        private void ExportCSV_button_Click(object sender, EventArgs e)
+        {
+            using (FolderBrowserDialog folderDialog = new FolderBrowserDialog())
+            {
+                // Set the initial folder to the desktop.
+                folderDialog.RootFolder = Environment.SpecialFolder.Desktop;
+
+                if (folderDialog.ShowDialog() == DialogResult.OK)
+                {
+                    // Get the selected folder path.
+                    string selectedFolder = folderDialog.SelectedPath;
+
+                    try
+                    {
+
+                        // Saves the Planes Data
+                        Empresa empresaavioes = dbContext.GetAvioesData();
+                        List<Aviao> avioes = empresaavioes.GetAvioes();
+
+                        Empresa empresareservas = dbContext.GetReservasData();
+                        List<Reserva> listaReservas = empresareservas.GetReservas();
+
+                        Empresa empresamanutencoes = dbContext.GetManutencoesData();
+                        List<Manutencoes> listaManutencoes = empresamanutencoes.GetManutencoes();
+
+                        // Define the string you want to save to the CSV file.
+                        string dataAvioes = PlanesData(avioes);
+                        string dataReservas = ReservationsData(listaReservas);
+                        string dataManutencoes = ManutencoesData(listaManutencoes);
+                        string dataToSave = dataAvioes + Environment.NewLine + dataReservas + Environment.NewLine + dataManutencoes;
+
+
+                        // Define the path for the CSV file.
+                        string csvFilePath = Path.Combine(selectedFolder, "Dados_Exportados.csv");
+
+                        // Write the string to the CSV file.
+                        File.WriteAllText(csvFilePath, dataToSave);
+
+                        MessageBox.Show("Data has been saved to: " + csvFilePath, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+            }
+        }
+
+        private string PlanesData(List<Aviao> avioes)
+        {
+            StringBuilder csvData = new StringBuilder();
+
+            // Header row
+            csvData.AppendLine("Avioes:");
+            csvData.AppendLine("id | capacidade | autonomia | data_ultima_manutencao | estado | quantidade_motores | marca | modelo | ano_fabrico | tipo | AdditionalAttribute1 | AdditionalAttribute2");
+
+            // Data rows
+            foreach (Aviao aviao in avioes)
+            {
+                // Create a line for each aviao
+                string aviaoLine = $"{aviao.id} | {aviao.capacidade_passageiros} | {aviao.autonomia} | {aviao.dataUltimaManutencao} | {aviao.estado} | {aviao.qtdMotores} | {aviao.marca} | {aviao.modelo} | {aviao.anoFabrico}| {aviao.Tipo}";
+
+                // Depending on the type, add additional attributes
+                switch (aviao.Tipo)
+                {
+                    case "AeronaveComercial":
+                        AeronaveComercial comercialAviao = aviao as AeronaveComercial;
+                        if (comercialAviao != null)
+                        {
+                            aviaoLine += $",{comercialAviao.numeroVoosDia},{comercialAviao.companhiaAerea}";
+                        }
+                        break;
+                    case "AeronaveParticular":
+                        AeronaveParticular particularAviao = aviao as AeronaveParticular;
+                        if (particularAviao != null)
+                        {
+                            aviaoLine += $",{particularAviao.numProprietarios},{particularAviao.valorFrete}";
+                        }
+                        break;
+                    case "AeronaveMercadorias":
+                        AeronaveMercadorias mercadoriasAviao = aviao as AeronaveMercadorias;
+                        if (mercadoriasAviao != null)
+                        {
+                            aviaoLine += $",{mercadoriasAviao.capacidadeCarga},{mercadoriasAviao.valorFrete}";
+                        }
+                        break;
+                    case "Avioneta":
+                        Avioneta avioneta = aviao as Avioneta;
+                        if (avioneta != null)
+                        {
+                            aviaoLine += $",{avioneta.areaDescolagem},{avioneta.valorFrete}";
+                        }
+                        break;
+                }
+
+
+                csvData.AppendLine(aviaoLine);
+            }
+
+            return csvData.ToString();
+        }
+
+        private string ReservationsData(List<Reserva> reservas)
+        {
+            StringBuilder csvData = new StringBuilder();
+
+            // Header row
+            csvData.AppendLine("Reservas:");
+            csvData.AppendLine("ID Reserva | ID Aviaao | Nome do Cliente | Data de Inicio | Data de Fim");
+
+            // Data rows
+            foreach (Reserva reserva in reservas)
+            {
+                // Create a line for each reserva
+                string reservaLine = $"{reserva.id_reserva} | {reserva.id_aviao} | {reserva.nome_cliente} | {reserva.data_inicio} | {reserva.data_fim}";
+
+                csvData.AppendLine(reservaLine);
+            }
+
+            return csvData.ToString();
+        }
+
+        private string ManutencoesData(List<Manutencoes> manutencoes)
+        {
+            StringBuilder csvData = new StringBuilder();
+
+            // Header row
+            csvData.AppendLine("Manutencoes:");
+            csvData.AppendLine("ID Manutencao | ID Aviaao | Data de Inicio | Data de Fim");
+
+            // Data rows
+            foreach (Manutencoes manutencao in manutencoes)
+            {
+                // Create a line for each reserva
+                string manutencaoLine = $"{manutencao.id_manutencao} | {manutencao.id_aviao} | {manutencao.data_inicio} | {manutencao.data_inicio}";
+
+                csvData.AppendLine(manutencaoLine);
+            }
+
+            return csvData.ToString();
         }
     }
 }

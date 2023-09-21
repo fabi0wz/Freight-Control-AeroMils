@@ -53,6 +53,7 @@
             AvioesTimer = new System.Windows.Forms.Timer(components);
             ReservasTimer = new System.Windows.Forms.Timer(components);
             ManutencaoTimer = new System.Windows.Forms.Timer(components);
+            ExportCSV_button = new Button();
             panel_sidebar.SuspendLayout();
             SobreContainer.SuspendLayout();
             AlertasContainer.SuspendLayout();
@@ -67,6 +68,7 @@
             // panel_sidebar
             // 
             panel_sidebar.BackColor = Color.FromArgb(54, 53, 67);
+            panel_sidebar.Controls.Add(ExportCSV_button);
             panel_sidebar.Controls.Add(SobreContainer);
             panel_sidebar.Controls.Add(AlertasContainer);
             panel_sidebar.Controls.Add(ManutencaoContainer);
@@ -76,9 +78,10 @@
             panel_sidebar.Controls.Add(panel_icone);
             panel_sidebar.Dock = DockStyle.Left;
             panel_sidebar.Location = new Point(0, 0);
-            panel_sidebar.Margin = new Padding(4, 2, 4, 2);
+            panel_sidebar.Margin = new Padding(3, 1, 3, 1);
             panel_sidebar.Name = "panel_sidebar";
-            panel_sidebar.Size = new Size(342, 992);
+
+            panel_sidebar.Size = new Size(239, 661);
             panel_sidebar.TabIndex = 0;
             // 
             // SobreContainer
@@ -86,12 +89,12 @@
             SobreContainer.BackColor = Color.FromArgb(54, 53, 67);
             SobreContainer.Controls.Add(button_sobre);
             SobreContainer.Dock = DockStyle.Bottom;
-            SobreContainer.Location = new Point(0, 924);
-            SobreContainer.Margin = new Padding(4, 5, 4, 5);
-            SobreContainer.MaximumSize = new Size(396, 68);
-            SobreContainer.MinimumSize = new Size(396, 68);
+
+            SobreContainer.Location = new Point(0, 620);
+            SobreContainer.MaximumSize = new Size(277, 41);
+            SobreContainer.MinimumSize = new Size(277, 41);
             SobreContainer.Name = "SobreContainer";
-            SobreContainer.Size = new Size(396, 68);
+            SobreContainer.Size = new Size(277, 41);
             SobreContainer.TabIndex = 3;
             // 
             // button_sobre
@@ -103,9 +106,9 @@
             button_sobre.ForeColor = Color.White;
             button_sobre.Image = Properties.Resources.Sobre;
             button_sobre.Location = new Point(0, 0);
-            button_sobre.Margin = new Padding(4, 2, 4, 2);
+            button_sobre.Margin = new Padding(3, 1, 3, 1);
             button_sobre.Name = "button_sobre";
-            button_sobre.Size = new Size(396, 68);
+            button_sobre.Size = new Size(277, 41);
             button_sobre.TabIndex = 1;
             button_sobre.Text = "Sobre";
             button_sobre.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -117,12 +120,11 @@
             AlertasContainer.BackColor = Color.FromArgb(54, 53, 67);
             AlertasContainer.Controls.Add(button_alertas);
             AlertasContainer.Dock = DockStyle.Top;
-            AlertasContainer.Location = new Point(0, 590);
-            AlertasContainer.Margin = new Padding(4, 5, 4, 5);
-            AlertasContainer.MaximumSize = new Size(396, 68);
-            AlertasContainer.MinimumSize = new Size(396, 68);
+            AlertasContainer.Location = new Point(0, 355);
+            AlertasContainer.MaximumSize = new Size(277, 41);
+            AlertasContainer.MinimumSize = new Size(277, 41);
             AlertasContainer.Name = "AlertasContainer";
-            AlertasContainer.Size = new Size(396, 68);
+            AlertasContainer.Size = new Size(277, 41);
             AlertasContainer.TabIndex = 2;
             // 
             // button_alertas
@@ -135,9 +137,9 @@
             button_alertas.Image = Properties.Resources.Alertas;
             button_alertas.ImageAlign = ContentAlignment.MiddleLeft;
             button_alertas.Location = new Point(0, 0);
-            button_alertas.Margin = new Padding(4, 2, 4, 2);
+            button_alertas.Margin = new Padding(3, 1, 3, 1);
             button_alertas.Name = "button_alertas";
-            button_alertas.Size = new Size(396, 68);
+            button_alertas.Size = new Size(277, 41);
             button_alertas.TabIndex = 1;
             button_alertas.Text = "Alertas";
             button_alertas.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -151,12 +153,11 @@
             ManutencaoContainer.Controls.Add(button_HistoricoManutencao);
             ManutencaoContainer.Controls.Add(button_manutencao);
             ManutencaoContainer.Dock = DockStyle.Top;
-            ManutencaoContainer.Location = new Point(0, 522);
-            ManutencaoContainer.Margin = new Padding(4, 5, 4, 5);
-            ManutencaoContainer.MaximumSize = new Size(396, 208);
-            ManutencaoContainer.MinimumSize = new Size(396, 68);
+            ManutencaoContainer.Location = new Point(0, 314);
+            ManutencaoContainer.MaximumSize = new Size(277, 125);
+            ManutencaoContainer.MinimumSize = new Size(277, 41);
             ManutencaoContainer.Name = "ManutencaoContainer";
-            ManutencaoContainer.Size = new Size(396, 68);
+            ManutencaoContainer.Size = new Size(277, 41);
             ManutencaoContainer.TabIndex = 1;
             // 
             // button_NovaManutencao
@@ -168,10 +169,10 @@
             button_NovaManutencao.ForeColor = Color.White;
             button_NovaManutencao.Image = Properties.Resources.Manutencao;
             button_NovaManutencao.ImageAlign = ContentAlignment.MiddleLeft;
-            button_NovaManutencao.Location = new Point(0, 136);
-            button_NovaManutencao.Margin = new Padding(4, 2, 4, 2);
+            button_NovaManutencao.Location = new Point(0, 82);
+            button_NovaManutencao.Margin = new Padding(3, 1, 3, 1);
             button_NovaManutencao.Name = "button_NovaManutencao";
-            button_NovaManutencao.Size = new Size(396, 68);
+            button_NovaManutencao.Size = new Size(277, 41);
             button_NovaManutencao.TabIndex = 2;
             button_NovaManutencao.Text = "Nova Manutencao";
             button_NovaManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -187,10 +188,10 @@
             button_HistoricoManutencao.ForeColor = Color.White;
             button_HistoricoManutencao.Image = Properties.Resources.Manutencao;
             button_HistoricoManutencao.ImageAlign = ContentAlignment.MiddleLeft;
-            button_HistoricoManutencao.Location = new Point(0, 68);
-            button_HistoricoManutencao.Margin = new Padding(4, 2, 4, 2);
+            button_HistoricoManutencao.Location = new Point(0, 41);
+            button_HistoricoManutencao.Margin = new Padding(3, 1, 3, 1);
             button_HistoricoManutencao.Name = "button_HistoricoManutencao";
-            button_HistoricoManutencao.Size = new Size(396, 68);
+            button_HistoricoManutencao.Size = new Size(277, 41);
             button_HistoricoManutencao.TabIndex = 3;
             button_HistoricoManutencao.Text = "Historico Manutenções";
             button_HistoricoManutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -207,9 +208,9 @@
             button_manutencao.Image = Properties.Resources.Manutencao;
             button_manutencao.ImageAlign = ContentAlignment.MiddleLeft;
             button_manutencao.Location = new Point(0, 0);
-            button_manutencao.Margin = new Padding(4, 2, 4, 2);
+            button_manutencao.Margin = new Padding(3, 1, 3, 1);
             button_manutencao.Name = "button_manutencao";
-            button_manutencao.Size = new Size(396, 68);
+            button_manutencao.Size = new Size(277, 41);
             button_manutencao.TabIndex = 1;
             button_manutencao.Text = "Manutenção   ❯";
             button_manutencao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -223,12 +224,11 @@
             ReservasContainer.Controls.Add(button_NovaReserva);
             ReservasContainer.Controls.Add(button_reservas);
             ReservasContainer.Dock = DockStyle.Top;
-            ReservasContainer.Location = new Point(0, 454);
-            ReservasContainer.Margin = new Padding(4, 5, 4, 5);
-            ReservasContainer.MaximumSize = new Size(396, 208);
-            ReservasContainer.MinimumSize = new Size(396, 68);
+            ReservasContainer.Location = new Point(0, 273);
+            ReservasContainer.MaximumSize = new Size(277, 125);
+            ReservasContainer.MinimumSize = new Size(277, 41);
             ReservasContainer.Name = "ReservasContainer";
-            ReservasContainer.Size = new Size(396, 68);
+            ReservasContainer.Size = new Size(277, 41);
             ReservasContainer.TabIndex = 1;
             // 
             // button_HistoricoReserva
@@ -240,10 +240,10 @@
             button_HistoricoReserva.ForeColor = Color.White;
             button_HistoricoReserva.Image = Properties.Resources.Reservas;
             button_HistoricoReserva.ImageAlign = ContentAlignment.MiddleLeft;
-            button_HistoricoReserva.Location = new Point(0, 136);
-            button_HistoricoReserva.Margin = new Padding(4, 2, 4, 2);
+            button_HistoricoReserva.Location = new Point(0, 82);
+            button_HistoricoReserva.Margin = new Padding(3, 1, 3, 1);
             button_HistoricoReserva.Name = "button_HistoricoReserva";
-            button_HistoricoReserva.Size = new Size(396, 68);
+            button_HistoricoReserva.Size = new Size(277, 41);
             button_HistoricoReserva.TabIndex = 3;
             button_HistoricoReserva.Text = "Historico Reservas";
             button_HistoricoReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -259,10 +259,10 @@
             button_NovaReserva.ForeColor = Color.White;
             button_NovaReserva.Image = Properties.Resources.Reservas;
             button_NovaReserva.ImageAlign = ContentAlignment.MiddleLeft;
-            button_NovaReserva.Location = new Point(0, 68);
-            button_NovaReserva.Margin = new Padding(4, 2, 4, 2);
+            button_NovaReserva.Location = new Point(0, 41);
+            button_NovaReserva.Margin = new Padding(3, 1, 3, 1);
             button_NovaReserva.Name = "button_NovaReserva";
-            button_NovaReserva.Size = new Size(396, 68);
+            button_NovaReserva.Size = new Size(277, 41);
             button_NovaReserva.TabIndex = 2;
             button_NovaReserva.Text = "Nova Reserva";
             button_NovaReserva.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -279,9 +279,9 @@
             button_reservas.Image = Properties.Resources.Reservas;
             button_reservas.ImageAlign = ContentAlignment.MiddleLeft;
             button_reservas.Location = new Point(0, 0);
-            button_reservas.Margin = new Padding(4, 2, 4, 2);
+            button_reservas.Margin = new Padding(3, 1, 3, 1);
             button_reservas.Name = "button_reservas";
-            button_reservas.Size = new Size(396, 68);
+            button_reservas.Size = new Size(277, 41);
             button_reservas.TabIndex = 1;
             button_reservas.Text = "Reservas   ❯";
             button_reservas.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -294,12 +294,11 @@
             AvioesContainer.Controls.Add(button_avioes);
             AvioesContainer.Controls.Add(button_InserirAviao);
             AvioesContainer.Dock = DockStyle.Top;
-            AvioesContainer.Location = new Point(0, 386);
-            AvioesContainer.Margin = new Padding(4, 5, 4, 5);
-            AvioesContainer.MaximumSize = new Size(396, 138);
-            AvioesContainer.MinimumSize = new Size(396, 68);
+            AvioesContainer.Location = new Point(0, 232);
+            AvioesContainer.MaximumSize = new Size(277, 83);
+            AvioesContainer.MinimumSize = new Size(277, 41);
             AvioesContainer.Name = "AvioesContainer";
-            AvioesContainer.Size = new Size(396, 68);
+            AvioesContainer.Size = new Size(277, 41);
             AvioesContainer.TabIndex = 0;
             // 
             // button_avioes
@@ -312,9 +311,9 @@
             button_avioes.Image = Properties.Resources.Avioes;
             button_avioes.ImageAlign = ContentAlignment.MiddleLeft;
             button_avioes.Location = new Point(0, 0);
-            button_avioes.Margin = new Padding(4, 2, 4, 2);
+            button_avioes.Margin = new Padding(3, 1, 3, 1);
             button_avioes.Name = "button_avioes";
-            button_avioes.Size = new Size(396, 68);
+            button_avioes.Size = new Size(277, 41);
             button_avioes.TabIndex = 1;
             button_avioes.Text = "Aviões   ❯";
             button_avioes.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -331,9 +330,9 @@
             button_InserirAviao.Image = Properties.Resources.Avioes;
             button_InserirAviao.ImageAlign = ContentAlignment.MiddleLeft;
             button_InserirAviao.Location = new Point(0, 0);
-            button_InserirAviao.Margin = new Padding(4, 2, 4, 2);
+            button_InserirAviao.Margin = new Padding(3, 1, 3, 1);
             button_InserirAviao.Name = "button_InserirAviao";
-            button_InserirAviao.Size = new Size(396, 68);
+            button_InserirAviao.Size = new Size(277, 41);
             button_InserirAviao.TabIndex = 2;
             button_InserirAviao.Text = "Inserir Aviao";
             button_InserirAviao.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -345,12 +344,11 @@
             DashboardContainer.BackColor = Color.FromArgb(54, 53, 67);
             DashboardContainer.Controls.Add(button_dashboard);
             DashboardContainer.Dock = DockStyle.Top;
-            DashboardContainer.Location = new Point(0, 318);
-            DashboardContainer.Margin = new Padding(4, 5, 4, 5);
-            DashboardContainer.MaximumSize = new Size(396, 68);
-            DashboardContainer.MinimumSize = new Size(396, 68);
+            DashboardContainer.Location = new Point(0, 191);
+            DashboardContainer.MaximumSize = new Size(277, 41);
+            DashboardContainer.MinimumSize = new Size(277, 41);
             DashboardContainer.Name = "DashboardContainer";
-            DashboardContainer.Size = new Size(396, 68);
+            DashboardContainer.Size = new Size(277, 41);
             DashboardContainer.TabIndex = 2;
             // 
             // button_dashboard
@@ -363,9 +361,9 @@
             button_dashboard.Image = Properties.Resources.Dashboard;
             button_dashboard.ImageAlign = ContentAlignment.MiddleLeft;
             button_dashboard.Location = new Point(0, 0);
-            button_dashboard.Margin = new Padding(4, 2, 4, 2);
+            button_dashboard.Margin = new Padding(3, 1, 3, 1);
             button_dashboard.Name = "button_dashboard";
-            button_dashboard.Size = new Size(396, 68);
+            button_dashboard.Size = new Size(277, 41);
             button_dashboard.TabIndex = 1;
             button_dashboard.Text = "Dashboard";
             button_dashboard.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -377,18 +375,17 @@
             panel_icone.Controls.Add(pictureBoxLogo);
             panel_icone.Dock = DockStyle.Top;
             panel_icone.Location = new Point(0, 0);
-            panel_icone.Margin = new Padding(14, 8, 8, 18);
+            panel_icone.Margin = new Padding(10, 5, 6, 11);
             panel_icone.Name = "panel_icone";
-            panel_icone.Size = new Size(342, 318);
+            panel_icone.Size = new Size(239, 191);
             panel_icone.TabIndex = 0;
             // 
             // pictureBoxLogo
             // 
             pictureBoxLogo.Image = Properties.Resources.amlogo;
-            pictureBoxLogo.Location = new Point(60, 20);
-            pictureBoxLogo.Margin = new Padding(4, 5, 4, 5);
+            pictureBoxLogo.Location = new Point(42, 12);
             pictureBoxLogo.Name = "pictureBoxLogo";
-            pictureBoxLogo.Size = new Size(212, 260);
+            pictureBoxLogo.Size = new Size(148, 156);
             pictureBoxLogo.SizeMode = PictureBoxSizeMode.Zoom;
             pictureBoxLogo.TabIndex = 0;
             pictureBoxLogo.TabStop = false;
@@ -399,10 +396,11 @@
             panel_main.BorderStyle = BorderStyle.Fixed3D;
             panel_main.Dock = DockStyle.Fill;
             panel_main.ImeMode = ImeMode.Off;
-            panel_main.Location = new Point(342, 0);
-            panel_main.Margin = new Padding(4, 2, 4, 2);
+            panel_main.Location = new Point(239, 0);
+            panel_main.Margin = new Padding(3, 1, 3, 1);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(1619, 992);
+
+            panel_main.Size = new Size(1145, 661);
             panel_main.TabIndex = 1;
             // 
             // AvioesTimer
@@ -420,15 +418,34 @@
             ManutencaoTimer.Interval = 10;
             ManutencaoTimer.Tick += ManutencaoTimer_Tick;
             // 
+            // ExportCSV_button
+            // 
+            ExportCSV_button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ExportCSV_button.Dock = DockStyle.Bottom;
+            ExportCSV_button.FlatAppearance.BorderSize = 0;
+            ExportCSV_button.FlatStyle = FlatStyle.Flat;
+            ExportCSV_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ExportCSV_button.ForeColor = Color.White;
+            ExportCSV_button.ImageAlign = ContentAlignment.MiddleLeft;
+            ExportCSV_button.Location = new Point(0, 513);
+            ExportCSV_button.Margin = new Padding(3, 1, 3, 1);
+            ExportCSV_button.Name = "ExportCSV_button";
+            ExportCSV_button.Size = new Size(239, 41);
+            ExportCSV_button.TabIndex = 2;
+            ExportCSV_button.Text = "Exportar dados para CSV";
+            ExportCSV_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            ExportCSV_button.UseVisualStyleBackColor = true;
+            ExportCSV_button.Click += ExportCSV_button_Click;
+            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1961, 992);
+
+            ClientSize = new Size(1384, 661);
             Controls.Add(panel_main);
             Controls.Add(panel_sidebar);
             FormBorderStyle = FormBorderStyle.FixedSingle;
-            Margin = new Padding(4, 5, 4, 5);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Aeromils";
@@ -472,5 +489,6 @@
         private Panel AlertasContainer;
         private Panel DashboardContainer;
         private Panel SobreContainer;
+        private Button ExportCSV_button;
     }
 }
