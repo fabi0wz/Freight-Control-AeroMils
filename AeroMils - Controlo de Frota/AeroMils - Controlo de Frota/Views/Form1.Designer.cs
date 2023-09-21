@@ -80,7 +80,8 @@
             panel_sidebar.Location = new Point(0, 0);
             panel_sidebar.Margin = new Padding(3, 1, 3, 1);
             panel_sidebar.Name = "panel_sidebar";
-            panel_sidebar.Size = new Size(239, 595);
+
+            panel_sidebar.Size = new Size(239, 661);
             panel_sidebar.TabIndex = 0;
             // 
             // SobreContainer
@@ -88,7 +89,8 @@
             SobreContainer.BackColor = Color.FromArgb(54, 53, 67);
             SobreContainer.Controls.Add(button_sobre);
             SobreContainer.Dock = DockStyle.Bottom;
-            SobreContainer.Location = new Point(0, 554);
+
+            SobreContainer.Location = new Point(0, 620);
             SobreContainer.MaximumSize = new Size(277, 41);
             SobreContainer.MinimumSize = new Size(277, 41);
             SobreContainer.Name = "SobreContainer";
@@ -397,7 +399,8 @@
             panel_main.Location = new Point(239, 0);
             panel_main.Margin = new Padding(3, 1, 3, 1);
             panel_main.Name = "panel_main";
-            panel_main.Size = new Size(1134, 595);
+
+            panel_main.Size = new Size(1145, 661);
             panel_main.TabIndex = 1;
             // 
             // AvioesTimer
@@ -438,7 +441,8 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1373, 595);
+
+            ClientSize = new Size(1384, 661);
             Controls.Add(panel_main);
             Controls.Add(panel_sidebar);
             FormBorderStyle = FormBorderStyle.FixedSingle;

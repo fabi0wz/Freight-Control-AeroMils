@@ -41,21 +41,11 @@
             manutencaoLinha4DataInicio = new Label();
             manutencaoLinha4IDAviao = new Label();
             manutencaoLinha4IDManutencao = new Label();
-            manutencaoLine9 = new Panel();
-            manutencaoLinha9DataFim = new Label();
-            manutencaoLinha9DataInicio = new Label();
-            manutencaoLinha9IDAviao = new Label();
-            manutencaoLinha9IDManutencao = new Label();
             manutencaoLine7 = new Panel();
             manutencaoLinha7DataFim = new Label();
             manutencaoLinha7DataInicio = new Label();
             manutencaoLinha7IDAviao = new Label();
             manutencaoLinha7IDManutencao = new Label();
-            manutencaoLine8 = new Panel();
-            manutencaoLinha8DataFim = new Label();
-            manutencaoLinha8DataInicio = new Label();
-            manutencaoLinha8IDAviao = new Label();
-            manutencaoLinha8IDManutencao = new Label();
             manutencaoLine1 = new Panel();
             manutencaoLinha1DataFim = new Label();
             manutencaoLinha1DataInicio = new Label();
@@ -87,9 +77,7 @@
             manutencaoBGPanel.SuspendLayout();
             manutencaoLine2.SuspendLayout();
             manutencaoLine4.SuspendLayout();
-            manutencaoLine9.SuspendLayout();
             manutencaoLine7.SuspendLayout();
-            manutencaoLine8.SuspendLayout();
             manutencaoLine1.SuspendLayout();
             manutencaoLine6.SuspendLayout();
             panel2.SuspendLayout();
@@ -106,9 +94,7 @@
             manutencaoBGPanel.BackColor = SystemColors.AppWorkspace;
             manutencaoBGPanel.Controls.Add(manutencaoLine2);
             manutencaoBGPanel.Controls.Add(manutencaoLine4);
-            manutencaoBGPanel.Controls.Add(manutencaoLine9);
             manutencaoBGPanel.Controls.Add(manutencaoLine7);
-            manutencaoBGPanel.Controls.Add(manutencaoLine8);
             manutencaoBGPanel.Controls.Add(manutencaoLine1);
             manutencaoBGPanel.Controls.Add(manutencaoLine6);
             manutencaoBGPanel.Controls.Add(panel2);
@@ -117,7 +103,7 @@
             manutencaoBGPanel.Location = new Point(45, 33);
             manutencaoBGPanel.Margin = new Padding(2, 3, 2, 3);
             manutencaoBGPanel.Name = "manutencaoBGPanel";
-            manutencaoBGPanel.Size = new Size(881, 656);
+            manutencaoBGPanel.Size = new Size(881, 525);
             manutencaoBGPanel.TabIndex = 0;
             // 
             // manutencaoLine2
@@ -141,7 +127,7 @@
             manutencaoLinha2DataFim.Location = new Point(698, 16);
             manutencaoLinha2DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha2DataFim.Name = "manutencaoLinha2DataFim";
-            manutencaoLinha2DataFim.Size = new Size(73, 28);
+            manutencaoLinha2DataFim.Size = new Size(58, 21);
             manutencaoLinha2DataFim.TabIndex = 9;
             manutencaoLinha2DataFim.Text = "default";
             // 
@@ -152,7 +138,7 @@
             manutencaoLinha2DataInicio.Location = new Point(494, 16);
             manutencaoLinha2DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha2DataInicio.Name = "manutencaoLinha2DataInicio";
-            manutencaoLinha2DataInicio.Size = new Size(73, 28);
+            manutencaoLinha2DataInicio.Size = new Size(58, 21);
             manutencaoLinha2DataInicio.TabIndex = 8;
             manutencaoLinha2DataInicio.Text = "default";
             // 
@@ -163,7 +149,7 @@
             manutencaoLinha2IDAviao.Location = new Point(318, 16);
             manutencaoLinha2IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha2IDAviao.Name = "manutencaoLinha2IDAviao";
-            manutencaoLinha2IDAviao.Size = new Size(73, 28);
+            manutencaoLinha2IDAviao.Size = new Size(58, 21);
             manutencaoLinha2IDAviao.TabIndex = 6;
             manutencaoLinha2IDAviao.Text = "default";
             // 
@@ -174,7 +160,7 @@
             manutencaoLinha2IDManutencao.Location = new Point(60, 16);
             manutencaoLinha2IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha2IDManutencao.Name = "manutencaoLinha2IDManutencao";
-            manutencaoLinha2IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha2IDManutencao.Size = new Size(58, 21);
             manutencaoLinha2IDManutencao.TabIndex = 5;
             manutencaoLinha2IDManutencao.Text = "default";
             // 
@@ -199,7 +185,7 @@
             manutencaoLinha4DataFim.Location = new Point(698, 16);
             manutencaoLinha4DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha4DataFim.Name = "manutencaoLinha4DataFim";
-            manutencaoLinha4DataFim.Size = new Size(73, 28);
+            manutencaoLinha4DataFim.Size = new Size(58, 21);
             manutencaoLinha4DataFim.TabIndex = 9;
             manutencaoLinha4DataFim.Text = "default";
             // 
@@ -210,7 +196,7 @@
             manutencaoLinha4DataInicio.Location = new Point(494, 16);
             manutencaoLinha4DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha4DataInicio.Name = "manutencaoLinha4DataInicio";
-            manutencaoLinha4DataInicio.Size = new Size(73, 28);
+            manutencaoLinha4DataInicio.Size = new Size(58, 21);
             manutencaoLinha4DataInicio.TabIndex = 8;
             manutencaoLinha4DataInicio.Text = "default";
             // 
@@ -221,7 +207,7 @@
             manutencaoLinha4IDAviao.Location = new Point(318, 16);
             manutencaoLinha4IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha4IDAviao.Name = "manutencaoLinha4IDAviao";
-            manutencaoLinha4IDAviao.Size = new Size(73, 28);
+            manutencaoLinha4IDAviao.Size = new Size(58, 21);
             manutencaoLinha4IDAviao.TabIndex = 6;
             manutencaoLinha4IDAviao.Text = "default";
             // 
@@ -232,67 +218,9 @@
             manutencaoLinha4IDManutencao.Location = new Point(60, 16);
             manutencaoLinha4IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha4IDManutencao.Name = "manutencaoLinha4IDManutencao";
-            manutencaoLinha4IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha4IDManutencao.Size = new Size(58, 21);
             manutencaoLinha4IDManutencao.TabIndex = 5;
             manutencaoLinha4IDManutencao.Text = "default";
-            // 
-            // manutencaoLine9
-            // 
-            manutencaoLine9.BackColor = SystemColors.Control;
-            manutencaoLine9.BorderStyle = BorderStyle.FixedSingle;
-            manutencaoLine9.Controls.Add(manutencaoLinha9DataFim);
-            manutencaoLine9.Controls.Add(manutencaoLinha9DataInicio);
-            manutencaoLine9.Controls.Add(manutencaoLinha9IDAviao);
-            manutencaoLine9.Controls.Add(manutencaoLinha9IDManutencao);
-            manutencaoLine9.Location = new Point(0, 590);
-            manutencaoLine9.Margin = new Padding(2, 3, 2, 3);
-            manutencaoLine9.Name = "manutencaoLine9";
-            manutencaoLine9.Size = new Size(881, 65);
-            manutencaoLine9.TabIndex = 11;
-            // 
-            // manutencaoLinha9DataFim
-            // 
-            manutencaoLinha9DataFim.AutoSize = true;
-            manutencaoLinha9DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha9DataFim.Location = new Point(698, 16);
-            manutencaoLinha9DataFim.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha9DataFim.Name = "manutencaoLinha9DataFim";
-            manutencaoLinha9DataFim.Size = new Size(73, 28);
-            manutencaoLinha9DataFim.TabIndex = 9;
-            manutencaoLinha9DataFim.Text = "default";
-            // 
-            // manutencaoLinha9DataInicio
-            // 
-            manutencaoLinha9DataInicio.AutoSize = true;
-            manutencaoLinha9DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha9DataInicio.Location = new Point(494, 16);
-            manutencaoLinha9DataInicio.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha9DataInicio.Name = "manutencaoLinha9DataInicio";
-            manutencaoLinha9DataInicio.Size = new Size(73, 28);
-            manutencaoLinha9DataInicio.TabIndex = 8;
-            manutencaoLinha9DataInicio.Text = "default";
-            // 
-            // manutencaoLinha9IDAviao
-            // 
-            manutencaoLinha9IDAviao.AutoSize = true;
-            manutencaoLinha9IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha9IDAviao.Location = new Point(318, 16);
-            manutencaoLinha9IDAviao.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha9IDAviao.Name = "manutencaoLinha9IDAviao";
-            manutencaoLinha9IDAviao.Size = new Size(73, 28);
-            manutencaoLinha9IDAviao.TabIndex = 6;
-            manutencaoLinha9IDAviao.Text = "default";
-            // 
-            // manutencaoLinha9IDManutencao
-            // 
-            manutencaoLinha9IDManutencao.AutoSize = true;
-            manutencaoLinha9IDManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha9IDManutencao.Location = new Point(60, 16);
-            manutencaoLinha9IDManutencao.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha9IDManutencao.Name = "manutencaoLinha9IDManutencao";
-            manutencaoLinha9IDManutencao.Size = new Size(73, 28);
-            manutencaoLinha9IDManutencao.TabIndex = 5;
-            manutencaoLinha9IDManutencao.Text = "default";
             // 
             // manutencaoLine7
             // 
@@ -315,7 +243,7 @@
             manutencaoLinha7DataFim.Location = new Point(698, 16);
             manutencaoLinha7DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha7DataFim.Name = "manutencaoLinha7DataFim";
-            manutencaoLinha7DataFim.Size = new Size(73, 28);
+            manutencaoLinha7DataFim.Size = new Size(58, 21);
             manutencaoLinha7DataFim.TabIndex = 9;
             manutencaoLinha7DataFim.Text = "default";
             // 
@@ -326,7 +254,7 @@
             manutencaoLinha7DataInicio.Location = new Point(494, 16);
             manutencaoLinha7DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha7DataInicio.Name = "manutencaoLinha7DataInicio";
-            manutencaoLinha7DataInicio.Size = new Size(73, 28);
+            manutencaoLinha7DataInicio.Size = new Size(58, 21);
             manutencaoLinha7DataInicio.TabIndex = 8;
             manutencaoLinha7DataInicio.Text = "default";
             // 
@@ -337,7 +265,7 @@
             manutencaoLinha7IDAviao.Location = new Point(318, 16);
             manutencaoLinha7IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha7IDAviao.Name = "manutencaoLinha7IDAviao";
-            manutencaoLinha7IDAviao.Size = new Size(73, 28);
+            manutencaoLinha7IDAviao.Size = new Size(58, 21);
             manutencaoLinha7IDAviao.TabIndex = 6;
             manutencaoLinha7IDAviao.Text = "default";
             // 
@@ -348,67 +276,9 @@
             manutencaoLinha7IDManutencao.Location = new Point(60, 16);
             manutencaoLinha7IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha7IDManutencao.Name = "manutencaoLinha7IDManutencao";
-            manutencaoLinha7IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha7IDManutencao.Size = new Size(58, 21);
             manutencaoLinha7IDManutencao.TabIndex = 5;
             manutencaoLinha7IDManutencao.Text = "default";
-            // 
-            // manutencaoLine8
-            // 
-            manutencaoLine8.BackColor = SystemColors.Control;
-            manutencaoLine8.BorderStyle = BorderStyle.FixedSingle;
-            manutencaoLine8.Controls.Add(manutencaoLinha8DataFim);
-            manutencaoLine8.Controls.Add(manutencaoLinha8DataInicio);
-            manutencaoLine8.Controls.Add(manutencaoLinha8IDAviao);
-            manutencaoLine8.Controls.Add(manutencaoLinha8IDManutencao);
-            manutencaoLine8.Location = new Point(0, 525);
-            manutencaoLine8.Margin = new Padding(2, 3, 2, 3);
-            manutencaoLine8.Name = "manutencaoLine8";
-            manutencaoLine8.Size = new Size(881, 65);
-            manutencaoLine8.TabIndex = 11;
-            // 
-            // manutencaoLinha8DataFim
-            // 
-            manutencaoLinha8DataFim.AutoSize = true;
-            manutencaoLinha8DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha8DataFim.Location = new Point(698, 16);
-            manutencaoLinha8DataFim.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha8DataFim.Name = "manutencaoLinha8DataFim";
-            manutencaoLinha8DataFim.Size = new Size(73, 28);
-            manutencaoLinha8DataFim.TabIndex = 9;
-            manutencaoLinha8DataFim.Text = "default";
-            // 
-            // manutencaoLinha8DataInicio
-            // 
-            manutencaoLinha8DataInicio.AutoSize = true;
-            manutencaoLinha8DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha8DataInicio.Location = new Point(494, 16);
-            manutencaoLinha8DataInicio.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha8DataInicio.Name = "manutencaoLinha8DataInicio";
-            manutencaoLinha8DataInicio.Size = new Size(73, 28);
-            manutencaoLinha8DataInicio.TabIndex = 8;
-            manutencaoLinha8DataInicio.Text = "default";
-            // 
-            // manutencaoLinha8IDAviao
-            // 
-            manutencaoLinha8IDAviao.AutoSize = true;
-            manutencaoLinha8IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha8IDAviao.Location = new Point(318, 16);
-            manutencaoLinha8IDAviao.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha8IDAviao.Name = "manutencaoLinha8IDAviao";
-            manutencaoLinha8IDAviao.Size = new Size(73, 28);
-            manutencaoLinha8IDAviao.TabIndex = 6;
-            manutencaoLinha8IDAviao.Text = "default";
-            // 
-            // manutencaoLinha8IDManutencao
-            // 
-            manutencaoLinha8IDManutencao.AutoSize = true;
-            manutencaoLinha8IDManutencao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            manutencaoLinha8IDManutencao.Location = new Point(60, 16);
-            manutencaoLinha8IDManutencao.Margin = new Padding(2, 0, 2, 0);
-            manutencaoLinha8IDManutencao.Name = "manutencaoLinha8IDManutencao";
-            manutencaoLinha8IDManutencao.Size = new Size(73, 28);
-            manutencaoLinha8IDManutencao.TabIndex = 5;
-            manutencaoLinha8IDManutencao.Text = "default";
             // 
             // manutencaoLine1
             // 
@@ -431,7 +301,7 @@
             manutencaoLinha1DataFim.Location = new Point(698, 16);
             manutencaoLinha1DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha1DataFim.Name = "manutencaoLinha1DataFim";
-            manutencaoLinha1DataFim.Size = new Size(73, 28);
+            manutencaoLinha1DataFim.Size = new Size(58, 21);
             manutencaoLinha1DataFim.TabIndex = 4;
             manutencaoLinha1DataFim.Text = "default";
             // 
@@ -442,7 +312,7 @@
             manutencaoLinha1DataInicio.Location = new Point(494, 16);
             manutencaoLinha1DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha1DataInicio.Name = "manutencaoLinha1DataInicio";
-            manutencaoLinha1DataInicio.Size = new Size(73, 28);
+            manutencaoLinha1DataInicio.Size = new Size(58, 21);
             manutencaoLinha1DataInicio.TabIndex = 3;
             manutencaoLinha1DataInicio.Text = "default";
             // 
@@ -453,7 +323,7 @@
             manutencaoLinha1IDAviao.Location = new Point(318, 16);
             manutencaoLinha1IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha1IDAviao.Name = "manutencaoLinha1IDAviao";
-            manutencaoLinha1IDAviao.Size = new Size(73, 28);
+            manutencaoLinha1IDAviao.Size = new Size(58, 21);
             manutencaoLinha1IDAviao.TabIndex = 1;
             manutencaoLinha1IDAviao.Text = "default";
             // 
@@ -464,7 +334,7 @@
             manutencaoLinha1IDManutencao.Location = new Point(60, 16);
             manutencaoLinha1IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha1IDManutencao.Name = "manutencaoLinha1IDManutencao";
-            manutencaoLinha1IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha1IDManutencao.Size = new Size(58, 21);
             manutencaoLinha1IDManutencao.TabIndex = 0;
             manutencaoLinha1IDManutencao.Text = "default";
             // 
@@ -489,7 +359,7 @@
             manutencaoLinha6DataFim.Location = new Point(698, 16);
             manutencaoLinha6DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha6DataFim.Name = "manutencaoLinha6DataFim";
-            manutencaoLinha6DataFim.Size = new Size(73, 28);
+            manutencaoLinha6DataFim.Size = new Size(58, 21);
             manutencaoLinha6DataFim.TabIndex = 9;
             manutencaoLinha6DataFim.Text = "default";
             // 
@@ -500,7 +370,7 @@
             manutencaoLinha6DataInicio.Location = new Point(494, 16);
             manutencaoLinha6DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha6DataInicio.Name = "manutencaoLinha6DataInicio";
-            manutencaoLinha6DataInicio.Size = new Size(73, 28);
+            manutencaoLinha6DataInicio.Size = new Size(58, 21);
             manutencaoLinha6DataInicio.TabIndex = 8;
             manutencaoLinha6DataInicio.Text = "default";
             // 
@@ -511,7 +381,7 @@
             manutencaoLinha6IDAviao.Location = new Point(318, 16);
             manutencaoLinha6IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha6IDAviao.Name = "manutencaoLinha6IDAviao";
-            manutencaoLinha6IDAviao.Size = new Size(73, 28);
+            manutencaoLinha6IDAviao.Size = new Size(58, 21);
             manutencaoLinha6IDAviao.TabIndex = 6;
             manutencaoLinha6IDAviao.Text = "default";
             // 
@@ -522,7 +392,7 @@
             manutencaoLinha6IDManutencao.Location = new Point(60, 16);
             manutencaoLinha6IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha6IDManutencao.Name = "manutencaoLinha6IDManutencao";
-            manutencaoLinha6IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha6IDManutencao.Size = new Size(58, 21);
             manutencaoLinha6IDManutencao.TabIndex = 5;
             manutencaoLinha6IDManutencao.Text = "default";
             // 
@@ -548,7 +418,7 @@
             headerDataFim.Location = new Point(698, 16);
             headerDataFim.Margin = new Padding(2, 0, 2, 0);
             headerDataFim.Name = "headerDataFim";
-            headerDataFim.Size = new Size(123, 37);
+            headerDataFim.Size = new Size(98, 30);
             headerDataFim.TabIndex = 4;
             headerDataFim.Text = "Data Fim";
             // 
@@ -560,7 +430,7 @@
             headerDataInicio.Location = new Point(494, 16);
             headerDataInicio.Margin = new Padding(2, 0, 2, 0);
             headerDataInicio.Name = "headerDataInicio";
-            headerDataInicio.Size = new Size(144, 37);
+            headerDataInicio.Size = new Size(114, 30);
             headerDataInicio.TabIndex = 3;
             headerDataInicio.Text = "Data Inicio";
             // 
@@ -572,7 +442,7 @@
             headerIDAviao.Location = new Point(318, 16);
             headerIDAviao.Margin = new Padding(2, 0, 2, 0);
             headerIDAviao.Name = "headerIDAviao";
-            headerIDAviao.Size = new Size(116, 37);
+            headerIDAviao.Size = new Size(94, 30);
             headerIDAviao.TabIndex = 1;
             headerIDAviao.Text = "ID Avião";
             // 
@@ -584,7 +454,7 @@
             headerIDManutencao.Location = new Point(60, 16);
             headerIDManutencao.Margin = new Padding(2, 0, 2, 0);
             headerIDManutencao.Name = "headerIDManutencao";
-            headerIDManutencao.Size = new Size(198, 37);
+            headerIDManutencao.Size = new Size(160, 30);
             headerIDManutencao.TabIndex = 0;
             headerIDManutencao.Text = "ID Manutenção";
             // 
@@ -609,7 +479,7 @@
             manutencaoLinha3DataFim.Location = new Point(698, 16);
             manutencaoLinha3DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha3DataFim.Name = "manutencaoLinha3DataFim";
-            manutencaoLinha3DataFim.Size = new Size(73, 28);
+            manutencaoLinha3DataFim.Size = new Size(58, 21);
             manutencaoLinha3DataFim.TabIndex = 9;
             manutencaoLinha3DataFim.Text = "default";
             // 
@@ -620,7 +490,7 @@
             manutencaoLinha3DataInicio.Location = new Point(494, 16);
             manutencaoLinha3DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha3DataInicio.Name = "manutencaoLinha3DataInicio";
-            manutencaoLinha3DataInicio.Size = new Size(73, 28);
+            manutencaoLinha3DataInicio.Size = new Size(58, 21);
             manutencaoLinha3DataInicio.TabIndex = 8;
             manutencaoLinha3DataInicio.Text = "default";
             // 
@@ -631,7 +501,7 @@
             manutencaoLinha3IDAviao.Location = new Point(318, 16);
             manutencaoLinha3IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha3IDAviao.Name = "manutencaoLinha3IDAviao";
-            manutencaoLinha3IDAviao.Size = new Size(73, 28);
+            manutencaoLinha3IDAviao.Size = new Size(58, 21);
             manutencaoLinha3IDAviao.TabIndex = 6;
             manutencaoLinha3IDAviao.Text = "default";
             // 
@@ -642,7 +512,7 @@
             manutencaoLinha3IDManutencao.Location = new Point(60, 16);
             manutencaoLinha3IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha3IDManutencao.Name = "manutencaoLinha3IDManutencao";
-            manutencaoLinha3IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha3IDManutencao.Size = new Size(58, 21);
             manutencaoLinha3IDManutencao.TabIndex = 5;
             manutencaoLinha3IDManutencao.Text = "default";
             // 
@@ -667,7 +537,7 @@
             manutencaoLinha5DataFim.Location = new Point(698, 16);
             manutencaoLinha5DataFim.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha5DataFim.Name = "manutencaoLinha5DataFim";
-            manutencaoLinha5DataFim.Size = new Size(73, 28);
+            manutencaoLinha5DataFim.Size = new Size(58, 21);
             manutencaoLinha5DataFim.TabIndex = 9;
             manutencaoLinha5DataFim.Text = "default";
             // 
@@ -678,7 +548,7 @@
             manutencaoLinha5DataInicio.Location = new Point(494, 16);
             manutencaoLinha5DataInicio.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha5DataInicio.Name = "manutencaoLinha5DataInicio";
-            manutencaoLinha5DataInicio.Size = new Size(73, 28);
+            manutencaoLinha5DataInicio.Size = new Size(58, 21);
             manutencaoLinha5DataInicio.TabIndex = 8;
             manutencaoLinha5DataInicio.Text = "default";
             // 
@@ -689,7 +559,7 @@
             manutencaoLinha5IDAviao.Location = new Point(318, 16);
             manutencaoLinha5IDAviao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha5IDAviao.Name = "manutencaoLinha5IDAviao";
-            manutencaoLinha5IDAviao.Size = new Size(73, 28);
+            manutencaoLinha5IDAviao.Size = new Size(58, 21);
             manutencaoLinha5IDAviao.TabIndex = 6;
             manutencaoLinha5IDAviao.Text = "default";
             // 
@@ -700,7 +570,7 @@
             manutencaoLinha5IDManutencao.Location = new Point(60, 16);
             manutencaoLinha5IDManutencao.Margin = new Padding(2, 0, 2, 0);
             manutencaoLinha5IDManutencao.Name = "manutencaoLinha5IDManutencao";
-            manutencaoLinha5IDManutencao.Size = new Size(73, 28);
+            manutencaoLinha5IDManutencao.Size = new Size(58, 21);
             manutencaoLinha5IDManutencao.TabIndex = 5;
             manutencaoLinha5IDManutencao.Text = "default";
             // 
@@ -709,7 +579,7 @@
             manutencaoNextButton.BackColor = Color.FromArgb(54, 53, 67);
             manutencaoNextButton.FlatStyle = FlatStyle.Flat;
             manutencaoNextButton.ForeColor = Color.White;
-            manutencaoNextButton.Location = new Point(632, 717);
+            manutencaoNextButton.Location = new Point(632, 593);
             manutencaoNextButton.Margin = new Padding(2, 3, 2, 3);
             manutencaoNextButton.Name = "manutencaoNextButton";
             manutencaoNextButton.Size = new Size(116, 38);
@@ -723,7 +593,7 @@
             manutencaoPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             manutencaoPreviousButton.FlatStyle = FlatStyle.Flat;
             manutencaoPreviousButton.ForeColor = Color.White;
-            manutencaoPreviousButton.Location = new Point(222, 717);
+            manutencaoPreviousButton.Location = new Point(222, 593);
             manutencaoPreviousButton.Margin = new Padding(2, 3, 2, 3);
             manutencaoPreviousButton.Name = "manutencaoPreviousButton";
             manutencaoPreviousButton.Size = new Size(116, 38);
@@ -734,9 +604,9 @@
             // 
             // Manutencao
             // 
-            AutoScaleDimensions = new SizeF(9F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1135, 767);
+            ClientSize = new Size(1129, 658);
             Controls.Add(manutencaoPreviousButton);
             Controls.Add(manutencaoNextButton);
             Controls.Add(manutencaoBGPanel);
@@ -749,12 +619,8 @@
             manutencaoLine2.PerformLayout();
             manutencaoLine4.ResumeLayout(false);
             manutencaoLine4.PerformLayout();
-            manutencaoLine9.ResumeLayout(false);
-            manutencaoLine9.PerformLayout();
             manutencaoLine7.ResumeLayout(false);
             manutencaoLine7.PerformLayout();
-            manutencaoLine8.ResumeLayout(false);
-            manutencaoLine8.PerformLayout();
             manutencaoLine1.ResumeLayout(false);
             manutencaoLine1.PerformLayout();
             manutencaoLine6.ResumeLayout(false);
@@ -789,8 +655,6 @@
         private Panel manutencaoLine5;
         private Panel manutencaoLine6;
         private Panel manutencaoLine7;
-        private Panel manutencaoLine8;
-        private Panel manutencaoLine9;
         private Panel panel2;
         private Panel manutencaoBGPanel;
         private Label manutencaoLinha7DataFim;
@@ -821,14 +685,6 @@
         private Label manutencaoLinha6DataInicio;
         private Label manutencaoLinha6IDAviao;
         private Label manutencaoLinha6IDManutencao;
-        private Label manutencaoLinha8DataFim;
-        private Label manutencaoLinha8DataInicio;
-        private Label manutencaoLinha8IDAviao;
-        private Label manutencaoLinha8IDManutencao;
-        private Label manutencaoLinha9DataFim;
-        private Label manutencaoLinha9DataInicio;
-        private Label manutencaoLinha9IDAviao;
-        private Label manutencaoLinha9IDManutencao;
         private Button manutencaoNextButton;
         private Button manutencaoPreviousButton;
     }
