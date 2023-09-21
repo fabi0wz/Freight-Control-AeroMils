@@ -20,7 +20,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private SQLiteDBContext dbContext = new SQLiteDBContext();
         private int currentPage = 0;
-        private int recordsPerPage = 9;
+        private int recordsPerPage = 7;
         private Empresa empresa;
         private List<Reserva> listaReservas;
 
