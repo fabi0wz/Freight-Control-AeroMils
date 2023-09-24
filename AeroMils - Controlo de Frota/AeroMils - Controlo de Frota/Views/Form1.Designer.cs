@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             panel_sidebar = new Panel();
+            ExportCSV_button = new Button();
             SobreContainer = new Panel();
             button_sobre = new Button();
             AlertasContainer = new Panel();
@@ -53,7 +54,6 @@
             AvioesTimer = new System.Windows.Forms.Timer(components);
             ReservasTimer = new System.Windows.Forms.Timer(components);
             ManutencaoTimer = new System.Windows.Forms.Timer(components);
-            ExportCSV_button = new Button();
             panel_sidebar.SuspendLayout();
             SobreContainer.SuspendLayout();
             AlertasContainer.SuspendLayout();
@@ -80,16 +80,33 @@
             panel_sidebar.Location = new Point(0, 0);
             panel_sidebar.Margin = new Padding(3, 1, 3, 1);
             panel_sidebar.Name = "panel_sidebar";
-
             panel_sidebar.Size = new Size(239, 661);
             panel_sidebar.TabIndex = 0;
+            // 
+            // ExportCSV_button
+            // 
+            ExportCSV_button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            ExportCSV_button.Dock = DockStyle.Bottom;
+            ExportCSV_button.FlatAppearance.BorderSize = 0;
+            ExportCSV_button.FlatStyle = FlatStyle.Flat;
+            ExportCSV_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            ExportCSV_button.ForeColor = Color.White;
+            ExportCSV_button.ImageAlign = ContentAlignment.MiddleLeft;
+            ExportCSV_button.Location = new Point(0, 579);
+            ExportCSV_button.Margin = new Padding(3, 1, 3, 1);
+            ExportCSV_button.Name = "ExportCSV_button";
+            ExportCSV_button.Size = new Size(239, 41);
+            ExportCSV_button.TabIndex = 2;
+            ExportCSV_button.Text = "Exportar dados para CSV";
+            ExportCSV_button.TextImageRelation = TextImageRelation.ImageBeforeText;
+            ExportCSV_button.UseVisualStyleBackColor = true;
+            ExportCSV_button.Click += ExportCSV_button_Click;
             // 
             // SobreContainer
             // 
             SobreContainer.BackColor = Color.FromArgb(54, 53, 67);
             SobreContainer.Controls.Add(button_sobre);
             SobreContainer.Dock = DockStyle.Bottom;
-
             SobreContainer.Location = new Point(0, 620);
             SobreContainer.MaximumSize = new Size(277, 41);
             SobreContainer.MinimumSize = new Size(277, 41);
@@ -99,7 +116,7 @@
             // 
             // button_sobre
             // 
-            button_sobre.Dock = DockStyle.Top;
+            button_sobre.Dock = DockStyle.Bottom;
             button_sobre.FlatAppearance.BorderSize = 0;
             button_sobre.FlatStyle = FlatStyle.Flat;
             button_sobre.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
@@ -399,7 +416,6 @@
             panel_main.Location = new Point(239, 0);
             panel_main.Margin = new Padding(3, 1, 3, 1);
             panel_main.Name = "panel_main";
-
             panel_main.Size = new Size(1145, 661);
             panel_main.TabIndex = 1;
             // 
@@ -418,30 +434,10 @@
             ManutencaoTimer.Interval = 10;
             ManutencaoTimer.Tick += ManutencaoTimer_Tick;
             // 
-            // ExportCSV_button
-            // 
-            ExportCSV_button.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            ExportCSV_button.Dock = DockStyle.Bottom;
-            ExportCSV_button.FlatAppearance.BorderSize = 0;
-            ExportCSV_button.FlatStyle = FlatStyle.Flat;
-            ExportCSV_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            ExportCSV_button.ForeColor = Color.White;
-            ExportCSV_button.ImageAlign = ContentAlignment.MiddleLeft;
-            ExportCSV_button.Location = new Point(0, 513);
-            ExportCSV_button.Margin = new Padding(3, 1, 3, 1);
-            ExportCSV_button.Name = "ExportCSV_button";
-            ExportCSV_button.Size = new Size(239, 41);
-            ExportCSV_button.TabIndex = 2;
-            ExportCSV_button.Text = "Exportar dados para CSV";
-            ExportCSV_button.TextImageRelation = TextImageRelation.ImageBeforeText;
-            ExportCSV_button.UseVisualStyleBackColor = true;
-            ExportCSV_button.Click += ExportCSV_button_Click;
-            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-
             ClientSize = new Size(1384, 661);
             Controls.Add(panel_main);
             Controls.Add(panel_sidebar);

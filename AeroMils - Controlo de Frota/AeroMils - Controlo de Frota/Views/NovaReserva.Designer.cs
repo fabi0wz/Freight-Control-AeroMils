@@ -76,27 +76,26 @@
             VoosPanel.Controls.Add(VooComercial_button);
             VoosPanel.Dock = DockStyle.Fill;
             VoosPanel.Location = new Point(0, 0);
-            VoosPanel.Margin = new Padding(4, 5, 4, 5);
             VoosPanel.Name = "VoosPanel";
-            VoosPanel.Size = new Size(1000, 564);
+            VoosPanel.Size = new Size(700, 338);
             VoosPanel.TabIndex = 0;
             // 
             // listaAvioesInput
             // 
             listaAvioesInput.FormattingEnabled = true;
-            listaAvioesInput.Location = new Point(361, 284);
+            listaAvioesInput.Location = new Point(253, 170);
+            listaAvioesInput.Margin = new Padding(2, 2, 2, 2);
             listaAvioesInput.Name = "listaAvioesInput";
-            listaAvioesInput.Size = new Size(482, 33);
+            listaAvioesInput.Size = new Size(339, 23);
             listaAvioesInput.TabIndex = 44;
             // 
             // escolhaAviaoLabel
             // 
             escolhaAviaoLabel.AutoSize = true;
             escolhaAviaoLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            escolhaAviaoLabel.Location = new Point(361, 238);
-            escolhaAviaoLabel.Margin = new Padding(4, 0, 4, 0);
+            escolhaAviaoLabel.Location = new Point(253, 143);
             escolhaAviaoLabel.Name = "escolhaAviaoLabel";
-            escolhaAviaoLabel.Size = new Size(73, 32);
+            escolhaAviaoLabel.Size = new Size(49, 21);
             escolhaAviaoLabel.TabIndex = 43;
             escolhaAviaoLabel.Text = "Aviao";
             // 
@@ -104,30 +103,27 @@
             // 
             nomeClienteLabel.AutoSize = true;
             nomeClienteLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeClienteLabel.Location = new Point(37, 238);
-            nomeClienteLabel.Margin = new Padding(4, 0, 4, 0);
+            nomeClienteLabel.Location = new Point(26, 143);
             nomeClienteLabel.Name = "nomeClienteLabel";
-            nomeClienteLabel.Size = new Size(162, 32);
+            nomeClienteLabel.Size = new Size(105, 21);
             nomeClienteLabel.TabIndex = 42;
             nomeClienteLabel.Text = "Nome Cliente";
             // 
             // nomeClienteInput
             // 
             nomeClienteInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeClienteInput.Location = new Point(37, 278);
-            nomeClienteInput.Margin = new Padding(4, 5, 4, 5);
+            nomeClienteInput.Location = new Point(26, 167);
             nomeClienteInput.Name = "nomeClienteInput";
-            nomeClienteInput.Size = new Size(242, 39);
+            nomeClienteInput.Size = new Size(171, 29);
             nomeClienteInput.TabIndex = 41;
             // 
             // endDateLabel
             // 
             endDateLabel.AutoSize = true;
             endDateLabel.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            endDateLabel.Location = new Point(818, 350);
-            endDateLabel.Margin = new Padding(4, 0, 4, 0);
+            endDateLabel.Location = new Point(573, 210);
             endDateLabel.Name = "endDateLabel";
-            endDateLabel.Size = new Size(56, 28);
+            endDateLabel.Size = new Size(37, 17);
             endDateLabel.TabIndex = 40;
             endDateLabel.Text = "Até ?";
             // 
@@ -135,10 +131,9 @@
             // 
             Comercial_De_IdaVolta_label.AutoSize = true;
             Comercial_De_IdaVolta_label.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
-            Comercial_De_IdaVolta_label.Location = new Point(643, 350);
-            Comercial_De_IdaVolta_label.Margin = new Padding(4, 0, 4, 0);
+            Comercial_De_IdaVolta_label.Location = new Point(450, 210);
             Comercial_De_IdaVolta_label.Name = "Comercial_De_IdaVolta_label";
-            Comercial_De_IdaVolta_label.Size = new Size(50, 28);
+            Comercial_De_IdaVolta_label.Size = new Size(34, 17);
             Comercial_De_IdaVolta_label.TabIndex = 39;
             Comercial_De_IdaVolta_label.Text = "De ?";
             // 
@@ -146,10 +141,9 @@
             // 
             Comercial_ParaOnde_IdaVolta_label.AutoSize = true;
             Comercial_ParaOnde_IdaVolta_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Comercial_ParaOnde_IdaVolta_label.Location = new Point(376, 336);
-            Comercial_ParaOnde_IdaVolta_label.Margin = new Padding(4, 0, 4, 0);
+            Comercial_ParaOnde_IdaVolta_label.Location = new Point(253, 202);
             Comercial_ParaOnde_IdaVolta_label.Name = "Comercial_ParaOnde_IdaVolta_label";
-            Comercial_ParaOnde_IdaVolta_label.Size = new Size(138, 32);
+            Comercial_ParaOnde_IdaVolta_label.Size = new Size(90, 21);
             Comercial_ParaOnde_IdaVolta_label.TabIndex = 38;
             Comercial_ParaOnde_IdaVolta_label.Text = "Para onde ?";
             // 
@@ -157,11 +151,10 @@
             // 
             endDateInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             endDateInput.Format = DateTimePickerFormat.Short;
-            endDateInput.Location = new Point(818, 384);
-            endDateInput.Margin = new Padding(4, 5, 4, 5);
+            endDateInput.Location = new Point(573, 230);
             endDateInput.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             endDateInput.Name = "endDateInput";
-            endDateInput.Size = new Size(145, 33);
+            endDateInput.Size = new Size(103, 25);
             endDateInput.TabIndex = 37;
             endDateInput.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             // 
@@ -169,10 +162,9 @@
             // 
             Comercial_DeOnde_IdaVolta_label.AutoSize = true;
             Comercial_DeOnde_IdaVolta_label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Comercial_DeOnde_IdaVolta_label.Location = new Point(37, 336);
-            Comercial_DeOnde_IdaVolta_label.Margin = new Padding(4, 0, 4, 0);
+            Comercial_DeOnde_IdaVolta_label.Location = new Point(26, 202);
             Comercial_DeOnde_IdaVolta_label.Name = "Comercial_DeOnde_IdaVolta_label";
-            Comercial_DeOnde_IdaVolta_label.Size = new Size(124, 32);
+            Comercial_DeOnde_IdaVolta_label.Size = new Size(79, 21);
             Comercial_DeOnde_IdaVolta_label.TabIndex = 36;
             Comercial_DeOnde_IdaVolta_label.Text = "De onde ?";
             // 
@@ -180,31 +172,28 @@
             // 
             startDateInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             startDateInput.Format = DateTimePickerFormat.Short;
-            startDateInput.Location = new Point(643, 384);
-            startDateInput.Margin = new Padding(4, 5, 4, 5);
+            startDateInput.Location = new Point(450, 230);
             startDateInput.MaxDate = new DateTime(2023, 12, 31, 0, 0, 0, 0);
             startDateInput.MinDate = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             startDateInput.Name = "startDateInput";
-            startDateInput.Size = new Size(145, 33);
+            startDateInput.Size = new Size(103, 25);
             startDateInput.TabIndex = 35;
             startDateInput.Value = new DateTime(2023, 8, 23, 14, 9, 15, 786);
             // 
             // localDestinoInput
             // 
             localDestinoInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            localDestinoInput.Location = new Point(376, 376);
-            localDestinoInput.Margin = new Padding(4, 5, 4, 5);
+            localDestinoInput.Location = new Point(253, 226);
             localDestinoInput.Name = "localDestinoInput";
-            localDestinoInput.Size = new Size(242, 39);
+            localDestinoInput.Size = new Size(171, 29);
             localDestinoInput.TabIndex = 34;
             // 
             // localPartidaInput
             // 
             localPartidaInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            localPartidaInput.Location = new Point(37, 376);
-            localPartidaInput.Margin = new Padding(4, 5, 4, 5);
+            localPartidaInput.Location = new Point(26, 226);
             localPartidaInput.Name = "localPartidaInput";
-            localPartidaInput.Size = new Size(242, 39);
+            localPartidaInput.Size = new Size(171, 29);
             localPartidaInput.TabIndex = 33;
             // 
             // IdaVolta_button
@@ -215,10 +204,10 @@
             IdaVolta_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             IdaVolta_button.ForeColor = Color.White;
             IdaVolta_button.ImageAlign = ContentAlignment.MiddleLeft;
-            IdaVolta_button.Location = new Point(37, 147);
-            IdaVolta_button.Margin = new Padding(4);
+            IdaVolta_button.Location = new Point(26, 88);
+            IdaVolta_button.Margin = new Padding(3, 2, 3, 2);
             IdaVolta_button.Name = "IdaVolta_button";
-            IdaVolta_button.Size = new Size(151, 49);
+            IdaVolta_button.Size = new Size(106, 29);
             IdaVolta_button.TabIndex = 31;
             IdaVolta_button.Text = "Ida e volta";
             IdaVolta_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -233,10 +222,10 @@
             SoIda_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             SoIda_button.ForeColor = Color.White;
             SoIda_button.ImageAlign = ContentAlignment.MiddleLeft;
-            SoIda_button.Location = new Point(197, 147);
-            SoIda_button.Margin = new Padding(4);
+            SoIda_button.Location = new Point(138, 88);
+            SoIda_button.Margin = new Padding(3, 2, 3, 2);
             SoIda_button.Name = "SoIda_button";
-            SoIda_button.Size = new Size(151, 49);
+            SoIda_button.Size = new Size(106, 29);
             SoIda_button.TabIndex = 32;
             SoIda_button.Text = "Só ida";
             SoIda_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -251,10 +240,10 @@
             Reservar_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Reservar_button.ForeColor = Color.White;
             Reservar_button.ImageAlign = ContentAlignment.MiddleLeft;
-            Reservar_button.Location = new Point(811, 460);
-            Reservar_button.Margin = new Padding(4);
+            Reservar_button.Location = new Point(568, 276);
+            Reservar_button.Margin = new Padding(3, 2, 3, 2);
             Reservar_button.Name = "Reservar_button";
-            Reservar_button.Size = new Size(171, 85);
+            Reservar_button.Size = new Size(120, 51);
             Reservar_button.TabIndex = 16;
             Reservar_button.Text = "Reservar";
             Reservar_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -269,10 +258,10 @@
             VooMercadoria_button.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
             VooMercadoria_button.ForeColor = Color.White;
             VooMercadoria_button.ImageAlign = ContentAlignment.MiddleLeft;
-            VooMercadoria_button.Location = new Point(519, 20);
-            VooMercadoria_button.Margin = new Padding(4);
+            VooMercadoria_button.Location = new Point(363, 12);
+            VooMercadoria_button.Margin = new Padding(3, 2, 3, 2);
             VooMercadoria_button.Name = "VooMercadoria_button";
-            VooMercadoria_button.Size = new Size(206, 74);
+            VooMercadoria_button.Size = new Size(144, 44);
             VooMercadoria_button.TabIndex = 8;
             VooMercadoria_button.Text = "Voo Mercadoria";
             VooMercadoria_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -287,10 +276,10 @@
             Avionetas_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             Avionetas_button.ForeColor = Color.White;
             Avionetas_button.ImageAlign = ContentAlignment.MiddleLeft;
-            Avionetas_button.Location = new Point(758, 20);
-            Avionetas_button.Margin = new Padding(4);
+            Avionetas_button.Location = new Point(531, 12);
+            Avionetas_button.Margin = new Padding(3, 2, 3, 2);
             Avionetas_button.Name = "Avionetas_button";
-            Avionetas_button.Size = new Size(206, 74);
+            Avionetas_button.Size = new Size(144, 44);
             Avionetas_button.TabIndex = 7;
             Avionetas_button.Text = "Avionetas";
             Avionetas_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -300,10 +289,9 @@
             // Valor_label
             // 
             Valor_label.AutoSize = true;
-            Valor_label.Location = new Point(732, 494);
-            Valor_label.Margin = new Padding(4, 0, 4, 0);
+            Valor_label.Location = new Point(512, 296);
             Valor_label.Name = "Valor_label";
-            Valor_label.Size = new Size(42, 25);
+            Valor_label.Size = new Size(25, 15);
             Valor_label.TabIndex = 5;
             Valor_label.Text = "100";
             // 
@@ -315,10 +303,10 @@
             VooParticular_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             VooParticular_button.ForeColor = Color.White;
             VooParticular_button.ImageAlign = ContentAlignment.MiddleLeft;
-            VooParticular_button.Location = new Point(279, 20);
-            VooParticular_button.Margin = new Padding(4);
+            VooParticular_button.Location = new Point(195, 12);
+            VooParticular_button.Margin = new Padding(3, 2, 3, 2);
             VooParticular_button.Name = "VooParticular_button";
-            VooParticular_button.Size = new Size(206, 74);
+            VooParticular_button.Size = new Size(144, 44);
             VooParticular_button.TabIndex = 6;
             VooParticular_button.Text = "Voo Particular";
             VooParticular_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -333,10 +321,10 @@
             VooComercial_button.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
             VooComercial_button.ForeColor = Color.White;
             VooComercial_button.ImageAlign = ContentAlignment.MiddleLeft;
-            VooComercial_button.Location = new Point(34, 20);
-            VooComercial_button.Margin = new Padding(4);
+            VooComercial_button.Location = new Point(24, 12);
+            VooComercial_button.Margin = new Padding(3, 2, 3, 2);
             VooComercial_button.Name = "VooComercial_button";
-            VooComercial_button.Size = new Size(206, 74);
+            VooComercial_button.Size = new Size(144, 44);
             VooComercial_button.TabIndex = 5;
             VooComercial_button.Text = "Voo Comercial";
             VooComercial_button.TextImageRelation = TextImageRelation.ImageBeforeText;
@@ -345,11 +333,11 @@
             // 
             // NovaReserva
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1000, 564);
+            ClientSize = new Size(700, 338);
             Controls.Add(VoosPanel);
-            Margin = new Padding(4);
+            Margin = new Padding(3, 2, 3, 2);
             Name = "NovaReserva";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "NovaReserva";

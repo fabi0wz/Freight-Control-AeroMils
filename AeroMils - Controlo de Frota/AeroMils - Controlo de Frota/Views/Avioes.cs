@@ -285,6 +285,9 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void aviaoLinha1EstadoChange_Click(object sender, EventArgs e)
         {
+
+            int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
+
             if (aviaoLinha1Estado.Text == "Em Viagem")
             {
                 aviaoLinha1Estado.Text = "No Hangar";
@@ -293,6 +296,118 @@ namespace AeroMils___Controlo_de_Frota.Views
             {
                 aviaoLinha1Estado.Text = "Em Viagem";
             }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha2EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha2ID.Text == "" ? 0 : int.Parse(aviaoLinha2ID.Text);
+
+            if (aviaoLinha2Estado.Text == "Em Viagem")
+            {
+                aviaoLinha2Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha2Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha3EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha3ID.Text == "" ? 0 : int.Parse(aviaoLinha3ID.Text);
+
+            if (aviaoLinha3Estado.Text == "Em Viagem")
+            {
+                aviaoLinha3Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha3Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha4EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha4ID.Text == "" ? 0 : int.Parse(aviaoLinha4ID.Text);
+
+            if (aviaoLinha4Estado.Text == "Em Viagem")
+            {
+                aviaoLinha4Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha4Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha5EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha5ID.Text == "" ? 0 : int.Parse(aviaoLinha5ID.Text);
+
+            if (aviaoLinha5Estado.Text == "Em Viagem")
+            {
+                aviaoLinha5Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha5Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha6EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha6ID.Text == "" ? 0 : int.Parse(aviaoLinha6ID.Text);
+
+            if (aviaoLinha6Estado.Text == "Em Viagem")
+            {
+                aviaoLinha6Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha6Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void aviaoLinha7EstadoChange_Click(object sender, EventArgs e)
+        {
+            int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
+
+            if (aviaoLinha7Estado.Text == "Em Viagem")
+            {
+                aviaoLinha7Estado.Text = "No Hangar";
+            }
+            else
+            {
+                aviaoLinha7Estado.Text = "Em Viagem";
+            }
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void headerTipoAviao_Click(object sender, EventArgs e)
+        {
+            //filter by type
+
+
+        }
+
+        private void headerEstado_Click(object sender, EventArgs e)
+        {
+            //filter by status
+
+
         }
     }
 }

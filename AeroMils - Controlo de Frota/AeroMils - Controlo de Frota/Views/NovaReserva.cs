@@ -27,6 +27,9 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooComercial_button_Click(object sender, EventArgs e)
         {
+            IdaVolta_button.Show();
+            SoIda_button.Show();
+
             currentButton = "AeronaveComercial";
             resetColors();
             VooComercial_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -41,6 +44,9 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooParticular_button_Click(object sender, EventArgs e)
         {
+            IdaVolta_button.Show();
+            SoIda_button.Show();
+
             currentButton = "AeronaveParticular";
             resetColors();
             VooParticular_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -53,6 +59,12 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooMercadoria_button_Click(object sender, EventArgs e)
         {
+            IdaVolta_button.Hide();
+            SoIda_button.Hide();
+            Comercial_De_IdaVolta_label.Text = "Quando ?";
+            endDateLabel.Hide();
+            endDateInput.Hide();
+
             currentButton = "AeronaveMercadoria";
             resetColors();
             VooMercadoria_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -61,10 +73,14 @@ namespace AeroMils___Controlo_de_Frota.Views
 
             dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
             verificarDisponiveis(listaAvioesInput);
+
         }
 
         private void Avionetas_button_Click(object sender, EventArgs e)
         {
+            IdaVolta_button.Show();
+            SoIda_button.Show();
+
             currentButton = "Avioneta";
             resetColors();
             Avionetas_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -80,6 +96,10 @@ namespace AeroMils___Controlo_de_Frota.Views
             idaVolta = "IdaVolta";
             IdaVolta_button.BackColor = Color.FromArgb(255, 98, 45);
             SoIda_button.BackColor = Color.FromArgb(54, 53, 67);
+
+            Comercial_De_IdaVolta_label.Text = "De ?";
+            endDateLabel.Show();
+            endDateInput.Show();
         }
 
         private void SoIda_button_Click(object sender, EventArgs e)
@@ -87,6 +107,10 @@ namespace AeroMils___Controlo_de_Frota.Views
             idaVolta = "SoIda";
             SoIda_button.BackColor = Color.FromArgb(255, 98, 45);
             IdaVolta_button.BackColor = Color.FromArgb(54, 53, 67);
+
+            Comercial_De_IdaVolta_label.Text = "Quando ?";
+            endDateLabel.Hide();
+            endDateInput.Hide();
         }
 
         private void Reservar_button_Click(object sender, EventArgs e)
@@ -96,24 +120,47 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return;
             }
 
-            string nomeCliente = nomeClienteInput.Text;
-            string origem = localPartidaInput.Text;
-            string destino = localDestinoInput.Text;
-            DateTime dataPartida = startDateInput.Value;
-            DateTime dataRetorno = endDateInput.Value;
-
-            string stringIdAviao = listaAvioesInput.SelectedItem.ToString();
-            int index = stringIdAviao.IndexOf("-");
-            int id_aviao = Convert.ToInt32(stringIdAviao.Substring(0, index - 1));
-
-
-            DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-            if (result == DialogResult.Yes)
+            if (idaVolta == "IdaVolta")
             {
-                dbContext.InserirNovaReserva(id_aviao, nomeCliente, origem, destino, dataPartida, dataRetorno);
-                dbContext.ChangePlaneStatus(id_aviao);
-                this.Close();
+                string nomeCliente = nomeClienteInput.Text;
+                string origem = localPartidaInput.Text;
+                string destino = localDestinoInput.Text;
+                DateTime dataPartida = startDateInput.Value;
+                DateTime dataRetorno = endDateInput.Value;
+
+                string stringIdAviao = listaAvioesInput.SelectedItem.ToString();
+                int index = stringIdAviao.IndexOf("-");
+                int id_aviao = Convert.ToInt32(stringIdAviao.Substring(0, index - 1));
+
+
+                DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (result == DialogResult.Yes)
+                {
+                    dbContext.InserirNovaReserva(id_aviao, nomeCliente, origem, destino, dataPartida, dataRetorno);
+                    dbContext.ChangePlaneStatus(id_aviao);
+                    this.Close();
+                }
+            }
+            else
+            {
+                /*string nomeCliente = nomeClienteInput.Text;
+                string origem = localPartidaInput.Text;
+                string destino = localDestinoInput.Text;
+                DateTime dataPartida = startDateInput.Value;
+
+                string stringIdAviao = listaAvioesInput.SelectedItem.ToString();
+                int index = stringIdAviao.IndexOf("-");
+                int id_aviao = Convert.ToInt32(stringIdAviao.Substring(0, index - 1));
+
+                DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                
+                if (result == DialogResult.Yes)
+                {
+                    dbContext.InserirNovaReserva(id_aviao, nomeCliente, origem, destino, dataPartida);
+                    dbContext.ChangePlaneStatus(id_aviao);
+                    this.Close();
+                }*/
             }
         }
 
@@ -161,7 +208,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         public void verificarDisponiveis(ComboBox listaAvioesInput)
         {
-            if(listaAvioesInput.Items.Count == 0)
+            if (listaAvioesInput.Items.Count == 0)
             {
                 MessageBox.Show("Não existem aeronaves disponíveis para o tipo de voo selecionado.");
             }
