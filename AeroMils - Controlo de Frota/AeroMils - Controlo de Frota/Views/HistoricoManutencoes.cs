@@ -17,8 +17,6 @@ namespace AeroMils___Controlo_de_Frota.Views
         public HistoricoManutencoes()
         {
             InitializeComponent();
-            DataTable historicoManutencoesDataTable = dbContext.GetPreviousManutencoesData();
-            dataGridViewHistoricoManutencoes.DataSource = historicoManutencoesDataTable;
         }
 
     }

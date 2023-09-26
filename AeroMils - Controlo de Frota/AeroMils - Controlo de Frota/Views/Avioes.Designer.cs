@@ -90,6 +90,9 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLinha5ID = new Label();
             avioesNextButton = new Button();
             avioesPreviousButton = new Button();
+            filtrarPor_label = new Label();
+            comboBox1 = new ComboBox();
+            comboBox2 = new ComboBox();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             aviaoBGPanel.SuspendLayout();
             aviaoLine1.SuspendLayout();
@@ -117,7 +120,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoBGPanel.Controls.Add(panel2);
             aviaoBGPanel.Controls.Add(aviaoLine3);
             aviaoBGPanel.Controls.Add(aviaoLine5);
-            aviaoBGPanel.Location = new Point(51, 33);
+            aviaoBGPanel.Location = new Point(110, 98);
             aviaoBGPanel.Margin = new Padding(2, 3, 2, 3);
             aviaoBGPanel.Name = "aviaoBGPanel";
             aviaoBGPanel.Size = new Size(990, 525);
@@ -581,7 +584,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerTipoAviao.Size = new Size(147, 30);
             headerTipoAviao.TabIndex = 3;
             headerTipoAviao.Text = "Tipo de Avião";
-            headerTipoAviao.Click += headerTipoAviao_Click;
             // 
             // headerEstado
             // 
@@ -594,7 +596,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             headerEstado.Size = new Size(77, 30);
             headerEstado.TabIndex = 2;
             headerEstado.Text = "Estado";
-            headerEstado.Click += headerEstado_Click;
             // 
             // headerModelo
             // 
@@ -793,7 +794,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             avioesNextButton.BackColor = Color.FromArgb(54, 53, 67);
             avioesNextButton.FlatStyle = FlatStyle.Flat;
             avioesNextButton.ForeColor = Color.White;
-            avioesNextButton.Location = new Point(677, 584);
+            avioesNextButton.Location = new Point(736, 649);
             avioesNextButton.Margin = new Padding(2, 3, 2, 3);
             avioesNextButton.Name = "avioesNextButton";
             avioesNextButton.Size = new Size(116, 38);
@@ -807,7 +808,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             avioesPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             avioesPreviousButton.FlatStyle = FlatStyle.Flat;
             avioesPreviousButton.ForeColor = Color.White;
-            avioesPreviousButton.Location = new Point(320, 584);
+            avioesPreviousButton.Location = new Point(379, 649);
             avioesPreviousButton.Margin = new Padding(2, 3, 2, 3);
             avioesPreviousButton.Name = "avioesPreviousButton";
             avioesPreviousButton.Size = new Size(116, 38);
@@ -816,11 +817,46 @@ namespace AeroMils___Controlo_de_Frota.Views
             avioesPreviousButton.UseVisualStyleBackColor = false;
             avioesPreviousButton.Click += avioesPreviousButton_Click;
             // 
+            // filtrarPor_label
+            // 
+            filtrarPor_label.AutoSize = true;
+            filtrarPor_label.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            filtrarPor_label.Location = new Point(110, 34);
+            filtrarPor_label.Name = "filtrarPor_label";
+            filtrarPor_label.Size = new Size(118, 30);
+            filtrarPor_label.TabIndex = 14;
+            filtrarPor_label.Text = "Filtrar por:";
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Todos", "Em viagem", "No hangar" });
+            comboBox1.Location = new Point(253, 39);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 25);
+            comboBox1.TabIndex = 15;
+            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
+            // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Todos", "Comercial", "Particular", "Mercadoria", "Avioneta" });
+            comboBox2.Location = new Point(438, 39);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(151, 25);
+            comboBox2.TabIndex = 16;
+            comboBox2.SelectedIndexChanged += comboBox2_SelectedIndexChanged;
+            // 
             // Avioes
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1129, 658);
+            ClientSize = new Size(1210, 663);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(filtrarPor_label);
             Controls.Add(avioesPreviousButton);
             Controls.Add(avioesNextButton);
             Controls.Add(aviaoBGPanel);
@@ -846,6 +882,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             aviaoLine5.ResumeLayout(false);
             aviaoLine5.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -916,5 +953,8 @@ namespace AeroMils___Controlo_de_Frota.Views
         private Button aviaoLinha5EstadoChange;
         private Button aviaoLinha6EstadoChange;
         private Button aviaoLinha7EstadoChange;
+        private Label filtrarPor_label;
+        private ComboBox comboBox1;
+        private ComboBox comboBox2;
     }
 }

@@ -100,7 +100,7 @@
             manutencaoBGPanel.Controls.Add(panel2);
             manutencaoBGPanel.Controls.Add(manutencaoLine3);
             manutencaoBGPanel.Controls.Add(manutencaoLine5);
-            manutencaoBGPanel.Location = new Point(45, 33);
+            manutencaoBGPanel.Location = new Point(160, 60);
             manutencaoBGPanel.Margin = new Padding(2, 3, 2, 3);
             manutencaoBGPanel.Name = "manutencaoBGPanel";
             manutencaoBGPanel.Size = new Size(881, 525);
@@ -579,7 +579,7 @@
             manutencaoNextButton.BackColor = Color.FromArgb(54, 53, 67);
             manutencaoNextButton.FlatStyle = FlatStyle.Flat;
             manutencaoNextButton.ForeColor = Color.White;
-            manutencaoNextButton.Location = new Point(632, 593);
+            manutencaoNextButton.Location = new Point(747, 620);
             manutencaoNextButton.Margin = new Padding(2, 3, 2, 3);
             manutencaoNextButton.Name = "manutencaoNextButton";
             manutencaoNextButton.Size = new Size(116, 38);
@@ -593,7 +593,7 @@
             manutencaoPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             manutencaoPreviousButton.FlatStyle = FlatStyle.Flat;
             manutencaoPreviousButton.ForeColor = Color.White;
-            manutencaoPreviousButton.Location = new Point(222, 593);
+            manutencaoPreviousButton.Location = new Point(337, 620);
             manutencaoPreviousButton.Margin = new Padding(2, 3, 2, 3);
             manutencaoPreviousButton.Name = "manutencaoPreviousButton";
             manutencaoPreviousButton.Size = new Size(116, 38);
@@ -606,7 +606,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1129, 658);
+            ClientSize = new Size(1210, 663);
             Controls.Add(manutencaoPreviousButton);
             Controls.Add(manutencaoNextButton);
             Controls.Add(manutencaoBGPanel);

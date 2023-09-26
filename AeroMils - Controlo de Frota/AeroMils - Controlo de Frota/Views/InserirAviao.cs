@@ -167,7 +167,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             if (!int.TryParse(inserirQuantidadeInput.Text, out quantidade) || quantidade <= 0)
             {
                 // Handle invalid or non-positive integer input for quantidade
-                MessageBox.Show("Quantidade deve ser um número inteiro positivo.");
+                MessageBox.Show("Quantidade de motores deve ser um número inteiro positivo.");
                 return false; // Exit the method
             }
 

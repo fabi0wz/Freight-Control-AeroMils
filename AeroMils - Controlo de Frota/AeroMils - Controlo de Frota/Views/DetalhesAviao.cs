@@ -27,7 +27,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             ModeloLabelOutput.Text = aviao.modelo;
             AutonomiaLabelOutput.Text = aviao.autonomia.ToString();
             AnoLabelOutput.Text = aviao.anoFabrico.ToString();
-            QuantidadeLabelOutput.Text = aviao.qtdMotores.ToString();
+            qtdMotoresLabelOutput.Text = aviao.qtdMotores.ToString();
             CapacidadeLabelOutput.Text = aviao.capacidade_passageiros.ToString();
             ManutencaoLabelOutput.Text = aviao.dataUltimaManutencao.ToString();
 

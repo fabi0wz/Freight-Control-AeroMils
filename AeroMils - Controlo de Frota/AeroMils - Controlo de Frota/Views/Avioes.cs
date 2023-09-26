@@ -14,20 +14,23 @@ namespace AeroMils___Controlo_de_Frota.Views
         private int recordsPerPage = 7;
         private Empresa empresa;
         private List<Aviao> listaAvioes;
+        private bool isfiltered = false;
 
         public Avioes()
         {
             InitializeComponent();
             retrieveData();
             InitializeButtons();
+            DisplayRecords();
         }
+
+
 
         private void retrieveData()
         {
             empresa = dbContext.GetAvioesData();
             listaAvioes = empresa.GetAvioes();
 
-            DisplayRecords();
         }
 
         private void InitializeButtons()
@@ -396,18 +399,106 @@ namespace AeroMils___Controlo_de_Frota.Views
             dbContext.ChangePlaneStatus(id);
         }
 
-        private void headerTipoAviao_Click(object sender, EventArgs e)
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //filter by type
-
-
+            filterComboBox1();
         }
 
-        private void headerEstado_Click(object sender, EventArgs e)
+        private void filterComboBox1()
         {
-            //filter by status
+            retrieveData();
 
+            isfiltered = true;
 
+            if (comboBox1.Text == "Todos")
+            {
+                isfiltered = false;
+                retrieveData();
+            }
+
+            if (comboBox1.Text == "Em viagem")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.estado == false);
+            }
+            if (comboBox1.Text == "No hangar")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.estado == true);
+            }
+
+            if (listaAvioes.Any())
+            {
+                DisplayRecords();
+            }
+            else
+            {
+                MessageBox.Show("Não existem registos com esse filtro");
+                retrieveData();
+                filterComboBox2();
+                return;
+            }
+
+            if (isfiltered)
+            {
+                filterComboBox2();
+            }
+
+            DisplayRecords();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            filterComboBox2();
+        }
+
+        private void filterComboBox2()
+        {
+            retrieveData();
+
+            isfiltered = true;
+
+            if (comboBox2.Text == "Todos")
+            {
+                isfiltered = false;
+                retrieveData();
+            }
+
+            if (comboBox2.Text == "Comercial")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave Comercial");
+            }
+            if (comboBox2.Text == "Particular")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave Particular");
+            }
+            if (comboBox2.Text == "Mercadoria")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave de Mercadorias");
+            }
+            if (comboBox2.Text == "Avioneta")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Avioneta");
+            }
+
+            if (listaAvioes.Any())
+            {
+                DisplayRecords();
+            }
+            else
+            {
+                MessageBox.Show("Não existem registos com esse filtro");
+                retrieveData();
+                filterComboBox1();
+
+                return;
+            }
+
+            if (isfiltered)
+            {
+                filterComboBox1();
+            }
+
+            DisplayRecords();
         }
     }
 }

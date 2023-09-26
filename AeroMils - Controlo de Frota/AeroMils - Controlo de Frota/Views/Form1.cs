@@ -153,8 +153,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             OpenChildForm(new Views.Sobre(), sender);
 
             CloseExpanded();
-
-            login.Close();
         }
 
         private void button_InserirAviao_Click(object sender, EventArgs e)
@@ -174,11 +172,6 @@ namespace AeroMils___Controlo_de_Frota.Views
         private void button_HistoricoReserva_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Views.HistoricoReservas(), sender);
-        }
-
-        private void button_NovaManutencao_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Views.NovaManutencao(), sender);
         }
 
         private void button_HistoricoManutencao_Click(object sender, EventArgs e)

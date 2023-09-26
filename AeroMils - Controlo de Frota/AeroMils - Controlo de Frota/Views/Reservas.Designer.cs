@@ -81,6 +81,9 @@
             reservaLinha5IDReserva = new Label();
             reservaNextButton = new Button();
             reservaPreviousButton = new Button();
+            comboBox2 = new ComboBox();
+            comboBox1 = new ComboBox();
+            filtrarPor_label = new Label();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             reservaBGPanel.SuspendLayout();
             reservaLine2.SuspendLayout();
@@ -108,7 +111,7 @@
             reservaBGPanel.Controls.Add(panel2);
             reservaBGPanel.Controls.Add(reservaLine3);
             reservaBGPanel.Controls.Add(reservaLine5);
-            reservaBGPanel.Location = new Point(45, 33);
+            reservaBGPanel.Location = new Point(66, 95);
             reservaBGPanel.Margin = new Padding(2, 3, 2, 3);
             reservaBGPanel.Name = "reservaBGPanel";
             reservaBGPanel.Size = new Size(1063, 525);
@@ -684,7 +687,7 @@
             reservaNextButton.BackColor = Color.FromArgb(54, 53, 67);
             reservaNextButton.FlatStyle = FlatStyle.Flat;
             reservaNextButton.ForeColor = Color.White;
-            reservaNextButton.Location = new Point(708, 586);
+            reservaNextButton.Location = new Point(692, 646);
             reservaNextButton.Margin = new Padding(2, 3, 2, 3);
             reservaNextButton.Name = "reservaNextButton";
             reservaNextButton.Size = new Size(116, 38);
@@ -698,7 +701,7 @@
             reservaPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             reservaPreviousButton.FlatStyle = FlatStyle.Flat;
             reservaPreviousButton.ForeColor = Color.White;
-            reservaPreviousButton.Location = new Point(283, 586);
+            reservaPreviousButton.Location = new Point(335, 646);
             reservaPreviousButton.Margin = new Padding(2, 3, 2, 3);
             reservaPreviousButton.Name = "reservaPreviousButton";
             reservaPreviousButton.Size = new Size(116, 38);
@@ -707,11 +710,44 @@
             reservaPreviousButton.UseVisualStyleBackColor = false;
             reservaPreviousButton.Click += reservaPreviousButton_Click;
             // 
+            // comboBox2
+            // 
+            comboBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox2.FormattingEnabled = true;
+            comboBox2.Items.AddRange(new object[] { "Todos", "Comercial", "Particular", "Mercadoria", "Avioneta" });
+            comboBox2.Location = new Point(394, 40);
+            comboBox2.Name = "comboBox2";
+            comboBox2.Size = new Size(151, 25);
+            comboBox2.TabIndex = 19;
+            // 
+            // comboBox1
+            // 
+            comboBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            comboBox1.FormattingEnabled = true;
+            comboBox1.Items.AddRange(new object[] { "Todos", "Em viagem", "No hangar" });
+            comboBox1.Location = new Point(209, 40);
+            comboBox1.Name = "comboBox1";
+            comboBox1.Size = new Size(151, 25);
+            comboBox1.TabIndex = 18;
+            // 
+            // filtrarPor_label
+            // 
+            filtrarPor_label.AutoSize = true;
+            filtrarPor_label.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
+            filtrarPor_label.Location = new Point(66, 35);
+            filtrarPor_label.Name = "filtrarPor_label";
+            filtrarPor_label.Size = new Size(118, 30);
+            filtrarPor_label.TabIndex = 17;
+            filtrarPor_label.Text = "Filtrar por:";
+            // 
             // Reservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1129, 646);
+            ClientSize = new Size(1210, 663);
+            Controls.Add(comboBox2);
+            Controls.Add(comboBox1);
+            Controls.Add(filtrarPor_label);
             Controls.Add(reservaPreviousButton);
             Controls.Add(reservaNextButton);
             Controls.Add(reservaBGPanel);
@@ -737,6 +773,7 @@
             reservaLine5.ResumeLayout(false);
             reservaLine5.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -800,5 +837,8 @@
         private Label reservaLinha6IDReserva;
         private Button reservaNextButton;
         private Button reservaPreviousButton;
+        private ComboBox comboBox2;
+        private ComboBox comboBox1;
+        private Label filtrarPor_label;
     }
 }
