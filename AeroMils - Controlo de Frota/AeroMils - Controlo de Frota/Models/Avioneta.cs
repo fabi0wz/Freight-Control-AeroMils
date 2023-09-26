@@ -15,13 +15,34 @@ namespace AeroMils___Controlo_de_Frota.Models
         public int areaDescolagem
         {
             get => _areaDescolagem;
-            set => _areaDescolagem = value;
+            set
+            {
+                if (value >= 0) // Validate that areaDescolagem is non-negative
+                {
+                    _areaDescolagem = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Area de descolagem must be non-negative.");
+                }
+            }
         }
+
 
         public double valorFrete
         {
             get => _valorFrete;
-            set => _valorFrete = value;
+            set
+            {
+                if (value >= 0) // Validate that valorFrete is non-negative
+                {
+                    _valorFrete = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Valor do frete must be non-negative.");
+                }
+            }
         }
 
 

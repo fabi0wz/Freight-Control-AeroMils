@@ -69,6 +69,11 @@ namespace AeroMils___Controlo_de_Frota.Views
             int capacidade = Convert.ToInt32(inserirCapacidadeInput.Text);
             int autonomia = Convert.ToInt32(inserirAutonomiaInput.Text);
             DateTime manutencao = inserirManutencaoInput.Value;
+            if (inserirTipoInput.SelectedItem == null)
+            {
+                MessageBox.Show("Deve escolher um tipo válido");
+                return;
+            }
             string tipo = determinarTipo(inserirTipoInput.SelectedItem.ToString());
             DateTime ano = parseAnoFabrico();
             int quantidade = Convert.ToInt32(inserirQuantidadeInput.Text);
@@ -114,6 +119,12 @@ namespace AeroMils___Controlo_de_Frota.Views
             if (int.TryParse(yearString, out int year))
             {
                 DateTime selectedDate = new DateTime(year, 1, 1);
+
+                if (selectedDate.Year < 1900 || selectedDate.Year > DateTime.Now.Year)
+                {
+                    MessageBox.Show("Ano de Fabrico Inválido");
+                    return DateTime.MinValue; // Return an "invalid" date
+                }
                 return selectedDate;
             }
             else
@@ -152,17 +163,6 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return false; // Exit the method
             }
 
-            DateTime manutencao = inserirManutencaoInput.Value;
-
-            DateTime ano = parseAnoFabrico();
-
-            if (ano == DateTime.MinValue)
-            {
-                // Handle invalid year input
-                MessageBox.Show("Ano de Fabrico Inválido.");
-                return false; // Exit the method
-            }
-
             int quantidade;
             if (!int.TryParse(inserirQuantidadeInput.Text, out quantidade) || quantidade <= 0)
             {
@@ -175,7 +175,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             if (!int.TryParse(inserirSpecial1Input.Text, out special1))
             {
                 // Handle invalid integer input for special1
-                MessageBox.Show("Special1 deve ser um número inteiro.");
+                MessageBox.Show($"{inserirSpecial1Label.Text} deve ser um número inteiro.");
                 return false; // Exit the method
             }
 
@@ -185,16 +185,27 @@ namespace AeroMils___Controlo_de_Frota.Views
                 if (!double.TryParse(inserirSpecial2Input.Text, out special2))
                 {
                     // Handle invalid double input for special2
-                    MessageBox.Show("Special2 deve ser um número decimal válido.");
+                    MessageBox.Show($"{inserirSpecial2Label.Text} deve ser um número decimal válido.");
                     return false; // Exit the method
                 }
             }
-            else
+
+            if (string.IsNullOrEmpty(inserirSpecial2Input.Text))
             {
-                string special2 = inserirSpecial2Input.Text;
+                MessageBox.Show($"{inserirSpecial2Label.Text} é um campo obrigatório.");
+                return false;
             }
+
+            if (string.IsNullOrEmpty(inserirAnoInput.Text) || !int.TryParse(inserirAnoInput.Text, out int ano) || ano <= 1990)
+            {
+                // Handle empty, non-integer, or less than 1990 input for inserirAnoInput
+                MessageBox.Show("O ano deve ser um número inteiro maior que 1990.");
+                return false; // Exit the method
+            }
+
             return true;
         }
+
 
         public bool inserirSpecial(int aviaoID)
         {

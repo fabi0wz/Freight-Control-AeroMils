@@ -23,17 +23,38 @@ namespace AeroMils___Controlo_de_Frota.Modules
 
         public void AddAviao(Aviao aviao)
         {
-            avioes.Add(aviao);
+            if (aviao != null)
+            {
+                avioes.Add(aviao);
+            }
+            else
+            {
+                throw new ArgumentNullException("aviao", "Aviao cannot be null.");
+            }
         }
 
         public void AddReserva(Reserva reserva)
         {
-            reservas.Add(reserva);
+            if (reserva != null)
+            {
+                reservas.Add(reserva);
+            }
+            else
+            {
+                throw new ArgumentNullException("reserva", "Reserva cannot be null.");
+            }
         }
-        
+
         public void AddManutencao(Manutencoes manutencoes)
         {
-            manutencao.Add(manutencoes);
+            if (manutencoes != null)
+            {
+                manutencao.Add(manutencoes);
+            }
+            else
+            {
+                throw new ArgumentNullException("manutencoes", "Manutencoes cannot be null.");
+            }
         }
 
         public List<Aviao> GetAvioes()

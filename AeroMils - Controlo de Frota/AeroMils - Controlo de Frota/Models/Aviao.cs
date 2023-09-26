@@ -31,7 +31,7 @@ namespace AeroMils___Controlo_de_Frota.Models
         private DateTime _anoFabrico;
 
         private string _tipo;
-        
+
         public int id
         {
             get
@@ -41,9 +41,17 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _id = value;
+                if (value >= 0) // Validate that id is non-negative
+                {
+                    _id = value;
+                }
+                else
+                {
+                    throw new ArgumentException("ID must be non-negative.");
+                }
             }
-        }   
+        }
+
         public int capacidade_passageiros
         {
             get
@@ -53,9 +61,17 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _capacidade_passageiros = value;
+                if (value >= 0) // Validate that capacidade_passageiros is non-negative
+                {
+                    _capacidade_passageiros = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Capacidade de passageiros must be non-negative.");
+                }
             }
         }
+
 
         public int autonomia
         {
@@ -66,7 +82,14 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _autonomia = value;
+                if (value >= 0) // Validate that autonomia is non-negative
+                {
+                    _autonomia = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Autonomia must be non-negative.");
+                }
             }
         }
 
@@ -79,7 +102,14 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _dataUltimaManutencao = value;
+                if (value <= DateTime.Now) // Validate that dataUltimaManutencao is not in the future
+                {
+                    _dataUltimaManutencao = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Data de última manutenção cannot be in the future.");
+                }
             }
         }
 
@@ -92,7 +122,14 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _estado = value;
+                if (value == true || value == false) // Validate that estado is a valid boolean value
+                {
+                    _estado = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Estado must be a valid boolean value (true or false).");
+                }
             }
         }
 
@@ -105,7 +142,14 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _qtdMotores = value;
+                if (value >= 0) // Validate that qtdMotores is non-negative
+                {
+                    _qtdMotores = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Quantidade de motores must be non-negative.");
+                }
             }
         }
 
@@ -118,7 +162,14 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _marca = value;
+                if (!string.IsNullOrEmpty(value)) // Validate that marca is not null or empty
+                {
+                    _marca = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Marca cannot be null or empty.");
+                }
             }
         }
 
@@ -131,9 +182,17 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _modelo = value;
+                if (!string.IsNullOrEmpty(value)) // Validate that modelo is not null or empty
+                {
+                    _modelo = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Modelo cannot be null or empty.");
+                }
             }
         }
+
 
         public DateTime anoFabrico
         {
@@ -144,9 +203,17 @@ namespace AeroMils___Controlo_de_Frota.Models
 
             set
             {
-                _anoFabrico = value;
+                if (value <= DateTime.Now) // Validate that anoFabrico is not in the future
+                {
+                    _anoFabrico = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Ano de fabrico cannot be in the future.");
+                }
             }
         }
+
 
         public string Tipo
         {
@@ -156,9 +223,17 @@ namespace AeroMils___Controlo_de_Frota.Models
             }
             set
             {
-                _tipo = value;
+                if (!string.IsNullOrEmpty(value)) // Validate that Tipo is not null or empty
+                {
+                    _tipo = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Tipo cannot be null or empty.");
+                }
             }
         }
+
 
         public Aviao(int id)
         {

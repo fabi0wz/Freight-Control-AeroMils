@@ -86,7 +86,7 @@
             // 
             inserirCapacidadeLabel.AutoSize = true;
             inserirCapacidadeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            inserirCapacidadeLabel.Location = new Point(435, 131);
+            inserirCapacidadeLabel.Location = new Point(234, 131);
             inserirCapacidadeLabel.Name = "inserirCapacidadeLabel";
             inserirCapacidadeLabel.Size = new Size(199, 21);
             inserirCapacidadeLabel.TabIndex = 6;
@@ -156,7 +156,7 @@
             // 
             inserirSpecial2Label.AutoSize = true;
             inserirSpecial2Label.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            inserirSpecial2Label.Location = new Point(234, 131);
+            inserirSpecial2Label.Location = new Point(435, 131);
             inserirSpecial2Label.Name = "inserirSpecial2Label";
             inserirSpecial2Label.Size = new Size(134, 21);
             inserirSpecial2Label.TabIndex = 13;
@@ -212,7 +212,7 @@
             // inserirSpecial2Input
             // 
             inserirSpecial2Input.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            inserirSpecial2Input.Location = new Point(234, 155);
+            inserirSpecial2Input.Location = new Point(435, 155);
             inserirSpecial2Input.Name = "inserirSpecial2Input";
             inserirSpecial2Input.Size = new Size(100, 29);
             inserirSpecial2Input.TabIndex = 22;
@@ -246,7 +246,7 @@
             // inserirCapacidadeInput
             // 
             inserirCapacidadeInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            inserirCapacidadeInput.Location = new Point(435, 155);
+            inserirCapacidadeInput.Location = new Point(234, 155);
             inserirCapacidadeInput.Name = "inserirCapacidadeInput";
             inserirCapacidadeInput.Size = new Size(100, 29);
             inserirCapacidadeInput.TabIndex = 17;

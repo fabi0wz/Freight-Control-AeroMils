@@ -14,12 +14,32 @@ namespace AeroMils___Controlo_de_Frota.Models
         public int capacidadeCarga
         {
             get => _capacidadeCarga;
-            set => _capacidadeCarga = value;
+            set
+            {
+                if (value >= 0) // Validate that capacidadeCarga is non-negative
+                {
+                    _capacidadeCarga = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Capacidade de carga must be non-negative.");
+                }
+            }
         }
         public double valorFrete
         {
             get => _valorFrete;
-            set => _valorFrete = value;
+            set
+            {
+                if (value >= 0) // Validate that valorFrete is non-negative
+                {
+                    _valorFrete = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Valor do frete must be non-negative.");
+                }
+            }
         }
 
         public AeronaveMercadorias(int id, int capacidadeCarga, double valorFrete) 
