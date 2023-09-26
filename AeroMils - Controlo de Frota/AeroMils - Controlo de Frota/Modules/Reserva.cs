@@ -10,7 +10,7 @@ namespace AeroMils___Controlo_de_Frota.Modules
     {
         private DateTime _data_inicio;
         private DateTime _data_fim;
-        private double _nome_cliente;
+        private string _nome_cliente;
         private int _id_aviao;
         private int _id_reserva;
 
@@ -36,7 +36,6 @@ namespace AeroMils___Controlo_de_Frota.Modules
                 this._data_fim = DateTime.Parse(value);
             }
         }
-        public double valorFreteTotal { get; set; }
 
         public int id_aviao { get; set; }
         public int id_reserva { get; set; }

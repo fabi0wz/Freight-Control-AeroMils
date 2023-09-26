@@ -134,6 +134,12 @@ namespace AeroMils___Controlo_de_Frota.Views
             DateTime dataPartida = startDateInput.Value;
             DateTime dataRetorno = endDateInput.Value;
 
+            if(listaAvioesInput.SelectedItem == null)
+            {
+                MessageBox.Show("Precisa de escolher um avião válido");
+                return;
+            }
+
             string stringIdAviao = listaAvioesInput.SelectedItem.ToString();
             int index = stringIdAviao.IndexOf("-");
             int id_aviao = Convert.ToInt32(stringIdAviao.Substring(0, index - 1));

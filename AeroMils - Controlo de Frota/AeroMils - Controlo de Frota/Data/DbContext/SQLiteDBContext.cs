@@ -27,6 +27,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             connection = new SQLiteConnection(connectionString);
         }
 
+        //Opens de DB Connection
         public void OpenConnection()
         {
             if (connection.State == ConnectionState.Closed)
@@ -35,6 +36,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
+        //Closes de DB Connection
         public void CloseConnection()
         {
             if (connection.State == ConnectionState.Open)
@@ -43,12 +45,14 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
+        //Insert a new plane into the DB
         public int InserirNovoAviao(string modelo, string marca, int capacidade, int autonomia, DateTime manutencao, string tipo, DateTime ano, int quantidade)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
                 try
                 {
+                    //Opens the connection
                     connection.Open();
 
                     // Create a SQLite command to insert data into the database
@@ -58,6 +62,8 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
+
+                        //Add the parameters to be replaced by the variables in the command
                         command.Parameters.AddWithValue("@Modelo", modelo);
                         command.Parameters.AddWithValue("@Capacidade", capacidade);
                         command.Parameters.AddWithValue("@Autonomia", autonomia);
@@ -91,6 +97,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
         
 
+        //Insert a new Avioneta (after inserting a Plane)
         public void InserirNovaAvioneta(int aviaoId, int areaMinimaDescolagem, double valorFrete)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
@@ -99,7 +106,11 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
 
                 using (SQLiteCommand command = new SQLiteCommand(connection))
                 {
+                    // Create a SQLite command to insert data into the database
+
                     string query = "INSERT INTO Avionetas (id_aviao, area_minima_descolagem, valor_frete) VALUES (@aviaoId, @areaMinimaDescolagem, @valorFrete);";
+
+                    //Add the parameters to be replaced by the variables in the command
 
                     command.CommandText = query;
                     command.Parameters.AddWithValue("@aviaoId", aviaoId);

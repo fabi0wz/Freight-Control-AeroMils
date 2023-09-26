@@ -14,13 +14,33 @@ namespace AeroMils___Controlo_de_Frota.Models
         public int numeroVoosDia
         {
             get => _numeroVoosDia;
-            set => _numeroVoosDia = value;
+            set
+            {
+                if (value >= 0) // Validate that numeroVoosDia is non-negative
+                {
+                    _numeroVoosDia = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Número de voos por dia must be non-negative.");
+                }
+            }
         }
 
         public string companhiaAerea
         {
             get => _companhiaAerea;
-            set => _companhiaAerea = value;
+            set
+            {
+                if (!string.IsNullOrEmpty(value)) // Validate that companhiaAerea is not null or empty
+                {
+                    _companhiaAerea = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Companhia aérea cannot be null or empty.");
+                }
+            }
         }
 
         public AeronaveComercial(int id, int numeroVoosDia, string companhiaAerea)
