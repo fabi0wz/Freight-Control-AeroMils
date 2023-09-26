@@ -96,6 +96,10 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return;
             }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             string nomeCliente = nomeClienteInput.Text;
             string origem = localPartidaInput.Text;
             string destino = localDestinoInput.Text;
@@ -115,6 +119,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 dbContext.ChangePlaneStatus(id_aviao);
                 this.Close();
             }
+ 
         }
 
         private void resetColors()
@@ -166,6 +171,8 @@ namespace AeroMils___Controlo_de_Frota.Views
                 MessageBox.Show("Não existem aeronaves disponíveis para o tipo de voo selecionado.");
             }
         }
+
+
 
     }
 }
