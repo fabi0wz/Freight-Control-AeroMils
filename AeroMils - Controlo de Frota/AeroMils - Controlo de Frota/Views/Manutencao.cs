@@ -32,7 +32,15 @@ namespace AeroMils___Controlo_de_Frota.Views
             empresa = dbContext.GetManutencoesData();
             listaManutencoes = empresa.GetManutencoes();
 
+            removeNotActive();
+
             DisplayRecords();
+        }
+
+        private void removeNotActive()
+        {
+            DateTime dataAtual = DateTime.Now;
+            listaManutencoes.RemoveAll(listaManutencoes => DateTime.Parse(listaManutencoes.data_fim) < dataAtual);
         }
 
         private void DisplayRecords()

@@ -147,12 +147,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha1EstadoChange
             // 
-            aviaoLinha1EstadoChange.Location = new Point(350, 16);
+            aviaoLinha1EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha1EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_241;
+            aviaoLinha1EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha1EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha1EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha1EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha1EstadoChange.Location = new Point(350, 12);
             aviaoLinha1EstadoChange.Name = "aviaoLinha1EstadoChange";
-            aviaoLinha1EstadoChange.Size = new Size(36, 21);
+            aviaoLinha1EstadoChange.Size = new Size(37, 32);
             aviaoLinha1EstadoChange.TabIndex = 14;
-            aviaoLinha1EstadoChange.Text = "<>";
-            aviaoLinha1EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha1EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha1EstadoChange.Click += aviaoLinha1EstadoChange_Click;
             // 
             // aviaoLinha1DataManutencao
@@ -231,12 +236,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha2EstadoChange
             // 
-            aviaoLinha2EstadoChange.Location = new Point(350, 16);
+            aviaoLinha2EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha2EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_242;
+            aviaoLinha2EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha2EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha2EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha2EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha2EstadoChange.Location = new Point(350, 12);
             aviaoLinha2EstadoChange.Name = "aviaoLinha2EstadoChange";
-            aviaoLinha2EstadoChange.Size = new Size(36, 21);
+            aviaoLinha2EstadoChange.Size = new Size(37, 32);
             aviaoLinha2EstadoChange.TabIndex = 15;
-            aviaoLinha2EstadoChange.Text = "<>";
-            aviaoLinha2EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha2EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha2EstadoChange.Click += aviaoLinha2EstadoChange_Click;
             // 
             // aviaoLinha2DataManutencao
@@ -315,12 +325,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha4EstadoChange
             // 
-            aviaoLinha4EstadoChange.Location = new Point(350, 16);
+            aviaoLinha4EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha4EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_244;
+            aviaoLinha4EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha4EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha4EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha4EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha4EstadoChange.Location = new Point(350, 12);
             aviaoLinha4EstadoChange.Name = "aviaoLinha4EstadoChange";
-            aviaoLinha4EstadoChange.Size = new Size(36, 21);
+            aviaoLinha4EstadoChange.Size = new Size(37, 32);
             aviaoLinha4EstadoChange.TabIndex = 17;
-            aviaoLinha4EstadoChange.Text = "<>";
-            aviaoLinha4EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha4EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha4EstadoChange.Click += aviaoLinha4EstadoChange_Click;
             // 
             // aviaoLinha4DataManutencao
@@ -399,12 +414,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha7EstadoChange
             // 
-            aviaoLinha7EstadoChange.Location = new Point(350, 16);
+            aviaoLinha7EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha7EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_247;
+            aviaoLinha7EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha7EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha7EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha7EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha7EstadoChange.Location = new Point(350, 12);
             aviaoLinha7EstadoChange.Name = "aviaoLinha7EstadoChange";
-            aviaoLinha7EstadoChange.Size = new Size(36, 21);
+            aviaoLinha7EstadoChange.Size = new Size(37, 32);
             aviaoLinha7EstadoChange.TabIndex = 20;
-            aviaoLinha7EstadoChange.Text = "<>";
-            aviaoLinha7EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha7EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha7EstadoChange.Click += aviaoLinha7EstadoChange_Click;
             // 
             // aviaoLinha7DataManutencao
@@ -483,12 +503,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha6EstadoChange
             // 
-            aviaoLinha6EstadoChange.Location = new Point(350, 16);
+            aviaoLinha6EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha6EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_246;
+            aviaoLinha6EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha6EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha6EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha6EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha6EstadoChange.Location = new Point(350, 12);
             aviaoLinha6EstadoChange.Name = "aviaoLinha6EstadoChange";
-            aviaoLinha6EstadoChange.Size = new Size(36, 21);
+            aviaoLinha6EstadoChange.Size = new Size(37, 32);
             aviaoLinha6EstadoChange.TabIndex = 19;
-            aviaoLinha6EstadoChange.Text = "<>";
-            aviaoLinha6EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha6EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha6EstadoChange.Click += aviaoLinha6EstadoChange_Click;
             // 
             // aviaoLinha6DataManutencao
@@ -642,12 +667,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha3EstadoChange
             // 
-            aviaoLinha3EstadoChange.Location = new Point(350, 16);
+            aviaoLinha3EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha3EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_243;
+            aviaoLinha3EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha3EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha3EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha3EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha3EstadoChange.Location = new Point(350, 12);
             aviaoLinha3EstadoChange.Name = "aviaoLinha3EstadoChange";
-            aviaoLinha3EstadoChange.Size = new Size(36, 21);
+            aviaoLinha3EstadoChange.Size = new Size(37, 32);
             aviaoLinha3EstadoChange.TabIndex = 16;
-            aviaoLinha3EstadoChange.Text = "<>";
-            aviaoLinha3EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha3EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha3EstadoChange.Click += aviaoLinha3EstadoChange_Click;
             // 
             // aviaoLinha3DataManutencao
@@ -726,12 +756,17 @@ namespace AeroMils___Controlo_de_Frota.Views
             // 
             // aviaoLinha5EstadoChange
             // 
-            aviaoLinha5EstadoChange.Location = new Point(350, 16);
+            aviaoLinha5EstadoChange.BackColor = Color.Transparent;
+            aviaoLinha5EstadoChange.BackgroundImage = Properties.Resources.icons8_sorting_arrows_horizontal_245;
+            aviaoLinha5EstadoChange.BackgroundImageLayout = ImageLayout.Center;
+            aviaoLinha5EstadoChange.FlatAppearance.BorderSize = 0;
+            aviaoLinha5EstadoChange.FlatStyle = FlatStyle.Flat;
+            aviaoLinha5EstadoChange.ForeColor = Color.Transparent;
+            aviaoLinha5EstadoChange.Location = new Point(350, 12);
             aviaoLinha5EstadoChange.Name = "aviaoLinha5EstadoChange";
-            aviaoLinha5EstadoChange.Size = new Size(36, 21);
+            aviaoLinha5EstadoChange.Size = new Size(37, 32);
             aviaoLinha5EstadoChange.TabIndex = 18;
-            aviaoLinha5EstadoChange.Text = "<>";
-            aviaoLinha5EstadoChange.UseVisualStyleBackColor = true;
+            aviaoLinha5EstadoChange.UseVisualStyleBackColor = false;
             aviaoLinha5EstadoChange.Click += aviaoLinha5EstadoChange_Click;
             // 
             // aviaoLinha5DataManutencao
@@ -947,14 +982,14 @@ namespace AeroMils___Controlo_de_Frota.Views
         private Button avioesNextButton;
         private Button avioesPreviousButton;
         private Button aviaoLinha1EstadoChange;
-        private Button aviaoLinha2EstadoChange;
-        private Button aviaoLinha3EstadoChange;
-        private Button aviaoLinha4EstadoChange;
-        private Button aviaoLinha5EstadoChange;
-        private Button aviaoLinha6EstadoChange;
-        private Button aviaoLinha7EstadoChange;
         private Label filtrarPor_label;
         private ComboBox comboBox1;
         private ComboBox comboBox2;
+        private Button aviaoLinha2EstadoChange;
+        private Button aviaoLinha4EstadoChange;
+        private Button aviaoLinha7EstadoChange;
+        private Button aviaoLinha6EstadoChange;
+        private Button aviaoLinha3EstadoChange;
+        private Button aviaoLinha5EstadoChange;
     }
 }
