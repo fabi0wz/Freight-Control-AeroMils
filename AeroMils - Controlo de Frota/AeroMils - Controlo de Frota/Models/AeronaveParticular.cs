@@ -14,13 +14,35 @@ namespace AeroMils___Controlo_de_Frota.Models
         public int numProprietarios
         {
             get => _numProprietarios;
-            set => _numProprietarios = value;
+            set
+            {
+                if (value >= 0) // Validate that numProprietarios is non-negative
+                {
+                    _numProprietarios = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Number of proprietarios must be non-negative.");
+                }
+            }
         }
+
         public double valorFrete
         {
             get => _valorFrete;
-            set => _valorFrete = value;
+            set
+            {
+                if (value >= 0) // Validate that valorFrete is non-negative
+                {
+                    _valorFrete = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Valor do frete must be non-negative.");
+                }
+            }
         }
+
 
 
         public AeronaveParticular(int id, int numProprietarios, double valorFrete)

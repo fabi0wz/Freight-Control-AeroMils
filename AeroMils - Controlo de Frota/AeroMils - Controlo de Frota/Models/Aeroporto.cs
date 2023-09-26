@@ -15,20 +15,53 @@ namespace AeroMils___Controlo_de_Frota.Models
         public string localizacao
         {
             get => _localizacao;
-            set => _localizacao = value;
+            set
+            {
+                if (!string.IsNullOrEmpty(value)) // Validate that localizacao is not null or empty
+                {
+                    _localizacao = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Localizacao cannot be null or empty.");
+                }
+            }
         }
+
 
         public int numeroPistas
         {
             get => _numeroPistas;
-            set => _numeroPistas = value;
+            set
+            {
+                if (value >= 0) // Validate that numeroPistas is non-negative
+                {
+                    _numeroPistas = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Numero de pistas must be non-negative.");
+                }
+            }
         }
+
 
         public int capacidadeAtendimento
         {
             get => _capacidadeAtendimento;
-            set => _capacidadeAtendimento = value;
+            set
+            {
+                if (value >= 0) // Validate that capacidadeAtendimento is non-negative
+                {
+                    _capacidadeAtendimento = value;
+                }
+                else
+                {
+                    throw new ArgumentException("Capacidade de atendimento must be non-negative.");
+                }
+            }
         }
+
 
         public Aeroporto(string localizacao, int numeroPistas, int capacidadeAtendimento)
         {
