@@ -209,14 +209,14 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             {
                 connection.Open();
 
-                using (SQLiteCommand command = new SQLiteCommand("SELECT Status FROM Avioes WHERE ID = @PlaneID", connection))
+                using (SQLiteCommand command = new SQLiteCommand("SELECT estado FROM Avioes WHERE id_aviao = @PlaneID", connection))
                 {
                     command.Parameters.AddWithValue("@PlaneID", planeID);
                     int currentStatus = Convert.ToInt32(command.ExecuteScalar());
 
                     int newStatus = currentStatus == 0 ? 1 : 0;
 
-                    using (SQLiteCommand updateCommand = new SQLiteCommand("UPDATE Avioes SET Status = @NewStatus WHERE ID = @PlaneID", connection))
+                    using (SQLiteCommand updateCommand = new SQLiteCommand("UPDATE Avioes SET estado = @NewStatus WHERE id_aviao = @PlaneID", connection))
                     {
                         updateCommand.Parameters.AddWithValue("@NewStatus", newStatus);
                         updateCommand.Parameters.AddWithValue("@PlaneID", planeID);
@@ -365,7 +365,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public Avioneta GetAvionetaData(int id)
         {
             Avioneta avioneta = null;
-
+            OpenConnection();
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT area_minima_descolagem, valor_frete FROM Avionetas WHERE id_aviao = @id_aviao", connection))
             {
@@ -390,7 +390,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public AeronaveParticular GetAeroNaveParticularData(int id)
         {
             AeronaveParticular aeronaveparticular = null;
-
+            OpenConnection();
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT num_proprietarios, valor_frete FROM AeronavesParticulares WHERE id_aviao = @id_aviao", connection))
             {
@@ -414,6 +414,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public AeronaveComercial GetAeronavesComerciaisData(int id)
         {
             AeronaveComercial aeronaveComercial = null;
+            OpenConnection();
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT num_voos_diarios, companhia_aerea FROM AeronavesComerciais WHERE id_aviao = @id_aviao", connection))
             {
@@ -438,7 +439,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
         public AeronaveMercadorias GetAeronavesMercadoriasData(int id)
         {
             AeronaveMercadorias aeronaveMercadorias = null;
-
+            OpenConnection();
 
             using (SQLiteCommand command = new SQLiteCommand("SELECT capacidade_carga, valor_frete FROM AeronavesMercadorias WHERE id_aviao = @id_aviao", connection))
             {

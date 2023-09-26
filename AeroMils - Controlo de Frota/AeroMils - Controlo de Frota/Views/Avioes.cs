@@ -14,20 +14,23 @@ namespace AeroMils___Controlo_de_Frota.Views
         private int recordsPerPage = 7;
         private Empresa empresa;
         private List<Aviao> listaAvioes;
+        private bool isfiltered = false;
 
         public Avioes()
         {
             InitializeComponent();
             retrieveData();
             InitializeButtons();
+            DisplayRecords();
         }
+
+
 
         private void retrieveData()
         {
             empresa = dbContext.GetAvioesData();
             listaAvioes = empresa.GetAvioes();
 
-            DisplayRecords();
         }
 
         private void InitializeButtons()
@@ -50,6 +53,18 @@ namespace AeroMils___Controlo_de_Frota.Views
             throw new InvalidOperationException($"Label control with name '{labelName}' not found.");
         }
 
+        private Button FindButton(string buttonName)
+        {
+            Control[] controls = this.Controls.Find(buttonName, true);
+
+            if (controls.Length > 0 && controls[0] is Button button)
+            {
+                return button;
+            }
+
+            throw new InvalidOperationException($"Button control with name '{buttonName}' not found.");
+        }
+
 
 
         private void DisplayRecords()
@@ -70,19 +85,24 @@ namespace AeroMils___Controlo_de_Frota.Views
                 string estadoLabelName = $"aviaoLinha{rowNumber}Estado";
                 string tipoLabelName = $"aviaoLinha{rowNumber}Tipo";
                 string dataManutencaoLabelName = $"aviaoLinha{rowNumber}DataManutencao";
+                string estadoChangeLabelName = $"aviaoLinha{rowNumber}EstadoChange";
+                //aviaoLinha7EstadoChange
+
 
                 Label idLabel = FindLabelByName(idLabelName);
                 Label modeloLabel = FindLabelByName(modeloLabelName);
                 Label estadoLabel = FindLabelByName(estadoLabelName);
                 Label tipoLabel = FindLabelByName(tipoLabelName);
                 Label dataManutencaoLabel = FindLabelByName(dataManutencaoLabelName);
+                Button estadoChangeLabel = FindButton(estadoChangeLabelName);
 
                 Aviao aviao = listaAvioes[i];
                 idLabel.Text = aviao.id.ToString();
                 modeloLabel.Text = aviao.marca.ToString();
                 estadoLabel.Text = aviao.estado == false ? "No Hangar" : "Em Viagem";
                 tipoLabel.Text = aviao.Tipo;
-                dataManutencaoLabel.Text = aviao.dataUltimaManutencao.ToString();
+                dataManutencaoLabel.Text = aviao.dataUltimaManutencao.ToString("dd/MM/yyyy");
+                estadoChangeLabel.Visible = true;
             }
 
             // Enable or disable the "Next" and "Previous" buttons based on the index bounds
@@ -93,6 +113,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void clearTable()
         {
+
             for (int rowNumber = 1; rowNumber <= recordsPerPage; rowNumber++)
             {
                 string idLabelName = $"aviaoLinha{rowNumber}ID";
@@ -100,18 +121,21 @@ namespace AeroMils___Controlo_de_Frota.Views
                 string estadoLabelName = $"aviaoLinha{rowNumber}Estado";
                 string tipoLabelName = $"aviaoLinha{rowNumber}Tipo";
                 string dataManutencaoLabelName = $"aviaoLinha{rowNumber}DataManutencao";
+                string estadoChangeLabelName = $"aviaoLinha{rowNumber}EstadoChange";
 
                 Label idLabel = FindLabelByName(idLabelName);
                 Label modeloLabel = FindLabelByName(modeloLabelName);
                 Label estadoLabel = FindLabelByName(estadoLabelName);
                 Label tipoLabel = FindLabelByName(tipoLabelName);
                 Label dataManutencaoLabel = FindLabelByName(dataManutencaoLabelName);
+                Button estadoChangeLabel = FindButton(estadoChangeLabelName);
 
                 idLabel.Text = "";
                 modeloLabel.Text = "";
                 estadoLabel.Text = "";
                 tipoLabel.Text = "";
                 dataManutencaoLabel.Text = "";
+                estadoChangeLabel.Visible = false;
             }
         }
 
@@ -221,78 +245,211 @@ namespace AeroMils___Controlo_de_Frota.Views
         private void aviaoLine1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
+            verDetalhesAviao(id);
 
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
         }
 
         private void aviaoLine2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha2ID.Text == "" ? 0 : int.Parse(aviaoLinha2ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha3ID.Text == "" ? 0 : int.Parse(aviaoLinha3ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha4ID.Text == "" ? 0 : int.Parse(aviaoLinha4ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine5_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha5ID.Text == "" ? 0 : int.Parse(aviaoLinha5ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine6_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha6ID.Text == "" ? 0 : int.Parse(aviaoLinha6ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine7_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
+
+        private void verDetalhesAviao(int id)
+        {
+            Aviao aviao = id == 0 ? null : dbContext.GetAviaoById(id);
+
+            if (aviao != null)
+            {
+                Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
+                detalhesAviao.Show();
+            }
+            else
+            {
+                MessageBox.Show("Precisa Selecionar um avião");
+            }
+
+        }
         ///////////////////////////  ESTADO CHANGE   ///////////////////////////
 
         private void aviaoLinha1EstadoChange_Click(object sender, EventArgs e)
         {
-            if (aviaoLinha1Estado.Text == "Em Viagem")
+
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha1ID.Text)); ;
+        }
+
+        private void aviaoLinha2EstadoChange_Click(object sender, EventArgs e)
+        {
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha2ID.Text));
+        }
+
+        private void aviaoLinha3EstadoChange_Click(object sender, EventArgs e)
+        {
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha3ID.Text));
+        }
+
+        private void aviaoLinha4EstadoChange_Click(object sender, EventArgs e)
+        {
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha4ID.Text));
+        }
+
+        private void aviaoLinha5EstadoChange_Click(object sender, EventArgs e)
+        {
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha5ID.Text));
+        }
+
+        private void aviaoLinha6EstadoChange_Click(object sender, EventArgs e)
+        {
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha6ID.Text));
+        }
+
+        private void aviaoLinha7EstadoChange_Click(object sender, EventArgs e)
+        {
+
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha7ID.Text));
+
+        }
+
+        private void alterarEstadoAviao(int id_aviao)
+        {
+            int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
+
+            aviaoLinha7Estado.Text = aviaoLinha7Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            filterComboBox1();
+        }
+
+        private void filterComboBox1()
+        {
+            retrieveData();
+
+            isfiltered = true;
+
+            if (comboBox1.Text == "Todos")
             {
-                aviaoLinha1Estado.Text = "No Hangar";
+                isfiltered = false;
+                retrieveData();
+            }
+
+            if (comboBox1.Text == "Em viagem")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.estado == false);
+            }
+            if (comboBox1.Text == "No hangar")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.estado == true);
+            }
+
+            if (listaAvioes.Any())
+            {
+                DisplayRecords();
             }
             else
             {
-                aviaoLinha1Estado.Text = "Em Viagem";
+                MessageBox.Show("Não existem registos com esse filtro");
+                retrieveData();
+                filterComboBox2();
+                return;
             }
+
+            if (isfiltered)
+            {
+                filterComboBox2();
+            }
+
+            DisplayRecords();
+        }
+
+        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            filterComboBox2();
+        }
+
+        private void filterComboBox2()
+        {
+            retrieveData();
+
+            isfiltered = true;
+
+            if (comboBox2.Text == "Todos")
+            {
+                isfiltered = false;
+                retrieveData();
+            }
+
+            if (comboBox2.Text == "Comercial")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave Comercial");
+            }
+            if (comboBox2.Text == "Particular")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave Particular");
+            }
+            if (comboBox2.Text == "Mercadoria")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Aeronave de Mercadorias");
+            }
+            if (comboBox2.Text == "Avioneta")
+            {
+                listaAvioes.RemoveAll(aviao => aviao.Tipo != "Avioneta");
+            }
+
+            if (listaAvioes.Any())
+            {
+                DisplayRecords();
+            }
+            else
+            {
+                MessageBox.Show("Não existem registos com esse filtro");
+                retrieveData();
+                filterComboBox1();
+
+                return;
+            }
+
+            if (isfiltered)
+            {
+                filterComboBox1();
+            }
+
+            DisplayRecords();
         }
     }
 }

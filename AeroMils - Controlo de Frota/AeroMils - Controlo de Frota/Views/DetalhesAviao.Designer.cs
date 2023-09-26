@@ -30,7 +30,7 @@
         {
             Special2Label = new Label();
             Special1Label = new Label();
-            QuantidadeLabel = new Label();
+            qtdMotoresLabel = new Label();
             AnoLabel = new Label();
             TipoLabel = new Label();
             ManutencaoLabel = new Label();
@@ -38,7 +38,7 @@
             CapacidadeLabel = new Label();
             MarcaLabel = new Label();
             ModeloLabel = new Label();
-            QuantidadeLabelOutput = new Label();
+            qtdMotoresLabelOutput = new Label();
             AnoLabelOutput = new Label();
             TipoLabelOutput = new Label();
             ManutencaoLabelOutput = new Label();
@@ -48,6 +48,7 @@
             ModeloLabelOutput = new Label();
             Special2LabelOutput = new Label();
             Special1LabelOutput = new Label();
+            enviarManutButton = new Button();
             SuspendLayout();
             // 
             // Special2Label
@@ -70,15 +71,15 @@
             Special1Label.TabIndex = 32;
             Special1Label.Text = "Numero de Voos Diarios";
             // 
-            // QuantidadeLabel
+            // qtdMotoresLabel
             // 
-            QuantidadeLabel.AutoSize = true;
-            QuantidadeLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            QuantidadeLabel.Location = new Point(435, 65);
-            QuantidadeLabel.Name = "QuantidadeLabel";
-            QuantidadeLabel.Size = new Size(71, 21);
-            QuantidadeLabel.TabIndex = 31;
-            QuantidadeLabel.Text = "Motores:";
+            qtdMotoresLabel.AutoSize = true;
+            qtdMotoresLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            qtdMotoresLabel.Location = new Point(508, 28);
+            qtdMotoresLabel.Name = "qtdMotoresLabel";
+            qtdMotoresLabel.Size = new Size(71, 21);
+            qtdMotoresLabel.TabIndex = 31;
+            qtdMotoresLabel.Text = "Motores:";
             // 
             // AnoLabel
             // 
@@ -134,7 +135,7 @@
             // 
             MarcaLabel.AutoSize = true;
             MarcaLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MarcaLabel.Location = new Point(30, 64);
+            MarcaLabel.Location = new Point(508, 63);
             MarcaLabel.Name = "MarcaLabel";
             MarcaLabel.Size = new Size(56, 21);
             MarcaLabel.TabIndex = 25;
@@ -144,27 +145,27 @@
             // 
             ModeloLabel.AutoSize = true;
             ModeloLabel.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ModeloLabel.Location = new Point(435, 28);
+            ModeloLabel.Location = new Point(30, 65);
             ModeloLabel.Name = "ModeloLabel";
             ModeloLabel.Size = new Size(66, 21);
             ModeloLabel.TabIndex = 24;
             ModeloLabel.Text = "Modelo:";
             // 
-            // QuantidadeLabelOutput
+            // qtdMotoresLabelOutput
             // 
-            QuantidadeLabelOutput.AutoSize = true;
-            QuantidadeLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            QuantidadeLabelOutput.Location = new Point(521, 65);
-            QuantidadeLabelOutput.Name = "QuantidadeLabelOutput";
-            QuantidadeLabelOutput.Size = new Size(58, 21);
-            QuantidadeLabelOutput.TabIndex = 41;
-            QuantidadeLabelOutput.Text = "default";
+            qtdMotoresLabelOutput.AutoSize = true;
+            qtdMotoresLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            qtdMotoresLabelOutput.Location = new Point(611, 28);
+            qtdMotoresLabelOutput.Name = "qtdMotoresLabelOutput";
+            qtdMotoresLabelOutput.Size = new Size(58, 21);
+            qtdMotoresLabelOutput.TabIndex = 41;
+            qtdMotoresLabelOutput.Text = "default";
             // 
             // AnoLabelOutput
             // 
             AnoLabelOutput.AutoSize = true;
             AnoLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AnoLabelOutput.Location = new Point(247, 258);
+            AnoLabelOutput.Location = new Point(257, 258);
             AnoLabelOutput.Name = "AnoLabelOutput";
             AnoLabelOutput.Size = new Size(58, 21);
             AnoLabelOutput.TabIndex = 40;
@@ -174,7 +175,7 @@
             // 
             TipoLabelOutput.AutoSize = true;
             TipoLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            TipoLabelOutput.Location = new Point(247, 219);
+            TipoLabelOutput.Location = new Point(257, 219);
             TipoLabelOutput.Name = "TipoLabelOutput";
             TipoLabelOutput.Size = new Size(58, 21);
             TipoLabelOutput.TabIndex = 39;
@@ -184,7 +185,7 @@
             // 
             ManutencaoLabelOutput.AutoSize = true;
             ManutencaoLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ManutencaoLabelOutput.Location = new Point(247, 178);
+            ManutencaoLabelOutput.Location = new Point(257, 178);
             ManutencaoLabelOutput.Name = "ManutencaoLabelOutput";
             ManutencaoLabelOutput.Size = new Size(58, 21);
             ManutencaoLabelOutput.TabIndex = 38;
@@ -194,7 +195,7 @@
             // 
             AutonomiaLabelOutput.AutoSize = true;
             AutonomiaLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            AutonomiaLabelOutput.Location = new Point(247, 293);
+            AutonomiaLabelOutput.Location = new Point(257, 293);
             AutonomiaLabelOutput.Name = "AutonomiaLabelOutput";
             AutonomiaLabelOutput.Size = new Size(58, 21);
             AutonomiaLabelOutput.TabIndex = 37;
@@ -204,7 +205,7 @@
             // 
             CapacidadeLabelOutput.AutoSize = true;
             CapacidadeLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            CapacidadeLabelOutput.Location = new Point(247, 137);
+            CapacidadeLabelOutput.Location = new Point(257, 137);
             CapacidadeLabelOutput.Name = "CapacidadeLabelOutput";
             CapacidadeLabelOutput.Size = new Size(58, 21);
             CapacidadeLabelOutput.TabIndex = 36;
@@ -214,7 +215,7 @@
             // 
             MarcaLabelOutput.AutoSize = true;
             MarcaLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            MarcaLabelOutput.Location = new Point(247, 65);
+            MarcaLabelOutput.Location = new Point(611, 63);
             MarcaLabelOutput.Name = "MarcaLabelOutput";
             MarcaLabelOutput.Size = new Size(58, 21);
             MarcaLabelOutput.TabIndex = 35;
@@ -224,7 +225,7 @@
             // 
             ModeloLabelOutput.AutoSize = true;
             ModeloLabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            ModeloLabelOutput.Location = new Point(521, 28);
+            ModeloLabelOutput.Location = new Point(257, 65);
             ModeloLabelOutput.Name = "ModeloLabelOutput";
             ModeloLabelOutput.Size = new Size(58, 21);
             ModeloLabelOutput.TabIndex = 34;
@@ -234,7 +235,7 @@
             // 
             Special2LabelOutput.AutoSize = true;
             Special2LabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Special2LabelOutput.Location = new Point(247, 100);
+            Special2LabelOutput.Location = new Point(257, 100);
             Special2LabelOutput.Name = "Special2LabelOutput";
             Special2LabelOutput.Size = new Size(58, 21);
             Special2LabelOutput.TabIndex = 43;
@@ -244,20 +245,38 @@
             // 
             Special1LabelOutput.AutoSize = true;
             Special1LabelOutput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            Special1LabelOutput.Location = new Point(247, 28);
+            Special1LabelOutput.Location = new Point(257, 28);
             Special1LabelOutput.Name = "Special1LabelOutput";
             Special1LabelOutput.Size = new Size(58, 21);
             Special1LabelOutput.TabIndex = 42;
             Special1LabelOutput.Text = "default";
             // 
+            // enviarManutButton
+            // 
+            enviarManutButton.BackColor = Color.FromArgb(54, 53, 67);
+            enviarManutButton.FlatAppearance.BorderSize = 0;
+            enviarManutButton.FlatStyle = FlatStyle.Flat;
+            enviarManutButton.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            enviarManutButton.ForeColor = Color.White;
+            enviarManutButton.ImageAlign = ContentAlignment.MiddleLeft;
+            enviarManutButton.Location = new Point(508, 263);
+            enviarManutButton.Margin = new Padding(3, 2, 3, 2);
+            enviarManutButton.Name = "enviarManutButton";
+            enviarManutButton.Size = new Size(161, 51);
+            enviarManutButton.TabIndex = 44;
+            enviarManutButton.Text = "Enviar para manutenção";
+            enviarManutButton.TextImageRelation = TextImageRelation.ImageBeforeText;
+            enviarManutButton.UseVisualStyleBackColor = false;
+            // 
             // DetalhesAviao
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(762, 338);
+            ClientSize = new Size(756, 349);
+            Controls.Add(enviarManutButton);
             Controls.Add(Special2LabelOutput);
             Controls.Add(Special1LabelOutput);
-            Controls.Add(QuantidadeLabelOutput);
+            Controls.Add(qtdMotoresLabelOutput);
             Controls.Add(AnoLabelOutput);
             Controls.Add(TipoLabelOutput);
             Controls.Add(ManutencaoLabelOutput);
@@ -267,7 +286,7 @@
             Controls.Add(ModeloLabelOutput);
             Controls.Add(Special2Label);
             Controls.Add(Special1Label);
-            Controls.Add(QuantidadeLabel);
+            Controls.Add(qtdMotoresLabel);
             Controls.Add(AnoLabel);
             Controls.Add(TipoLabel);
             Controls.Add(ManutencaoLabel);
@@ -288,7 +307,7 @@
 
         private Label Special2Label;
         private Label Special1Label;
-        private Label QuantidadeLabel;
+        private Label qtdMotoresLabel;
         private Label AnoLabel;
         private Label TipoLabel;
         private Label ManutencaoLabel;
@@ -296,7 +315,7 @@
         private Label CapacidadeLabel;
         private Label MarcaLabel;
         private Label ModeloLabel;
-        private Label QuantidadeLabelOutput;
+        private Label qtdMotoresLabelOutput;
         private Label AnoLabelOutput;
         private Label TipoLabelOutput;
         private Label ManutencaoLabelOutput;
@@ -306,5 +325,6 @@
         private Label ModeloLabelOutput;
         private Label Special2LabelOutput;
         private Label Special1LabelOutput;
+        private Button enviarManutButton;
     }
 }

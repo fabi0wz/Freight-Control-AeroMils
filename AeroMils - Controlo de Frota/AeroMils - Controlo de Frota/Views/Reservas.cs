@@ -28,7 +28,6 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             InitializeComponent();
             retrieveData();
-            InitializeButtons();
         }
 
         private void retrieveData()
@@ -101,12 +100,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             }
         }
 
-        private void InitializeButtons()
-        {
-            /*avioesNextButton.Enabled = listaAvioes.Count > recordsPerPage;
-            avioesPreviousButton.Enabled = false; // Initially, the "Previous" button is disabled
-            */
-        }
 
         private Label FindLabelByName(string labelName)
         {
@@ -130,6 +123,11 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             currentPage++;
             DisplayRecords();
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            retrieveData();
         }
     }
 }

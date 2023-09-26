@@ -14,10 +14,12 @@ namespace AeroMils___Controlo_de_Frota.Views
     public partial class Dashboard : Form
     {
         private SQLiteDBContext dbContext = new SQLiteDBContext();
+        int dayCounter = 0;
 
         public Dashboard()
         {
             InitializeComponent();
+            dataHoje_label.Text = DateTime.Now.ToString("dd/MM/yyyy");
             DataTable avioesEmViagemDataTable = dbContext.GetAvioesEmViagem();
             DataTable fretesATerminarDataTable = dbContext.GetFretesATerminar();
             DataTable manutencoesEmBreveDataTAble = dbContext.GetManutencoesEmBreve();
@@ -27,6 +29,18 @@ namespace AeroMils___Controlo_de_Frota.Views
             dataGridViewManutencoesemBreve.DataSource = manutencoesEmBreveDataTAble;
         }
 
+        private void Mais1dia_button_Click(object sender, EventArgs e)
+        {
+            dayCounter++;
 
+            dataHoje_label.Text = DateTime.Now.AddDays(dayCounter).ToString("dd/MM/yyyy");
+
+        }
+
+        private void Menos1dia_Button_Click(object sender, EventArgs e)
+        {
+            dayCounter--;
+            dataHoje_label.Text = DateTime.Now.AddDays(dayCounter).ToString("dd/MM/yyyy");
+        }
     }
 }

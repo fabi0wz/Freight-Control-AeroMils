@@ -17,16 +17,20 @@ namespace AeroMils___Controlo_de_Frota.Views
         SQLiteDBContext dbContext = new SQLiteDBContext();
         // fields
         private string currentButton = "AeronaveComercial";
-        private string idaVolta = "IdaVolta";
 
         public NovaReserva()
         {
             InitializeComponent();
             dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
+            valorFreteLabel.Hide();
+            Valor_label.Hide();
         }
 
         private void VooComercial_button_Click(object sender, EventArgs e)
         {
+            valorFreteLabel.Hide();
+            Valor_label.Hide();
+
             currentButton = "AeronaveComercial";
             resetColors();
             VooComercial_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -41,6 +45,9 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooParticular_button_Click(object sender, EventArgs e)
         {
+            valorFreteLabel.Show();
+            Valor_label.Show();
+
             currentButton = "AeronaveParticular";
             resetColors();
             VooParticular_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -53,6 +60,9 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void VooMercadoria_button_Click(object sender, EventArgs e)
         {
+            valorFreteLabel.Show();
+            Valor_label.Show();
+
             currentButton = "AeronaveMercadoria";
             resetColors();
             VooMercadoria_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -61,10 +71,14 @@ namespace AeroMils___Controlo_de_Frota.Views
 
             dbContext.getAvailablePlanes(listaAvioesInput, currentButton);
             verificarDisponiveis(listaAvioesInput);
+
         }
 
         private void Avionetas_button_Click(object sender, EventArgs e)
         {
+            valorFreteLabel.Show();
+            Valor_label.Show();
+
             currentButton = "Avioneta";
             resetColors();
             Avionetas_button.BackColor = Color.FromArgb(255, 98, 45);
@@ -75,20 +89,6 @@ namespace AeroMils___Controlo_de_Frota.Views
             verificarDisponiveis(listaAvioesInput);
         }
 
-        private void IdaVolta_button_Click(object sender, EventArgs e)
-        {
-            idaVolta = "IdaVolta";
-            IdaVolta_button.BackColor = Color.FromArgb(255, 98, 45);
-            SoIda_button.BackColor = Color.FromArgb(54, 53, 67);
-        }
-
-        private void SoIda_button_Click(object sender, EventArgs e)
-        {
-            idaVolta = "SoIda";
-            SoIda_button.BackColor = Color.FromArgb(255, 98, 45);
-            IdaVolta_button.BackColor = Color.FromArgb(54, 53, 67);
-        }
-
         private void Reservar_button_Click(object sender, EventArgs e)
         {
             while (!validations())
@@ -96,6 +96,10 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return;
             }
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
             string nomeCliente = nomeClienteInput.Text;
             string origem = localPartidaInput.Text;
             string destino = localDestinoInput.Text;
@@ -115,6 +119,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 dbContext.ChangePlaneStatus(id_aviao);
                 this.Close();
             }
+ 
         }
 
         private void resetColors()
@@ -161,11 +166,13 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         public void verificarDisponiveis(ComboBox listaAvioesInput)
         {
-            if(listaAvioesInput.Items.Count == 0)
+            if (listaAvioesInput.Items.Count == 0)
             {
                 MessageBox.Show("Não existem aeronaves disponíveis para o tipo de voo selecionado.");
             }
         }
+
+
 
     }
 }
