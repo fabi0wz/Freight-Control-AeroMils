@@ -62,7 +62,6 @@ C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\Aer
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.HistoricoReservas.resources
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.InserirAviao.resources
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Manutencao.resources
-C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.NovaManutencao.resources
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.NovaReserva.resources
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Reservas.resources
 C:\Users\Fabi0\Desktop\Freight-Control-AeroMils\AeroMils - Controlo de Frota\AeroMils - Controlo de Frota\obj\Debug\net7.0-windows\AeroMils___Controlo_de_Frota.Views.Sobre.resources

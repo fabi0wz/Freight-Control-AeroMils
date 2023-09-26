@@ -267,6 +267,7 @@
             enviarManutButton.Text = "Enviar para manutenção";
             enviarManutButton.TextImageRelation = TextImageRelation.ImageBeforeText;
             enviarManutButton.UseVisualStyleBackColor = false;
+            enviarManutButton.Click += enviarManutButton_Click;
             // 
             // DetalhesAviao
             // 

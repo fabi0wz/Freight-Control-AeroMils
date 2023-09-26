@@ -9,6 +9,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Form1 : Form
     {
+
         // fields
         private Button currentButton = null!;
         private Form activeForm = null!;
@@ -141,22 +142,12 @@ namespace AeroMils___Controlo_de_Frota.Views
             CloseExpanded();
         }
 
-        private void button_alertas_Click(object sender, EventArgs e)
-        {
-            OpenChildForm(new Views.Alertas(), sender);
-
-            CloseExpanded();
-        }
-
         private void button_sobre_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Views.Sobre(), sender);
 
             CloseExpanded();
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
         }
 
         private void button_InserirAviao_Click(object sender, EventArgs e)

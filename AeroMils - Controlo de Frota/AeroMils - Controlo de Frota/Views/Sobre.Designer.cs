@@ -36,29 +36,35 @@
             panel1 = new Panel();
             Next_button = new Button();
             panel2 = new Panel();
-            panel3 = new Panel();
-            pictureBox10 = new PictureBox();
-            pictureBox9 = new PictureBox();
-            pictureBox8 = new PictureBox();
             pictureBox7 = new PictureBox();
             pictureBox6 = new PictureBox();
             pictureBox5 = new PictureBox();
             pictureBox4 = new PictureBox();
             pictureBox3 = new PictureBox();
+            panel3 = new Panel();
+            pictureBox10 = new PictureBox();
+            pictureBox9 = new PictureBox();
+            pictureBox8 = new PictureBox();
             Previous_button = new Button();
+            panel0 = new Panel();
+            label5 = new Label();
+            label4 = new Label();
+            pictureBox11 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
-            panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).BeginInit();
+            panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
+            panel0.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // pictureBox1
@@ -153,46 +159,6 @@
             panel2.Size = new Size(1002, 639);
             panel2.TabIndex = 6;
             // 
-            // panel3
-            // 
-            panel3.Controls.Add(pictureBox10);
-            panel3.Controls.Add(pictureBox9);
-            panel3.Controls.Add(pictureBox8);
-            panel3.Location = new Point(27, 12);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(1002, 639);
-            panel3.TabIndex = 7;
-            // 
-            // pictureBox10
-            // 
-            pictureBox10.Image = Properties.Resources.meme81;
-            pictureBox10.Location = new Point(561, 23);
-            pictureBox10.Name = "pictureBox10";
-            pictureBox10.Size = new Size(398, 593);
-            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox10.TabIndex = 2;
-            pictureBox10.TabStop = false;
-            // 
-            // pictureBox9
-            // 
-            pictureBox9.Image = Properties.Resources.meme71;
-            pictureBox9.Location = new Point(22, 392);
-            pictureBox9.Name = "pictureBox9";
-            pictureBox9.Size = new Size(497, 202);
-            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox9.TabIndex = 1;
-            pictureBox9.TabStop = false;
-            // 
-            // pictureBox8
-            // 
-            pictureBox8.Image = Properties.Resources.meme62;
-            pictureBox8.Location = new Point(22, 14);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(497, 329);
-            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox8.TabIndex = 0;
-            pictureBox8.TabStop = false;
-            // 
             // pictureBox7
             // 
             pictureBox7.Image = Properties.Resources.meme5;
@@ -243,6 +209,46 @@
             pictureBox3.TabIndex = 0;
             pictureBox3.TabStop = false;
             // 
+            // panel3
+            // 
+            panel3.Controls.Add(pictureBox10);
+            panel3.Controls.Add(pictureBox9);
+            panel3.Controls.Add(pictureBox8);
+            panel3.Location = new Point(27, 12);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(1002, 639);
+            panel3.TabIndex = 7;
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = Properties.Resources.meme81;
+            pictureBox10.Location = new Point(561, 23);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new Size(398, 593);
+            pictureBox10.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox10.TabIndex = 2;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.Image = Properties.Resources.meme71;
+            pictureBox9.Location = new Point(22, 392);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(497, 202);
+            pictureBox9.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox9.TabIndex = 1;
+            pictureBox9.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.Image = Properties.Resources.meme62;
+            pictureBox8.Location = new Point(22, 14);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(497, 329);
+            pictureBox8.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox8.TabIndex = 0;
+            pictureBox8.TabStop = false;
+            // 
             // Previous_button
             // 
             Previous_button.BackColor = Color.FromArgb(54, 53, 67);
@@ -261,11 +267,52 @@
             Previous_button.UseVisualStyleBackColor = false;
             Previous_button.Click += Previous_button_Click;
             // 
+            // panel0
+            // 
+            panel0.Controls.Add(label5);
+            panel0.Controls.Add(label4);
+            panel0.Controls.Add(pictureBox11);
+            panel0.Location = new Point(27, 12);
+            panel0.Name = "panel0";
+            panel0.Size = new Size(1002, 639);
+            panel0.TabIndex = 8;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label5.Location = new Point(344, 305);
+            label5.Name = "label5";
+            label5.Size = new Size(623, 47);
+            label5.TabIndex = 2;
+            label5.Text = "primeira coisa que o User faz é clicar";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 26.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Location = new Point(344, 255);
+            label4.Name = "label4";
+            label4.Size = new Size(554, 47);
+            label4.TabIndex = 1;
+            label4.Text = "Quando dizes para não clicar e a";
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Image = Properties.Resources.meme9;
+            pictureBox11.Location = new Point(33, 106);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new Size(305, 397);
+            pictureBox11.SizeMode = PictureBoxSizeMode.Zoom;
+            pictureBox11.TabIndex = 0;
+            pictureBox11.TabStop = false;
+            // 
             // Sobre
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1210, 663);
+            Controls.Add(panel0);
             Controls.Add(panel3);
             Controls.Add(Previous_button);
             Controls.Add(panel2);
@@ -279,15 +326,18 @@
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
-            panel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox6).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox3).EndInit();
+            panel3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
+            panel0.ResumeLayout(false);
+            panel0.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
         }
 
@@ -311,5 +361,9 @@
         private PictureBox pictureBox10;
         private PictureBox pictureBox9;
         private PictureBox pictureBox8;
+        private Panel panel0;
+        private Label label5;
+        private Label label4;
+        private PictureBox pictureBox11;
     }
 }

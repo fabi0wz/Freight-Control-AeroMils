@@ -14,7 +14,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         private int recordsPerPage = 7;
         private Empresa empresa;
         private List<Aviao> listaAvioes;
-        private bool isfiltered = false;
+
 
         public Avioes()
         {
@@ -305,44 +305,61 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void aviaoLinha1EstadoChange_Click(object sender, EventArgs e)
         {
+            int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
 
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha1ID.Text)); ;
+            aviaoLinha1Estado.Text = aviaoLinha1Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha2EstadoChange_Click(object sender, EventArgs e)
         {
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha2ID.Text));
+            int id = aviaoLinha2ID.Text == "" ? 0 : int.Parse(aviaoLinha2ID.Text);
+
+            aviaoLinha2Estado.Text = aviaoLinha2Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha3EstadoChange_Click(object sender, EventArgs e)
         {
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha3ID.Text));
+            int id = aviaoLinha3ID.Text == "" ? 0 : int.Parse(aviaoLinha3ID.Text);
+
+            aviaoLinha3Estado.Text = aviaoLinha3Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha4EstadoChange_Click(object sender, EventArgs e)
         {
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha4ID.Text));
+            int id = aviaoLinha4ID.Text == "" ? 0 : int.Parse(aviaoLinha4ID.Text);
+
+            aviaoLinha4Estado.Text = aviaoLinha4Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha5EstadoChange_Click(object sender, EventArgs e)
         {
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha5ID.Text));
+            int id = aviaoLinha5ID.Text == "" ? 0 : int.Parse(aviaoLinha5ID.Text);
+
+            aviaoLinha5Estado.Text = aviaoLinha5Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha6EstadoChange_Click(object sender, EventArgs e)
         {
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha6ID.Text));
+            int id = aviaoLinha6ID.Text == "" ? 0 : int.Parse(aviaoLinha6ID.Text);
+
+            aviaoLinha6Estado.Text = aviaoLinha6Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
+
+            dbContext.ChangePlaneStatus(id);
         }
 
         private void aviaoLinha7EstadoChange_Click(object sender, EventArgs e)
         {
 
-            alterarEstadoAviao(Convert.ToInt32(aviaoLinha7ID.Text));
-
-        }
-
-        private void alterarEstadoAviao(int id_aviao)
-        {
             int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
 
             aviaoLinha7Estado.Text = aviaoLinha7Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
@@ -352,20 +369,11 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
-            filterComboBox1();
+            filterResults();
         }
 
         private void filterComboBox1()
         {
-            retrieveData();
-
-            isfiltered = true;
-
-            if (comboBox1.Text == "Todos")
-            {
-                isfiltered = false;
-                retrieveData();
-            }
 
             if (comboBox1.Text == "Em viagem")
             {
@@ -380,6 +388,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             {
                 DisplayRecords();
             }
+
             else
             {
                 MessageBox.Show("Não existem registos com esse filtro");
@@ -388,31 +397,17 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return;
             }
 
-            if (isfiltered)
-            {
-                filterComboBox2();
-            }
-
             DisplayRecords();
         }
 
         private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
-            filterComboBox2();
+            filterResults();
         }
 
         private void filterComboBox2()
         {
-            retrieveData();
-
-            isfiltered = true;
-
-            if (comboBox2.Text == "Todos")
-            {
-                isfiltered = false;
-                retrieveData();
-            }
 
             if (comboBox2.Text == "Comercial")
             {
@@ -435,6 +430,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             {
                 DisplayRecords();
             }
+
             else
             {
                 MessageBox.Show("Não existem registos com esse filtro");
@@ -444,12 +440,40 @@ namespace AeroMils___Controlo_de_Frota.Views
                 return;
             }
 
-            if (isfiltered)
+            DisplayRecords();
+        }
+
+        private void filterResults()
+        {
+            bool val1 = (comboBox1.Text == "Todos" || comboBox1.Text == "");
+            bool val2 = (comboBox2.Text == "Todos" || comboBox2.Text == "");
+
+            if(val1 && val2)
             {
+                retrieveData();
+                DisplayRecords();
+                return;
+            }
+
+            if (!val1)
+            {
+                retrieveData();
                 filterComboBox1();
             }
 
-            DisplayRecords();
+            if (!val2)
+            {
+                retrieveData();
+                filterComboBox2();
+            }
+
+            if(!val1 && !val2)
+            {
+                retrieveData();
+                filterComboBox1();
+                filterComboBox2();
+            }
+            
         }
     }
 }

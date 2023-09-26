@@ -173,6 +173,86 @@ namespace AeroMils___Controlo_de_Frota.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_24 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-24", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_241 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-241", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_242 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-242", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_243 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-243", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_244 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-244", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_245 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-245", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_246 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-246", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_sorting_arrows_horizontal_247 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-sorting-arrows-horizontal-247", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Manutencao {
             get {
                 object obj = ResourceManager.GetObject("Manutencao", resourceCulture);
@@ -286,6 +366,16 @@ namespace AeroMils___Controlo_de_Frota.Properties {
         internal static System.Drawing.Bitmap meme81 {
             get {
                 object obj = ResourceManager.GetObject("meme81", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap meme9 {
+            get {
+                object obj = ResourceManager.GetObject("meme9", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
