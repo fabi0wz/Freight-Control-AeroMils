@@ -33,8 +33,6 @@
             ExportCSV_button = new Button();
             SobreContainer = new Panel();
             button_sobre = new Button();
-            AlertasContainer = new Panel();
-            button_alertas = new Button();
             ManutencaoContainer = new Panel();
             button_HistoricoManutencao = new Button();
             button_manutencao = new Button();
@@ -55,7 +53,6 @@
             ManutencaoTimer = new System.Windows.Forms.Timer(components);
             panel_sidebar.SuspendLayout();
             SobreContainer.SuspendLayout();
-            AlertasContainer.SuspendLayout();
             ManutencaoContainer.SuspendLayout();
             ReservasContainer.SuspendLayout();
             AvioesContainer.SuspendLayout();
@@ -69,7 +66,6 @@
             panel_sidebar.BackColor = Color.FromArgb(54, 53, 67);
             panel_sidebar.Controls.Add(ExportCSV_button);
             panel_sidebar.Controls.Add(SobreContainer);
-            panel_sidebar.Controls.Add(AlertasContainer);
             panel_sidebar.Controls.Add(ManutencaoContainer);
             panel_sidebar.Controls.Add(ReservasContainer);
             panel_sidebar.Controls.Add(AvioesContainer);
@@ -126,40 +122,10 @@
             button_sobre.Name = "button_sobre";
             button_sobre.Size = new Size(277, 41);
             button_sobre.TabIndex = 1;
-            button_sobre.Text = "Sobre";
+            button_sobre.Text = "NÃO CLICAR !!!";
             button_sobre.TextImageRelation = TextImageRelation.ImageBeforeText;
             button_sobre.UseVisualStyleBackColor = true;
             button_sobre.Click += button_sobre_Click;
-            // 
-            // AlertasContainer
-            // 
-            AlertasContainer.BackColor = Color.FromArgb(54, 53, 67);
-            AlertasContainer.Controls.Add(button_alertas);
-            AlertasContainer.Dock = DockStyle.Top;
-            AlertasContainer.Location = new Point(0, 355);
-            AlertasContainer.MaximumSize = new Size(277, 41);
-            AlertasContainer.MinimumSize = new Size(277, 41);
-            AlertasContainer.Name = "AlertasContainer";
-            AlertasContainer.Size = new Size(277, 41);
-            AlertasContainer.TabIndex = 2;
-            // 
-            // button_alertas
-            // 
-            button_alertas.FlatAppearance.BorderSize = 0;
-            button_alertas.FlatStyle = FlatStyle.Flat;
-            button_alertas.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point);
-            button_alertas.ForeColor = Color.White;
-            button_alertas.Image = Properties.Resources.Alertas;
-            button_alertas.ImageAlign = ContentAlignment.MiddleLeft;
-            button_alertas.Location = new Point(0, 0);
-            button_alertas.Margin = new Padding(3, 1, 3, 1);
-            button_alertas.Name = "button_alertas";
-            button_alertas.Size = new Size(277, 41);
-            button_alertas.TabIndex = 1;
-            button_alertas.Text = "Alertas";
-            button_alertas.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button_alertas.UseVisualStyleBackColor = true;
-            button_alertas.Click += button_alertas_Click;
             // 
             // ManutencaoContainer
             // 
@@ -426,7 +392,6 @@
             FormClosing += Form1_FormClosing;
             panel_sidebar.ResumeLayout(false);
             SobreContainer.ResumeLayout(false);
-            AlertasContainer.ResumeLayout(false);
             ManutencaoContainer.ResumeLayout(false);
             ReservasContainer.ResumeLayout(false);
             AvioesContainer.ResumeLayout(false);
@@ -441,7 +406,6 @@
         private Panel panel_sidebar;
         private Button button_dashboard;
         private Panel panel_icone;
-        private Button button_alertas;
         private Button button_manutencao;
         private Button button_reservas;
         private Button button_avioes;
@@ -459,7 +423,6 @@
         private System.Windows.Forms.Timer ReservasTimer;
         private System.Windows.Forms.Timer ManutencaoTimer;
         private Button button_HistoricoManutencao;
-        private Panel AlertasContainer;
         private Panel DashboardContainer;
         private Panel SobreContainer;
         private Button ExportCSV_button;

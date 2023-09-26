@@ -37,13 +37,8 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void removeActive()
         {
-            for (int j = 0; j < listaManutencoes.Count; j++)
-            {
-                if (listaManutencoes[j].data_fim.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) > 0)
-                {
-                    listaManutencoes.RemoveAt(j);
-                }
-            }
+            DateTime dataAtual = DateTime.Now;
+            listaManutencoes.RemoveAll(listaManutencoes => DateTime.Parse(listaManutencoes.data_fim) > dataAtual);
         }
 
         private void DisplayRecords()

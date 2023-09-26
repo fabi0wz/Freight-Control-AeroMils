@@ -12,13 +12,12 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Sobre : Form
     {
-        int pageNumber = 1;
+        int pageNumber = 0;
 
         public Sobre()
         {
             InitializeComponent();
-            panel2.Visible = false;
-            panel3.Visible = false;
+            panel0.Visible = true;
         }
 
         private void Next_button_Click(object sender, EventArgs e)
@@ -30,11 +29,20 @@ namespace AeroMils___Controlo_de_Frota.Views
                 pageNumber = 3;
             }
 
+            if (pageNumber == 0)
+            {
+                panel0.Visible = true;
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
+            }
+
             if (pageNumber == 1)
             {
                 panel1.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
+                panel0.Visible = false;
 
             }
 
@@ -43,6 +51,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 panel2.Visible = true;
                 panel1.Visible = false;
                 panel3.Visible = false;
+                panel0.Visible = false;
             }
 
             if (pageNumber == 3)
@@ -50,6 +59,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 panel3.Visible = true;
                 panel1.Visible = false;
                 panel2.Visible = false;
+                panel0.Visible = false;
             }
 
         }
@@ -58,9 +68,17 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             pageNumber--;
 
-            if (pageNumber < 1)
+            if (pageNumber < 0)
             {
-                pageNumber = 1;
+                pageNumber = 0;
+            }
+
+            if (pageNumber == 0)
+            {
+                panel0.Visible = true;
+                panel1.Visible = false;
+                panel2.Visible = false;
+                panel3.Visible = false;
             }
 
             if (pageNumber == 1)
@@ -68,6 +86,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 panel1.Visible = true;
                 panel2.Visible = false;
                 panel3.Visible = false;
+                panel0.Visible = false;
             }
 
             if (pageNumber == 2)
@@ -75,6 +94,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 panel2.Visible = true;
                 panel1.Visible = false;
                 panel3.Visible = false;
+                panel0.Visible = false;
             }
 
             if (pageNumber == 3)
@@ -82,7 +102,10 @@ namespace AeroMils___Controlo_de_Frota.Views
                 panel3.Visible = true;
                 panel1.Visible = false;
                 panel2.Visible = false;
+                panel0.Visible = false;
             }
         }
+
+
     }
 }
