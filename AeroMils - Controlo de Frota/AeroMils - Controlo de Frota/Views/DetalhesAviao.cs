@@ -17,10 +17,11 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class DetalhesAviao : Form
     {
-
+        SQLiteDBContext dbContext = new SQLiteDBContext();  
         public DetalhesAviao(Aviao aviao)
         {
             InitializeComponent();
+<<<<<<< Updated upstream
 
             TipoLabelOutput.Text = aviao.Tipo;
             MarcaLabelOutput.Text = aviao.marca;
@@ -32,19 +33,62 @@ namespace AeroMils___Controlo_de_Frota.Views
             ManutencaoLabelOutput.Text = aviao.dataUltimaManutencao.ToString();
 
             switch (aviao.Tipo)
+=======
+            try
+>>>>>>> Stashed changes
             {
-                case "AeronaveComercial":
-                    break;
-                case "AeronaveMercadorias":
+                if (aviao != null)
+                {
+                    TipoLabelOutput.Text = aviao.Tipo;
+                    MarcaLabelOutput.Text = aviao.marca;
+                    ModeloLabelOutput.Text = aviao.modelo;
+                    AutonomiaLabelOutput.Text = aviao.autonomia.ToString();
+                    AnoLabelOutput.Text = aviao.anoFabrico.ToString();
+                    QuantidadeLabelOutput.Text = aviao.qtdMotores.ToString();
+                    CapacidadeLabelOutput.Text = aviao.capacidade_passageiros.ToString();
+                    ManutencaoLabelOutput.Text = aviao.dataUltimaManutencao.ToString();
 
-                    break;
-                case "AeronaveParticular":
+                    switch (aviao.Tipo)
+                    {
+                        case "Aeronave Comercial":
+                            AeronaveComercial aeronaveComercial = (AeronaveComercial)aviao;
+                            dbContext.GetAeronavesComerciaisData(aeronaveComercial.id);
+                            Special1LabelOutput.Text = aeronaveComercial.numeroVoosDia.ToString();
+                            Special2LabelOutput.Text = aeronaveComercial.companhiaAerea;
+                            break;
 
-                    break;
-                case "Avioneta":
+                        case "Aeronave de Mercadorias":
+                            AeronaveMercadorias aeronaveMercadorias = (AeronaveMercadorias)aviao;
+                            dbContext.GetAeronavesMercadoriasData(aeronaveMercadorias.id);
+                            Special1LabelOutput.Text = aeronaveMercadorias.capacidadeCarga.ToString();
+                            Special2LabelOutput.Text = aeronaveMercadorias.valorFrete.ToString();
+                            break;
 
-                    break;
+                        case "Aeronave Particular":
+                            AeronaveParticular aeronaveParticular = (AeronaveParticular)aviao;
+                            dbContext.GetAeroNaveParticularData(aeronaveParticular.id);
+                            Special1LabelOutput.Text = aeronaveParticular.numProprietarios.ToString();
+                            Special2LabelOutput.Text = aeronaveParticular.valorFrete.ToString();
+                            break;
+
+                        case "Avioneta":
+                            Avioneta avioneta = (Avioneta)aviao;
+                            dbContext.GetAvionetaData(avioneta.id);
+                            Special1LabelOutput.Text = avioneta.areaDescolagem.ToString();
+                            Special2LabelOutput.Text = avioneta.valorFrete.ToString();
+                            break;
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("Precisa Selecionar um avião");
+                }
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ocorreu um erro: " + ex.Message);
+            }
+
         }
 
 

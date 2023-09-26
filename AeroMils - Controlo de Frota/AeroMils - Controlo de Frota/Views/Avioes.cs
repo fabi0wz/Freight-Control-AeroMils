@@ -53,6 +53,18 @@ namespace AeroMils___Controlo_de_Frota.Views
             throw new InvalidOperationException($"Label control with name '{labelName}' not found.");
         }
 
+        private Button FindButton(string buttonName)
+        {
+            Control[] controls = this.Controls.Find(buttonName, true);
+
+            if (controls.Length > 0 && controls[0] is Button button)
+            {
+                return button;
+            }
+
+            throw new InvalidOperationException($"Button control with name '{buttonName}' not found.");
+        }
+
 
 
         private void DisplayRecords()
@@ -73,19 +85,24 @@ namespace AeroMils___Controlo_de_Frota.Views
                 string estadoLabelName = $"aviaoLinha{rowNumber}Estado";
                 string tipoLabelName = $"aviaoLinha{rowNumber}Tipo";
                 string dataManutencaoLabelName = $"aviaoLinha{rowNumber}DataManutencao";
+                string estadoChangeLabelName = $"aviaoLinha{rowNumber}EstadoChange";
+                //aviaoLinha7EstadoChange
+
 
                 Label idLabel = FindLabelByName(idLabelName);
                 Label modeloLabel = FindLabelByName(modeloLabelName);
                 Label estadoLabel = FindLabelByName(estadoLabelName);
                 Label tipoLabel = FindLabelByName(tipoLabelName);
                 Label dataManutencaoLabel = FindLabelByName(dataManutencaoLabelName);
+                Button estadoChangeLabel = FindButton(estadoChangeLabelName);
 
                 Aviao aviao = listaAvioes[i];
                 idLabel.Text = aviao.id.ToString();
                 modeloLabel.Text = aviao.marca.ToString();
                 estadoLabel.Text = aviao.estado == false ? "No Hangar" : "Em Viagem";
                 tipoLabel.Text = aviao.Tipo;
-                dataManutencaoLabel.Text = aviao.dataUltimaManutencao.ToString();
+                dataManutencaoLabel.Text = aviao.dataUltimaManutencao.ToString("dd/MM/yyyy");
+                estadoChangeLabel.Visible = true;
             }
 
             // Enable or disable the "Next" and "Previous" buttons based on the index bounds
@@ -96,6 +113,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void clearTable()
         {
+
             for (int rowNumber = 1; rowNumber <= recordsPerPage; rowNumber++)
             {
                 string idLabelName = $"aviaoLinha{rowNumber}ID";
@@ -103,18 +121,21 @@ namespace AeroMils___Controlo_de_Frota.Views
                 string estadoLabelName = $"aviaoLinha{rowNumber}Estado";
                 string tipoLabelName = $"aviaoLinha{rowNumber}Tipo";
                 string dataManutencaoLabelName = $"aviaoLinha{rowNumber}DataManutencao";
+                string estadoChangeLabelName = $"aviaoLinha{rowNumber}EstadoChange";
 
                 Label idLabel = FindLabelByName(idLabelName);
                 Label modeloLabel = FindLabelByName(modeloLabelName);
                 Label estadoLabel = FindLabelByName(estadoLabelName);
                 Label tipoLabel = FindLabelByName(tipoLabelName);
                 Label dataManutencaoLabel = FindLabelByName(dataManutencaoLabelName);
+                Button estadoChangeLabel = FindButton(estadoChangeLabelName);
 
                 idLabel.Text = "";
                 modeloLabel.Text = "";
                 estadoLabel.Text = "";
                 tipoLabel.Text = "";
                 dataManutencaoLabel.Text = "";
+                estadoChangeLabel.Visible = false;
             }
         }
 
@@ -224,177 +245,107 @@ namespace AeroMils___Controlo_de_Frota.Views
         private void aviaoLine1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
+            verDetalhesAviao(id);
 
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
         }
 
         private void aviaoLine2_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha2ID.Text == "" ? 0 : int.Parse(aviaoLinha2ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine3_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha3ID.Text == "" ? 0 : int.Parse(aviaoLinha3ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine4_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha4ID.Text == "" ? 0 : int.Parse(aviaoLinha4ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine5_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha5ID.Text == "" ? 0 : int.Parse(aviaoLinha5ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine6_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha6ID.Text == "" ? 0 : int.Parse(aviaoLinha6ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
         private void aviaoLine7_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
-            Aviao aviao = dbContext.GetAviaoById(id);
-
-            Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
-            detalhesAviao.Show();
+            verDetalhesAviao(id);
         }
 
+
+        private void verDetalhesAviao(int id)
+        {
+            Aviao aviao = id == 0 ? null : dbContext.GetAviaoById(id);
+
+            if (aviao != null)
+            {
+                Views.DetalhesAviao detalhesAviao = new Views.DetalhesAviao(aviao);
+                detalhesAviao.Show();
+            }
+            else
+            {
+                MessageBox.Show("Precisa Selecionar um avião");
+            }
+
+        }
         ///////////////////////////  ESTADO CHANGE   ///////////////////////////
 
         private void aviaoLinha1EstadoChange_Click(object sender, EventArgs e)
         {
 
-            int id = aviaoLinha1ID.Text == "" ? 0 : int.Parse(aviaoLinha1ID.Text);
-
-            if (aviaoLinha1Estado.Text == "Em Viagem")
-            {
-                aviaoLinha1Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha1Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha1ID.Text)); ;
         }
 
         private void aviaoLinha2EstadoChange_Click(object sender, EventArgs e)
         {
-            int id = aviaoLinha2ID.Text == "" ? 0 : int.Parse(aviaoLinha2ID.Text);
-
-            if (aviaoLinha2Estado.Text == "Em Viagem")
-            {
-                aviaoLinha2Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha2Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha2ID.Text));
         }
 
         private void aviaoLinha3EstadoChange_Click(object sender, EventArgs e)
         {
-            int id = aviaoLinha3ID.Text == "" ? 0 : int.Parse(aviaoLinha3ID.Text);
-
-            if (aviaoLinha3Estado.Text == "Em Viagem")
-            {
-                aviaoLinha3Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha3Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha3ID.Text));
         }
 
         private void aviaoLinha4EstadoChange_Click(object sender, EventArgs e)
         {
-            int id = aviaoLinha4ID.Text == "" ? 0 : int.Parse(aviaoLinha4ID.Text);
-
-            if (aviaoLinha4Estado.Text == "Em Viagem")
-            {
-                aviaoLinha4Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha4Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha4ID.Text));
         }
 
         private void aviaoLinha5EstadoChange_Click(object sender, EventArgs e)
         {
-            int id = aviaoLinha5ID.Text == "" ? 0 : int.Parse(aviaoLinha5ID.Text);
-
-            if (aviaoLinha5Estado.Text == "Em Viagem")
-            {
-                aviaoLinha5Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha5Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha5ID.Text));
         }
 
         private void aviaoLinha6EstadoChange_Click(object sender, EventArgs e)
         {
-            int id = aviaoLinha6ID.Text == "" ? 0 : int.Parse(aviaoLinha6ID.Text);
-
-            if (aviaoLinha6Estado.Text == "Em Viagem")
-            {
-                aviaoLinha6Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha6Estado.Text = "Em Viagem";
-            }
-
-            dbContext.ChangePlaneStatus(id);
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha6ID.Text));
         }
 
         private void aviaoLinha7EstadoChange_Click(object sender, EventArgs e)
         {
+
+            alterarEstadoAviao(Convert.ToInt32(aviaoLinha7ID.Text));
+
+        }
+
+        private void alterarEstadoAviao(int id_aviao)
+        {
             int id = aviaoLinha7ID.Text == "" ? 0 : int.Parse(aviaoLinha7ID.Text);
 
-            if (aviaoLinha7Estado.Text == "Em Viagem")
-            {
-                aviaoLinha7Estado.Text = "No Hangar";
-            }
-            else
-            {
-                aviaoLinha7Estado.Text = "Em Viagem";
-            }
+            aviaoLinha7Estado.Text = aviaoLinha7Estado.Text == "Em Viagem" ? "No Hangar" : "Em Viagem";
 
             dbContext.ChangePlaneStatus(id);
         }
