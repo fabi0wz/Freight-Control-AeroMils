@@ -532,9 +532,9 @@
             headerNomeCliente.Location = new Point(414, 16);
             headerNomeCliente.Margin = new Padding(2, 0, 2, 0);
             headerNomeCliente.Name = "headerNomeCliente";
-            headerNomeCliente.Size = new Size(142, 30);
+            headerNomeCliente.Size = new Size(146, 30);
             headerNomeCliente.TabIndex = 2;
-            headerNomeCliente.Text = "Nome cliente";
+            headerNomeCliente.Text = "Nome Cliente";
             // 
             // headerIDreserva
             // 

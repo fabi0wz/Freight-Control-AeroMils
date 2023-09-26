@@ -81,9 +81,6 @@
             reservaLinha5IDReserva = new Label();
             reservaNextButton = new Button();
             reservaPreviousButton = new Button();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            filtrarPor_label = new Label();
             ((System.ComponentModel.ISupportInitialize)sQLiteDBContextBindingSource).BeginInit();
             reservaBGPanel.SuspendLayout();
             reservaLine2.SuspendLayout();
@@ -111,10 +108,10 @@
             reservaBGPanel.Controls.Add(panel2);
             reservaBGPanel.Controls.Add(reservaLine3);
             reservaBGPanel.Controls.Add(reservaLine5);
-            reservaBGPanel.Location = new Point(66, 95);
+            reservaBGPanel.Location = new Point(107, 51);
             reservaBGPanel.Margin = new Padding(2, 3, 2, 3);
             reservaBGPanel.Name = "reservaBGPanel";
-            reservaBGPanel.Size = new Size(1063, 525);
+            reservaBGPanel.Size = new Size(990, 525);
             reservaBGPanel.TabIndex = 0;
             // 
             // reservaLine2
@@ -129,14 +126,14 @@
             reservaLine2.Location = new Point(0, 135);
             reservaLine2.Margin = new Padding(2, 3, 2, 3);
             reservaLine2.Name = "reservaLine2";
-            reservaLine2.Size = new Size(1063, 65);
+            reservaLine2.Size = new Size(990, 65);
             reservaLine2.TabIndex = 7;
             // 
             // reservaLinha2DataFim
             // 
             reservaLinha2DataFim.AutoSize = true;
             reservaLinha2DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha2DataFim.Location = new Point(879, 16);
+            reservaLinha2DataFim.Location = new Point(834, 16);
             reservaLinha2DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha2DataFim.Name = "reservaLinha2DataFim";
             reservaLinha2DataFim.Size = new Size(58, 21);
@@ -147,7 +144,7 @@
             // 
             reservaLinha2DataInicio.AutoSize = true;
             reservaLinha2DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha2DataInicio.Location = new Point(675, 16);
+            reservaLinha2DataInicio.Location = new Point(642, 16);
             reservaLinha2DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha2DataInicio.Name = "reservaLinha2DataInicio";
             reservaLinha2DataInicio.Size = new Size(58, 21);
@@ -158,7 +155,7 @@
             // 
             reservaLinha2NomeCliente.AutoSize = true;
             reservaLinha2NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha2NomeCliente.Location = new Point(435, 16);
+            reservaLinha2NomeCliente.Location = new Point(413, 16);
             reservaLinha2NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha2NomeCliente.Name = "reservaLinha2NomeCliente";
             reservaLinha2NomeCliente.Size = new Size(58, 21);
@@ -169,7 +166,7 @@
             // 
             reservaLinha2IDAviao.AutoSize = true;
             reservaLinha2IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha2IDAviao.Location = new Point(259, 16);
+            reservaLinha2IDAviao.Location = new Point(220, 16);
             reservaLinha2IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha2IDAviao.Name = "reservaLinha2IDAviao";
             reservaLinha2IDAviao.Size = new Size(58, 21);
@@ -180,7 +177,7 @@
             // 
             reservaLinha2IDReserva.AutoSize = true;
             reservaLinha2IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha2IDReserva.Location = new Point(59, 16);
+            reservaLinha2IDReserva.Location = new Point(45, 16);
             reservaLinha2IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha2IDReserva.Name = "reservaLinha2IDReserva";
             reservaLinha2IDReserva.Size = new Size(58, 21);
@@ -199,14 +196,14 @@
             reservaLine4.Location = new Point(0, 265);
             reservaLine4.Margin = new Padding(2, 3, 2, 3);
             reservaLine4.Name = "reservaLine4";
-            reservaLine4.Size = new Size(1063, 65);
+            reservaLine4.Size = new Size(990, 65);
             reservaLine4.TabIndex = 8;
             // 
             // reservaLinha4DataFim
             // 
             reservaLinha4DataFim.AutoSize = true;
             reservaLinha4DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha4DataFim.Location = new Point(879, 16);
+            reservaLinha4DataFim.Location = new Point(834, 16);
             reservaLinha4DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha4DataFim.Name = "reservaLinha4DataFim";
             reservaLinha4DataFim.Size = new Size(58, 21);
@@ -217,7 +214,7 @@
             // 
             reservaLinha4DataInicio.AutoSize = true;
             reservaLinha4DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha4DataInicio.Location = new Point(675, 16);
+            reservaLinha4DataInicio.Location = new Point(642, 16);
             reservaLinha4DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha4DataInicio.Name = "reservaLinha4DataInicio";
             reservaLinha4DataInicio.Size = new Size(58, 21);
@@ -228,7 +225,7 @@
             // 
             reservaLinha4NomeCliente.AutoSize = true;
             reservaLinha4NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha4NomeCliente.Location = new Point(435, 16);
+            reservaLinha4NomeCliente.Location = new Point(413, 16);
             reservaLinha4NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha4NomeCliente.Name = "reservaLinha4NomeCliente";
             reservaLinha4NomeCliente.Size = new Size(58, 21);
@@ -239,7 +236,7 @@
             // 
             reservaLinha4IDAviao.AutoSize = true;
             reservaLinha4IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha4IDAviao.Location = new Point(259, 16);
+            reservaLinha4IDAviao.Location = new Point(220, 16);
             reservaLinha4IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha4IDAviao.Name = "reservaLinha4IDAviao";
             reservaLinha4IDAviao.Size = new Size(58, 21);
@@ -250,7 +247,7 @@
             // 
             reservaLinha4IDReserva.AutoSize = true;
             reservaLinha4IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha4IDReserva.Location = new Point(59, 16);
+            reservaLinha4IDReserva.Location = new Point(45, 16);
             reservaLinha4IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha4IDReserva.Name = "reservaLinha4IDReserva";
             reservaLinha4IDReserva.Size = new Size(58, 21);
@@ -269,14 +266,14 @@
             reservaLine7.Location = new Point(0, 460);
             reservaLine7.Margin = new Padding(2, 3, 2, 3);
             reservaLine7.Name = "reservaLine7";
-            reservaLine7.Size = new Size(1063, 65);
+            reservaLine7.Size = new Size(990, 65);
             reservaLine7.TabIndex = 10;
             // 
             // reservaLinha7DataFim
             // 
             reservaLinha7DataFim.AutoSize = true;
             reservaLinha7DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha7DataFim.Location = new Point(879, 16);
+            reservaLinha7DataFim.Location = new Point(834, 16);
             reservaLinha7DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha7DataFim.Name = "reservaLinha7DataFim";
             reservaLinha7DataFim.Size = new Size(58, 21);
@@ -287,7 +284,7 @@
             // 
             reservaLinha7DataInicio.AutoSize = true;
             reservaLinha7DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha7DataInicio.Location = new Point(675, 16);
+            reservaLinha7DataInicio.Location = new Point(642, 16);
             reservaLinha7DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha7DataInicio.Name = "reservaLinha7DataInicio";
             reservaLinha7DataInicio.Size = new Size(58, 21);
@@ -298,7 +295,7 @@
             // 
             reservaLinha7NomeCliente.AutoSize = true;
             reservaLinha7NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha7NomeCliente.Location = new Point(435, 16);
+            reservaLinha7NomeCliente.Location = new Point(413, 16);
             reservaLinha7NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha7NomeCliente.Name = "reservaLinha7NomeCliente";
             reservaLinha7NomeCliente.Size = new Size(58, 21);
@@ -309,7 +306,7 @@
             // 
             reservaLinha7IDAviao.AutoSize = true;
             reservaLinha7IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha7IDAviao.Location = new Point(259, 16);
+            reservaLinha7IDAviao.Location = new Point(220, 16);
             reservaLinha7IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha7IDAviao.Name = "reservaLinha7IDAviao";
             reservaLinha7IDAviao.Size = new Size(58, 21);
@@ -320,7 +317,7 @@
             // 
             reservaLinha7IDReserva.AutoSize = true;
             reservaLinha7IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha7IDReserva.Location = new Point(59, 16);
+            reservaLinha7IDReserva.Location = new Point(45, 16);
             reservaLinha7IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha7IDReserva.Name = "reservaLinha7IDReserva";
             reservaLinha7IDReserva.Size = new Size(58, 21);
@@ -339,14 +336,14 @@
             reservaLine1.Location = new Point(0, 70);
             reservaLine1.Margin = new Padding(2, 3, 2, 3);
             reservaLine1.Name = "reservaLine1";
-            reservaLine1.Size = new Size(1063, 65);
+            reservaLine1.Size = new Size(990, 65);
             reservaLine1.TabIndex = 5;
             // 
             // reservaLinha1DataFim
             // 
             reservaLinha1DataFim.AutoSize = true;
             reservaLinha1DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha1DataFim.Location = new Point(879, 16);
+            reservaLinha1DataFim.Location = new Point(834, 16);
             reservaLinha1DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha1DataFim.Name = "reservaLinha1DataFim";
             reservaLinha1DataFim.Size = new Size(58, 21);
@@ -357,7 +354,7 @@
             // 
             reservaLinha1DataInicio.AutoSize = true;
             reservaLinha1DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha1DataInicio.Location = new Point(675, 16);
+            reservaLinha1DataInicio.Location = new Point(642, 16);
             reservaLinha1DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha1DataInicio.Name = "reservaLinha1DataInicio";
             reservaLinha1DataInicio.Size = new Size(58, 21);
@@ -368,7 +365,7 @@
             // 
             reservaLinha1NomeCliente.AutoSize = true;
             reservaLinha1NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha1NomeCliente.Location = new Point(435, 16);
+            reservaLinha1NomeCliente.Location = new Point(413, 16);
             reservaLinha1NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha1NomeCliente.Name = "reservaLinha1NomeCliente";
             reservaLinha1NomeCliente.Size = new Size(58, 21);
@@ -379,7 +376,7 @@
             // 
             reservaLinha1IDAviao.AutoSize = true;
             reservaLinha1IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha1IDAviao.Location = new Point(259, 16);
+            reservaLinha1IDAviao.Location = new Point(220, 16);
             reservaLinha1IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha1IDAviao.Name = "reservaLinha1IDAviao";
             reservaLinha1IDAviao.Size = new Size(58, 21);
@@ -390,7 +387,7 @@
             // 
             reservaLinha1IDReserva.AutoSize = true;
             reservaLinha1IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha1IDReserva.Location = new Point(59, 15);
+            reservaLinha1IDReserva.Location = new Point(45, 16);
             reservaLinha1IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha1IDReserva.Name = "reservaLinha1IDReserva";
             reservaLinha1IDReserva.Size = new Size(58, 21);
@@ -409,14 +406,14 @@
             reservaLine6.Location = new Point(0, 395);
             reservaLine6.Margin = new Padding(2, 3, 2, 3);
             reservaLine6.Name = "reservaLine6";
-            reservaLine6.Size = new Size(1063, 65);
+            reservaLine6.Size = new Size(990, 65);
             reservaLine6.TabIndex = 9;
             // 
             // reservaLinha6DataFim
             // 
             reservaLinha6DataFim.AutoSize = true;
             reservaLinha6DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha6DataFim.Location = new Point(879, 16);
+            reservaLinha6DataFim.Location = new Point(834, 16);
             reservaLinha6DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha6DataFim.Name = "reservaLinha6DataFim";
             reservaLinha6DataFim.Size = new Size(58, 21);
@@ -427,7 +424,7 @@
             // 
             reservaLinha6DataInicio.AutoSize = true;
             reservaLinha6DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha6DataInicio.Location = new Point(675, 16);
+            reservaLinha6DataInicio.Location = new Point(642, 16);
             reservaLinha6DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha6DataInicio.Name = "reservaLinha6DataInicio";
             reservaLinha6DataInicio.Size = new Size(58, 21);
@@ -438,7 +435,7 @@
             // 
             reservaLinha6NomeCliente.AutoSize = true;
             reservaLinha6NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha6NomeCliente.Location = new Point(435, 16);
+            reservaLinha6NomeCliente.Location = new Point(413, 16);
             reservaLinha6NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha6NomeCliente.Name = "reservaLinha6NomeCliente";
             reservaLinha6NomeCliente.Size = new Size(58, 21);
@@ -449,7 +446,7 @@
             // 
             reservaLinha6IDAviao.AutoSize = true;
             reservaLinha6IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha6IDAviao.Location = new Point(259, 16);
+            reservaLinha6IDAviao.Location = new Point(220, 16);
             reservaLinha6IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha6IDAviao.Name = "reservaLinha6IDAviao";
             reservaLinha6IDAviao.Size = new Size(58, 21);
@@ -460,7 +457,7 @@
             // 
             reservaLinha6IDReserva.AutoSize = true;
             reservaLinha6IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha6IDReserva.Location = new Point(59, 16);
+            reservaLinha6IDReserva.Location = new Point(45, 16);
             reservaLinha6IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha6IDReserva.Name = "reservaLinha6IDReserva";
             reservaLinha6IDReserva.Size = new Size(58, 21);
@@ -479,7 +476,7 @@
             panel2.Location = new Point(0, 0);
             panel2.Margin = new Padding(2, 3, 2, 3);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1063, 70);
+            panel2.Size = new Size(990, 70);
             panel2.TabIndex = 1;
             // 
             // headerDataFim
@@ -487,7 +484,7 @@
             headerDataFim.AutoSize = true;
             headerDataFim.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerDataFim.ForeColor = SystemColors.Control;
-            headerDataFim.Location = new Point(880, 16);
+            headerDataFim.Location = new Point(835, 16);
             headerDataFim.Margin = new Padding(2, 0, 2, 0);
             headerDataFim.Name = "headerDataFim";
             headerDataFim.Size = new Size(98, 30);
@@ -499,7 +496,7 @@
             headerDataInicio.AutoSize = true;
             headerDataInicio.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerDataInicio.ForeColor = SystemColors.Control;
-            headerDataInicio.Location = new Point(676, 16);
+            headerDataInicio.Location = new Point(643, 16);
             headerDataInicio.Margin = new Padding(2, 0, 2, 0);
             headerDataInicio.Name = "headerDataInicio";
             headerDataInicio.Size = new Size(114, 30);
@@ -511,7 +508,7 @@
             headerNomeCliente.AutoSize = true;
             headerNomeCliente.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerNomeCliente.ForeColor = SystemColors.Control;
-            headerNomeCliente.Location = new Point(436, 16);
+            headerNomeCliente.Location = new Point(414, 16);
             headerNomeCliente.Margin = new Padding(2, 0, 2, 0);
             headerNomeCliente.Name = "headerNomeCliente";
             headerNomeCliente.Size = new Size(146, 30);
@@ -523,7 +520,7 @@
             headerIDAviao.AutoSize = true;
             headerIDAviao.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerIDAviao.ForeColor = SystemColors.Control;
-            headerIDAviao.Location = new Point(260, 16);
+            headerIDAviao.Location = new Point(221, 16);
             headerIDAviao.Margin = new Padding(2, 0, 2, 0);
             headerIDAviao.Name = "headerIDAviao";
             headerIDAviao.Size = new Size(94, 30);
@@ -535,7 +532,7 @@
             headerIDReserva.AutoSize = true;
             headerIDReserva.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
             headerIDReserva.ForeColor = SystemColors.Control;
-            headerIDReserva.Location = new Point(60, 16);
+            headerIDReserva.Location = new Point(46, 16);
             headerIDReserva.Margin = new Padding(2, 0, 2, 0);
             headerIDReserva.Name = "headerIDReserva";
             headerIDReserva.Size = new Size(115, 30);
@@ -554,14 +551,14 @@
             reservaLine3.Location = new Point(0, 200);
             reservaLine3.Margin = new Padding(2, 3, 2, 3);
             reservaLine3.Name = "reservaLine3";
-            reservaLine3.Size = new Size(1063, 65);
+            reservaLine3.Size = new Size(990, 65);
             reservaLine3.TabIndex = 7;
             // 
             // reservaLinha3DataFim
             // 
             reservaLinha3DataFim.AutoSize = true;
             reservaLinha3DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha3DataFim.Location = new Point(879, 16);
+            reservaLinha3DataFim.Location = new Point(834, 16);
             reservaLinha3DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha3DataFim.Name = "reservaLinha3DataFim";
             reservaLinha3DataFim.Size = new Size(58, 21);
@@ -572,7 +569,7 @@
             // 
             reservaLinha3DataInicio.AutoSize = true;
             reservaLinha3DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha3DataInicio.Location = new Point(675, 16);
+            reservaLinha3DataInicio.Location = new Point(642, 16);
             reservaLinha3DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha3DataInicio.Name = "reservaLinha3DataInicio";
             reservaLinha3DataInicio.Size = new Size(58, 21);
@@ -583,7 +580,7 @@
             // 
             reservaLinha3NomeCliente.AutoSize = true;
             reservaLinha3NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha3NomeCliente.Location = new Point(435, 16);
+            reservaLinha3NomeCliente.Location = new Point(413, 16);
             reservaLinha3NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha3NomeCliente.Name = "reservaLinha3NomeCliente";
             reservaLinha3NomeCliente.Size = new Size(58, 21);
@@ -594,7 +591,7 @@
             // 
             reservaLinha3IDAviao.AutoSize = true;
             reservaLinha3IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha3IDAviao.Location = new Point(259, 16);
+            reservaLinha3IDAviao.Location = new Point(220, 16);
             reservaLinha3IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha3IDAviao.Name = "reservaLinha3IDAviao";
             reservaLinha3IDAviao.Size = new Size(58, 21);
@@ -605,7 +602,7 @@
             // 
             reservaLinha3IDReserva.AutoSize = true;
             reservaLinha3IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha3IDReserva.Location = new Point(59, 16);
+            reservaLinha3IDReserva.Location = new Point(45, 16);
             reservaLinha3IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha3IDReserva.Name = "reservaLinha3IDReserva";
             reservaLinha3IDReserva.Size = new Size(58, 21);
@@ -624,14 +621,14 @@
             reservaLine5.Location = new Point(0, 330);
             reservaLine5.Margin = new Padding(2, 3, 2, 3);
             reservaLine5.Name = "reservaLine5";
-            reservaLine5.Size = new Size(1063, 65);
+            reservaLine5.Size = new Size(990, 65);
             reservaLine5.TabIndex = 9;
             // 
             // reservaLinha5DataFim
             // 
             reservaLinha5DataFim.AutoSize = true;
             reservaLinha5DataFim.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha5DataFim.Location = new Point(879, 16);
+            reservaLinha5DataFim.Location = new Point(834, 16);
             reservaLinha5DataFim.Margin = new Padding(2, 0, 2, 0);
             reservaLinha5DataFim.Name = "reservaLinha5DataFim";
             reservaLinha5DataFim.Size = new Size(58, 21);
@@ -642,7 +639,7 @@
             // 
             reservaLinha5DataInicio.AutoSize = true;
             reservaLinha5DataInicio.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha5DataInicio.Location = new Point(675, 16);
+            reservaLinha5DataInicio.Location = new Point(642, 16);
             reservaLinha5DataInicio.Margin = new Padding(2, 0, 2, 0);
             reservaLinha5DataInicio.Name = "reservaLinha5DataInicio";
             reservaLinha5DataInicio.Size = new Size(58, 21);
@@ -653,7 +650,7 @@
             // 
             reservaLinha5NomeCliente.AutoSize = true;
             reservaLinha5NomeCliente.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha5NomeCliente.Location = new Point(435, 16);
+            reservaLinha5NomeCliente.Location = new Point(413, 16);
             reservaLinha5NomeCliente.Margin = new Padding(2, 0, 2, 0);
             reservaLinha5NomeCliente.Name = "reservaLinha5NomeCliente";
             reservaLinha5NomeCliente.Size = new Size(58, 21);
@@ -664,7 +661,7 @@
             // 
             reservaLinha5IDAviao.AutoSize = true;
             reservaLinha5IDAviao.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha5IDAviao.Location = new Point(259, 16);
+            reservaLinha5IDAviao.Location = new Point(220, 16);
             reservaLinha5IDAviao.Margin = new Padding(2, 0, 2, 0);
             reservaLinha5IDAviao.Name = "reservaLinha5IDAviao";
             reservaLinha5IDAviao.Size = new Size(58, 21);
@@ -675,7 +672,7 @@
             // 
             reservaLinha5IDReserva.AutoSize = true;
             reservaLinha5IDReserva.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            reservaLinha5IDReserva.Location = new Point(59, 16);
+            reservaLinha5IDReserva.Location = new Point(45, 16);
             reservaLinha5IDReserva.Margin = new Padding(2, 0, 2, 0);
             reservaLinha5IDReserva.Name = "reservaLinha5IDReserva";
             reservaLinha5IDReserva.Size = new Size(58, 21);
@@ -687,7 +684,7 @@
             reservaNextButton.BackColor = Color.FromArgb(54, 53, 67);
             reservaNextButton.FlatStyle = FlatStyle.Flat;
             reservaNextButton.ForeColor = Color.White;
-            reservaNextButton.Location = new Point(692, 646);
+            reservaNextButton.Location = new Point(733, 602);
             reservaNextButton.Margin = new Padding(2, 3, 2, 3);
             reservaNextButton.Name = "reservaNextButton";
             reservaNextButton.Size = new Size(116, 38);
@@ -701,7 +698,7 @@
             reservaPreviousButton.BackColor = Color.FromArgb(54, 53, 67);
             reservaPreviousButton.FlatStyle = FlatStyle.Flat;
             reservaPreviousButton.ForeColor = Color.White;
-            reservaPreviousButton.Location = new Point(335, 646);
+            reservaPreviousButton.Location = new Point(376, 602);
             reservaPreviousButton.Margin = new Padding(2, 3, 2, 3);
             reservaPreviousButton.Name = "reservaPreviousButton";
             reservaPreviousButton.Size = new Size(116, 38);
@@ -710,44 +707,11 @@
             reservaPreviousButton.UseVisualStyleBackColor = false;
             reservaPreviousButton.Click += reservaPreviousButton_Click;
             // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Items.AddRange(new object[] { "Todos", "Comercial", "Particular", "Mercadoria", "Avioneta" });
-            comboBox2.Location = new Point(394, 40);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(151, 25);
-            comboBox2.TabIndex = 19;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Todos", "Em viagem", "No hangar" });
-            comboBox1.Location = new Point(209, 40);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(151, 25);
-            comboBox1.TabIndex = 18;
-            // 
-            // filtrarPor_label
-            // 
-            filtrarPor_label.AutoSize = true;
-            filtrarPor_label.Font = new Font("Segoe UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point);
-            filtrarPor_label.Location = new Point(66, 35);
-            filtrarPor_label.Name = "filtrarPor_label";
-            filtrarPor_label.Size = new Size(118, 30);
-            filtrarPor_label.TabIndex = 17;
-            filtrarPor_label.Text = "Filtrar por:";
-            // 
             // Reservas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1210, 663);
-            Controls.Add(comboBox2);
-            Controls.Add(comboBox1);
-            Controls.Add(filtrarPor_label);
             Controls.Add(reservaPreviousButton);
             Controls.Add(reservaNextButton);
             Controls.Add(reservaBGPanel);
@@ -773,7 +737,6 @@
             reservaLine5.ResumeLayout(false);
             reservaLine5.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
@@ -837,8 +800,5 @@
         private Label reservaLinha6IDReserva;
         private Button reservaNextButton;
         private Button reservaPreviousButton;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
-        private Label filtrarPor_label;
     }
 }

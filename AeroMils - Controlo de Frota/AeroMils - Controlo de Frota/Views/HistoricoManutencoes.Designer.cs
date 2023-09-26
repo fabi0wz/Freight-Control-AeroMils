@@ -94,6 +94,7 @@
             histManutNextButton.TabIndex = 18;
             histManutNextButton.Text = "Next";
             histManutNextButton.UseVisualStyleBackColor = false;
+            histManutNextButton.Click += histManutNextButton_Click;
             // 
             // aviaoBGPanel
             // 
@@ -592,6 +593,7 @@
             histManutPreviousButton.TabIndex = 19;
             histManutPreviousButton.Text = "Previous";
             histManutPreviousButton.UseVisualStyleBackColor = false;
+            histManutPreviousButton.Click += histManutPreviousButton_Click;
             // 
             // HistoricoManutencoes
             // 
