@@ -9,6 +9,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class Avioes : Form
     {
+        //starts the database connection, the current page and the records per page, and the list of planes
         private SQLiteDBContext dbContext = new SQLiteDBContext();
         private int currentPage = 0;
         private int recordsPerPage = 7;
@@ -18,12 +19,12 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         public Avioes()
         {
+            //initializes the components, retrieves the data, initializes the buttons and displays the records
             InitializeComponent();
             retrieveData();
             InitializeButtons();
             DisplayRecords();
         }
-
 
 
         private void retrieveData()
@@ -33,23 +34,27 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         }
 
+        //initializes the buttons
         private void InitializeButtons()
         {
+            // Enable/disable the "Next" button based on whether we're on the last page
             avioesNextButton.Enabled = listaAvioes.Count > recordsPerPage;
             avioesPreviousButton.Enabled = false; // Initially, the "Previous" button is disabled
         }
 
 
-
         private Label FindLabelByName(string labelName)
         {
+            // Find the control with the given name
             Control[] controls = this.Controls.Find(labelName, true);
 
+            // If a control with the given name is found and it's a Label, return it
             if (controls.Length > 0 && controls[0] is Label label)
             {
                 return label;
             }
 
+            // Otherwise, throw an exception
             throw new InvalidOperationException($"Label control with name '{labelName}' not found.");
         }
 
@@ -64,7 +69,6 @@ namespace AeroMils___Controlo_de_Frota.Views
 
             throw new InvalidOperationException($"Button control with name '{buttonName}' not found.");
         }
-
 
 
         private void DisplayRecords()
@@ -86,9 +90,8 @@ namespace AeroMils___Controlo_de_Frota.Views
                 string tipoLabelName = $"aviaoLinha{rowNumber}Tipo";
                 string dataManutencaoLabelName = $"aviaoLinha{rowNumber}DataManutencao";
                 string estadoChangeLabelName = $"aviaoLinha{rowNumber}EstadoChange";
-                //aviaoLinha7EstadoChange
 
-
+                // Find the Labels and Button controls based on the names
                 Label idLabel = FindLabelByName(idLabelName);
                 Label modeloLabel = FindLabelByName(modeloLabelName);
                 Label estadoLabel = FindLabelByName(estadoLabelName);
@@ -96,6 +99,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                 Label dataManutencaoLabel = FindLabelByName(dataManutencaoLabelName);
                 Button estadoChangeLabel = FindButton(estadoChangeLabelName);
 
+                // Set the values of the Labels and Button controls
                 Aviao aviao = listaAvioes[i];
                 idLabel.Text = aviao.id.ToString();
                 modeloLabel.Text = aviao.marca.ToString();
@@ -285,7 +289,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             verDetalhesAviao(id);
         }
 
-
+        
         private void verDetalhesAviao(int id)
         {
             Aviao aviao = id == 0 ? null : dbContext.GetAviaoById(id);
@@ -367,6 +371,7 @@ namespace AeroMils___Controlo_de_Frota.Views
             dbContext.ChangePlaneStatus(id);
         }
 
+        ///////////////////////////  FILTERS   ///////////////////////////
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
             filterResults();

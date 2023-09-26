@@ -14,6 +14,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class HistoricoManutencoes : Form
     {
+        //starts the database connection, the current page and the records per page, and the list of manutencoes
         private SQLiteDBContext dbContext = new SQLiteDBContext();
         private int currentPage = 0;
         private int recordsPerPage = 7;
@@ -22,6 +23,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         public HistoricoManutencoes()
         {
+            //initializes the components, retrieves the data, initializes the buttons and displays the records
             InitializeComponent();
             retrieveData();
         }
@@ -37,6 +39,7 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         private void removeActive()
         {
+            // if data_fim > data atual, remove from list
             DateTime dataAtual = DateTime.Now;
             listaManutencoes.RemoveAll(listaManutencoes => DateTime.Parse(listaManutencoes.data_fim) > dataAtual);
         }
