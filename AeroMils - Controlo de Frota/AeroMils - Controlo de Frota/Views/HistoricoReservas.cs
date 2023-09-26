@@ -31,20 +31,16 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             empresa = dbContext.GetReservasData();
             listaReservas = empresa.GetReservas();
-
             removeActive();
+
+
             DisplayRecords();
         }
 
         private void removeActive()
         {
-            for (int j = 0; j < listaReservas.Count; j++)
-            {
-                if (listaReservas[j].data_fim.CompareTo(DateTime.Now.ToString("dd/MM/yyyy")) > 0)
-                {
-                    listaReservas.RemoveAt(j);
-                }
-            }
+            DateTime dataAtual = DateTime.Now;
+            listaReservas.RemoveAll(listaReservas => DateTime.Parse(listaReservas.data_fim) > dataAtual);
         }
 
         private void DisplayRecords()

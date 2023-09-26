@@ -20,13 +20,7 @@ namespace AeroMils___Controlo_de_Frota.Views
         {
             InitializeComponent();
             dataHoje_label.Text = DateTime.Now.ToString("dd/MM/yyyy");
-            DataTable avioesEmViagemDataTable = dbContext.GetAvioesEmViagem();
-            DataTable fretesATerminarDataTable = dbContext.GetFretesATerminar();
-            DataTable manutencoesEmBreveDataTAble = dbContext.GetManutencoesEmBreve();
-
-            dataGridViewAvioesemViagem.DataSource = avioesEmViagemDataTable;
-            dataGridViewFretesaTerminar.DataSource = fretesATerminarDataTable;
-            dataGridViewManutencoesemBreve.DataSource = manutencoesEmBreveDataTAble;
+            renderTable();
         }
 
         private void Mais1dia_button_Click(object sender, EventArgs e)
@@ -34,13 +28,25 @@ namespace AeroMils___Controlo_de_Frota.Views
             dayCounter++;
 
             dataHoje_label.Text = DateTime.Now.AddDays(dayCounter).ToString("dd/MM/yyyy");
-
+            renderTable();
         }
 
         private void Menos1dia_Button_Click(object sender, EventArgs e)
         {
             dayCounter--;
             dataHoje_label.Text = DateTime.Now.AddDays(dayCounter).ToString("dd/MM/yyyy");
+            renderTable();
+        }
+
+        private void renderTable()
+        {
+            DataTable avioesEmViagemDataTable = dbContext.GetAvioesEmViagem(DateTime.Parse(dataHoje_label.Text));
+            DataTable fretesATerminarDataTable = dbContext.GetFretesATerminar(DateTime.Parse(dataHoje_label.Text));
+            DataTable manutencoesEmBreveDataTAble = dbContext.GetManutencoesEmBreve(DateTime.Parse(dataHoje_label.Text));
+
+            dataGridViewAvioesemViagem.DataSource = avioesEmViagemDataTable;
+            dataGridViewFretesaTerminar.DataSource = fretesATerminarDataTable;
+            dataGridViewManutencoesemBreve.DataSource = manutencoesEmBreveDataTAble;
         }
     }
 }

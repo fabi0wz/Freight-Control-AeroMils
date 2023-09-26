@@ -40,19 +40,21 @@
             endDateInput = new DateTimePicker();
             deOndeLabel = new Label();
             startDateInput = new DateTimePicker();
-            localDestinoInput = new TextBox();
-            localPartidaInput = new TextBox();
             Reservar_button = new Button();
             VooMercadoria_button = new Button();
             Avionetas_button = new Button();
             Valor_label = new Label();
             VooParticular_button = new Button();
             VooComercial_button = new Button();
+            localPartidaInput = new ComboBox();
+            localDestinoInput = new ComboBox();
             VoosPanel.SuspendLayout();
             SuspendLayout();
             // 
             // VoosPanel
             // 
+            VoosPanel.Controls.Add(localDestinoInput);
+            VoosPanel.Controls.Add(localPartidaInput);
             VoosPanel.Controls.Add(valorFreteLabel);
             VoosPanel.Controls.Add(listaAvioesInput);
             VoosPanel.Controls.Add(escolhaAviaoLabel);
@@ -64,8 +66,6 @@
             VoosPanel.Controls.Add(endDateInput);
             VoosPanel.Controls.Add(deOndeLabel);
             VoosPanel.Controls.Add(startDateInput);
-            VoosPanel.Controls.Add(localDestinoInput);
-            VoosPanel.Controls.Add(localPartidaInput);
             VoosPanel.Controls.Add(Reservar_button);
             VoosPanel.Controls.Add(VooMercadoria_button);
             VoosPanel.Controls.Add(Avionetas_button);
@@ -96,6 +96,7 @@
             listaAvioesInput.Name = "listaAvioesInput";
             listaAvioesInput.Size = new Size(339, 23);
             listaAvioesInput.TabIndex = 44;
+            listaAvioesInput.SelectedIndexChanged += listaAvioesInput_SelectedIndexChanged;
             // 
             // escolhaAviaoLabel
             // 
@@ -160,11 +161,12 @@
             endDateInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             endDateInput.Format = DateTimePickerFormat.Short;
             endDateInput.Location = new Point(571, 195);
-            endDateInput.MinDate = DateTime.Now.AddDays(1);
+            endDateInput.MinDate = new DateTime(2023, 9, 27, 20, 38, 34, 343);
             endDateInput.Name = "endDateInput";
             endDateInput.Size = new Size(103, 25);
             endDateInput.TabIndex = 37;
-            endDateInput.Value = DateTime.Now.AddDays(1);
+            endDateInput.Value = new DateTime(2023, 9, 27, 20, 38, 34, 348);
+            endDateInput.ValueChanged += endDateInput_ValueChanged;
             // 
             // deOndeLabel
             // 
@@ -181,27 +183,12 @@
             startDateInput.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point);
             startDateInput.Format = DateTimePickerFormat.Short;
             startDateInput.Location = new Point(448, 195);
-            startDateInput.MinDate = DateTime.Now;
+            startDateInput.MinDate = new DateTime(2023, 9, 26, 20, 38, 34, 352);
             startDateInput.Name = "startDateInput";
             startDateInput.Size = new Size(103, 25);
             startDateInput.TabIndex = 35;
-            startDateInput.Value = DateTime.Now;
-            // 
-            // localDestinoInput
-            // 
-            localDestinoInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            localDestinoInput.Location = new Point(251, 191);
-            localDestinoInput.Name = "localDestinoInput";
-            localDestinoInput.Size = new Size(171, 29);
-            localDestinoInput.TabIndex = 34;
-            // 
-            // localPartidaInput
-            // 
-            localPartidaInput.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point);
-            localPartidaInput.Location = new Point(24, 191);
-            localPartidaInput.Name = "localPartidaInput";
-            localPartidaInput.Size = new Size(171, 29);
-            localPartidaInput.TabIndex = 33;
+            startDateInput.Value = new DateTime(2023, 9, 26, 20, 38, 34, 352);
+            startDateInput.ValueChanged += startDateInput_ValueChanged;
             // 
             // Reservar_button
             // 
@@ -303,6 +290,24 @@
             VooComercial_button.UseVisualStyleBackColor = false;
             VooComercial_button.Click += VooComercial_button_Click;
             // 
+            // localPartidaInput
+            // 
+            localPartidaInput.FormattingEnabled = true;
+            localPartidaInput.Location = new Point(24, 200);
+            localPartidaInput.Margin = new Padding(2);
+            localPartidaInput.Name = "localPartidaInput";
+            localPartidaInput.Size = new Size(171, 23);
+            localPartidaInput.TabIndex = 46;
+            // 
+            // localDestinoInput
+            // 
+            localDestinoInput.FormattingEnabled = true;
+            localDestinoInput.Location = new Point(251, 200);
+            localDestinoInput.Margin = new Padding(2);
+            localDestinoInput.Name = "localDestinoInput";
+            localDestinoInput.Size = new Size(171, 23);
+            localDestinoInput.TabIndex = 47;
+            // 
             // NovaReserva
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -339,8 +344,8 @@
         private DateTimePicker endDateInput;
         private Label deOndeLabel;
         private DateTimePicker startDateInput;
-        private TextBox localDestinoInput;
-        private TextBox localPartidaInput;
         private Label valorFreteLabel;
+        private ComboBox localDestinoInput;
+        private ComboBox localPartidaInput;
     }
 }

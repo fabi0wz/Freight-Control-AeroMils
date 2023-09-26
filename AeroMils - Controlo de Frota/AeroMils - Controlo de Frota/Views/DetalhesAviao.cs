@@ -17,25 +17,14 @@ namespace AeroMils___Controlo_de_Frota.Views
 {
     public partial class DetalhesAviao : Form
     {
-        SQLiteDBContext dbContext = new SQLiteDBContext();  
+        Aviao aviao = null;
+        SQLiteDBContext dbContext = new SQLiteDBContext();
         public DetalhesAviao(Aviao aviao)
         {
+            this.aviao = aviao;
             InitializeComponent();
-<<<<<<< Updated upstream
 
-            TipoLabelOutput.Text = aviao.Tipo;
-            MarcaLabelOutput.Text = aviao.marca;
-            ModeloLabelOutput.Text = aviao.modelo;
-            AutonomiaLabelOutput.Text = aviao.autonomia.ToString();
-            AnoLabelOutput.Text = aviao.anoFabrico.ToString();
-            qtdMotoresLabelOutput.Text = aviao.qtdMotores.ToString();
-            CapacidadeLabelOutput.Text = aviao.capacidade_passageiros.ToString();
-            ManutencaoLabelOutput.Text = aviao.dataUltimaManutencao.ToString();
-
-            switch (aviao.Tipo)
-=======
             try
->>>>>>> Stashed changes
             {
                 if (aviao != null)
                 {
@@ -44,7 +33,7 @@ namespace AeroMils___Controlo_de_Frota.Views
                     ModeloLabelOutput.Text = aviao.modelo;
                     AutonomiaLabelOutput.Text = aviao.autonomia.ToString();
                     AnoLabelOutput.Text = aviao.anoFabrico.ToString();
-                    QuantidadeLabelOutput.Text = aviao.qtdMotores.ToString();
+                    qtdMotoresLabelOutput.Text = aviao.qtdMotores.ToString();
                     CapacidadeLabelOutput.Text = aviao.capacidade_passageiros.ToString();
                     ManutencaoLabelOutput.Text = aviao.dataUltimaManutencao.ToString();
 
@@ -91,6 +80,13 @@ namespace AeroMils___Controlo_de_Frota.Views
 
         }
 
-
+        private void enviarManutButton_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("A informação está toda correta?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                dbContext.novaManutencao(Convert.ToInt32(aviao.id));
+            }
+        }
     }
 }

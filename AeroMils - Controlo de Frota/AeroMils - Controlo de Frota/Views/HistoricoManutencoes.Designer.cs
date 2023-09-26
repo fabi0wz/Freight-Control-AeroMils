@@ -425,9 +425,9 @@
             headerDataFim.Location = new Point(794, 16);
             headerDataFim.Margin = new Padding(2, 0, 2, 0);
             headerDataFim.Name = "headerDataFim";
-            headerDataFim.Size = new Size(125, 30);
+            headerDataFim.Size = new Size(176, 30);
             headerDataFim.TabIndex = 3;
-            headerDataFim.Text = "Data de fim";
+            headerDataFim.Text = "Data de Validade";
             // 
             // headerDataInicio
             // 

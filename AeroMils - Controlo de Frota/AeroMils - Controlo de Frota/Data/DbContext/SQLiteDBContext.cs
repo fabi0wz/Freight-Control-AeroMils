@@ -171,7 +171,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             }
         }
 
-        public void InserirNovaReserva(int id_Aviao, string nomeCliente, string origem, string destino, DateTime dataPartida, DateTime dataRetorno)
+        public void InserirNovaReserva(int id_Aviao, string nomeCliente, DateTime dataPartida, DateTime dataRetorno)
         {
             using (SQLiteConnection connection = new SQLiteConnection(connectionString))
             {
@@ -180,17 +180,15 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                     connection.Open();
 
                     // Create a SQLite command to insert data into the database
-                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim, localPartida, localDestino)" +
-                                   "VALUES (@idAviao, @nomeCliente, @dataInicio, @dataFim, @localPartida, @localDestino);";
+                    string query = "INSERT INTO Reservas (id_aviao, nome_cliente, data_inicio, data_fim)" +
+                                   "VALUES (@idAviao, @nomeCliente, @dataInicio, @dataFim);";
 
                     using (SQLiteCommand command = new SQLiteCommand(query, connection))
                     {
                         command.Parameters.AddWithValue("@idAviao", id_Aviao);
                         command.Parameters.AddWithValue("@nomeCliente", nomeCliente);
                         command.Parameters.AddWithValue("@dataInicio", dataPartida);
-                        command.Parameters.AddWithValue("@dataFim", dataRetorno);
-                        command.Parameters.AddWithValue("@localPartida", origem);
-                        command.Parameters.AddWithValue("@localDestino", destino);
+                        command.Parameters.AddWithValue("@dataFim", dataRetorno);   
                         command.ExecuteNonQuery();
                        
                     }
@@ -669,7 +667,7 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
-        public DataTable GetAvioesEmViagem()
+        public DataTable GetAvioesEmViagem(DateTime date)
         {
             DataTable dataTable = new DataTable();
             OpenConnection();
@@ -677,9 +675,10 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             using (SQLiteCommand command = new SQLiteCommand(
                 "SELECT * " +
                 "FROM Avioes " +
-                "WHERE estado = 1 " +
-                "LIMIT 5", connection))
+                "WHERE estado = 1", connection))
             {
+                command.Parameters.AddWithValue("@date", date);
+
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
                     adapter.Fill(dataTable);
@@ -689,7 +688,10 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
-        public DataTable GetFretesATerminar()
+
+
+
+        public DataTable GetFretesATerminar(DateTime date)
         {
             DataTable dataTable = new DataTable();
             OpenConnection();
@@ -697,10 +699,12 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             using (SQLiteCommand command = new SQLiteCommand(
                 "SELECT * " +
                 "FROM Reservas " +
-                "WHERE data_fim >= DATE('now') " +
+                "WHERE data_fim >= @date " +
                 "ORDER BY data_fim ASC " +
                 "LIMIT 5", connection))
             {
+                command.Parameters.AddWithValue("@date", date);
+
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
                     adapter.Fill(dataTable);
@@ -710,7 +714,8 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             return dataTable;
         }
 
-        public DataTable GetManutencoesEmBreve()
+
+        public DataTable GetManutencoesEmBreve(DateTime date)
         {
             DataTable dataTable = new DataTable();
             OpenConnection();
@@ -719,10 +724,12 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                 "SELECT Avioes.id_aviao, modelo, data_ult_manutencao AS Data_da_Ultima_Manutencao, data_fim AS Validade_Manutenção " +
                 "FROM Avioes, Manutencoes " +
                 "WHERE Avioes.id_aviao = Manutencoes.id_aviao " +
-                "AND Manutencoes.data_fim >= DATE('now') " +
+                "AND Manutencoes.data_fim >= @date " +
                 "ORDER BY data_fim ASC " +
                 "LIMIT 5", connection))
             {
+                command.Parameters.AddWithValue("@date", date);
+
                 using (SQLiteDataAdapter adapter = new SQLiteDataAdapter(command))
                 {
                     adapter.Fill(dataTable);
@@ -731,6 +738,36 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
             CloseConnection();
             return dataTable;
         }
+
+        public void novaManutencao(int planeID)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            {
+                connection.Open();
+
+                DateTime dataInicio = DateTime.Now;
+                Random rnd = new Random();
+                int validadeManutencao = rnd.Next(15, 61);
+                DateTime validade = dataInicio.AddDays(validadeManutencao);
+
+                using (SQLiteCommand command = new SQLiteCommand("INSERT INTO Manutencoes (id_aviao, data_inicio, data_fim) VALUES (@PlaneID, @DataInicio, @DataFim)", connection))
+                {
+                    command.Parameters.AddWithValue("@PlaneID", planeID);
+                    command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd HH:mm:ss"));
+                    command.Parameters.AddWithValue("@DataFim", validade.ToString("yyyy-MM-dd HH:mm:ss"));
+                    command.ExecuteNonQuery();
+                }
+
+                // Update the Avioes table with the new data_ult_manutencao value
+                using (SQLiteCommand updateAvioesCommand = new SQLiteCommand("UPDATE Avioes SET data_ult_manutencao = @DataInicio WHERE id_aviao = @PlaneID", connection))
+                {
+                    updateAvioesCommand.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd HH:mm:ss"));
+                    updateAvioesCommand.Parameters.AddWithValue("@PlaneID", planeID);
+                    updateAvioesCommand.ExecuteNonQuery();
+                }
+            }
+        }
+
 
     }
 }
