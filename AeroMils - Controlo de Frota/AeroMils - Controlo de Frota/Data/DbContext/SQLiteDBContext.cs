@@ -764,15 +764,15 @@ namespace AeroMils___Controlo_de_Frota.Data.DbContext
                 using (SQLiteCommand command = new SQLiteCommand("INSERT INTO Manutencoes (id_aviao, data_inicio, data_fim) VALUES (@PlaneID, @DataInicio, @DataFim)", connection))
                 {
                     command.Parameters.AddWithValue("@PlaneID", planeID);
-                    command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd HH:mm:ss"));
-                    command.Parameters.AddWithValue("@DataFim", validade.ToString("yyyy-MM-dd HH:mm:ss"));
+                    command.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd"));
+                    command.Parameters.AddWithValue("@DataFim", validade.ToString("yyyy-MM-dd"));
                     command.ExecuteNonQuery();
                 }
 
                 // Update the Avioes table with the new data_ult_manutencao value
                 using (SQLiteCommand updateAvioesCommand = new SQLiteCommand("UPDATE Avioes SET data_ult_manutencao = @DataInicio WHERE id_aviao = @PlaneID", connection))
                 {
-                    updateAvioesCommand.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd HH:mm:ss"));
+                    updateAvioesCommand.Parameters.AddWithValue("@DataInicio", dataInicio.ToString("yyyy-MM-dd"));
                     updateAvioesCommand.Parameters.AddWithValue("@PlaneID", planeID);
                     updateAvioesCommand.ExecuteNonQuery();
                 }
