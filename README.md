@@ -1,7 +1,5 @@
 # Avião Charter System
 
-![Project Logo](add_your_project_logo_url_here)
-
 This project, developed in C# with Windows Forms, is an Freight Control System designed to manage and facilitate the chartering of airplanes. The system is the collaborative effort of two full stack development students enrolled in a course on Programming of Information Systems and Technologies.
 
 ## Features asked in our exam:
